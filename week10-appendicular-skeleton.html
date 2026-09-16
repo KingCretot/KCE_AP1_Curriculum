@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 10: The Appendicular Skeleton</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 3</div></div></div><div class="lesson-tag">Week 10 &middot; Ch. 8 &middot; Appendicular Skeleton</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 11</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 10 · Chapter 8</p><h1 class="slide-title">The Appendicular Skeleton</h1>
+  <div class="card warm"><p style="margin-bottom:0;">Last week's axial skeleton protected the body's core. This week's appendicular skeleton — the limbs and their girdles — is built for an entirely different job: movement. You'll see a clear structural trade-off between mobility and stability play out across four regions.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Identify the four major regions of the appendicular skeleton</span></li>
+<li><span class="num">2</span><span>Name the bones of the upper limb, proximal to distal</span></li>
+<li><span class="num">3</span><span>Name the bones of the lower limb, proximal to distal</span></li>
+<li><span class="num">4</span><span>Compare the pectoral and pelvic girdles</span></li>
+<li><span class="num">5</span><span>Explain the mobility-vs-stability trade-off across the appendicular skeleton</span></li>
+<li><span class="num">6</span><span>Recognize common fracture sites in the appendicular skeleton</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Big Picture</p><h1 class="slide-title">Four regions, one repeating pattern</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="115" height="140" rx="12" fill="#fff" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="77" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Pectoral Girdle</text>
+  <text x="77" y="112" text-anchor="middle" font-size="9" fill="#1c1c1c">clavicle, scapula</text><rect x="155" y="30" width="115" height="140" rx="12" fill="#fff" stroke="#C9A84C" stroke-width="2.5"/>
+  <text x="212" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Upper Limb</text>
+  <text x="212" y="112" text-anchor="middle" font-size="9" fill="#1c1c1c">humerus to fingers</text><rect x="290" y="30" width="115" height="140" rx="12" fill="#fff" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="347" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Pelvic Girdle</text>
+  <text x="347" y="112" text-anchor="middle" font-size="9" fill="#1c1c1c">the hip bones</text><rect x="425" y="30" width="115" height="140" rx="12" fill="#fff" stroke="#2E7D55" stroke-width="2.5"/>
+  <text x="482" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Lower Limb</text>
+  <text x="482" y="112" text-anchor="middle" font-size="9" fill="#1c1c1c">femur to toes</text>
+  <text x="280" y="205" text-anchor="middle" font-size="11" fill="#1c1c1c" font-style="italic">Two girdles anchor two limbs — a repeating pattern, upper and lower</text>
+</svg></div>
+    <div class="diagram-caption">The appendicular skeleton's 126 bones organize into four groups that repeat a single pattern twice: a girdle anchors a limb to the axial skeleton, then the limb extends outward in a proximal-to-distal sequence. Learn the pattern once, and the upper and lower limb both make sense.</div>
+    
+  </div></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Vocabulary &amp; Word Parts</p><h1 class="slide-title">Appendicular skeleton roots</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">append/o-</span><span class="meaning">attachment, appendage</span></div><div class="wp-body"><b>Append</b>icular skeleton = the bones "attached to" the axial skeleton — limbs and girdles.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">brachi/o-</span><span class="meaning">arm</span></div><div class="wp-body"><b>Brachi</b>al refers to the arm; the humerus is sometimes called the "brachium" bone.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">carp/o-</span><span class="meaning">wrist</span></div><div class="wp-body"><b>Carp</b>als = the 8 small wrist bones.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">tars/o-</span><span class="meaning">ankle</span></div><div class="wp-body"><b>Tars</b>als = the 7 ankle bones — the lower-limb equivalent of carpals.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">phalan/o-</span><span class="meaning">finger/toe bone</span></div><div class="wp-body"><b>Phalan</b>ges = the bones of the fingers and toes, 14 in each hand and each foot.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">pelv/o-</span><span class="meaning">basin, pelvis</span></div><div class="wp-body"><b>Pelv</b>ic girdle = the hip bones, shaped like a basin that supports the trunk's weight.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Upper limb: proximal to distal</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="120" y="20" width="50" height="120" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="200" y="80" font-size="10.5" font-weight="700" fill="#0047BA">Humerus</text>
+  <text x="200" y="94" font-size="8.5" fill="#1c1c1c">(single arm bone)</text>
+
+  <rect x="105" y="150" width="30" height="110" rx="8" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="200" y="180" font-size="10.5" font-weight="700" fill="#7A5A00">Radius</text>
+  <text x="200" y="194" font-size="8.5" fill="#1c1c1c">(thumb side)</text>
+
+  <rect x="140" y="150" width="30" height="110" rx="8" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="200" y="220" font-size="10.5" font-weight="700" fill="#DB2F30">Ulna</text>
+  <text x="200" y="234" font-size="8.5" fill="#1c1c1c">(pinky side)</text>
+
+  <rect x="105" y="270" width="65" height="35" rx="6" fill="#F0E7F7" stroke="#5B3E96" stroke-width="2"/>
+  <text x="200" y="278" font-size="10.5" font-weight="700" fill="#5B3E96">Carpals (8)</text>
+  <text x="200" y="292" font-size="8.5" fill="#1c1c1c">wrist bones</text>
+
+  <rect x="105" y="315" width="65" height="20" rx="4" fill="#E7F1E7" stroke="#2E7D55" stroke-width="2"/>
+  <text x="200" y="330" font-size="9.5" fill="#2E7D55" font-weight="700">Metacarpals (5) &mdash; palm</text>
+
+  <rect x="105" y="345" width="65" height="20" rx="4" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="200" y="360" font-size="9.5" fill="#0047BA" font-weight="700">Phalanges (14) &mdash; fingers</text>
+</svg></div>
+    <div class="diagram-caption">One bone becomes two, then many, then more: a single humerus in the arm gives way to a paired radius (thumb-side) and ulna (pinky-side) in the forearm, then the 8 carpals, 5 metacarpals, and 14 phalanges of the wrist and hand — built for fine, precise movement.</div>
+    
+  </div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Lower limb: proximal to distal</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="120" y="20" width="50" height="140" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="200" y="90" font-size="10.5" font-weight="700" fill="#0047BA">Femur</text>
+  <text x="200" y="104" font-size="8.5" fill="#1c1c1c">(longest bone in body)</text>
+
+  <ellipse cx="145" cy="172" rx="35" ry="12" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="200" y="176" font-size="9.5" fill="#7A5A00" font-weight="700">Patella (kneecap)</text>
+
+  <rect x="105" y="190" width="30" height="100" rx="8" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="200" y="220" font-size="10.5" font-weight="700" fill="#DB2F30">Tibia</text>
+  <text x="200" y="234" font-size="8.5" fill="#1c1c1c">(shin, weight-bearing)</text>
+
+  <rect x="140" y="190" width="25" height="100" rx="8" fill="#F0E7F7" stroke="#5B3E96" stroke-width="2.2"/>
+  <text x="200" y="260" font-size="10.5" font-weight="700" fill="#5B3E96">Fibula</text>
+  <text x="200" y="274" font-size="8.5" fill="#1c1c1c">(thin, lateral)</text>
+
+  <rect x="105" y="300" width="65" height="35" rx="6" fill="#E7F1E7" stroke="#2E7D55" stroke-width="2"/>
+  <text x="200" y="313" font-size="10.5" font-weight="700" fill="#2E7D55">Tarsals (7)</text>
+  <text x="200" y="327" font-size="8.5" fill="#1c1c1c">ankle bones</text>
+
+  <rect x="105" y="345" width="65" height="20" rx="4" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="200" y="360" font-size="9.5" fill="#0047BA" font-weight="700">Metatarsals (5) + Phalanges (14)</text>
+</svg></div>
+    <div class="diagram-caption">The lower limb mirrors the upper limb's pattern almost bone-for-bone: femur parallels humerus, tibia/fibula parallel radius/ulna, tarsals parallel carpals. The key differences reflect the lower limb's job — weight-bearing and stability instead of fine manipulation. The patella (kneecap) has no upper-limb equivalent.</div>
+    
+  </div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Pectoral vs. pelvic girdle: a mobility/stability trade-off</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="250" height="160" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="145" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Pectoral Girdle</text>
+  <text x="145" y="85" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Clavicle + Scapula</text>
+  <text x="145" y="105" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Lightly attached &mdash; wide range</text>
+  <text x="145" y="119" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">of motion, easily dislocated</text>
+  <text x="145" y="145" text-anchor="middle" font-size="9" fill="#1c1c1c">Trade-off: mobility over stability</text>
+
+  <rect x="290" y="30" width="250" height="160" rx="10" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="415" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Pelvic Girdle</text>
+  <text x="415" y="85" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Two hip bones, fused to sacrum</text>
+  <text x="415" y="105" text-anchor="middle" font-size="9" fill="#DB2F30" font-weight="700">Firmly attached &mdash; stable,</text>
+  <text x="415" y="119" text-anchor="middle" font-size="9" fill="#DB2F30" font-weight="700">supports body weight</text>
+  <text x="415" y="145" text-anchor="middle" font-size="9" fill="#1c1c1c">Trade-off: stability over mobility</text>
+</svg></div>
+    <div class="diagram-caption">This is the single biggest conceptual takeaway for this week: the pectoral girdle is loosely attached to the axial skeleton, trading stability for an enormous range of arm motion — which is also exactly why shoulder dislocations are so common. The pelvic girdle is firmly fused to the sacrum, trading mobility for the stability needed to support body weight and permit walking.</div>
+    
+  </div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Your Turn &mdash; Guided Practice</p><h1 class="slide-title">Apply it before the quiz</h1>
+  <div class="gp-box"><p class="gp-prompt">A patient falls onto an outstretched hand and reports pain in the forearm on the thumb side, near the wrist.</p><p style="font-weight:600;font-size:14.5px;">Question 1 — Which forearm bone is most likely fractured?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">The radius</button>
+<button class="choice-btn" data-correct="false">The ulna</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">The <b>radius</b> sits on the thumb side of the forearm — exactly matching the pain location described. This injury pattern (fall onto an outstretched hand, thumb-side pain) is common enough clinically to have its own name: a distal radius fracture.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — Is this bone part of the axial or appendicular skeleton?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">Appendicular</button>
+<button class="choice-btn" data-correct="false">Axial</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">The radius is part of the upper limb, making it <b>appendicular</b>. Only the skull, vertebral column, and thoracic cage belong to the axial skeleton — everything in the limbs and girdles is appendicular.</div></div></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Why shoulder dislocations are so common</h1>
+  <p>This is a direct, real-world consequence of the pectoral girdle's mobility-over-stability design.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">The shoulder joint is the most frequently dislocated joint in the body — a direct trade-off for the wide range of motion the loosely-attached <strong>pectoral girdle</strong> allows. Compare this to the hip joint (part of the firmly-anchored pelvic girdle), which dislocates far less often precisely because it sacrifices some mobility for structural stability. Same basic joint concept, opposite design priorities.</p></div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Hip fractures and the elderly</h1>
+  <p>This connects the pelvic girdle's weight-bearing role directly to a major real-world health concern.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">Because the femur and pelvic girdle bear so much of the body's weight, a <strong>hip fracture</strong> (typically at the proximal femur, near the pelvic girdle) is a serious injury in older adults — often linked to osteoporosis from Chapter 6, since weakened bone fractures more easily under normal walking loads. This is exactly why fall prevention and bone density screening are emphasized so heavily for aging patients.</p></div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Mini Knowledge Test</p><h1 class="slide-title">Show what you know &mdash; 7 questions</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">Which bone is part of the pectoral girdle?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Clavicle</button>
+<button class="quiz-opt" data-correct="false">Femur</button>
+<button class="quiz-opt" data-correct="false">Sacrum</button></div><div class="rationale-box" id="rat-quiz-q1">The <b>clavicle</b> (collarbone), along with the scapula, makes up the pectoral girdle. The femur is a lower-limb bone, and the sacrum is part of the axial skeleton.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">Which forearm bone is on the pinky side?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Ulna</button>
+<button class="quiz-opt" data-correct="false">Radius</button>
+<button class="quiz-opt" data-correct="false">Humerus</button></div><div class="rationale-box" id="rat-quiz-q2">The <b>ulna</b> runs along the pinky side of the forearm. The radius is on the thumb side instead, and the humerus is the single upper-arm bone above the elbow.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">How many carpal bones are in each wrist?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">8</button>
+<button class="quiz-opt" data-correct="false">5</button>
+<button class="quiz-opt" data-correct="false">14</button></div><div class="rationale-box" id="rat-quiz-q3">There are <b>8</b> carpal bones per wrist. 5 is the number of metacarpals in the palm, and 14 is the number of phalanges in the fingers.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">The patella (kneecap) has no direct equivalent in the:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Upper limb</button>
+<button class="quiz-opt" data-correct="false">Lower limb</button>
+<button class="quiz-opt" data-correct="false">Pelvic girdle</button></div><div class="rationale-box" id="rat-quiz-q4">The patella is unique to the <b>lower limb</b> — there's no equivalent bone at the elbow in the upper limb. It's part of the lower limb and unrelated to the pelvic girdle's own structure.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">Which girdle is more firmly attached to the axial skeleton?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Pelvic girdle</button>
+<button class="quiz-opt" data-correct="false">Pectoral girdle</button>
+<button class="quiz-opt" data-correct="false">Both are equally attached</button></div><div class="rationale-box" id="rat-quiz-q5">The <b>pelvic girdle</b> is firmly fused to the sacrum for stability and weight-bearing. The pectoral girdle is loosely attached instead, trading stability for a wide range of arm motion.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">Which region of the appendicular skeleton is built primarily for weight-bearing and stability rather than fine movement?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Lower limb and pelvic girdle</button>
+<button class="quiz-opt" data-correct="false">Upper limb and pectoral girdle</button>
+<button class="quiz-opt" data-correct="false">Neither — both prioritize fine movement equally</button></div><div class="rationale-box" id="rat-quiz-q6">The <b>lower limb and pelvic girdle</b> are built for weight-bearing and stability, supporting the body during standing and walking. The upper limb and pectoral girdle instead prioritize mobility and fine manipulation.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">A distal radius fracture from falling on an outstretched hand affects which skeletal division?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Appendicular</button>
+<button class="quiz-opt" data-correct="false">Axial</button>
+<button class="quiz-opt" data-correct="false">Both equally</button></div><div class="rationale-box" id="rat-quiz-q7">The radius is part of the upper limb, which belongs entirely to the <b>appendicular</b> skeleton. The axial skeleton (skull, vertebral column, thoracic cage) is unaffected by this type of injury.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 7</span></div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Debrief</p><h1 class="slide-title">Week 10 Quick-Reference Recap</h1>
+  <p>One page to glance at before Exam 3 — everything from this week, condensed.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Four Regions</h4><ul><li>Pectoral girdle — clavicle, scapula</li><li>Upper limb — humerus to fingers</li><li>Pelvic girdle — hip bones</li><li>Lower limb — femur to toes</li></ul></div>
+<div class="recap-cell"><h4>Upper Limb Sequence</h4><p>Humerus &rarr; Radius/Ulna &rarr; Carpals (8) &rarr; Metacarpals (5) &rarr; Phalanges (14).</p></div>
+<div class="recap-cell"><h4>Lower Limb Sequence</h4><p>Femur &rarr; Patella &rarr; Tibia/Fibula &rarr; Tarsals (7) &rarr; Metatarsals (5) &rarr; Phalanges (14).</p></div>
+<div class="recap-cell"><h4>Girdle Trade-off</h4><ul><li>Pectoral — mobile, less stable</li><li>Pelvic — stable, less mobile</li></ul></div>
+<div class="recap-cell"><h4>Common Injuries</h4><p>Shoulder dislocation (pectoral girdle mobility), hip fracture (pelvic girdle/femur, often osteoporosis-linked).</p></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Appendicular Skeleton</span><span class="term-pill">Pectoral Girdle</span><span class="term-pill">Pelvic Girdle</span><span class="term-pill">Humerus</span><span class="term-pill">Radius</span><span class="term-pill">Ulna</span><span class="term-pill">Femur</span><span class="term-pill">Tibia</span><span class="term-pill">Fibula</span><span class="term-pill">Carpals</span><span class="term-pill">Tarsals</span></div>
+  <div class="next-box"><strong>Next — Week 11: Articulations (Joints).</strong> Now that you know the bones, you'll learn how they connect — joint classification, structure, and the movements each type allows.</div>
+  <div class="end-actions"><a class="end-btn primary next-lesson-link" href="week11-articulations.html">Next: Week 11 &rarr;</a><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
