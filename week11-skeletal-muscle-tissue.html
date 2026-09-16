@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 11: Skeletal Muscle Tissue</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 4</div></div></div><div class="lesson-tag">Week 11 &middot; Ch. 10 &middot; Muscle Tissue</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 12</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 11 · Chapter 10</p><h1 class="slide-title">Muscle Tissue</h1>
+  <div class="card warm"><p style="margin-bottom:0;">This week begins Exam Block 4 and moves from bones and joints into the tissue that actually moves them. Muscle tissue converts chemical energy into force — you'll cover the three muscle types, skeletal muscle's internal organization, and the sliding filament mechanism that powers every contraction.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Compare the three muscle tissue types</span></li>
+<li><span class="num">2</span><span>Describe skeletal muscle's hierarchical organization</span></li>
+<li><span class="num">3</span><span>Identify the components of a sarcomere</span></li>
+<li><span class="num">4</span><span>Explain the sliding filament theory of contraction</span></li>
+<li><span class="num">5</span><span>Describe the role of calcium and ATP in muscle contraction</span></li>
+<li><span class="num">6</span><span>Connect muscle fatigue to its underlying physiological causes</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Big Picture</p><h1 class="slide-title">Three muscle tissue types</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="140" height="150" rx="12" fill="#fff" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="90" y="65" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Skeletal</text>
+  <text x="90" y="95" text-anchor="middle" font-size="9.5" fill="#0047BA" font-weight="700">Voluntary, striated</text>
+  <text x="90" y="115" text-anchor="middle" font-size="9" fill="#1c1c1c">attaches to bone</text><rect x="210" y="30" width="140" height="150" rx="12" fill="#fff" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="280" y="65" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Cardiac</text>
+  <text x="280" y="95" text-anchor="middle" font-size="9.5" fill="#DB2F30" font-weight="700">Involuntary, striated</text>
+  <text x="280" y="115" text-anchor="middle" font-size="9" fill="#1c1c1c">heart only</text><rect x="400" y="30" width="140" height="150" rx="12" fill="#fff" stroke="#2E7D55" stroke-width="2.5"/>
+  <text x="470" y="65" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Smooth</text>
+  <text x="470" y="95" text-anchor="middle" font-size="9.5" fill="#2E7D55" font-weight="700">Involuntary, non-striated</text>
+  <text x="470" y="115" text-anchor="middle" font-size="9" fill="#1c1c1c">organ walls, vessels</text>
+</svg></div>
+    <div class="diagram-caption">This is the fourth primary tissue type from Chapter 4, now covered in depth. Skeletal muscle is voluntary and striated (visibly striped under a microscope) — this is the type covered in most depth this week. Cardiac muscle is also striated but involuntary, found only in the heart. Smooth muscle is involuntary and non-striated, found in the walls of organs and blood vessels.</div>
+    
+  </div></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Vocabulary &amp; Word Parts</p><h1 class="slide-title">Muscle tissue roots</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">my/o-</span><span class="meaning">muscle</span></div><div class="wp-body"><b>My</b>ofibril = a contractile strand inside a muscle fiber. Myosin = a key muscle contraction protein.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">sarc/o-</span><span class="meaning">flesh, muscle</span></div><div class="wp-body"><b>Sarc</b>omere = the basic contractile unit of muscle. Sarcolemma = a muscle fiber's cell membrane.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-lemma</span><span class="meaning">husk, sheath</span></div><div class="wp-body">Sarco<b>lemma</b> = the membrane surrounding a muscle fiber.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">fasc/o-</span><span class="meaning">bundle, band</span></div><div class="wp-body"><b>Fasc</b>icle = a bundle of muscle fibers grouped together.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-troph/o-</span><span class="meaning">nourishment, growth</span></div><div class="wp-body">Hyper<b>troph</b>y = muscle growth from increased use. Atrophy = muscle shrinkage from disuse.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">tetan/o-</span><span class="meaning">rigid, tense</span></div><div class="wp-body"><b>Tetan</b>y = a sustained, maximal muscle contraction from rapid, repeated stimulation.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Skeletal muscle's hierarchical organization</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="90" y="20" width="120" height="60" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="240" y="45" font-size="10.5" fill="#0047BA">Muscle</text>
+  <text x="240" y="59" font-size="8.5" fill="#1c1c1c">whole organ</text>
+
+  <rect x="100" y="100" width="100" height="55" rx="8" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="240" y="122" font-size="10.5" fill="#7A5A00">Fascicle</text>
+  <text x="240" y="136" font-size="8.5" fill="#1c1c1c">bundle of fibers</text>
+
+  <rect x="110" y="175" width="80" height="50" rx="6" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="240" y="196" font-size="10.5" fill="#DB2F30">Muscle fiber</text>
+  <text x="240" y="210" font-size="8.5" fill="#1c1c1c">a single muscle cell</text>
+
+  <rect x="120" y="245" width="60" height="40" rx="4" fill="#F0E7F7" stroke="#5B3E96" stroke-width="2.2"/>
+  <text x="240" y="262" font-size="10.5" fill="#5B3E96">Myofibril</text>
+  <text x="240" y="276" font-size="8.5" fill="#1c1c1c">contractile strand inside fiber</text>
+</svg></div>
+    <div class="diagram-caption">A whole muscle is built from progressively smaller units, each nested inside the last: the muscle organ contains bundles called fascicles, each fascicle contains individual muscle fibers (cells), and each fiber contains many myofibrils — the actual contractile strands. This nesting pattern is worth memorizing in order, since exam questions often test the sequence directly.</div>
+    
+  </div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The sarcomere: muscle's basic contractile unit</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <line x1="40" y1="100" x2="440" y2="100" stroke="#1c1c1c" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="40" y1="60" x2="40" y2="140" stroke="#DB2F30" stroke-width="3"/>
+  <line x1="440" y1="60" x2="440" y2="140" stroke="#DB2F30" stroke-width="3"/>
+  <text x="40" y="50" text-anchor="middle" font-size="9" fill="#DB2F30">Z-disc</text>
+  <text x="440" y="50" text-anchor="middle" font-size="9" fill="#DB2F30">Z-disc</text>
+  <line x1="80" y1="75" x2="80" y2="125" stroke="#0047BA" stroke-width="2.5"/><line x1="130" y1="75" x2="130" y2="125" stroke="#0047BA" stroke-width="2.5"/><line x1="180" y1="75" x2="180" y2="125" stroke="#0047BA" stroke-width="2.5"/><line x1="230" y1="75" x2="230" y2="125" stroke="#0047BA" stroke-width="2.5"/><line x1="280" y1="75" x2="280" y2="125" stroke="#0047BA" stroke-width="2.5"/><line x1="330" y1="75" x2="330" y2="125" stroke="#0047BA" stroke-width="2.5"/><line x1="380" y1="75" x2="380" y2="125" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="240" y="75" text-anchor="middle" font-size="9.5" fill="#0047BA" font-weight="700">Thin filaments (actin)</text>
+  <rect x="150" y="90" width="180" height="20" fill="#C9A84C" opacity="0.55"/>
+  <text x="240" y="150" text-anchor="middle" font-size="9.5" fill="#7A5A00" font-weight="700">Thick filaments (myosin)</text>
+  <text x="240" y="180" text-anchor="middle" font-size="10" fill="#0A1F3D" font-style="italic">One sarcomere = Z-disc to Z-disc, the basic contractile unit</text>
+</svg></div>
+    <div class="diagram-caption">A sarcomere runs from one Z-disc to the next and contains two types of protein filaments: thin filaments (actin) anchored to the Z-discs, and thick filaments (myosin) in the center. This repeating Z-disc-to-Z-disc unit, stacked thousands of times along a myofibril, is what gives skeletal muscle its striped (striated) appearance under a microscope.</div>
+    
+  </div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Sliding filament theory</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="20" width="200" height="80" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="120" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0047BA">Relaxed sarcomere</text>
+  <text x="120" y="62" text-anchor="middle" font-size="9" fill="#1c1c1c">longer &mdash; filaments barely</text>
+  <text x="120" y="75" text-anchor="middle" font-size="9" fill="#1c1c1c">overlap</text>
+
+  <text x="240" y="65" text-anchor="middle" font-size="20" fill="#C9A84C" font-weight="700">&#8594;</text>
+
+  <rect x="260" y="20" width="200" height="80" rx="10" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2"/>
+  <text x="360" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="#DB2F30">Contracted sarcomere</text>
+  <text x="360" y="62" text-anchor="middle" font-size="9" fill="#1c1c1c">shorter &mdash; thin filaments</text>
+  <text x="360" y="75" text-anchor="middle" font-size="9" fill="#1c1c1c">pulled inward by myosin</text>
+
+  <rect x="20" y="120" width="440" height="80" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="240" y="145" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7A5A00">The filaments themselves don't shrink</text>
+  <text x="240" y="166" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Myosin heads repeatedly grab actin and pull it inward &mdash;</text>
+  <text x="240" y="182" text-anchor="middle" font-size="9.5" fill="#1c1c1c">the filaments slide past each other, shortening the whole sarcomere.</text>
+</svg></div>
+    <div class="diagram-caption">This is the central mechanism of the whole chapter. Muscle contraction does NOT happen because the filaments themselves shrink — they stay the same length. Instead, myosin heads on the thick filaments repeatedly grab, pull, and release the thin filaments, ratcheting them further into the center of the sarcomere. As every sarcomere in a muscle fiber shortens this way, the whole muscle contracts.</div>
+    
+  </div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">What triggers the slide: calcium and ATP</h1><ul>
+    <li><strong>Calcium (Ca&sup2;&#8314;)</strong> — released from storage inside the muscle fiber when a nerve signal arrives; it exposes the myosin-binding sites on actin, allowing the contraction cycle to begin.</li>
+    <li><strong>ATP</strong> — provides the energy for each myosin head to release its grip on actin and "re-cock" for another pull. Without ATP, muscle fibers can't relax — this is part of why rigor mortis occurs after death, when ATP production stops entirely.</li>
+    <li><strong>The cycle repeats</strong> — as long as calcium and ATP are both available, myosin heads keep pulling, actin keeps sliding, and the sarcomere keeps shortening.</li>
+  </ul></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Your Turn &mdash; Guided Practice</p><h1 class="slide-title">Apply it before the quiz</h1>
+  <div class="gp-box"><p class="gp-prompt">After an intense workout, a runner's leg muscles become fatigued and can no longer contract with the same force.</p><p style="font-weight:600;font-size:14.5px;">Question 1 — At the molecular level, which two resources becoming depleted best explains this fatigue?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">ATP and calcium availability</button>
+<button class="choice-btn" data-correct="false">Bone density and joint cartilage</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">Sustained contraction depends on adequate <b>ATP and calcium</b> to keep the sliding filament cycle running. Bone density and joint cartilage are skeletal structures unrelated to the muscle contraction cycle itself.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — Which structural level of muscle organization directly contains the sarcomeres responsible for this contraction?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">The myofibril</button>
+<button class="choice-btn" data-correct="false">The fascicle</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">Sarcomeres are found within <b>myofibrils</b> — the smallest structural level in the hierarchy that directly contains the contractile units. A fascicle is a much larger bundle of whole muscle fibers, several organizational levels above the myofibril.</div></div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Rigor mortis and the ATP connection</h1>
+  <p>This is a striking, memorable application of the ATP requirement covered this week.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;"><strong>Rigor mortis</strong> — the stiffening of muscles after death — occurs because ATP production stops when circulation and cellular metabolism cease. Without ATP, myosin heads that are gripping actin at the moment of death can't release their grip, leaving the muscle locked in a contracted state until the muscle tissue itself begins to break down. This is a direct, unforgettable illustration of ATP's role in muscle RELAXATION, not just contraction.</p></div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Muscular dystrophy and structural muscle proteins</h1>
+  <p>This connects the sarcomere's structural proteins to a well-known group of genetic diseases.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;"><strong>Muscular dystrophy</strong> refers to a group of genetic disorders that disrupt structural proteins supporting the muscle fiber membrane (the sarcolemma) and its connection to the contractile machinery inside. Over time, this leads to progressive muscle weakness and degeneration — a direct consequence of a breakdown at the structural level this week covers, even though the disease itself isn't part of the standard exam content.</p></div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Mini Knowledge Test</p><h1 class="slide-title">Show what you know &mdash; 7 questions</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">Which muscle type is voluntary and striated?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Skeletal</button>
+<button class="quiz-opt" data-correct="false">Cardiac</button>
+<button class="quiz-opt" data-correct="false">Smooth</button></div><div class="rationale-box" id="rat-quiz-q1"><b>Skeletal</b> muscle is voluntary and striated. Cardiac muscle is also striated but involuntary, and smooth muscle is both involuntary and non-striated — neither matches skeletal muscle's combination of traits.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">Which structure directly contains a bundle of muscle fibers?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Fascicle</button>
+<button class="quiz-opt" data-correct="false">Myofibril</button>
+<button class="quiz-opt" data-correct="false">Sarcomere</button></div><div class="rationale-box" id="rat-quiz-q2">A <b>fascicle</b> is a bundle of muscle fibers. A myofibril is a contractile strand inside a single fiber, and a sarcomere is an even smaller repeating unit within a myofibril — both are much smaller structures than a fascicle.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">A sarcomere is defined as the region between two:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Z-discs</button>
+<button class="quiz-opt" data-correct="false">Fascicles</button>
+<button class="quiz-opt" data-correct="false">Muscle fibers</button></div><div class="rationale-box" id="rat-quiz-q3">A sarcomere runs from one <b>Z-disc</b> to the next. Fascicles and muscle fibers are much larger structural units — a sarcomere is a microscopic component found within a single myofibril.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">Which protein makes up the thin filaments?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Actin</button>
+<button class="quiz-opt" data-correct="false">Myosin</button>
+<button class="quiz-opt" data-correct="false">Collagen</button></div><div class="rationale-box" id="rat-quiz-q4"><b>Actin</b> makes up the thin filaments. Myosin makes up the thick filaments instead, and collagen is a structural connective tissue protein unrelated to the sarcomere's contractile filaments.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">During contraction, what happens to the length of the actin and myosin filaments themselves?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">They stay the same length</button>
+<button class="quiz-opt" data-correct="false">They both shrink</button>
+<button class="quiz-opt" data-correct="false">They both stretch longer</button></div><div class="rationale-box" id="rat-quiz-q5">The filaments <b>stay the same length</b> — contraction happens because they slide past each other, not because they shrink. This is the key insight of sliding filament theory, distinguishing it from a simple 'shrinking' model of contraction.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">Which ion must be released for a muscle contraction to begin?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Calcium</button>
+<button class="quiz-opt" data-correct="false">Sodium</button>
+<button class="quiz-opt" data-correct="false">Potassium</button></div><div class="rationale-box" id="rat-quiz-q6"><b>Calcium</b> release exposes the myosin-binding sites on actin, allowing contraction to begin. Sodium and potassium play roles in nerve signaling more broadly, but calcium is the specific trigger for the contraction cycle itself.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">Rigor mortis occurs because, after death:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">ATP production stops, so myosin can't release actin</button>
+<button class="quiz-opt" data-correct="false">Calcium floods every cell simultaneously and prevents relaxation</button>
+<button class="quiz-opt" data-correct="false">Muscle fibers instantly convert to bone tissue</button></div><div class="rationale-box" id="rat-quiz-q7">Rigor mortis happens because <b>ATP production stops</b>, leaving myosin heads unable to release their grip on actin. Muscle tissue does not convert to bone, and while calcium changes occur after death, the defining mechanism tested here is the loss of ATP.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 7</span></div></section>
+<section class="slide" data-slide="12"><p class="eyebrow">Debrief</p><h1 class="slide-title">Week 11 Quick-Reference Recap</h1>
+  <p>One page to glance at before Exam 4 — everything from this week, condensed.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Three Muscle Types</h4><ul><li>Skeletal — voluntary, striated</li><li>Cardiac — involuntary, striated</li><li>Smooth — involuntary, non-striated</li></ul></div>
+<div class="recap-cell"><h4>Organization Hierarchy</h4><p>Muscle &rarr; Fascicle &rarr; Muscle fiber &rarr; Myofibril &rarr; Sarcomere.</p></div>
+<div class="recap-cell"><h4>Sarcomere Components</h4><ul><li>Z-discs — sarcomere boundaries</li><li>Thin filaments — actin</li><li>Thick filaments — myosin</li></ul></div>
+<div class="recap-cell"><h4>Sliding Filament Theory</h4><p>Myosin pulls actin inward; filaments don't shrink, they slide past each other.</p></div>
+<div class="recap-cell"><h4>Contraction Requirements</h4><ul><li>Calcium — exposes binding sites</li><li>ATP — powers myosin release/re-cock</li></ul></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Skeletal Muscle</span><span class="term-pill">Cardiac Muscle</span><span class="term-pill">Smooth Muscle</span><span class="term-pill">Fascicle</span><span class="term-pill">Myofibril</span><span class="term-pill">Sarcomere</span><span class="term-pill">Actin</span><span class="term-pill">Myosin</span><span class="term-pill">Sliding Filament Theory</span><span class="term-pill">Calcium</span><span class="term-pill">ATP</span></div>
+  <div class="next-box"><strong>Next — Week 12: The Muscular System + Exam 4 Synthesis.</strong> You'll build on this week's contraction mechanism by naming and locating the body's major skeletal muscles, then pull Chapters 10&ndash;11 together for Exam 4.</div>
+  <div class="end-actions"><a class="end-btn primary next-lesson-link" href="week12-muscular-system-exam4-synthesis.html">Next: Week 12 &rarr;</a><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
