@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 15: Autonomic NS & Cumulative Final Review</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 5 &middot; Final Week</div></div></div><div class="lesson-tag">Week 15 &middot; Ch. 16 + Cumulative Review &middot; ANS &amp; Final</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 12</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 15 · Chapter 16 + Cumulative Review</p><h1 class="slide-title">The Autonomic Nervous System &amp; Your Final Review</h1>
+  <div class="card warm"><p style="margin-bottom:0;">This is the last week of the supplemental program. First, new material: the autonomic nervous system &mdash; the involuntary half of everything covered the last two weeks. Then, since this closes both Exam Block 5 and the entire 15-week course, the second half is a full cumulative review pulling all 16 chapters together, with your final one-page study sheet at the very end.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Distinguish the somatic and autonomic nervous systems</span></li>
+<li><span class="num">2</span><span>Compare the sympathetic and parasympathetic divisions</span></li>
+<li><span class="num">3</span><span>Explain the two-neuron autonomic pathway</span></li>
+<li><span class="num">4</span><span>Trace the major thread connecting all five exam blocks</span></li>
+<li><span class="num">5</span><span>Complete a comprehensive, cumulative practice quiz</span></li>
+<li><span class="num">6</span><span>Walk away with one final study sheet covering the whole course</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Part 1 — Big Picture</p><h1 class="slide-title">Somatic vs. autonomic: two halves of the motor system</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="200" height="140" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="120" y="60" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Somatic NS</text>
+  <text x="120" y="90" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Voluntary control</text>
+  <text x="120" y="104" text-anchor="middle" font-size="9.5" fill="#1c1c1c">of skeletal muscle</text>
+  <text x="120" y="130" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">One neuron,</text>
+  <text x="120" y="144" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">CNS straight to muscle</text>
+  <rect x="260" y="30" width="200" height="140" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.5"/>
+  <text x="360" y="60" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Autonomic NS</text>
+  <text x="360" y="90" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Involuntary control of</text>
+  <text x="360" y="104" text-anchor="middle" font-size="9.5" fill="#1c1c1c">organs, glands, vessels</text>
+  <text x="360" y="130" text-anchor="middle" font-size="9" fill="#7A5A00" font-weight="700">Two neurons,</text>
+  <text x="360" y="144" text-anchor="middle" font-size="9" fill="#7A5A00" font-weight="700">CNS to ganglion to organ</text>
+</svg></div>
+    <div class="diagram-caption">The motor side of the nervous system splits into two systems. The somatic nervous system gives voluntary control over skeletal muscle, using a single neuron running straight from the CNS to the muscle. The autonomic nervous system (ANS) instead gives involuntary control over organs, glands, and blood vessels, always using two neurons in series with a ganglion in between.</div>
+    
+  </div></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Part 1 — Vocabulary &amp; Word Parts</p><h1 class="slide-title">Autonomic nervous system roots</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">auto-</span><span class="meaning">self</span></div><div class="wp-body"><b>Auto</b>nomic = "self-governing" &mdash; runs without conscious control.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">sympath/o-</span><span class="meaning">sympathy, feeling with</span></div><div class="wp-body"><b>Sympath</b>etic division = the "fight or flight" branch, active under stress.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">para-</span><span class="meaning">beside, alongside</span></div><div class="wp-body"><b>Para</b>sympathetic division = literally "alongside" the sympathetic, the "rest and digest" branch.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">gangli/o-</span><span class="meaning">ganglion, knot</span></div><div class="wp-body">A <b>gangli</b>on is a cluster of neuron cell bodies outside the CNS &mdash; where pre- and postganglionic neurons connect.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">chol/o- / -ergic</span><span class="meaning">relating to a neurotransmitter</span></div><div class="wp-body">Cholin<b>ergic</b> = signaling with acetylcholine, the parasympathetic neurotransmitter.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">adren/o-</span><span class="meaning">adrenal gland, epinephrine</span></div><div class="wp-body"><b>Adren</b>ergic = signaling with norepinephrine/epinephrine, the sympathetic neurotransmitter family.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Part 1 — Structure &amp; Function</p><h1 class="slide-title">Sympathetic vs. parasympathetic: opposite effects, same organs</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="20" width="250" height="180" rx="10" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="145" y="50" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Sympathetic</text>
+  <text x="145" y="68" text-anchor="middle" font-size="10" fill="#DB2F30" font-weight="700">"Fight or flight"</text>
+  <text x="145" y="95" text-anchor="middle" font-size="9" fill="#1c1c1c">Heart rate up</text>
+  <text x="145" y="112" text-anchor="middle" font-size="9" fill="#1c1c1c">Airways dilate</text>
+  <text x="145" y="129" text-anchor="middle" font-size="9" fill="#1c1c1c">Blood to muscles</text>
+  <text x="145" y="146" text-anchor="middle" font-size="9" fill="#1c1c1c">Digestion slows</text>
+  <text x="145" y="170" text-anchor="middle" font-size="8.5" fill="#DB2F30" font-weight="700">Neurotransmitter: norepinephrine</text>
+  <rect x="290" y="20" width="250" height="180" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="415" y="50" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Parasympathetic</text>
+  <text x="415" y="68" text-anchor="middle" font-size="10" fill="#0047BA" font-weight="700">"Rest and digest"</text>
+  <text x="415" y="95" text-anchor="middle" font-size="9" fill="#1c1c1c">Heart rate down</text>
+  <text x="415" y="112" text-anchor="middle" font-size="9" fill="#1c1c1c">Airways constrict</text>
+  <text x="415" y="129" text-anchor="middle" font-size="9" fill="#1c1c1c">Blood to digestion</text>
+  <text x="415" y="146" text-anchor="middle" font-size="9" fill="#1c1c1c">Digestion speeds up</text>
+  <text x="415" y="170" text-anchor="middle" font-size="8.5" fill="#0047BA" font-weight="700">Neurotransmitter: acetylcholine</text>
+</svg></div>
+    <div class="diagram-caption">Most organs receive input from both divisions, which push in opposite directions to keep the body balanced. The sympathetic division (norepinephrine) mobilizes the body for action: heart rate rises, airways widen, and digestion is put on hold. The parasympathetic division (acetylcholine) does the opposite, conserving energy and supporting digestion during calm conditions.</div>
+    
+  </div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Part 1 — Structure &amp; Function</p><h1 class="slide-title">The two-neuron autonomic pathway</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="60" width="100" height="60" rx="8" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="70" y="95" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0A1F3D">CNS</text>
+  <path d="M120,90 L200,90" stroke="#C9A84C" stroke-width="3"/>
+  <text x="160" y="75" text-anchor="middle" font-size="8.5" fill="#7A5A00" font-weight="700">Preganglionic</text>
+  <circle cx="220" cy="90" r="22" fill="#F5EFE0" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="220" y="94" text-anchor="middle" font-size="8" fill="#0A1F3D" font-weight="700">Ganglion</text>
+  <path d="M242,90 L340,90" stroke="#DB2F30" stroke-width="3"/>
+  <text x="290" y="75" text-anchor="middle" font-size="8.5" fill="#DB2F30" font-weight="700">Postganglionic</text>
+  <rect x="340" y="65" width="110" height="50" rx="8" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="395" y="95" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0A1F3D">Target organ</text>
+</svg></div>
+    <div class="diagram-caption">Unlike the single-neuron somatic pathway, every autonomic signal travels through exactly two neurons: a preganglionic neuron runs from the CNS to a ganglion, and a postganglionic neuron continues from that ganglion to the target organ. This two-neuron relay, with its built-in ganglion checkpoint, is the structural signature of the entire autonomic system.</div>
+    
+  </div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Part 1 — Clinical Correlation</p><h1 class="slide-title">Epinephrine and anaphylaxis: the sympathetic response, delivered by injection</h1>
+  <p>This connects the sympathetic effects above directly to a medication many students already recognize.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">An <strong>EpiPen</strong> delivers epinephrine, a hormone that mimics norepinephrine's sympathetic effects almost exactly. During anaphylaxis (a severe allergic reaction), airways can swell shut and blood pressure can crash; injected epinephrine rapidly reverses both by triggering the same "fight or flight" effects covered above &mdash; opening airways and constricting blood vessels to raise blood pressure &mdash; buying critical time before emergency care arrives.</p></div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Part 2 — The Whole Course, One Map</p><h1 class="slide-title">Five exam blocks, sixteen chapters, one connected body</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="15" width="90" height="38" rx="7" fill="#fff" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="65" y="32" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0A1F3D">Exam 1</text>
+  <text x="65" y="46" text-anchor="middle" font-size="8.5" fill="#0047BA" font-weight="700">Ch. 1-3</text>
+  <text x="120" y="39" font-size="9.5" fill="#1c1c1c">Foundations, chemistry, the cell</text><rect x="20" y="60" width="90" height="38" rx="7" fill="#fff" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="65" y="77" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0A1F3D">Exam 2</text>
+  <text x="65" y="91" text-anchor="middle" font-size="8.5" fill="#C9A84C" font-weight="700">Ch. 4-6</text>
+  <text x="120" y="84" font-size="9.5" fill="#1c1c1c">Tissues, skin, bone tissue</text><rect x="20" y="105" width="90" height="38" rx="7" fill="#fff" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="65" y="122" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0A1F3D">Exam 3</text>
+  <text x="65" y="136" text-anchor="middle" font-size="8.5" fill="#DB2F30" font-weight="700">Ch. 7-9</text>
+  <text x="120" y="129" font-size="9.5" fill="#1c1c1c">Axial + appendicular skeleton, joints</text><rect x="20" y="150" width="90" height="38" rx="7" fill="#fff" stroke="#2E7D55" stroke-width="2.2"/>
+  <text x="65" y="167" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0A1F3D">Exam 4</text>
+  <text x="65" y="181" text-anchor="middle" font-size="8.5" fill="#2E7D55" font-weight="700">Ch. 10-11</text>
+  <text x="120" y="174" font-size="9.5" fill="#1c1c1c">Muscle tissue, the muscular system</text><rect x="20" y="195" width="90" height="38" rx="7" fill="#fff" stroke="#5B3E96" stroke-width="2.2"/>
+  <text x="65" y="212" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0A1F3D">Exam 5</text>
+  <text x="65" y="226" text-anchor="middle" font-size="8.5" fill="#5B3E96" font-weight="700">Ch. 12-16</text>
+  <text x="120" y="219" font-size="9.5" fill="#1c1c1c">Neurons, spinal cord, brain, ANS</text>
+</svg></div>
+    <div class="diagram-caption">Zoom all the way out, and the whole semester follows one path: from the chemistry and cells that build every structure (Exam 1), to the tissues and bone that give the body shape (Exam 2-3), to the muscles that move that shape (Exam 4), to the nervous system that controls all of it (Exam 5). Nothing in this course stands alone &mdash; every later chapter depends on the ones before it.</div>
+    
+  </div></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Part 2 — Cross-Chapter Connections</p><h1 class="slide-title">Three threads that run through the entire course</h1><div class="card blue"><p style="margin-bottom:0;"><strong>Thread 1 &mdash; Structure predicts function, at every scale.</strong> A bone's shape predicts its joint type (Ch. 7-9); a muscle's shape and attachment points predict its action (Ch. 10-11); a neuron's shape predicts its role (Ch. 12). This single idea, first introduced with bone, explains structures in every system covered since.</p></div>
+  <div class="card blue"><p style="margin-bottom:0;"><strong>Thread 2 &mdash; The microscopic explains the macroscopic.</strong> Sliding filaments (invisible) explain whole-muscle contraction (visible); individual neurons (invisible) explain entire nervous-system pathways (whole-body). Zooming in always explains what you see when you zoom back out.</p></div>
+  <div class="card blue"><p style="margin-bottom:0;"><strong>Thread 3 &mdash; The spine is the throughline.</strong> Vertebrae (Ch. 7) protect the spinal cord (Ch. 13), which routes signals to every muscle (Ch. 10-11) and organ (Ch. 16) in the body &mdash; one structure, first introduced in Exam Block 3, that reappears in every block after it.</p></div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Part 2 — Lab Crosswalk</p><h1 class="slide-title">Connecting lecture to Lab 10 &amp; Lab Exam 3</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="20" width="440" height="120" rx="10" fill="#F5EFE0" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="240" y="50" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Lab 10 &amp; Lab Exam 3</text>
+  <text x="240" y="75" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Brain/cranial nerve model ID, reflex testing,</text>
+  <text x="240" y="92" text-anchor="middle" font-size="9.5" fill="#1c1c1c">and autonomic response scenarios</text>
+  <text x="240" y="118" text-anchor="middle" font-size="9" fill="#7A5A00" font-weight="700">Ties to: Ch. 12-16 in full</text>
+</svg></div>
+    <div class="diagram-caption">Your final lab exam draws on everything from Chapters 12 through 16: identifying brain and cranial nerve structures on models, demonstrating and interpreting reflex tests, and working through autonomic response scenarios (predicting whether a given situation calls for a sympathetic or parasympathetic response).</div>
+    
+  </div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Your Turn — One Final Application</p><h1 class="slide-title">Bring it all together before the quiz</h1>
+  <div class="gp-box"><p class="gp-prompt">A person is startled by a loud noise: their heart rate spikes, pupils dilate, and they feel ready to run.</p><p style="font-weight:600;font-size:14.5px;">Question 1 — Which autonomic division is responsible for this response?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">Sympathetic</button>
+<button class="choice-btn" data-correct="false">Parasympathetic</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">This is the classic <b>sympathetic</b>, "fight or flight" response — heart rate rising and pupils dilating are textbook sympathetic effects, mobilizing the body for immediate action.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — Structurally, how did this signal reach the heart?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">A two-neuron pathway, through a ganglion</button>
+<button class="choice-btn" data-correct="false">A single neuron running directly to the heart</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">Every autonomic signal &mdash; sympathetic or parasympathetic &mdash; travels through <b>two neurons connected at a ganglion</b>. A single-neuron pathway describes the somatic system instead, which controls skeletal muscle, not the heart.</div></div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Cumulative Final Practice Quiz</p><h1 class="slide-title">12 questions spanning the entire course</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">The chemical level of organization (Ch. 2) is foundational because:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Every structure in the body is ultimately built from chemical bonds and molecules</button>
+<button class="quiz-opt" data-correct="false">It's only relevant to Exam 1</button>
+<button class="quiz-opt" data-correct="false">It has no connection to later chapters</button></div><div class="rationale-box" id="rat-quiz-q1">Chemistry is <b>foundational</b> to every later chapter — cells, tissues, bones, and muscles are all built from the molecules covered first. This is precisely why the course begins there.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">Epithelial and connective tissue (Ch. 4) both contribute directly to:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">The integumentary system (Ch. 5)</button>
+<button class="quiz-opt" data-correct="false">Only the muscular system</button>
+<button class="quiz-opt" data-correct="false">Only the nervous system</button></div><div class="rationale-box" id="rat-quiz-q2">Skin (Ch. 5) is built from <b>epithelial and connective tissue</b> — a direct, one-chapter-later application of Ch. 4's tissue types.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">A bone's shape (long, flat, irregular) most directly predicts its:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Function and the joint types it can form</button>
+<button class="quiz-opt" data-correct="false">Chemical composition only</button>
+<button class="quiz-opt" data-correct="false">Color</button></div><div class="rationale-box" id="rat-quiz-q3">Bone <b>shape predicts function</b> and joint compatibility — the same structure-predicts-function thread traced across the whole course.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">The sliding filament theory (Ch. 10) explains contraction at the level of the:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Sarcomere</button>
+<button class="quiz-opt" data-correct="false">Whole muscle only</button>
+<button class="quiz-opt" data-correct="false">Skeletal system</button></div><div class="rationale-box" id="rat-quiz-q4">Sliding filaments act at the <b>sarcomere</b> level — the microscopic mechanism that, scaled up, produces visible whole-muscle contraction.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">A muscle named using the "action + location" convention (Ch. 11) would be exemplified by:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Flexor carpi radialis</button>
+<button class="quiz-opt" data-correct="false">Gluteus maximus</button>
+<button class="quiz-opt" data-correct="false">Deltoid</button></div><div class="rationale-box" id="rat-quiz-q5">"<b>Flexor carpi radialis</b>" combines action (flexor) with location (carpi radialis, the wrist). "Maximus" names by size; "deltoid" names by shape.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">Which neuroglial cell myelinates axons in the CNS?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Oligodendrocytes</button>
+<button class="quiz-opt" data-correct="false">Schwann cells</button>
+<button class="quiz-opt" data-correct="false">Astrocytes</button></div><div class="rationale-box" id="rat-quiz-q6"><b>Oligodendrocytes</b> myelinate CNS axons. Schwann cells do the same job in the PNS; astrocytes provide general neuron support instead.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">In a spinal cord cross-section, the gray matter is located:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">In an inner, H-shaped core</button>
+<button class="quiz-opt" data-correct="false">In an outer ring</button>
+<button class="quiz-opt" data-correct="false">Only in cranial nerves</button></div><div class="rationale-box" id="rat-quiz-q7">Spinal cord gray matter sits in an <b>inner, H-shaped core</b>, surrounded by white matter — the reverse of the brain's organization.</div></div>
+<div class="quiz-q" data-quiz="q8"><div class="qnum">Question 8</div><div class="qtext">Which cerebral lobe processes vision?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Occipital</button>
+<button class="quiz-opt" data-correct="false">Frontal</button>
+<button class="quiz-opt" data-correct="false">Temporal</button></div><div class="rationale-box" id="rat-quiz-q8">The <b>occipital</b> lobe, at the back of the brain, processes vision.</div></div>
+<div class="quiz-q" data-quiz="q9"><div class="qnum">Question 9</div><div class="qtext">Upper motor neuron damage typically produces:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Spastic paralysis with exaggerated reflexes</button>
+<button class="quiz-opt" data-correct="false">Flaccid paralysis with absent reflexes</button>
+<button class="quiz-opt" data-correct="false">No change in muscle tone</button></div><div class="rationale-box" id="rat-quiz-q9"><b>Upper motor neuron</b> damage produces spastic paralysis. Flaccid paralysis with absent reflexes instead points to lower motor neuron damage.</div></div>
+<div class="quiz-q" data-quiz="q10"><div class="qnum">Question 10</div><div class="qtext">The parasympathetic division's neurotransmitter is:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Acetylcholine</button>
+<button class="quiz-opt" data-correct="false">Norepinephrine</button>
+<button class="quiz-opt" data-correct="false">Calcium</button></div><div class="rationale-box" id="rat-quiz-q10">The parasympathetic division signals with <b>acetylcholine</b>. The sympathetic division uses norepinephrine instead; calcium's role is in muscle contraction (Ch. 10), not autonomic signaling.</div></div>
+<div class="quiz-q" data-quiz="q11"><div class="qnum">Question 11</div><div class="qtext">Every autonomic pathway, sympathetic or parasympathetic, uses:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Exactly two neurons, connected at a ganglion</button>
+<button class="quiz-opt" data-correct="false">Exactly one neuron</button>
+<button class="quiz-opt" data-correct="false">A variable number of neurons</button></div><div class="rationale-box" id="rat-quiz-q11">Autonomic pathways always use <b>exactly two neurons</b> in series, meeting at a ganglion. The single-neuron pathway belongs to the somatic system instead.</div></div>
+<div class="quiz-q" data-quiz="q12"><div class="qnum">Question 12</div><div class="qtext">Across the whole course, the idea that shows up most consistently, from bone to muscle to neuron, is that:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Structure predicts function</button>
+<button class="quiz-opt" data-correct="false">Every system works in total isolation</button>
+<button class="quiz-opt" data-correct="false">Only Exam 5 material matters for real-world application</button></div><div class="rationale-box" id="rat-quiz-q12"><b>Structure predicts function</b> is the thread traced across every exam block this semester — from bone shape to muscle attachment to neuron shape, the same principle keeps reappearing.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 12</span></div></section>
+<section class="slide" data-slide="12"><p class="eyebrow">Final Study Sheet</p><h1 class="slide-title">Whole-Course One-Page Recap: Chapters 1&ndash;16</h1>
+  <p>Your last stop before the cumulative final &mdash; the entire semester, condensed onto one page.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Exam 1 — Ch. 1-3</h4><p>Terminology, homeostasis, chemistry, the cell.</p></div>
+<div class="recap-cell"><h4>Exam 2 — Ch. 4-6</h4><p>Tissue types, the integumentary system, osseous tissue.</p></div>
+<div class="recap-cell"><h4>Exam 3 — Ch. 7-9</h4><p>Axial + appendicular skeleton, joint classification.</p></div>
+<div class="recap-cell"><h4>Exam 4 — Ch. 10-11</h4><p>Sliding filament theory, origin/insertion, muscle naming.</p></div>
+<div class="recap-cell"><h4>Exam 5 — Ch. 12-14</h4><p>Neuron structure, spinal cord/nerves, reflex arc, brain regions.</p></div>
+<div class="recap-cell"><h4>Exam 5 — Ch. 15-16</h4><p>Sensory/motor pathways, sympathetic vs. parasympathetic ANS.</p></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Homeostasis</span><span class="term-pill">Tissue</span><span class="term-pill">Osseous Tissue</span><span class="term-pill">Axial Skeleton</span><span class="term-pill">Sarcomere</span><span class="term-pill">Agonist</span><span class="term-pill">Neuron</span><span class="term-pill">Reflex Arc</span><span class="term-pill">Cerebrum</span><span class="term-pill">Sympathetic</span><span class="term-pill">Parasympathetic</span><span class="term-pill">Ganglion</span></div>
+  <div class="next-box"><strong>You've completed the full 15-week A&amp;P I Supplemental Program.</strong> All 16 chapters are covered, cross-referenced, and drilled. Good luck on your cumulative final &mdash; you've built the foundation for it, one exam block at a time.</div>
+  <div class="end-actions"><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
