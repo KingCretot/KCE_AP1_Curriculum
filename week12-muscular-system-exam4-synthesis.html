@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 12: The Muscular System + Exam 4 Synthesis</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 4</div></div></div><div class="lesson-tag">Week 12 &middot; Ch. 11 + Review &middot; Muscular System &amp; Exam 4</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 12</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 12 · Chapter 11 + Review</p><h1 class="slide-title">The Muscular System &amp; Exam 4 Synthesis</h1>
+  <div class="card warm"><p style="margin-bottom:0;">This week has two halves: first, Chapter 11 moves from the microscopic contraction mechanism (Ch. 10) to whole named muscles — how they're organized into pairs, how they're named, and where the major ones are. Then, since this closes Exam Block 4, the second half pulls Chapters 10–11 together, connects them to Lab 8–9, and builds your final study sheet before Exam 4.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Define origin, insertion, agonist, antagonist, and synergist</span></li>
+<li><span class="num">2</span><span>Explain how muscles work in functional pairs across a joint</span></li>
+<li><span class="num">3</span><span>Decode muscle names using the five common naming conventions</span></li>
+<li><span class="num">4</span><span>Locate several major skeletal muscles by region</span></li>
+<li><span class="num">5</span><span>Connect Chapters 10–11 into one coherent muscular system for Exam 4</span></li>
+<li><span class="num">6</span><span>Complete a comprehensive practice quiz and walk away with a one-page study sheet</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Part 1 — Big Picture</p><h1 class="slide-title">Origin and insertion: how a muscle pulls a bone</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="150" y="20" width="40" height="60" rx="8" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="260" y="45" font-size="10.5" fill="#0047BA" font-weight="700">Fixed bone (proximal)</text>
+  <ellipse cx="170" cy="120" rx="45" ry="65" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="260" y="110" font-size="10.5" fill="#DB2F30" font-weight="700">Muscle belly</text>
+  <rect x="150" y="200" width="40" height="60" rx="8" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="260" y="225" font-size="10.5" fill="#7A5A00" font-weight="700">Moving bone (distal)</text>
+  <text x="150" y="15" font-size="10" fill="#0047BA" font-weight="700">Origin</text>
+  <text x="150" y="278" font-size="10" fill="#7A5A00" font-weight="700">Insertion</text>
+</svg></div>
+    <div class="diagram-caption">Every skeletal muscle attaches to bone at two points. The origin is the fixed, typically proximal attachment point that stays relatively still. The insertion is the mobile, typically distal attachment point that gets pulled when the muscle contracts. Knowing which end is which is the foundation for understanding every muscle action covered this week.</div>
+    
+  </div></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Part 1 — Vocabulary &amp; Word Parts</p><h1 class="slide-title">Muscular system roots</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">-flexor</span><span class="meaning">bends a joint</span></div><div class="wp-body">Flexor carpi radialis = a muscle that <b>flex</b>es the wrist on the radius side.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-extensor</span><span class="meaning">straightens a joint</span></div><div class="wp-body"><b>Extensor</b> digitorum = a muscle that extends the fingers.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">gluteus</span><span class="meaning">buttock</span></div><div class="wp-body"><b>Glute</b>us maximus = the largest muscle of the buttock region.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">delt/o-</span><span class="meaning">triangular</span></div><div class="wp-body"><b>Delt</b>oid = the triangular shoulder muscle, named for its shape.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">bi-, tri-, quad-</span><span class="meaning">two, three, four</span></div><div class="wp-body"><b>Bi</b>ceps = two heads of origin. <b>Tri</b>ceps = three. <b>Quad</b>riceps = four.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">recti / rect/o-</span><span class="meaning">straight</span></div><div class="wp-body"><b>Rect</b>us abdominis = the "straight" abdominal muscle, running vertically.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Part 1 — Structure &amp; Function</p><h1 class="slide-title">Muscles work in functional pairs</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="200" height="160" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="120" y="65" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Agonist (Prime Mover)</text>
+  <text x="120" y="90" text-anchor="middle" font-size="9.5" fill="#1c1c1c">e.g. Biceps brachii</text>
+  <text x="120" y="110" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Produces the main</text>
+  <text x="120" y="124" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">movement (elbow flexion)</text>
+
+  <rect x="250" y="30" width="200" height="160" rx="10" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="350" y="65" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Antagonist</text>
+  <text x="350" y="90" text-anchor="middle" font-size="9.5" fill="#1c1c1c">e.g. Triceps brachii</text>
+  <text x="350" y="110" text-anchor="middle" font-size="9" fill="#DB2F30" font-weight="700">Opposes/reverses it</text>
+  <text x="350" y="124" text-anchor="middle" font-size="9" fill="#DB2F30" font-weight="700">(elbow extension)</text>
+</svg></div>
+    <div class="diagram-caption">Muscles can only pull, never push — so producing opposite movements at a joint requires opposing muscle pairs. The agonist (prime mover) produces the main movement being described; the antagonist relaxes and stretches to allow that movement, then can reverse it. A synergist (not pictured) is a third muscle that assists the agonist or stabilizes the joint during the movement.</div>
+    
+  </div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Part 1 — Structure &amp; Function</p><h1 class="slide-title">Five common muscle naming conventions</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="20" width="130" height="38" rx="7" fill="#fff" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="85" y="44" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Location</text>
+  <text x="165" y="44" font-size="10" fill="#1c1c1c">Rectus abdominis — near the abdomen</text><rect x="20" y="70" width="130" height="38" rx="7" fill="#fff" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="85" y="94" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Shape</text>
+  <text x="165" y="94" font-size="10" fill="#1c1c1c">Deltoid — triangular, like the Greek letter</text><rect x="20" y="120" width="130" height="38" rx="7" fill="#fff" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="85" y="144" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Action</text>
+  <text x="165" y="144" font-size="10" fill="#1c1c1c">Flexor carpi radialis — flexes the wrist</text><rect x="20" y="170" width="130" height="38" rx="7" fill="#fff" stroke="#2E7D55" stroke-width="2.2"/>
+  <text x="85" y="194" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Size</text>
+  <text x="165" y="194" font-size="10" fill="#1c1c1c">Gluteus maximus — the largest of 3 glutes</text><rect x="20" y="220" width="130" height="38" rx="7" fill="#fff" stroke="#5B3E96" stroke-width="2.2"/>
+  <text x="85" y="244" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D"># of origins</text>
+  <text x="165" y="244" font-size="10" fill="#1c1c1c">Biceps brachii — two heads of origin</text>
+</svg></div>
+    <div class="diagram-caption">Muscle names aren't random — they're built from a small set of naming conventions describing the muscle's location, shape, action, relative size, or number of origins. Once you recognize these patterns, an unfamiliar muscle name often tells you most of what you need to know about it without memorizing it directly.</div>
+    
+  </div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Part 1 — Your Turn</p><h1 class="slide-title">Apply it before we move to review</h1>
+  <div class="gp-box"><p class="gp-prompt">A muscle called the "extensor digitorum longus" is being described in a lab practical.</p><p style="font-weight:600;font-size:14.5px;">Question 1 — Based on its name alone, what movement does this muscle most likely produce?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">Extension of the digits (fingers/toes)</button>
+<button class="choice-btn" data-correct="false">Flexion of the wrist</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">The name directly tells you: "<b>extensor</b>" indicates extension, and "<b>digitorum</b>" refers to the digits (fingers or toes). This is a direct application of the naming-by-action convention covered this week.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — During this extension movement, what role does this muscle play?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">Agonist (prime mover)</button>
+<button class="choice-btn" data-correct="false">Antagonist</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">Since this muscle is actively producing the extension movement being described, it's acting as the <b>agonist</b> (prime mover) for that specific action. It would only be called the antagonist if a different muscle (like a flexor) were the one actively contracting instead.</div></div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Part 1 — Clinical Correlation</p><h1 class="slide-title">Muscle strains and the agonist/antagonist balance</h1>
+  <p>This connects the functional-pair concept directly to one of the most common sports injuries.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">A <strong>muscle strain</strong> occurs when a muscle is stretched or torn beyond its normal range — often when the antagonist contracts unexpectedly or too forcefully while the agonist is still lengthening. Hamstring strains are a classic example: the hamstrings (antagonist to the quadriceps during knee extension) are frequently injured during activities requiring rapid, forceful direction changes, exactly where the agonist/antagonist balance is tested hardest.</p></div></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Part 2 — Exam Blueprint</p><h1 class="slide-title">What Exam 4 covers</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="30" y="30" width="160" height="130" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="110" y="90" text-anchor="middle" font-size="26" font-weight="700" fill="#0047BA">~50%</text>
+  <text x="110" y="112" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Ch. 10</text>
+  <text x="110" y="126" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Muscle Tissue</text>
+
+  <rect x="210" y="30" width="160" height="130" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="290" y="90" text-anchor="middle" font-size="26" font-weight="700" fill="#7A5A00">~50%</text>
+  <text x="290" y="112" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Ch. 11</text>
+  <text x="290" y="126" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Muscular System</text>
+</svg></div>
+    <div class="diagram-caption">Exam 4 covers Chapters 10–11 roughly evenly. As with every lecture exam this semester, this is one of several scores worth a share of your final grade, with the lowest lecture exam score dropped — so a strong showing here matters, but isn't the whole game.</div>
+    
+  </div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Part 2 — Cross-Chapter Connections</p><h1 class="slide-title">Two threads worth tracing before the exam</h1><div class="card blue"><p style="margin-bottom:0;"><strong>Thread 1 — Microscopic contraction powers macroscopic movement.</strong> Chapter 10's sliding filament mechanism (myosin pulling actin) is literally what's happening inside every fiber of the whole named muscles covered in Chapter 11 — the two chapters describe the exact same process at two different scales.</p></div>
+  <div class="card blue"><p style="margin-bottom:0;"><strong>Thread 2 — Naming conventions connect to joint movements from Chapter 9.</strong> A muscle named "flexor carpi radialis" only makes sense once you already know what flexion means (Ch. 9) and where the wrist and radius are (Ch. 7–8) — Chapter 11's vocabulary is built directly on top of the last three chapters.</p></div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Part 2 — Lab Crosswalk</p><h1 class="slide-title">Connecting lecture to Lab 8–9</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="250" height="160" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="145" y="58" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Lab 8 &mdash; Muscle ID</text>
+  <text x="145" y="80" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Identify named muscles on</text>
+  <text x="145" y="94" text-anchor="middle" font-size="9.5" fill="#1c1c1c">models &mdash; deltoid, biceps,</text>
+  <text x="145" y="108" text-anchor="middle" font-size="9.5" fill="#1c1c1c">quadriceps, etc.</text>
+  <text x="145" y="130" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Ties to: Ch. 11 naming</text>
+  <text x="145" y="144" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">conventions</text>
+
+  <rect x="290" y="30" width="250" height="160" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="415" y="58" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Lab 9 &mdash; Muscle Action</text>
+  <text x="415" y="80" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Demonstrate/identify which</text>
+  <text x="415" y="94" text-anchor="middle" font-size="9.5" fill="#1c1c1c">muscle produces a given</text>
+  <text x="415" y="108" text-anchor="middle" font-size="9.5" fill="#1c1c1c">joint movement</text>
+  <text x="415" y="130" text-anchor="middle" font-size="9" fill="#7A5A00" font-weight="700">Ties to: Ch. 9 movements +</text>
+  <text x="415" y="144" text-anchor="middle" font-size="9" fill="#7A5A00" font-weight="700">Ch. 11 agonist/antagonist</text>
+</svg></div>
+    <div class="diagram-caption">Labs 8 and 9 test the same two skills from this block, applied hands-on: naming specific muscles on physical models (straight from Ch. 11 vocabulary and naming conventions), and identifying which muscle produces a given movement (straight from Ch. 9's movement terms plus Ch. 11's agonist/antagonist concept).</div>
+    
+  </div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Comprehensive Practice Quiz</p><h1 class="slide-title">Exam 4 dress rehearsal &mdash; 10 questions across Ch. 10&ndash;11</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">Which muscle type is voluntary and striated?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Skeletal</button>
+<button class="quiz-opt" data-correct="false">Cardiac</button>
+<button class="quiz-opt" data-correct="false">Smooth</button></div><div class="rationale-box" id="rat-quiz-q1"><b>Skeletal</b> muscle is voluntary and striated. Cardiac muscle is also striated but involuntary; smooth muscle is neither voluntary nor striated.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">A sarcomere runs from one Z-disc to the:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Next Z-disc</button>
+<button class="quiz-opt" data-correct="false">Nearest fascicle</button>
+<button class="quiz-opt" data-correct="false">Muscle's origin</button></div><div class="rationale-box" id="rat-quiz-q2">A sarcomere is defined as the region between two <b>Z-discs</b>. Fascicles and a muscle's origin are much larger structures, unrelated to the sarcomere's specific boundaries.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">Which protein makes up the thick filaments?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Myosin</button>
+<button class="quiz-opt" data-correct="false">Actin</button>
+<button class="quiz-opt" data-correct="false">Collagen</button></div><div class="rationale-box" id="rat-quiz-q3"><b>Myosin</b> makes up the thick filaments. Actin makes up the thin filaments instead, and collagen is unrelated to the sarcomere's contractile proteins.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">The fixed, typically proximal attachment point of a muscle is called the:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Origin</button>
+<button class="quiz-opt" data-correct="false">Insertion</button>
+<button class="quiz-opt" data-correct="false">Sarcomere</button></div><div class="rationale-box" id="rat-quiz-q4">The <b>origin</b> is the fixed attachment point. The insertion is the mobile end that gets pulled, and a sarcomere is a microscopic contractile unit, unrelated to whole-muscle attachment points.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">During elbow flexion, the biceps brachii acts as the:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Agonist</button>
+<button class="quiz-opt" data-correct="false">Antagonist</button>
+<button class="quiz-opt" data-correct="false">Origin</button></div><div class="rationale-box" id="rat-quiz-q5">The biceps brachii is the <b>agonist</b> (prime mover) for elbow flexion — it's the muscle actively producing that movement. The triceps brachii would be the antagonist in this scenario.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">A muscle named "gluteus maximus" is named according to which convention?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Size</button>
+<button class="quiz-opt" data-correct="false">Shape</button>
+<button class="quiz-opt" data-correct="false">Number of origins</button></div><div class="rationale-box" id="rat-quiz-q6">"Maximus" indicates <b>size</b> — this is the largest of the three gluteal muscles. Shape-based names (like deltoid) and origin-count names (like biceps) follow different conventions.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">Calcium's role in muscle contraction is to:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Expose the myosin-binding sites on actin</button>
+<button class="quiz-opt" data-correct="false">Provide the energy for the myosin power stroke</button>
+<button class="quiz-opt" data-correct="false">Anchor the muscle to its origin</button></div><div class="rationale-box" id="rat-quiz-q7">Calcium <b>exposes the myosin-binding sites</b> on actin, allowing contraction to begin. ATP (not calcium) provides the energy for the power stroke, and neither is involved in anchoring a muscle to bone.</div></div>
+<div class="quiz-q" data-quiz="q8"><div class="qnum">Question 8</div><div class="qtext">A synergist muscle's role is to:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Assist the agonist or stabilize the joint</button>
+<button class="quiz-opt" data-correct="false">Produce the exact opposite movement of the agonist</button>
+<button class="quiz-opt" data-correct="false">Replace the agonist entirely during contraction</button></div><div class="rationale-box" id="rat-quiz-q8">A <b>synergist</b> assists the agonist or stabilizes the joint during a movement. Producing the opposite movement describes the antagonist instead, and a synergist works alongside the agonist rather than replacing it.</div></div>
+<div class="quiz-q" data-quiz="q9"><div class="qnum">Question 9</div><div class="qtext">"Flexor carpi radialis" is named using which combination of conventions?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Action + location</button>
+<button class="quiz-opt" data-correct="false">Shape + size</button>
+<button class="quiz-opt" data-correct="false">Number of origins only</button></div><div class="rationale-box" id="rat-quiz-q9">"Flexor" describes the <b>action</b> (flexion), and "carpi radialis" describes the <b>location</b> (wrist, radius side) — a combination of two naming conventions, not shape/size or origin count alone.</div></div>
+<div class="quiz-q" data-quiz="q10"><div class="qnum">Question 10</div><div class="qtext">Rigor mortis is a direct illustration of ATP's role in muscle:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Relaxation</button>
+<button class="quiz-opt" data-correct="false">Growth</button>
+<button class="quiz-opt" data-correct="false">Naming</button></div><div class="rationale-box" id="rat-quiz-q10">Rigor mortis shows ATP's role in <b>relaxation</b> — without ATP, myosin can't release actin, leaving the muscle locked in contraction. It has nothing to do with muscle growth or the naming conventions covered in Chapter 11.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 10</span></div></section>
+<section class="slide" data-slide="12"><p class="eyebrow">Final Study Sheet</p><h1 class="slide-title">Exam 4 One-Page Recap: Chapters 10–11</h1>
+  <p>Your last stop before the real exam — everything from this block, condensed onto one page.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Ch. 10 — Muscle Types</h4><ul><li>Skeletal — voluntary, striated</li><li>Cardiac — involuntary, striated</li><li>Smooth — involuntary, non-striated</li></ul></div>
+<div class="recap-cell"><h4>Ch. 10 — Organization</h4><p>Muscle &rarr; Fascicle &rarr; Fiber &rarr; Myofibril &rarr; Sarcomere (Z-disc to Z-disc).</p></div>
+<div class="recap-cell"><h4>Ch. 10 — Contraction</h4><p>Sliding filament theory: myosin pulls actin inward. Requires calcium (exposes binding sites) + ATP (powers release/re-cock).</p></div>
+<div class="recap-cell"><h4>Ch. 11 — Attachment Points</h4><ul><li>Origin — fixed, proximal</li><li>Insertion — mobile, distal</li></ul></div>
+<div class="recap-cell"><h4>Ch. 11 — Functional Pairs</h4><ul><li>Agonist — prime mover</li><li>Antagonist — opposes/reverses</li><li>Synergist — assists/stabilizes</li></ul></div>
+<div class="recap-cell"><h4>Ch. 11 — Naming Conventions</h4><p>Location, Shape, Action, Size, Number of origins.</p></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Skeletal Muscle</span><span class="term-pill">Sarcomere</span><span class="term-pill">Sliding Filament Theory</span><span class="term-pill">Calcium</span><span class="term-pill">ATP</span><span class="term-pill">Origin</span><span class="term-pill">Insertion</span><span class="term-pill">Agonist</span><span class="term-pill">Antagonist</span><span class="term-pill">Synergist</span></div>
+  <div class="next-box"><strong>You've completed Exam Block 4.</strong> Chapters 10–11 are covered, cross-referenced, and drilled. Good luck on Exam 4 — and when you're ready, Exam Block 5 begins with Neural Tissue and the Spinal Cord.</div>
+  <div class="end-actions"><a class="end-btn primary next-lesson-link" href="week13-neural-tissue-spinal-cord.html">Next: Week 13 &rarr;</a><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
