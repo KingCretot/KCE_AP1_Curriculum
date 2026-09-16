@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 2: The Chemical Level of Organization</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 1</div></div></div><div class="lesson-tag">Week 2 &middot; Ch. 2 &middot; Chemical Level</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 19</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 2 · Chapter 2</p><h1 class="slide-title">The Chemical Level of Organization</h1>
+  <div class="card warm"><p style="margin-bottom:0;">Before you can understand a cell, you need to understand the chemistry that builds it. This week moves one level below the cell &mdash; atoms, bonds, water, pH, and the four major classes of organic molecules that make up living tissue.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Describe the basic structure of an atom and what makes elements different from each other</span></li>
+<li><span class="num">2</span><span>Compare ionic, covalent, and hydrogen bonds</span></li>
+<li><span class="num">3</span><span>Explain why water's properties matter for the body</span></li>
+<li><span class="num">4</span><span>Use the pH scale to describe acids, bases, and the role of buffers</span></li>
+<li><span class="num">5</span><span>Identify the four major classes of organic compounds and their basic building blocks</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Big Picture</p><h1 class="slide-title">Every structure in the body starts as chemistry</h1><div class="card warm"><p style="margin-bottom:0;">A muscle contracting, a nerve firing, a hormone binding to its receptor &mdash; every single one of these is, underneath the biology, a chemical event. You don't need to become a chemist this week, but you do need enough chemistry vocabulary to understand WHY the body's molecules behave the way they do.</p></div>
+  <p>This chapter builds the foundation for Chapter 3 (cells) directly: the cell membrane you'll study next week is literally built from the phospholipids you'll meet today, and the proteins your cells manufacture are built from the amino acids covered later in this chapter.</p></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Vocabulary &amp; Word Parts</p><h1 class="slide-title">Chemistry roots that show up everywhere</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">hydro-</span><span class="meaning">water</span></div><div class="wp-body"><b>Hydro</b>philic = "water-loving." <b>Hydro</b>phobic = "water-fearing."</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-ase</span><span class="meaning">enzyme</span></div><div class="wp-body">Lipase breaks down lipids. Any word ending in <b>-ase</b> is almost always an enzyme.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">iso-</span><span class="meaning">equal, same</span></div><div class="wp-body"><b>Iso</b>tope = same element, different neutron count. <b>Iso</b>tonic = equal concentration.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">mono-/di-/poly-</span><span class="meaning">one / two / many</span></div><div class="wp-body"><b>Mono</b>saccharide (1 sugar), <b>di</b>saccharide (2), <b>poly</b>saccharide (many).</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-lysis</span><span class="meaning">breaking down</span></div><div class="wp-body">Hydro<b>lysis</b> = breaking a bond by adding water.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-philic / -phobic</span><span class="meaning">loving / fearing</span></div><div class="wp-body">Describes how a molecule interacts with water &mdash; central to how membranes and proteins fold.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Atomic structure: the building block of everything</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="210" cy="140" r="22" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="210" y="135" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">Nucleus</text>
+  <text x="210" y="148" text-anchor="middle" font-size="8" fill="#0A1F3D">(p+ / n0)</text>
+  <ellipse cx="210" cy="140" rx="120" ry="45" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+  <ellipse cx="210" cy="140" rx="120" ry="45" fill="none" stroke="#C9A84C" stroke-width="1.5" transform="rotate(60 210 140)"/>
+  <ellipse cx="210" cy="140" rx="120" ry="45" fill="none" stroke="#C9A84C" stroke-width="1.5" transform="rotate(120 210 140)"/>
+  <circle cx="330" cy="140" r="7" fill="#DB2F30"/>
+  <circle cx="150" cy="63" r="7" fill="#DB2F30"/>
+  <circle cx="270" cy="217" r="7" fill="#DB2F30"/>
+  <text x="210" y="30" text-anchor="middle" font-size="11" fill="#1c1c1c">e&minus; = electrons (negative, orbiting)</text>
+  <text x="210" y="264" text-anchor="middle" font-size="11" fill="#1c1c1c">Protons (+) and neutrons (0) sit together in the nucleus</text>
+</svg></div>
+    <div class="diagram-caption">Protons (positive) and neutrons (neutral) sit in the nucleus; electrons (negative) exist in a surrounding cloud. The number of protons defines the element — carbon always has 6, oxygen always has 8.</div>
+    
+  </div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Elements the body actually runs on</h1>
+  <div class="card blue">Only a small handful of elements make up almost the entire human body — you don't need to memorize the periodic table, just this short list.</div>
+  <div class="step"><div class="badge">1</div><div class="content"><div class="label">Oxygen (O) &mdash; ~65% of body mass</div>Found in water and nearly every organic molecule.</div></div>
+<div class="step"><div class="badge">2</div><div class="content"><div class="label">Carbon (C) &mdash; ~18%</div>The backbone element of every organic molecule — carbs, lipids, proteins, nucleic acids.</div></div>
+<div class="step"><div class="badge">3</div><div class="content"><div class="label">Hydrogen (H) &mdash; ~10%</div>Found in water and bonded throughout organic molecules.</div></div>
+<div class="step"><div class="badge">4</div><div class="content"><div class="label">Nitrogen (N) &mdash; ~3%</div>Essential to amino acids (proteins) and nucleic acids (DNA/RNA).</div></div>
+<div class="step"><div class="badge">5</div><div class="content"><div class="label">Calcium, Phosphorus, Potassium, Sodium, and others &mdash; the remaining ~4%</div>Electrolytes and minerals critical for nerve signaling, bone, and fluid balance.</div></div>
+  <div class="card think"><strong>Memory anchor:</strong> "CHNOPS" (Carbon, Hydrogen, Nitrogen, Oxygen, Phosphorus, Sulfur) covers the elements you'll see over and over in organic molecules this semester.</div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Ionic bonds: electrons transferred, not shared</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="110" cy="100" r="42" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="110" y="95" text-anchor="middle" font-size="15" font-weight="700" fill="#0A1F3D">Na</text>
+  <text x="110" y="112" text-anchor="middle" font-size="10" fill="#0A1F3D">gives up 1 e&minus;</text>
+  <circle cx="330" cy="100" r="42" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="330" y="95" text-anchor="middle" font-size="15" font-weight="700" fill="#0A1F3D">Cl</text>
+  <text x="330" y="112" text-anchor="middle" font-size="10" fill="#0A1F3D">accepts 1 e&minus;</text>
+  <path d="M158,100 L282,100" stroke="#C9A84C" stroke-width="2.5" marker-end="url(#a3)"/>
+  <text x="220" y="88" text-anchor="middle" font-size="10" fill="#7A5A00">electron transfers</text>
+  <text x="110" y="170" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Na&#8314; (cation)</text>
+  <text x="330" y="170" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Cl&#8315; (anion)</text>
+  <text x="220" y="200" text-anchor="middle" font-size="11" fill="#1c1c1c" font-style="italic">Opposite charges attract &rarr; NaCl (table salt)</text>
+  <defs><marker id="a3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9A84C"/></marker></defs>
+</svg></div>
+    <div class="diagram-caption">An ion is an atom that has gained or lost electrons and now carries a charge. A cation is positively charged (lost electrons); an anion is negatively charged (gained electrons). Sodium and chloride ions — as Na+ and Cl- — are the same electrolytes your body tracks in blood tests.</div>
+    
+  </div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Covalent bonds: electrons shared</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="140" cy="100" r="38" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="140" y="107" text-anchor="middle" font-size="16" font-weight="700" fill="#0A1F3D">H</text>
+  <circle cx="280" cy="100" r="38" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="280" y="107" text-anchor="middle" font-size="16" font-weight="700" fill="#0A1F3D">H</text>
+  <ellipse cx="210" cy="100" rx="55" ry="40" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2" opacity="0.7"/>
+  <text x="210" y="30" text-anchor="middle" font-size="11" fill="#1c1c1c">Electrons are SHARED, not transferred</text>
+  <text x="210" y="170" text-anchor="middle" font-size="11" fill="#1c1c1c" font-style="italic">H&#8322; molecule — equal sharing = nonpolar covalent bond</text>
+</svg></div>
+    <div class="diagram-caption">Most of the molecules that make up your body — carbohydrates, proteins, DNA — are held together primarily by covalent bonds, which are generally stronger than ionic bonds in a water-based environment like the body.</div>
+    
+  </div></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Hydrogen bonds and water's special behavior</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 460 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  
+    <circle cx="110" cy="80" r="16" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+    <text x="110" y="84" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">O</text>
+    <circle cx="90" cy="98" r="8" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/>
+    <circle cx="130" cy="98" r="8" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/>
+  
+    <circle cx="280" cy="60" r="16" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+    <text x="280" y="64" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">O</text>
+    <circle cx="260" cy="78" r="8" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/>
+    <circle cx="300" cy="78" r="8" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/>
+  
+    <circle cx="200" cy="150" r="16" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+    <text x="200" y="154" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">O</text>
+    <circle cx="180" cy="168" r="8" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/>
+    <circle cx="220" cy="168" r="8" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/>
+  
+    <circle cx="370" cy="140" r="16" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+    <text x="370" y="144" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">O</text>
+    <circle cx="350" cy="158" r="8" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/>
+    <circle cx="390" cy="158" r="8" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/>
+  
+  <line x1="126" y1="90" x2="264" y2="66" stroke="#DB2F30" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="216" y1="145" x2="264" y2="76" stroke="#DB2F30" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="216" y1="150" x2="354" y2="142" stroke="#DB2F30" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="230" y="200" text-anchor="middle" font-size="11" fill="#DB2F30" font-weight="700">Dashed lines = hydrogen bonds between water molecules</text>
+</svg></div>
+    <div class="diagram-caption">A hydrogen bond is a weak attraction between a slightly positive hydrogen on one molecule and a slightly negative region on another. Individually weak, but in huge numbers they give water its high boiling point, surface tension, and ability to dissolve so many substances — properties life depends on.</div>
+    
+  </div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Why water gets its own spotlight</h1><p>Water makes up roughly 60% of total body weight, and nearly every chemical reaction in the body happens dissolved in it. Three properties matter most for this course:</p>
+  <ul>
+    <li><strong>Universal solvent</strong> — water dissolves more substances than almost any other liquid, which is why blood, cytoplasm, and interstitial fluid can carry so many dissolved nutrients, gases, and waste products at once.</li>
+    <li><strong>High heat capacity</strong> — water resists rapid temperature change, which helps stabilize body temperature even when the environment fluctuates.</li>
+    <li><strong>Participates in reactions</strong> — water is added or removed in many biological reactions (hydrolysis breaks bonds by adding water; dehydration synthesis builds bonds by removing water).</li>
+  </ul></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The pH scale, acids, bases, and buffers</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 160" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <defs><linearGradient id="phgrad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#DB2F30"/><stop offset="50%" stop-color="#C9A84C"/><stop offset="100%" stop-color="#0047BA"/>
+  </linearGradient></defs>
+  <rect x="30" y="40" width="500" height="30" rx="6" fill="url(#phgrad)"/>
+  <text x="30" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">0</text><text x="280" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">7</text><text x="530" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">14</text>
+  <line x1="280" y1="40" x2="280" y2="70" stroke="#0A1F3D" stroke-width="2"/>
+  <text x="280" y="90" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">7 = neutral (pure water)</text>
+  <text x="90" y="110" text-anchor="middle" font-size="11" fill="#DB2F30">Acidic (stomach acid &#8776;1.5&ndash;3.5)</text>
+  <text x="470" y="110" text-anchor="middle" font-size="11" fill="#0047BA">Basic/Alkaline (blood &#8776;7.35&ndash;7.45)</text>
+</svg></div>
+    <div class="diagram-caption">pH measures how acidic or basic a solution is, from 0 (most acidic) to 14 (most basic), with 7 as neutral. A buffer is a chemical system that resists pH change by absorbing excess H+ or OH- ions — this is exactly how blood keeps its pH locked in the narrow 7.35–7.45 range even when acids and bases enter the bloodstream constantly.</div>
+    
+  </div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Carbohydrates: the body's quick-energy molecules</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="80" cy="100" r="28" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="80" y="105" text-anchor="middle" font-size="10" font-weight="700" fill="#7A5A00">glucose</text>
+  <text x="80" y="150" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Monosaccharide</text>
+  <text x="80" y="164" text-anchor="middle" font-size="9" fill="#1c1c1c">(1 sugar unit)</text>
+  <circle cx="230" cy="90" r="24" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <circle cx="270" cy="90" r="24" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="250" y="150" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Disaccharide</text>
+  <text x="250" y="164" text-anchor="middle" font-size="9" fill="#1c1c1c">(2 units — e.g. sucrose)</text>
+  <circle cx="400" cy="75" r="18" fill="#FBF1D6" stroke="#C9A84C" stroke-width="1.8"/><circle cx="435" cy="75" r="18" fill="#FBF1D6" stroke="#C9A84C" stroke-width="1.8"/><circle cx="470" cy="75" r="18" fill="#FBF1D6" stroke="#C9A84C" stroke-width="1.8"/><circle cx="400" cy="110" r="18" fill="#FBF1D6" stroke="#C9A84C" stroke-width="1.8"/><circle cx="435" cy="110" r="18" fill="#FBF1D6" stroke="#C9A84C" stroke-width="1.8"/><circle cx="470" cy="110" r="18" fill="#FBF1D6" stroke="#C9A84C" stroke-width="1.8"/>
+  <text x="450" y="150" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Polysaccharide</text>
+  <text x="450" y="164" text-anchor="middle" font-size="9" fill="#1c1c1c">(many units — e.g. glycogen)</text>
+</svg></div>
+    <div class="diagram-caption">Carbohydrates are built from repeating sugar units. Glucose (a monosaccharide) is the body's primary fuel; glycogen (a polysaccharide) is how the liver and muscles store extra glucose for later use.</div>
+    
+  </div></section>
+<section class="slide" data-slide="12"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Lipids: energy storage and cell membranes</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="90" cy="60" r="14" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="90" y="64" text-anchor="middle" font-size="8" fill="#0A1F3D">glycerol</text>
+  <line x1="104" y1="60" x2="230" y2="45" stroke="#C9A84C" stroke-width="3"/>
+  <line x1="104" y1="65" x2="230" y2="70" stroke="#C9A84C" stroke-width="3"/>
+  <line x1="104" y1="70" x2="230" y2="95" stroke="#C9A84C" stroke-width="3"/>
+  <text x="170" y="115" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Triglyceride</text>
+  <text x="170" y="129" text-anchor="middle" font-size="9" fill="#1c1c1c">glycerol + 3 fatty acid tails</text>
+
+  <circle cx="360" cy="50" r="12" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <line x1="360" y1="62" x2="360" y2="130" stroke="#C9A84C" stroke-width="3"/>
+  <line x1="345" y1="62" x2="345" y2="120" stroke="#C9A84C" stroke-width="3"/>
+  <line x1="375" y1="62" x2="375" y2="120" stroke="#C9A84C" stroke-width="3"/>
+  <text x="360" y="150" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Phospholipid</text>
+  <text x="360" y="164" text-anchor="middle" font-size="9" fill="#1c1c1c">polar head, nonpolar tails — makes the cell membrane</text>
+</svg></div>
+    <div class="diagram-caption">Triglycerides (fat storage) and phospholipids (the main membrane-building molecule) share the same glycerol-plus-fatty-acid chemistry, but phospholipids swap one fatty acid tail for a phosphate group — giving them a water-loving head and water-fearing tails, exactly the shape needed to form a membrane.</div>
+    
+  </div></section>
+<section class="slide" data-slide="13"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Proteins: built from amino acids</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 520 190" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="60" cy="80" r="22" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/><text x="60" y="85" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">AA1</text><circle cx="140" cy="80" r="22" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/><text x="140" y="85" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">AA2</text><circle cx="220" cy="80" r="22" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/><text x="220" y="85" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">AA3</text><circle cx="300" cy="80" r="22" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/><text x="300" y="85" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">AA4</text><circle cx="380" cy="80" r="22" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/><text x="380" y="85" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">AA5</text><circle cx="460" cy="80" r="22" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/><text x="460" y="85" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">AA6</text>
+  <line x1="82" y1="80" x2="118" y2="80" stroke="#DB2F30" stroke-width="2"/><line x1="162" y1="80" x2="198" y2="80" stroke="#DB2F30" stroke-width="2"/><line x1="242" y1="80" x2="278" y2="80" stroke="#DB2F30" stroke-width="2"/><line x1="322" y1="80" x2="358" y2="80" stroke="#DB2F30" stroke-width="2"/><line x1="402" y1="80" x2="438" y2="80" stroke="#DB2F30" stroke-width="2"/>
+  <text x="260" y="130" text-anchor="middle" font-size="11" fill="#DB2F30" font-weight="700">Peptide bonds link amino acids into a chain</text>
+  <text x="260" y="160" text-anchor="middle" font-size="10.5" fill="#1c1c1c" font-style="italic">A folded chain of amino acids = a protein</text>
+</svg></div>
+    <div class="diagram-caption">There are 20 different amino acids, and the body links them in different orders and lengths to build every protein it needs — from structural proteins like collagen to functional proteins like enzymes and antibodies. The specific sequence of amino acids determines how a protein folds, and that folded shape determines its function.</div>
+    
+  </div></section>
+<section class="slide" data-slide="14"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Nucleic acids and ATP</h1><p><strong>Nucleic acids</strong> (DNA and RNA) are built from repeating units called nucleotides. DNA stores the genetic instructions for building every protein in the body; RNA carries out those instructions during protein synthesis.</p>
+  <div class="card blue"><p style="margin-bottom:0;"><strong>ATP (adenosine triphosphate)</strong> deserves special mention here: it's the cell's direct energy currency. Breaking the bond on its last phosphate group releases usable energy for nearly every cellular process — muscle contraction, active transport, and more. You'll see ATP again constantly starting next week.</p></div></section>
+<section class="slide" data-slide="15"><p class="eyebrow">Your Turn &mdash; Guided Practice</p><h1 class="slide-title">Apply it before the quiz</h1>
+  <div class="gp-box"><p class="gp-prompt">A patient's lab work shows a blood pH of 7.1 (normal range is 7.35–7.45) — a dangerously acidic reading.</p><p style="font-weight:600;font-size:14.5px;">Question 1 — Is a pH of 7.1 acidic, neutral, or basic relative to the normal blood range?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">Acidic — 7.1 is below the normal 7.35–7.45 range</button>
+<button class="choice-btn" data-correct="false">Basic — 7.1 is above the normal range</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">On the pH scale, lower numbers are more acidic. 7.1 is <b>below</b> the normal blood range of 7.35–7.45, making it acidic relative to normal — this condition is called acidosis.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — What is the body system most directly responsible for resisting this kind of pH swing?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">Buffer systems in the blood</button>
+<button class="choice-btn" data-correct="false">Ionic bonds in bone tissue</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2"><b>Buffers</b> are chemical systems designed specifically to absorb excess H+ or OH- ions and resist pH change. Bone does store some minerals relevant to long-term acid-base balance, but the immediate, moment-to-moment defense against pH swings is the blood's buffer systems, not ionic bonds themselves.</div></div></section>
+<section class="slide" data-slide="16"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Electrolytes: ions with real clinical stakes</h1>
+  <p>The ionic bonds you learned about today aren't abstract — the ions they create are checked in nearly every blood panel drawn in a hospital.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">A "basic metabolic panel" blood test directly measures ions like Na&#8314; (sodium), K&#8314; (potassium), Cl&#8315; (chloride), and Ca&#8322;&#8314; (calcium). Potassium is a good example of why this matters: both too much (hyperkalemia) and too little (hypokalemia) potassium can disrupt the electrical signals that keep the heart beating in rhythm — a life-threatening problem that starts as simple ion chemistry.</p></div></section>
+<section class="slide" data-slide="17"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Why IV fluids aren't just "water"</h1>
+  <p>The tonicity of an IV solution — how its dissolved particle concentration compares to blood — is a direct application of this week's chemistry.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">Giving a patient pure water intravenously would be dangerous — it would rush into blood cells by osmosis and cause them to swell and potentially burst. That's why IV fluids are carefully formulated (like 0.9% "normal saline") to match the body's normal solute concentration. This preview matters: osmosis and tonicity get a full, detailed treatment next week when you study the cell membrane directly.</p></div></section>
+<section class="slide" data-slide="18"><p class="eyebrow">Mini Knowledge Test</p><h1 class="slide-title">Show what you know &mdash; 7 questions</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">What determines which element an atom is?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Its number of protons</button>
+<button class="quiz-opt" data-correct="false">Its number of neutrons</button>
+<button class="quiz-opt" data-correct="false">Its number of electrons only</button></div><div class="rationale-box" id="rat-quiz-q1">The <b>number of protons</b> (the atomic number) defines the element — carbon is always 6 protons, oxygen is always 8. Neutron count can vary (creating isotopes of the same element), and while atoms are usually electrically neutral (protons = electrons), it's the proton count specifically that identifies the element.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">In an ionic bond, electrons are:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Transferred from one atom to another</button>
+<button class="quiz-opt" data-correct="false">Shared equally between atoms</button>
+<button class="quiz-opt" data-correct="false">Never involved</button></div><div class="rationale-box" id="rat-quiz-q2">Ionic bonds form when one atom fully <b>gives up</b> an electron and another fully <b>accepts</b> it, creating oppositely charged ions that attract each other. Equal sharing describes a nonpolar covalent bond instead.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">What makes water able to dissolve so many different substances?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">It's an excellent solvent due to its polarity and hydrogen bonding</button>
+<button class="quiz-opt" data-correct="false">It has no chemical properties at all</button>
+<button class="quiz-opt" data-correct="false">It only dissolves other liquids</button></div><div class="rationale-box" id="rat-quiz-q3">Water's polarity (slightly charged regions) and its hydrogen bonding let it surround and separate a huge range of charged and polar substances — this is exactly why it's called the "universal solvent." Water is chemically active, not inert, and it dissolves solids and gases just as readily as other liquids.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">A blood pH of 7.2 would be classified as:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Acidic relative to the normal range</button>
+<button class="quiz-opt" data-correct="false">Basic relative to the normal range</button>
+<button class="quiz-opt" data-correct="false">Exactly neutral</button></div><div class="rationale-box" id="rat-quiz-q4">Normal blood pH is 7.35–7.45. A reading of 7.2 falls <b>below</b> that range, making it acidic relative to normal — even though 7.2 is technically still above the neutral point of 7.0 on the full pH scale. "Acidic" here is relative to the body's normal range, not the absolute scale midpoint.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">Which organic molecule class is built from repeating sugar units?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Carbohydrates</button>
+<button class="quiz-opt" data-correct="false">Lipids</button>
+<button class="quiz-opt" data-correct="false">Nucleic acids</button></div><div class="rationale-box" id="rat-quiz-q5">Carbohydrates are built from monosaccharide (single sugar) units, linked into disaccharides or polysaccharides. Lipids are built from glycerol and fatty acids; nucleic acids are built from nucleotides — different building blocks entirely.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">What makes phospholipids able to form a cell membrane?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">A water-loving head and water-fearing tails</button>
+<button class="quiz-opt" data-correct="false">They dissolve completely and evenly in water</button>
+<button class="quiz-opt" data-correct="false">They are identical in structure to triglycerides</button></div><div class="rationale-box" id="rat-quiz-q6">A phospholipid's polar (water-loving) phosphate head and its nonpolar (water-fearing) fatty acid tails let it self-organize into a bilayer in a water-based environment — heads facing the water on both sides, tails hiding from it in the middle. This dual nature is exactly what triglycerides lack, since all three of their fatty acid tails are nonpolar.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">What is the direct role of ATP in the body?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">It's the cell's immediate energy currency</button>
+<button class="quiz-opt" data-correct="false">It stores genetic instructions</button>
+<button class="quiz-opt" data-correct="false">It's a structural building block of membranes</button></div><div class="rationale-box" id="rat-quiz-q7">ATP releases usable energy when its terminal phosphate bond breaks, making it the cell's direct energy currency for processes like muscle contraction and active transport. Storing genetic instructions is DNA's job; building membranes is primarily phospholipids' job.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 7</span></div></section>
+<section class="slide" data-slide="19"><p class="eyebrow">Debrief</p><h1 class="slide-title">Week 2 Quick-Reference Recap</h1>
+  <p>One page to glance at before Exam 1 — everything from this week, condensed.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Atomic Structure</h4><ul><li>Protons (+) and neutrons (0) — nucleus</li><li>Electrons (&minus;) — surrounding cloud</li><li>Proton count = the element</li></ul></div>
+<div class="recap-cell"><h4>Bond Types</h4><ul><li><strong>Ionic</strong> — electrons transferred</li><li><strong>Covalent</strong> — electrons shared</li><li><strong>Hydrogen</strong> — weak attraction, huge cumulative effect</li></ul></div>
+<div class="recap-cell"><h4>Water &amp; pH</h4><ul><li>Universal solvent, high heat capacity</li><li>pH 0&ndash;14, 7 = neutral</li><li>Blood pH: 7.35&ndash;7.45, defended by buffers</li></ul></div>
+<div class="recap-cell"><h4>Organic Molecule Classes</h4><ul><li><strong>Carbs</strong> — sugar units, quick energy</li><li><strong>Lipids</strong> — fats, membranes (phospholipids)</li><li><strong>Proteins</strong> — amino acid chains</li><li><strong>Nucleic acids</strong> — nucleotides, DNA/RNA</li></ul></div>
+<div class="recap-cell"><h4>ATP</h4><p>The cell's direct energy currency — breaking its terminal phosphate bond releases usable energy.</p></div>
+<div class="recap-cell"><h4>Clinical Threads</h4><ul><li>Electrolyte panels (Na, K, Cl, Ca)</li><li>IV fluid tonicity</li><li>Acidosis / buffer systems</li></ul></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Atom</span><span class="term-pill">Ion</span><span class="term-pill">Ionic Bond</span><span class="term-pill">Covalent Bond</span><span class="term-pill">Hydrogen Bond</span><span class="term-pill">pH</span><span class="term-pill">Buffer</span><span class="term-pill">Carbohydrate</span><span class="term-pill">Lipid</span><span class="term-pill">Protein</span><span class="term-pill">Nucleic Acid</span><span class="term-pill">ATP</span></div>
+  <div class="next-box"><strong>Next — Week 3: The Cellular Level of Organization.</strong> The phospholipids and proteins from this week become the actual building material for the cell membrane and organelles you'll study next.</div>
+  <div class="end-actions"><a class="end-btn primary next-lesson-link" href="week03-cellular-level.html">Next: Week 3 &rarr;</a><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
