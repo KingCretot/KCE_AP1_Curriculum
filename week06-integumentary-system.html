@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 6: The Integumentary System</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 2</div></div></div><div class="lesson-tag">Week 6 &middot; Ch. 5 &middot; Integumentary System</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 15</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 6 · Chapter 5</p><h1 class="slide-title">The Integumentary System</h1>
+  <div class="card warm"><p style="margin-bottom:0;">Skin is the body's largest organ, and it's built almost entirely from the tissue types you studied last week — a direct, practical application of Chapter 4. This week covers skin's layers, its accessory structures, and the critical functions it performs.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Describe the layers of the epidermis and dermis</span></li>
+<li><span class="num">2</span><span>Identify skin's accessory structures — hair, nails, and glands</span></li>
+<li><span class="num">3</span><span>Explain the main functions of the integumentary system</span></li>
+<li><span class="num">4</span><span>Explain how skin participates in thermoregulation</span></li>
+<li><span class="num">5</span><span>Outline the four stages of wound healing</span></li>
+<li><span class="num">6</span><span>Classify burns by depth</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Big Picture</p><h1 class="slide-title">Skin: an organ built from last week's tissue types</h1><div class="card warm"><p style="margin-bottom:0;">Skin isn't a single tissue — it's an <strong>organ</strong>, meaning it's built from multiple tissue types working together. Its outer layer (epidermis) is stratified squamous epithelial tissue — exactly the kind you learned about last week for protection. Its inner layer (dermis) is dense connective tissue. This is Chapter 4's content, applied directly.</p></div>
+  <p>Skin covers roughly 1.5–2 square meters of surface area in an adult and makes up about 15% of total body weight — by both measures, it's the largest organ in the body.</p></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Vocabulary &amp; Word Parts</p><h1 class="slide-title">Integumentary system roots</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">derm/o-, -derm</span><span class="meaning">skin</span></div><div class="wp-body">E<b>pi</b>dermis = "upon the skin." Hypo<b>derm</b>is = "below the skin."</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">cutane-</span><span class="meaning">skin</span></div><div class="wp-body">Sub<b>cutane</b>ous = beneath the skin (another name for the hypodermis).</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">kerat/o-</span><span class="meaning">hard, horny</span></div><div class="wp-body"><b>Kerat</b>in is the tough, waterproofing protein that fills dead skin cells at the surface.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">seb/o-</span><span class="meaning">oil, sebum</span></div><div class="wp-body"><b>Seb</b>aceous glands secrete sebum (oil) to lubricate skin and hair.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">sudor/o-, hidr/o-</span><span class="meaning">sweat</span></div><div class="wp-body"><b>Sudor</b>iferous glands = sweat glands. Hyper<b>hidr</b>osis = excessive sweating.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">melan/o-</span><span class="meaning">black, dark pigment</span></div><div class="wp-body"><b>Melan</b>ocytes produce melanin, the pigment responsible for skin color and UV protection.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The layers of skin</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="120" y="20" width="240" height="60" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="370" y="55" font-size="11" font-weight="700" fill="#7A5A00">Epidermis</text>
+  <text x="240" y="35" text-anchor="middle" font-size="9" fill="#0A1F3D">Stratum corneum (dead, flat cells — surface)</text>
+  <text x="240" y="65" text-anchor="middle" font-size="9" fill="#0A1F3D">Stratum basale (living, dividing — deepest layer)</text>
+  <rect x="120" y="80" width="240" height="100" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2"/>
+  <text x="370" y="130" font-size="11" font-weight="700" fill="#DB2F30">Dermis</text>
+  <text x="240" y="110" text-anchor="middle" font-size="9" fill="#0A1F3D">Papillary layer (upper, thin, blood vessels)</text>
+  <text x="240" y="155" text-anchor="middle" font-size="9" fill="#0A1F3D">Reticular layer (lower, thick, dense connective tissue)</text>
+  <rect x="120" y="180" width="240" height="60" fill="#FBF1D6" stroke="#C97A2C" stroke-width="2" opacity="0.6"/>
+  <text x="370" y="215" font-size="11" font-weight="700" fill="#96521A">Hypodermis</text>
+  <text x="240" y="215" text-anchor="middle" font-size="9" fill="#0A1F3D">(subcutaneous fat layer, not officially part of skin)</text>
+</svg></div>
+    <div class="diagram-caption">The epidermis and dermis are the two true layers of skin. The hypodermis (subcutaneous layer) lies beneath skin and anchors it to underlying muscle, but it's technically NOT part of the skin itself — a detail exam questions love to test.</div>
+    
+  </div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Epidermis: from deep to surface</h1>
+  <div class="card blue">The epidermis is stratified squamous epithelium — the exact classification pattern from last week — organized in layers, with the deepest layer constantly producing new cells that migrate upward and eventually die.</div>
+  <div class="step"><div class="badge">1</div><div class="content"><div class="label">1 · Stratum basale (deepest)</div>The single layer of living, actively dividing cells that produces every new epidermal cell.</div></div>
+<div class="step"><div class="badge">2</div><div class="content"><div class="label">2 · Middle layers</div>Cells migrate upward, gradually filling with keratin and flattening out as they move away from their blood supply.</div></div>
+<div class="step"><div class="badge">3</div><div class="content"><div class="label">3 · Stratum corneum (surface)</div>Dead, flattened, keratin-filled cells that form a tough, waterproof outer barrier — constantly shed and replaced from below.</div></div>
+  <div class="card think"><strong>The pattern to remember:</strong> cells are born deep, die as they rise, and are shed at the surface — the entire epidermis renews itself roughly every 3–4 weeks.</div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Accessory structures: hair follicles</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 380 280" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <path d="M170,20 L165,150" stroke="#0A1F3D" stroke-width="6" stroke-linecap="round"/>
+  <text x="230" y="30" font-size="10" fill="#0A1F3D">Hair shaft</text>
+  <path d="M140,140 Q160,220 175,255 Q190,220 200,140 Z" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="250" y="200" font-size="10" fill="#0047BA">Hair follicle</text>
+  <ellipse cx="175" cy="250" rx="18" ry="14" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="250" y="255" font-size="10" fill="#7A5A00">Hair bulb (growth)</text>
+  <ellipse cx="130" cy="90" rx="20" ry="14" fill="#FBEEF0" stroke="#DB2F30" stroke-width="1.8" transform="rotate(-30 130 90)"/>
+  <text x="10" y="75" font-size="9.5" fill="#DB2F30">Sebaceous gland</text>
+  <path d="M170,140 L110,110" stroke="#DDD" stroke-width="1.5"/>
+  <path d="M170,150 L100,170" stroke="#0A1F3D" stroke-width="1.5"/>
+  <text x="10" y="185" font-size="9.5" fill="#0A1F3D">Arrector pili muscle</text>
+</svg></div>
+    <div class="diagram-caption">The hair bulb at the base of the follicle is where active cell division produces the growing hair shaft. The arrector pili muscle can pull the follicle upright ("goosebumps"), and the nearby sebaceous gland keeps both the hair and surrounding skin lubricated.</div>
+    
+  </div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Two kinds of skin glands</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="40" y="30" width="180" height="160" rx="12" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="130" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#DB2F30">Sebaceous Gland</text>
+  <text x="130" y="85" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Secretes sebum (oil)</text>
+  <text x="130" y="105" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Empties into hair follicle</text>
+  <text x="130" y="130" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Lubricates skin &amp; hair,</text>
+  <text x="130" y="146" text-anchor="middle" font-size="9.5" fill="#1c1c1c">helps waterproof it</text>
+
+  <rect x="260" y="30" width="180" height="160" rx="12" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="350" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#0047BA">Sudoriferous Gland</text>
+  <text x="350" y="85" text-anchor="middle" font-size="9.5" fill="#1c1c1c">(sweat gland)</text>
+  <text x="350" y="105" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Opens onto skin surface</text>
+  <text x="350" y="130" text-anchor="middle" font-size="9.5" fill="#1c1c1c">via a pore</text>
+  <text x="350" y="150" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Cools the body by</text>
+  <text x="350" y="166" text-anchor="middle" font-size="9.5" fill="#1c1c1c">evaporating sweat</text>
+</svg></div>
+    <div class="diagram-caption">Both gland types are exocrine glands (they secrete onto a surface rather than into the bloodstream), but they serve very different jobs — one lubricates, the other cools.</div>
+    
+  </div></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">What skin actually does</h1><ul>
+    <li><strong>Protection</strong> — a physical barrier against pathogens, UV radiation (via melanin), and water loss.</li>
+    <li><strong>Thermoregulation</strong> — sweat glands and blood vessel diameter work together to release or conserve heat.</li>
+    <li><strong>Vitamin D synthesis</strong> — skin cells convert a cholesterol-based precursor into active vitamin D when exposed to UV light.</li>
+    <li><strong>Sensation</strong> — nerve endings in the dermis detect touch, pressure, temperature, and pain.</li>
+    <li><strong>Excretion</strong> — small amounts of waste (urea, salts) leave the body through sweat.</li>
+  </ul></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Thermoregulation: negative feedback in action</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="240" cy="130" r="30" fill="#FAF7EF" stroke="#0A1F3D" stroke-width="2"/>
+  <text x="240" y="134" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">98.6&deg;F</text>
+  <rect x="180" y="20" width="120" height="50" rx="8" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2"/>
+  <text x="240" y="42" text-anchor="middle" font-size="10.5" font-weight="700" fill="#DB2F30">Body temp rises</text>
+  <text x="240" y="56" text-anchor="middle" font-size="8.5" fill="#1c1c1c">(exercise, hot day)</text>
+  <rect x="20" y="105" width="120" height="50" rx="8" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="80" y="127" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0047BA">Sweat glands</text>
+  <text x="80" y="141" text-anchor="middle" font-size="8.5" fill="#1c1c1c">release sweat</text>
+  <rect x="340" y="105" width="120" height="50" rx="8" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="400" y="127" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7A5A00">Vessels dilate</text>
+  <text x="400" y="141" text-anchor="middle" font-size="8.5" fill="#1c1c1c">heat radiates out</text>
+  <rect x="180" y="190" width="120" height="50" rx="8" fill="#E7F1E7" stroke="#2E7D55" stroke-width="2"/>
+  <text x="240" y="212" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2E7D55">Temp drops</text>
+  <text x="240" y="226" text-anchor="middle" font-size="8.5" fill="#1c1c1c">back to normal</text>
+</svg></div>
+    <div class="diagram-caption">This is the exact negative feedback pattern from Exam Block 1's Chapter 1 — a stimulus (rising temperature) triggers a response (sweating, vessel dilation) that reverses the original change. Skin is one of the body's primary tools for executing this loop.</div>
+    
+  </div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Wound healing: four overlapping stages</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 160" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="115" height="90" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+    <text x="77" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Hemostasis</text>
+    <text x="144" y="82" text-anchor="middle" font-size="15" fill="#C9A84C" font-weight="700">&#8594;</text><rect x="155" y="30" width="115" height="90" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+    <text x="212" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Inflammation</text>
+    <text x="279" y="82" text-anchor="middle" font-size="15" fill="#C9A84C" font-weight="700">&#8594;</text><rect x="290" y="30" width="115" height="90" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+    <text x="347" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Proliferation</text>
+    <text x="414" y="82" text-anchor="middle" font-size="15" fill="#C9A84C" font-weight="700">&#8594;</text><rect x="425" y="30" width="115" height="90" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+    <text x="482" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Remodeling</text>
+    
+</svg></div>
+    <div class="diagram-caption">Hemostasis stops the bleeding (platelets, clotting) within minutes. Inflammation clears debris and pathogens (hours to days). Proliferation rebuilds tissue with new blood vessels and collagen (days to weeks). Remodeling strengthens and reorganizes that new tissue (weeks to over a year).</div>
+    
+  </div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Your Turn &mdash; Guided Practice</p><h1 class="slide-title">Apply it before the quiz</h1>
+  <div class="gp-box"><p class="gp-prompt">A patient comes in with a sunburn that is red, painful, and limited to the outermost layer of skin — no blistering.</p><p style="font-weight:600;font-size:14.5px;">Question 1 — Which layer of skin is primarily affected?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">Epidermis only</button>
+<button class="choice-btn" data-correct="false">Epidermis and full dermis</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">A burn limited to redness and pain with <b>no blistering</b> and no deeper damage is confined to the <b>epidermis</b> — this matches the definition of a first-degree burn. Blistering is a sign the dermis has also been affected.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — Which skin function is most immediately compromised by this kind of surface damage?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">Protection against UV/pathogens</button>
+<button class="choice-btn" data-correct="false">Vitamin D synthesis</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">Surface-level epidermal damage directly compromises the skin's <b>protective barrier</b> function first and most obviously. Vitamin D synthesis still occurs in surviving skin cells and isn't the primary concern with a superficial burn.</div></div></section>
+<section class="slide" data-slide="12"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Classifying burns by depth</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="40" y="20" width="400" height="30" fill="#FBF1D6" stroke="#C9A84C" stroke-width="1.5"/>
+  <text x="230" y="40" text-anchor="middle" font-size="10" fill="#0A1F3D">Epidermis</text>
+  <rect x="40" y="50" width="400" height="90" fill="#FBEEF0" stroke="#DB2F30" stroke-width="1.5"/>
+  <text x="230" y="98" text-anchor="middle" font-size="10" fill="#0A1F3D">Dermis</text>
+  <rect x="40" y="140" width="400" height="40" fill="#FDEEE0" stroke="#C97A2C" stroke-width="1.5" opacity="0.6"/>
+  <text x="230" y="163" text-anchor="middle" font-size="10" fill="#0A1F3D">Hypodermis</text>
+  <line x1="90" y1="10" x2="90" y2="50" stroke="#C9A84C" stroke-width="3"/>
+  <text x="90" y="205" text-anchor="middle" font-size="10" font-weight="700" fill="#7A5A00">1st degree</text>
+  <text x="90" y="219" text-anchor="middle" font-size="8.5" fill="#1c1c1c">epidermis only</text>
+  <line x1="230" y1="10" x2="230" y2="140" stroke="#DB2F30" stroke-width="3"/>
+  <text x="230" y="205" text-anchor="middle" font-size="10" font-weight="700" fill="#DB2F30">2nd degree</text>
+  <text x="230" y="219" text-anchor="middle" font-size="8.5" fill="#1c1c1c">into the dermis</text>
+  <line x1="370" y1="10" x2="370" y2="180" stroke="#0A1F3D" stroke-width="3"/>
+  <text x="370" y="205" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">3rd degree</text>
+  <text x="370" y="219" text-anchor="middle" font-size="8.5" fill="#1c1c1c">full thickness</text>
+</svg></div>
+    <div class="diagram-caption">Burn severity is classified almost entirely by which skin layers are affected — a direct clinical application of the layered structure covered earlier this week. First-degree burns affect only the epidermis; second-degree burns extend into the dermis; third-degree burns destroy the full thickness of skin, often requiring skin grafts since the regenerative stratum basale is gone.</div>
+    
+  </div></section>
+<section class="slide" data-slide="13"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Melanoma: when epithelial regeneration goes wrong</h1>
+  <p>This connects directly back to last week's discussion of why epithelial tissue is a common cancer site.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;"><strong>Melanoma</strong> is a cancer of melanocytes, the pigment-producing cells in the epidermis. Because epithelial tissue already regenerates rapidly (Chapter 4), a mutation that disrupts that normal regulated growth can lead to dangerously fast, uncontrolled cell division — which is part of why UV exposure (a direct DNA-damaging trigger) is such a significant risk factor, and why dermatologists watch for changes in mole shape, color, and size as early warning signs.</p></div></section>
+<section class="slide" data-slide="14"><p class="eyebrow">Mini Knowledge Test</p><h1 class="slide-title">Show what you know &mdash; 7 questions</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">Which layer of skin contains the actively dividing cells that produce new epidermal cells?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Stratum basale</button>
+<button class="quiz-opt" data-correct="false">Stratum corneum</button>
+<button class="quiz-opt" data-correct="false">Hypodermis</button></div><div class="rationale-box" id="rat-quiz-q1">The <b>stratum basale</b> is the deepest epidermal layer and the only one with actively dividing cells. The stratum corneum is the dead, surface layer; the hypodermis isn't technically part of the skin at all.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">The hypodermis is best described as:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">A subcutaneous fat layer that is not officially part of the skin</button>
+<button class="quiz-opt" data-correct="false">The outermost layer of the epidermis</button>
+<button class="quiz-opt" data-correct="false">The layer containing hair follicles and sweat glands</button></div><div class="rationale-box" id="rat-quiz-q2">The hypodermis sits beneath the dermis and anchors skin to muscle, but by strict anatomical definition it is <b>not part of the skin itself</b> — only the epidermis and dermis are. Hair follicles and most glands are found in the dermis, not the hypodermis.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">Sebaceous glands primarily secrete:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Sebum (oil)</button>
+<button class="quiz-opt" data-correct="false">Sweat</button>
+<button class="quiz-opt" data-correct="false">Keratin</button></div><div class="rationale-box" id="rat-quiz-q3"><b>Sebaceous</b> glands secrete sebum, an oily substance that lubricates skin and hair. Sweat comes from sudoriferous glands instead; keratin is a structural protein made within epidermal cells, not a gland secretion.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">Which skin function directly demonstrates negative feedback from Chapter 1?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Thermoregulation via sweating and vessel diameter</button>
+<button class="quiz-opt" data-correct="false">Vitamin D synthesis</button>
+<button class="quiz-opt" data-correct="false">Sensation via nerve endings</button></div><div class="rationale-box" id="rat-quiz-q4"><b>Thermoregulation</b> is a textbook negative feedback loop — rising temperature triggers sweating and vessel dilation that reverse the change. Vitamin D synthesis and sensation are important skin functions, but neither is itself a feedback loop.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">Which wound healing stage happens first?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Hemostasis</button>
+<button class="quiz-opt" data-correct="false">Remodeling</button>
+<button class="quiz-opt" data-correct="false">Proliferation</button></div><div class="rationale-box" id="rat-quiz-q5"><b>Hemostasis</b> (stopping the bleeding) happens within minutes and comes first. Proliferation (rebuilding tissue) and remodeling (long-term strengthening) both come later, in that order.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">A burn that extends into the dermis but not through its full thickness is classified as:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Second-degree</button>
+<button class="quiz-opt" data-correct="false">First-degree</button>
+<button class="quiz-opt" data-correct="false">Third-degree</button></div><div class="rationale-box" id="rat-quiz-q6"><b>Second-degree</b> burns extend into the dermis (often causing blistering) without destroying it completely. First-degree is epidermis-only; third-degree destroys the full thickness of skin.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">Melanocytes are found primarily in which skin structure?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">The epidermis</button>
+<button class="quiz-opt" data-correct="false">The hypodermis</button>
+<button class="quiz-opt" data-correct="false">Sweat glands</button></div><div class="rationale-box" id="rat-quiz-q7"><b>Melanocytes</b> reside in the epidermis, where they produce melanin for pigmentation and UV protection. They are not found in the hypodermis or within sweat gland structures themselves.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 7</span></div></section>
+<section class="slide" data-slide="15"><p class="eyebrow">Debrief</p><h1 class="slide-title">Week 6 Quick-Reference Recap</h1>
+  <p>One page to glance at before Exam 2 — everything from this week, condensed.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Skin Layers</h4><ul><li>Epidermis — stratified squamous epithelium</li><li>Dermis — dense connective tissue</li><li>Hypodermis — NOT technically part of skin</li></ul></div>
+<div class="recap-cell"><h4>Epidermal Growth</h4><p>Stratum basale (divides) &rarr; migrates up &rarr; stratum corneum (dead, shed).</p></div>
+<div class="recap-cell"><h4>Accessory Structures</h4><ul><li>Hair follicle + hair bulb</li><li>Sebaceous gland — oil</li><li>Sudoriferous gland — sweat</li></ul></div>
+<div class="recap-cell"><h4>Skin Functions</h4><p>Protection, thermoregulation, vitamin D synthesis, sensation, excretion.</p></div>
+<div class="recap-cell"><h4>Wound Healing</h4><p>Hemostasis &rarr; Inflammation &rarr; Proliferation &rarr; Remodeling.</p></div>
+<div class="recap-cell"><h4>Burn Classification</h4><ul><li>1st degree — epidermis only</li><li>2nd degree — into dermis</li><li>3rd degree — full thickness</li></ul></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Epidermis</span><span class="term-pill">Dermis</span><span class="term-pill">Hypodermis</span><span class="term-pill">Keratin</span><span class="term-pill">Melanocyte</span><span class="term-pill">Sebaceous Gland</span><span class="term-pill">Sudoriferous Gland</span><span class="term-pill">Thermoregulation</span><span class="term-pill">Wound Healing</span></div>
+  <div class="next-box"><strong>Next — Week 7: Osseous Tissue &amp; Bone Structure.</strong> You'll meet the most rigid connective tissue type from Chapter 4 in full detail, including how bones grow, remodel, and regulate calcium.</div>
+  <div class="end-actions"><a class="end-btn primary next-lesson-link" href="week07-osseous-tissue.html">Next: Week 7 &rarr;</a><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
