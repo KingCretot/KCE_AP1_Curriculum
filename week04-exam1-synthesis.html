@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 4: Exam 1 Synthesis + Lab Crosswalk</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 1 Review</div></div></div><div class="lesson-tag">Week 4 &middot; Review &middot; Ch. 1&ndash;3 Synthesis</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 10</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 4 · Review Week</p><h1 class="slide-title">Exam 1 Synthesis: Chapters 1&ndash;3</h1>
+  <div class="card warm"><p style="margin-bottom:0;">This week is different from the last three — no new content. It's dedicated entirely to pulling Chapters 1, 2, and 3 together, connecting lecture to what you actually did in Labs 1 and 2, flagging the mistakes students make most often on this exam, and building your final study sheet.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Explain how Chapters 1–3 build on each other as one continuous story</span></li>
+<li><span class="num">2</span><span>Connect Lab 1 and Lab 2 activities directly to their matching lecture content</span></li>
+<li><span class="num">3</span><span>Identify the most common mix-ups students make on this exam</span></li>
+<li><span class="num">4</span><span>Complete a comprehensive practice set spanning all three chapters</span></li>
+<li><span class="num">5</span><span>Walk into Exam 1 with a single, condensed study sheet covering everything tested</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Exam Blueprint</p><h1 class="slide-title">What's actually on Exam 1</h1><div class="card blue"><p style="margin-bottom:0;">Per the syllabus, exams in this course are <strong>closed book, closed note</strong>, built from true/false, matching, and multiple-choice questions. Exam 1 covers everything from Chapters 1&ndash;3 — nothing from Chapter 4 (Tissues) will appear.</p></div>
+  <p>One structural note worth knowing going in: this course drops your single lowest lecture exam score out of the four exams (Exam 1&ndash;4) before finals. That doesn't mean Exam 1 doesn't matter — it means a rough Exam 1 isn't the end of the world if you're rock-solid on the rest, and it's exactly why walking in well-prepared today gives you the most flexibility for the semester ahead.</p></section>
+<section class="slide" data-slide="3"><p class="eyebrow">The Big Picture</p><h1 class="slide-title">How Chapters 1, 2, and 3 are actually one story</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="60" width="150" height="100" rx="12" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="95" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Chapter 1</text>
+  <text x="95" y="112" text-anchor="middle" font-size="10" fill="#0A1F3D">Body plan &amp;</text>
+  <text x="95" y="126" text-anchor="middle" font-size="10" fill="#0A1F3D">homeostasis</text>
+  <text x="95" y="145" text-anchor="middle" font-size="9" fill="#0047BA" font-style="italic">The map</text>
+
+  <text x="195" y="118" text-anchor="middle" font-size="22" fill="#C9A84C" font-weight="700">&#8594;</text>
+
+  <rect x="205" y="60" width="150" height="100" rx="12" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.5"/>
+  <text x="280" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="#7A5A00">Chapter 2</text>
+  <text x="280" y="112" text-anchor="middle" font-size="10" fill="#0A1F3D">Atoms, bonds,</text>
+  <text x="280" y="126" text-anchor="middle" font-size="10" fill="#0A1F3D">biomolecules</text>
+  <text x="280" y="145" text-anchor="middle" font-size="9" fill="#7A5A00" font-style="italic">The raw material</text>
+
+  <text x="380" y="118" text-anchor="middle" font-size="22" fill="#C9A84C" font-weight="700">&#8594;</text>
+
+  <rect x="390" y="60" width="150" height="100" rx="12" fill="#E7F1E7" stroke="#2E7D55" stroke-width="2.5"/>
+  <text x="465" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Chapter 3</text>
+  <text x="465" y="112" text-anchor="middle" font-size="10" fill="#0A1F3D">The cell,</text>
+  <text x="465" y="126" text-anchor="middle" font-size="10" fill="#0A1F3D">built &amp; running</text>
+  <text x="465" y="145" text-anchor="middle" font-size="9" fill="#2E7D55" font-style="italic">The living unit</text>
+
+  <text x="280" y="200" text-anchor="middle" font-size="11" fill="#1c1c1c" font-style="italic">The map, the raw material, and the finished living unit — that's the whole story of Exam 1</text>
+</svg></div>
+    <div class="diagram-caption">It's easy to study these three chapters as separate, disconnected units. They aren't. Chapter 1 gives you the map (where things are). Chapter 2 gives you the raw material (what things are made of). Chapter 3 shows that raw material assembled into the smallest actual living unit — the cell.</div>
+    
+  </div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Cross-Chapter Connections</p><h1 class="slide-title">Where the chapters directly touch each other</h1><p>These aren't coincidences — the exam will reward you for seeing these connections, not just memorizing each chapter in isolation.</p>
+  <ul>
+    <li><strong>Ch. 2 phospholipids &rarr; Ch. 3 plasma membrane.</strong> The exact molecule you learned to draw in Week 2 — polar head, nonpolar tails — is the literal building block of the membrane in Week 3.</li>
+    <li><strong>Ch. 2 amino acids &rarr; Ch. 3 membrane proteins and ribosomes.</strong> Every channel, carrier, and receptor protein in the membrane, and everything a ribosome builds, is made of the amino acids from Chapter 2.</li>
+    <li><strong>Ch. 2 ATP &rarr; Ch. 3 active transport.</strong> The ATP you previewed in Week 2 is the exact energy source active transport and vesicular transport (endo-/exocytosis) spend in Week 3.</li>
+    <li><strong>Ch. 1 homeostasis &rarr; Ch. 3 membrane transport.</strong> Diffusion, osmosis, and active transport are literally how the cell — the smallest unit from Chapter 1's organization hierarchy — maintains its own internal homeostasis.</li>
+  </ul></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Lab Crosswalk</p><h1 class="slide-title">Lab 1: Introduction to Anatomy &amp; Physiology</h1><p>Lab 1 is the hands-on partner to Chapter 1's lecture content — this is where directional terms, planes, and cavities stop being abstract vocabulary and become something you actually locate and point to.</p>
+  <div class="card warm"><p style="margin-bottom:0;"><strong>What to reconnect before the exam:</strong> if your Lab 1 activity involved identifying directional terms and regions on a model or diagram, that's the exact skill tested when an exam question describes a location in words ("the structure superior to X, medial to Y") and expects you to identify it — or the reverse, giving you a structure and asking you to describe its location correctly.</p></div>
+  <p style="font-size:14px;color:#555;">If anything from your actual Lab 1 handout or practical doesn't match what's summarized here, trust your lab material first — labs vary slightly by section, and this supplement can't see your specific lab manual.</p></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Lab Crosswalk</p><h1 class="slide-title">Lab 2: Cell, Microscope, and Mitosis</h1><p>Lab 2 is the hands-on partner to Chapter 3 — this is typically where you'd view actual cells under a microscope and identify the stages of mitosis in prepared slides (often onion root tip or whitefish blastula slides are the classic examples used for this).</p>
+  <div class="card warm"><p style="margin-bottom:0;"><strong>What to reconnect before the exam:</strong> being able to identify a cell as being in prophase, metaphase, anaphase, or telophase from a microscope slide is the same skill as being able to describe what's physically happening during each of those stages from memory — the visual pattern (chromosomes condensed vs. lined up vs. separating vs. two nuclei forming) is your fastest way to tell them apart, on a slide or on an exam diagram.</p></div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Common Exam Traps</p><h1 class="slide-title">Mistakes students make most often on Exam 1</h1><ul>
+    <li><strong>Mixing up medial/lateral with left/right.</strong> Medial and lateral are always relative to the body's own midline, not to the viewer's left or right.</li>
+    <li><strong>Confusing negative and positive feedback direction.</strong> Remember: negative feedback opposes the change (common); positive feedback amplifies it (rare, and always ends when the triggering event finishes).</li>
+    <li><strong>Mixing up ionic and covalent bonds.</strong> Ionic = electrons transferred (creates charged ions). Covalent = electrons shared (no full charge created).</li>
+    <li><strong>Forgetting that "acidic" and "basic" for blood pH are relative to the normal range (7.35&ndash;7.45), not the full 0&ndash;14 scale's midpoint of 7.</strong> A pH of 7.2 is technically above neutral but still considered acidic for blood.</li>
+    <li><strong>Confusing facilitated diffusion with active transport.</strong> Both use a protein, but only active transport costs ATP and only active transport can move substances against their gradient.</li>
+    <li><strong>Mixing up hypertonic and hypotonic effects on cells.</strong> A simple anchor: hypotonic solutions have LESS solute outside, so water rushes IN and the cell swells — "hypo" and "big" can feel backward until this clicks.</li>
+  </ul></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Your Turn &mdash; Mixed Guided Practice</p><h1 class="slide-title">One question from each chapter</h1>
+  <div class="gp-box"><p class="gp-prompt">A quick check spanning all three chapters before the full practice set.</p><p style="font-weight:600;font-size:14.5px;">Question 1 (Ch. 1) — A structure is described as being closer to the point of attachment on a limb than another structure. What term describes it?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">Proximal</button>
+<button class="choice-btn" data-correct="false">Distal</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1"><b>Proximal</b> means closer to the point of attachment; <b>distal</b> means farther away. This is one of the pairs students flip most often under exam time pressure — a quick anchor: "proximal" and "point" both start with the sound of "p," and the point of attachment is where proximal structures are close to.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 (Ch. 2/3) — Which type of bond holds the two fatty acid tails to the glycerol backbone in a phospholipid?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">Covalent bond</button>
+<button class="choice-btn" data-correct="false">Ionic bond</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">The bonds linking glycerol to its fatty acid tails are <b>covalent</b> — shared electrons, not transferred ones. Ionic bonds create charged ions and are far less common in the stable, water-based structural molecules that make up membranes.</div></div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Comprehensive Practice</p><h1 class="slide-title">Exam 1 Full-Spectrum Quiz &mdash; 10 questions</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">(Ch. 1) A transverse plane divides the body into:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Top and bottom</button>
+<button class="quiz-opt" data-correct="false">Left and right</button>
+<button class="quiz-opt" data-correct="false">Front and back</button></div><div class="rationale-box" id="rat-quiz-q1"><b>Transverse</b> = top and bottom (a cross-section). Left/right is sagittal; front/back is frontal (coronal).</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">(Ch. 1) The pericardial cavity sits within the:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Thoracic cavity</button>
+<button class="quiz-opt" data-correct="false">Abdominal cavity</button>
+<button class="quiz-opt" data-correct="false">Dorsal cavity</button></div><div class="rationale-box" id="rat-quiz-q2">The pericardial cavity (surrounding the heart) is nested within the larger <b>thoracic cavity</b>, alongside the two pleural cavities. The abdominal cavity is below the diaphragm; the dorsal cavity holds the brain and spinal cord, an entirely separate cavity system.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">(Ch. 1) In a positive feedback loop, the response:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Amplifies the original stimulus</button>
+<button class="quiz-opt" data-correct="false">Reverses the original stimulus</button>
+<button class="quiz-opt" data-correct="false">Has no effect on the stimulus</button></div><div class="rationale-box" id="rat-quiz-q3">Positive feedback amplifies the change rather than reversing it — like labor contractions building in intensity. Reversing the stimulus is the definition of <em>negative</em> feedback instead.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">(Ch. 2) An atom's identity as a specific element is determined by its number of:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Protons</button>
+<button class="quiz-opt" data-correct="false">Neutrons</button>
+<button class="quiz-opt" data-correct="false">Electrons only</button></div><div class="rationale-box" id="rat-quiz-q4">Protons define the element (the atomic number). Neutron count can vary within the same element (creating isotopes), and while electron count usually matches proton count in a neutral atom, it's the proton count specifically that identifies which element it is.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">(Ch. 2) A buffer's job in the blood is to:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Resist changes in pH</button>
+<button class="quiz-opt" data-correct="false">Increase pH as high as possible</button>
+<button class="quiz-opt" data-correct="false">Transfer electrons between ions</button></div><div class="rationale-box" id="rat-quiz-q5">A buffer absorbs excess H+ or OH- ions to keep pH stable within a narrow range — it doesn't push pH toward any extreme, and it isn't about ionic electron transfer at all.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">(Ch. 2) Glycogen is an example of a:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Polysaccharide</button>
+<button class="quiz-opt" data-correct="false">Monosaccharide</button>
+<button class="quiz-opt" data-correct="false">Phospholipid</button></div><div class="rationale-box" id="rat-quiz-q6">Glycogen is many linked glucose units — a <b>polysaccharide</b>, the body's storage form of carbohydrate. A monosaccharide is a single sugar unit (like glucose alone); a phospholipid is a lipid, an entirely different molecule class.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">(Ch. 3) Which organelle modifies and packages proteins for their final destination?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Golgi apparatus</button>
+<button class="quiz-opt" data-correct="false">Rough ER</button>
+<button class="quiz-opt" data-correct="false">Mitochondria</button></div><div class="rationale-box" id="rat-quiz-q7">The <b>Golgi apparatus</b> is the "shipping department" — it modifies and packages proteins AFTER the rough ER has already built them. Mitochondria handle ATP production, an unrelated job entirely.</div></div>
+<div class="quiz-q" data-quiz="q8"><div class="qnum">Question 8</div><div class="qtext">(Ch. 3) Moving glucose into a cell via a specific channel protein, without using ATP, is:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Facilitated diffusion</button>
+<button class="quiz-opt" data-correct="false">Active transport</button>
+<button class="quiz-opt" data-correct="false">Simple diffusion</button></div><div class="rationale-box" id="rat-quiz-q8">A protein channel is required, but no ATP is spent — that combination specifically defines <b>facilitated diffusion</b>. Active transport would require ATP; simple diffusion never needs a protein channel at all.</div></div>
+<div class="quiz-q" data-quiz="q9"><div class="qnum">Question 9</div><div class="qtext">(Ch. 3) A cell in a hypotonic solution will:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Swell, possibly to the point of bursting</button>
+<button class="quiz-opt" data-correct="false">Shrink and shrivel</button>
+<button class="quiz-opt" data-correct="false">Remain completely unchanged</button></div><div class="rationale-box" id="rat-quiz-q9">"Hypo"tonic means LESS solute outside the cell than inside — water follows its concentration gradient INTO the cell, causing it to swell and, in extreme cases, lyse (burst).</div></div>
+<div class="quiz-q" data-quiz="q10"><div class="qnum">Question 10</div><div class="qtext">(Ch. 1–3 synthesis) Which sequence correctly shows how these three chapters build on each other?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Body organization (Ch.1) → chemical building blocks (Ch.2) → assembled into a living cell (Ch.3)</button>
+<button class="quiz-opt" data-correct="false">Cells (Ch.3) → atoms (Ch.2) → body cavities (Ch.1), unrelated to each other</button>
+<button class="quiz-opt" data-correct="false">Each chapter is fully independent with no connection to the others</button></div><div class="rationale-box" id="rat-quiz-q10">Chapter 1 gives you the map and vocabulary for the body as a whole, Chapter 2 gives you the chemical raw material everything is built from, and Chapter 3 shows that raw material assembled into the smallest true living unit. They're a deliberate build, not three disconnected topics.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 10</span></div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Final Study Sheet</p><h1 class="slide-title">Exam 1 Complete Recap — Chapters 1&ndash;3</h1>
+  <p>The single condensed page to review right before you sit down for Exam 1.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Ch. 1 — Directional Terms</h4><p>Superior/Inferior, Anterior/Posterior, Medial/Lateral, Proximal/Distal — always relative to anatomical position.</p></div>
+<div class="recap-cell"><h4>Ch. 1 — Planes &amp; Cavities</h4><p>Sagittal (L/R), Frontal (front/back), Transverse (top/bottom). Dorsal = Cranial + Vertebral. Ventral = Thoracic + Abdominopelvic.</p></div>
+<div class="recap-cell"><h4>Ch. 1 — Homeostasis</h4><p>Negative feedback opposes change (common). Positive feedback amplifies change (rare, self-limiting).</p></div>
+<div class="recap-cell"><h4>Ch. 2 — Bonds</h4><p>Ionic = transferred electrons. Covalent = shared electrons. Hydrogen = weak, but powerful in numbers (water's properties).</p></div>
+<div class="recap-cell"><h4>Ch. 2 — pH &amp; Biomolecules</h4><p>pH 0&ndash;14, 7 = neutral, blood 7.35&ndash;7.45. Carbs, lipids, proteins, nucleic acids — know their building blocks.</p></div>
+<div class="recap-cell"><h4>Ch. 3 — Membrane &amp; Organelles</h4><p>Phospholipid bilayer + proteins. Nucleus &rarr; ribosome &rarr; rough ER &rarr; Golgi = the manufacturing chain. Mitochondria = ATP.</p></div>
+<div class="recap-cell"><h4>Ch. 3 — Transport</h4><p>Passive: diffusion, facilitated diffusion, osmosis (no ATP). Active: requires ATP, moves against the gradient.</p></div>
+<div class="recap-cell"><h4>Ch. 3 — Tonicity &amp; Mitosis</h4><p>Hypertonic = shrinks. Hypotonic = swells. Mitosis: Prophase &rarr; Metaphase &rarr; Anaphase &rarr; Telophase.</p></div></div>
+  
+  <div class="next-box"><strong>Exam 1 covers Chapters 1&ndash;3 only.</strong> After this exam, Week 5 begins Exam Block 2 with Chapter 4 (Tissue Level of Organization) — a fresh start, and your first opportunity to apply the same study rhythm you just built.</div>
+  <div class="end-actions"><button class="end-btn secondary" data-action="restart">&#8635; Restart This Review Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
