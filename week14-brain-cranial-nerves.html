@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 14: The Brain, Cranial Nerves & Sensory-Motor Pathways</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 5</div></div></div><div class="lesson-tag">Week 14 &middot; Ch. 14&ndash;15 &middot; Brain &amp; Pathways</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 16</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 14 · Chapters 14 &amp; 15</p><h1 class="slide-title">The Brain, Cranial Nerves &amp; Sensory-Motor Pathways</h1>
+  <div class="card warm"><p style="margin-bottom:0;">This week moves from the spinal cord upward into the brain itself (Ch. 14), then covers how sensory information travels up to the brain and motor commands travel back down (Ch. 15). Together these chapters explain how the whole nervous system &mdash; from Weeks 13's neurons and spinal cord &mdash; forms one connected communication network.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Identify the four major brain regions and their general function</span></li>
+<li><span class="num">2</span><span>Locate the four cerebral lobes and match each to its primary job</span></li>
+<li><span class="num">3</span><span>Describe the three meningeal layers protecting the brain</span></li>
+<li><span class="num">4</span><span>Recognize that cranial nerves emerge from the brain, not the spinal cord</span></li>
+<li><span class="num">5</span><span>Distinguish general senses from special senses</span></li>
+<li><span class="num">6</span><span>Trace a sensory signal up and a motor signal down the nervous system</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Part 1 — Big Picture</p><h1 class="slide-title">Four major regions of the brain</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <ellipse cx="220" cy="100" rx="150" ry="80" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="180" y="60" font-size="12" font-weight="700" fill="#0047BA">Cerebrum</text>
+  <text x="180" y="75" font-size="9" fill="#1c1c1c">conscious thought, movement, senses</text>
+  <ellipse cx="330" cy="160" rx="55" ry="35" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="300" y="163" text-anchor="middle" font-size="9.5" font-weight="700" fill="#7A5A00">Cerebellum</text>
+  <text x="300" y="176" text-anchor="middle" font-size="8" fill="#1c1c1c">balance &amp; coordination</text>
+  <rect x="185" y="150" width="35" height="70" rx="10" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="60" y="215" font-size="9.5" font-weight="700" fill="#DB2F30">Brainstem</text>
+  <text x="60" y="228" font-size="8" fill="#1c1c1c">midbrain, pons, medulla &mdash; vital functions</text>
+  <circle cx="200" cy="110" r="18" fill="#F0E7F7" stroke="#5B3E96" stroke-width="2.2"/>
+  <text x="60" y="105" font-size="9.5" font-weight="700" fill="#5B3E96">Diencephalon</text>
+  <text x="60" y="118" font-size="8" fill="#1c1c1c">thalamus, hypothalamus</text>
+</svg></div>
+    <div class="diagram-caption">The brain organizes into four major regions, each with a distinct job. The cerebrum &mdash; by far the largest &mdash; handles conscious thought, voluntary movement, and sensory interpretation. The cerebellum fine-tunes balance and coordination. The brainstem (midbrain, pons, medulla) runs vital, largely automatic functions like breathing and heart rate. The diencephalon (thalamus and hypothalamus) relays sensory information and regulates homeostasis.</div>
+    
+  </div></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Part 1 — Vocabulary &amp; Word Parts</p><h1 class="slide-title">Brain &amp; cranial nerve roots</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">cerebr/o-</span><span class="meaning">brain, cerebrum</span></div><div class="wp-body"><b>Cerebr</b>al cortex = the outer, folded surface of the largest brain region.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">cerebell/o-</span><span class="meaning">cerebellum</span></div><div class="wp-body"><b>Cerebell</b>ar = relating to the balance-and-coordination center.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">mening/o-</span><span class="meaning">meninges</span></div><div class="wp-body"><b>Mening</b>itis = inflammation of the three protective membranes around the brain and spinal cord.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">thalam/o-</span><span class="meaning">thalamus</span></div><div class="wp-body"><b>Thalam</b>ic relay = nearly all sensory information passes through the thalamus before reaching conscious awareness.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">crani/o- (again)</span><span class="meaning">skull</span></div><div class="wp-body"><b>Crani</b>al nerves = the 12 nerve pairs that pass through openings in the skull.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-plegia (again)</span><span class="meaning">paralysis</span></div><div class="wp-body">Facial nerve <b>palsy</b> and other cranial-nerve-specific paralysis terms reuse this same root family.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Part 1 — Structure &amp; Function</p><h1 class="slide-title">The cerebrum's four lobes</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="15" width="130" height="38" rx="7" fill="#fff" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="85" y="39" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Frontal</text>
+  <text x="165" y="39" font-size="9.5" fill="#1c1c1c">Voluntary movement, reasoning, personality</text><rect x="20" y="65" width="130" height="38" rx="7" fill="#fff" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="85" y="89" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Parietal</text>
+  <text x="165" y="89" font-size="9.5" fill="#1c1c1c">Touch, spatial awareness, taste</text><rect x="20" y="115" width="130" height="38" rx="7" fill="#fff" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="85" y="139" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Temporal</text>
+  <text x="165" y="139" font-size="9.5" fill="#1c1c1c">Hearing, memory, language comprehension</text><rect x="20" y="165" width="130" height="38" rx="7" fill="#fff" stroke="#2E7D55" stroke-width="2.2"/>
+  <text x="85" y="189" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Occipital</text>
+  <text x="165" y="189" font-size="9.5" fill="#1c1c1c">Vision</text>
+</svg></div>
+    <div class="diagram-caption">The cerebrum's outer surface divides into four lobes, each specializing in different functions. A simple front-to-back memory device: frontal (movement &amp; reasoning, at the front) &rarr; parietal (touch, just behind it) &rarr; occipital (vision, at the very back) &mdash; with temporal tucked below, handling hearing and memory.</div>
+    
+  </div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Part 1 — Structure &amp; Function</p><h1 class="slide-title">Three protective layers: the meninges</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="180" cy="110" r="95" fill="#EAF0FB" stroke="#0047BA" stroke-width="4"/>
+  <circle cx="180" cy="110" r="72" fill="#F5EFE0" stroke="#C9A84C" stroke-width="3"/>
+  <circle cx="180" cy="110" r="52" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.5"/>
+  <circle cx="180" cy="110" r="32" fill="#D9D0E8"/>
+  <text x="180" y="115" text-anchor="middle" font-size="9" fill="#5B3E96" font-weight="700">Brain</text>
+  <text x="300" y="40" font-size="10" fill="#0047BA" font-weight="700">Dura mater (outer, tough)</text>
+  <text x="300" y="75" font-size="10" fill="#7A5A00" font-weight="700">Arachnoid (middle, CSF space)</text>
+  <text x="300" y="110" font-size="10" fill="#DB2F30" font-weight="700">Pia mater (inner, hugs brain)</text>
+</svg></div>
+    <div class="diagram-caption">Three membrane layers wrap the brain and spinal cord, from outside in: the tough dura mater, the web-like arachnoid mater (with cerebrospinal fluid filling the space beneath it), and the pia mater, which hugs the brain's surface directly. This same three-layer system continues down around the spinal cord.</div>
+    
+  </div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Part 1 — Structure &amp; Function</p><h1 class="slide-title">Cranial nerves: a different kind of nerve pair</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="20" width="520" height="60" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="280" y="45" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">12 pairs, numbered I through XII</text>
+  <text x="280" y="65" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Emerge directly from the brain and brainstem &mdash; not the spinal cord</text>
+  <rect x="20" y="100" width="140" height="80" rx="8" fill="#fff" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="90" y="130" text-anchor="middle" font-size="14" font-weight="700" fill="#C9A84C">I</text>
+  <text x="90" y="150" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">Olfactory</text>
+  <text x="90" y="166" text-anchor="middle" font-size="9" fill="#1c1c1c">Smell</text><rect x="210" y="100" width="140" height="80" rx="8" fill="#fff" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="280" y="130" text-anchor="middle" font-size="14" font-weight="700" fill="#DB2F30">II</text>
+  <text x="280" y="150" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">Optic</text>
+  <text x="280" y="166" text-anchor="middle" font-size="9" fill="#1c1c1c">Vision</text><rect x="400" y="100" width="140" height="80" rx="8" fill="#fff" stroke="#2E7D55" stroke-width="2.2"/>
+  <text x="470" y="130" text-anchor="middle" font-size="14" font-weight="700" fill="#2E7D55">X</text>
+  <text x="470" y="150" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">Vagus</text>
+  <text x="470" y="166" text-anchor="middle" font-size="9" fill="#1c1c1c">Organs, autonomic</text>
+</svg></div>
+    <div class="diagram-caption">Unlike the 31 pairs of spinal nerves covered last week, the 12 pairs of cranial nerves emerge directly from the brain and brainstem, passing through openings in the skull rather than through the vertebral column. Each is numbered with a Roman numeral (I&ndash;XII) in a fixed anterior-to-posterior order, and each serves a specific, often highly specialized function &mdash; from smell (I) to vision (II) to widespread organ control (X, the vagus nerve).</div>
+    
+  </div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Part 1 — Clinical Correlation</p><h1 class="slide-title">Why stroke symptoms depend on location</h1>
+  <p>This is a direct application of the brain-region map above.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">A <strong>stroke</strong> is an interruption of blood flow to part of the brain, and its symptoms map directly onto whichever region loses blood supply. A stroke in the frontal lobe may impair movement or personality; one in the temporal lobe may affect language or memory; one in the brainstem &mdash; even though it's small &mdash; can be immediately life-threatening, since it controls breathing and heart rate. This is exactly why "time is brain": the specific deficit tells clinicians where the damage is.</p></div></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Part 2 — Big Picture</p><h1 class="slide-title">Two categories of senses</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="200" height="140" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="120" y="60" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">General Senses</text>
+  <text x="120" y="90" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Touch, temperature,</text>
+  <text x="120" y="104" text-anchor="middle" font-size="9.5" fill="#1c1c1c">pain, pressure</text>
+  <text x="120" y="130" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Receptors spread</text>
+  <text x="120" y="144" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">throughout the body</text>
+  <rect x="260" y="30" width="200" height="140" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.5"/>
+  <text x="360" y="60" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Special Senses</text>
+  <text x="360" y="90" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Vision, hearing, taste,</text>
+  <text x="360" y="104" text-anchor="middle" font-size="9.5" fill="#1c1c1c">smell, balance</text>
+  <text x="360" y="130" text-anchor="middle" font-size="9" fill="#7A5A00" font-weight="700">Receptors confined to</text>
+  <text x="360" y="144" text-anchor="middle" font-size="9" fill="#7A5A00" font-weight="700">specific complex organs</text>
+</svg></div>
+    <div class="diagram-caption">Chapter 15 splits sensation into two categories. General senses (touch, temperature, pain, pressure) use simple receptors scattered throughout the body. Special senses (vision, hearing, taste, smell, balance) rely on complex, dedicated sensory organs confined to specific locations &mdash; the eye, the ear, and so on.</div>
+    
+  </div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Part 2 — Vocabulary &amp; Word Parts</p><h1 class="slide-title">Sensory &amp; motor pathway roots</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">noci-</span><span class="meaning">harm, injury</span></div><div class="wp-body"><b>Noci</b>ceptor = a receptor that detects tissue damage &mdash; the basis of pain sensation.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-esthesia</span><span class="meaning">sensation, feeling</span></div><div class="wp-body">An<b>esthesia</b> = the absence of sensation, induced medically.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">affer-</span><span class="meaning">carry toward</span></div><div class="wp-body"><b>Affer</b>ent pathways carry sensory signals toward the CNS &mdash; same root from Week 13's sensory neurons.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">effer-</span><span class="meaning">carry away</span></div><div class="wp-body"><b>Effer</b>ent pathways carry motor signals away from the CNS toward muscles.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">mechan/o-</span><span class="meaning">mechanical</span></div><div class="wp-body"><b>Mechan</b>oreceptor = detects physical/mechanical forces like touch or stretch.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">thermo-</span><span class="meaning">heat, temperature</span></div><div class="wp-body"><b>Thermo</b>receptor = detects temperature change.</div></div></div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Part 2 — Structure &amp; Function</p><h1 class="slide-title">The ascending (sensory) pathway</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="40" width="140" height="90" rx="8" fill="#fff" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="90" y="75" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Receptor</text>
+  <text x="90" y="100" text-anchor="middle" font-size="8" fill="#1c1c1c">in the periphery</text>
+  <path d="M160,85 L178,85" stroke="#1c1c1c" stroke-width="2" marker-end="url(#arrow14a)"/><rect x="210" y="40" width="140" height="90" rx="8" fill="#fff" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="280" y="75" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">1st-order neuron</text>
+  <text x="280" y="100" text-anchor="middle" font-size="8" fill="#1c1c1c">periphery → spinal cord/brainstem</text>
+  <path d="M350,85 L368,85" stroke="#1c1c1c" stroke-width="2" marker-end="url(#arrow14a)"/><rect x="400" y="40" width="140" height="90" rx="8" fill="#fff" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="470" y="75" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">2nd &amp; 3rd-order</text>
+  <text x="470" y="100" text-anchor="middle" font-size="8" fill="#1c1c1c">→ thalamus → cortex</text>
+  
+  <defs><marker id="arrow14a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1c1c1c"/></marker></defs>
+</svg></div>
+    <div class="diagram-caption">A sensory signal typically relays through a chain of neurons on its way to conscious awareness: a receptor detects the stimulus, a first-order neuron carries it into the spinal cord or brainstem, and second- and third-order neurons relay it onward &mdash; almost always through the thalamus &mdash; before it finally reaches the cerebral cortex, where it becomes a conscious sensation.</div>
+    
+  </div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Part 2 — Structure &amp; Function</p><h1 class="slide-title">The descending (motor) pathway</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="20" width="180" height="70" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="110" y="50" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Upper motor neuron</text>
+  <text x="110" y="68" text-anchor="middle" font-size="8.5" fill="#1c1c1c">cell body in cerebral cortex</text>
+  <path d="M110,90 L110,120" stroke="#1c1c1c" stroke-width="2" marker-end="url(#arrow14b)"/>
+  <defs><marker id="arrow14b" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M0,0 L8,0 L4,6 Z" fill="#1c1c1c"/></marker></defs>
+  <rect x="20" y="130" width="180" height="70" rx="10" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="110" y="158" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Lower motor neuron</text>
+  <text x="110" y="176" text-anchor="middle" font-size="8.5" fill="#1c1c1c">cell body in spinal cord,</text>
+  <text x="110" y="190" text-anchor="middle" font-size="8.5" fill="#1c1c1c">axon exits to the muscle</text>
+  <text x="260" y="60" font-size="9.5" fill="#1c1c1c">Damage above this junction</text>
+  <text x="260" y="75" font-size="9.5" fill="#1c1c1c">= upper motor neuron signs</text>
+  <text x="260" y="150" font-size="9.5" fill="#1c1c1c">Damage below this junction</text>
+  <text x="260" y="165" font-size="9.5" fill="#1c1c1c">= lower motor neuron signs</text>
+</svg></div>
+    <div class="diagram-caption">A voluntary movement follows the opposite direction: an upper motor neuron, with its cell body in the cerebral cortex, sends a command down toward the spinal cord, where it connects to a lower motor neuron whose axon exits directly to the target muscle. This two-neuron relay &mdash; and specifically where the damage occurs relative to the junction between them &mdash; is the key distinction in this week's clinical correlation.</div>
+    
+  </div></section>
+<section class="slide" data-slide="12"><p class="eyebrow">Part 2 — Structure &amp; Function</p><h1 class="slide-title">Four general-sense receptor types</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="15" width="160" height="38" rx="7" fill="#fff" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="100" y="39" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Mechanoreceptors</text>
+  <text x="195" y="39" font-size="9.5" fill="#1c1c1c">Detect touch, pressure, vibration, stretch</text><rect x="20" y="65" width="160" height="38" rx="7" fill="#fff" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="100" y="89" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Thermoreceptors</text>
+  <text x="195" y="89" font-size="9.5" fill="#1c1c1c">Detect temperature change</text><rect x="20" y="115" width="160" height="38" rx="7" fill="#fff" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="100" y="139" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Nociceptors</text>
+  <text x="195" y="139" font-size="9.5" fill="#1c1c1c">Detect tissue damage — pain</text><rect x="20" y="165" width="160" height="38" rx="7" fill="#fff" stroke="#2E7D55" stroke-width="2.2"/>
+  <text x="100" y="189" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Chemoreceptors</text>
+  <text x="195" y="189" font-size="9.5" fill="#1c1c1c">Detect chemical changes — taste, smell, blood pH</text>
+</svg></div>
+    <div class="diagram-caption">General senses rely on four main receptor categories, each tuned to a different kind of stimulus. Recognizing which receptor type is being described &mdash; from its name alone, using the word parts above &mdash; is a fast way to answer function-based exam questions without memorizing each one separately.</div>
+    
+  </div></section>
+<section class="slide" data-slide="13"><p class="eyebrow">Part 2 — Clinical Correlation</p><h1 class="slide-title">Upper vs. lower motor neuron damage: different signs</h1>
+  <p>This distinction is one of the highest-yield concepts in this week's material, and it builds directly on the motor pathway diagram above.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">Damage to an <strong>upper motor neuron</strong> (e.g., from a stroke) typically produces spastic paralysis &mdash; muscles stay tight and reflexes become exaggerated, because the lower motor neuron below the damage is still intact but has lost its usual inhibitory control. Damage to a <strong>lower motor neuron</strong> instead produces flaccid paralysis &mdash; muscles go limp and reflexes disappear entirely, because the direct connection to the muscle itself has been severed. Same symptom category (paralysis), opposite presentation, depending on which neuron is damaged.</p></div></section>
+<section class="slide" data-slide="14"><p class="eyebrow">Your Turn — Connecting Ch. 14 &amp; 15</p><h1 class="slide-title">Apply both chapters before the quiz</h1>
+  <div class="gp-box"><p class="gp-prompt">A patient presents with vision loss following a head injury.</p><p style="font-weight:600;font-size:14.5px;">Question 1 — Which lobe of the cerebrum was most likely affected?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">Occipital lobe</button>
+<button class="choice-btn" data-correct="false">Frontal lobe</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">The <b>occipital lobe</b> handles vision. The frontal lobe governs movement and reasoning instead — damage there would more likely affect voluntary movement or personality, not eyesight specifically.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — Which cranial nerve carries visual information from the eye toward the brain?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">Cranial nerve II (Optic)</button>
+<button class="choice-btn" data-correct="false">Cranial nerve I (Olfactory)</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2"><b>Cranial nerve II, the optic nerve</b>, carries visual signals from the eye. Cranial nerve I (olfactory) instead carries smell — a reminder that each cranial nerve is dedicated to a specific, often single sense or function.</div></div></section>
+<section class="slide" data-slide="15"><p class="eyebrow">Practice Quiz</p><h1 class="slide-title">8 questions across Ch. 14&ndash;15</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">Which brain region is primarily responsible for balance and coordination?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Cerebellum</button>
+<button class="quiz-opt" data-correct="false">Cerebrum</button>
+<button class="quiz-opt" data-correct="false">Diencephalon</button></div><div class="rationale-box" id="rat-quiz-q1">The <b>cerebellum</b> fine-tunes balance and coordination. The cerebrum handles conscious thought and movement initiation; the diencephalon relays sensory information and regulates homeostasis.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">Which cerebral lobe processes vision?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Occipital</button>
+<button class="quiz-opt" data-correct="false">Parietal</button>
+<button class="quiz-opt" data-correct="false">Temporal</button></div><div class="rationale-box" id="rat-quiz-q2">The <b>occipital</b> lobe, at the very back of the brain, processes vision. The parietal lobe handles touch and spatial awareness; the temporal lobe handles hearing and memory.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">Which meningeal layer is the toughest and most superficial?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Dura mater</button>
+<button class="quiz-opt" data-correct="false">Arachnoid mater</button>
+<button class="quiz-opt" data-correct="false">Pia mater</button></div><div class="rationale-box" id="rat-quiz-q3">The <b>dura mater</b> is the tough, outermost layer. The arachnoid is the web-like middle layer, and the pia mater is the innermost, directly hugging the brain's surface.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">Cranial nerves differ from spinal nerves primarily in that they:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Emerge from the brain and brainstem, not the spinal cord</button>
+<button class="quiz-opt" data-correct="false">Are exclusively motor, never sensory</button>
+<button class="quiz-opt" data-correct="false">Number 31 pairs instead of 12</button></div><div class="rationale-box" id="rat-quiz-q4">Cranial nerves <b>emerge from the brain and brainstem</b> through openings in the skull. There are 12 cranial nerve pairs (not 31 — that's the spinal nerve count), and several cranial nerves carry both sensory and motor fibers.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">Vision and hearing are classified as:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Special senses</button>
+<button class="quiz-opt" data-correct="false">General senses</button>
+<button class="quiz-opt" data-correct="false">Neither — they are reflexes</button></div><div class="rationale-box" id="rat-quiz-q5">Vision and hearing are <b>special senses</b> — they rely on complex, dedicated sensory organs (the eye, the ear) rather than the simple, widely distributed receptors of the general senses.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">In the ascending sensory pathway, signals almost always relay through the:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Thalamus</button>
+<button class="quiz-opt" data-correct="false">Cerebellum</button>
+<button class="quiz-opt" data-correct="false">Dura mater</button></div><div class="rationale-box" id="rat-quiz-q6">Nearly all sensory information relays through the <b>thalamus</b> before reaching the cerebral cortex and conscious awareness. The cerebellum and dura mater play no role in this specific relay.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">A nociceptor is a receptor specialized to detect:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Tissue damage / pain</button>
+<button class="quiz-opt" data-correct="false">Temperature change</button>
+<button class="quiz-opt" data-correct="false">Light touch</button></div><div class="rationale-box" id="rat-quiz-q7">A <b>nociceptor</b> detects tissue damage, producing the sensation of pain. Temperature change is detected by thermoreceptors, and light touch by mechanoreceptors instead.</div></div>
+<div class="quiz-q" data-quiz="q8"><div class="qnum">Question 8</div><div class="qtext">Flaccid paralysis with absent reflexes points to damage at the level of the:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Lower motor neuron</button>
+<button class="quiz-opt" data-correct="false">Upper motor neuron</button>
+<button class="quiz-opt" data-correct="false">Thalamus</button></div><div class="rationale-box" id="rat-quiz-q8"><b>Lower motor neuron</b> damage severs the direct connection to the muscle, producing flaccid paralysis and absent reflexes. Upper motor neuron damage instead typically produces spastic paralysis with exaggerated reflexes.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 8</span></div></section>
+<section class="slide" data-slide="16"><p class="eyebrow">Quick-Reference Recap</p><h1 class="slide-title">Chapters 14&ndash;15 One-Page Summary</h1>
+  <p>Everything from this week, condensed onto one page.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Ch. 14 — Brain Regions</h4><ul><li>Cerebrum — thought, movement</li><li>Cerebellum — balance, coordination</li><li>Brainstem — vital functions</li><li>Diencephalon — relay, homeostasis</li></ul></div>
+<div class="recap-cell"><h4>Ch. 14 — Cerebral Lobes</h4><p>Frontal (movement/reasoning), Parietal (touch), Temporal (hearing/memory), Occipital (vision).</p></div>
+<div class="recap-cell"><h4>Ch. 14 — Meninges</h4><p>Dura (outer, tough) &rarr; Arachnoid (CSF space) &rarr; Pia (inner, hugs brain).</p></div>
+<div class="recap-cell"><h4>Ch. 14 — Cranial Nerves</h4><p>12 pairs, numbered I&ndash;XII, emerge from brain/brainstem (not spinal cord).</p></div>
+<div class="recap-cell"><h4>Ch. 15 — Sensory Pathway</h4><p>Receptor &rarr; 1st-order neuron &rarr; (thalamus) &rarr; cortex.</p></div>
+<div class="recap-cell"><h4>Ch. 15 — Motor Signs</h4><p>Upper motor neuron damage = spastic. Lower motor neuron damage = flaccid.</p></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Cerebrum</span><span class="term-pill">Cerebellum</span><span class="term-pill">Brainstem</span><span class="term-pill">Diencephalon</span><span class="term-pill">Meninges</span><span class="term-pill">Cranial Nerve</span><span class="term-pill">Thalamus</span><span class="term-pill">Nociceptor</span><span class="term-pill">Mechanoreceptor</span><span class="term-pill">Upper Motor Neuron</span><span class="term-pill">Lower Motor Neuron</span></div>
+  <div class="next-box"><strong>Chapters 14&ndash;15 complete.</strong> You now know the brain's major regions, its protective layers, the cranial nerves, and how sensory and motor signals travel up and down the nervous system. Next week closes the nervous system unit: the autonomic nervous system, plus your cumulative final review.</div>
+  <div class="end-actions"><a class="end-btn primary next-lesson-link" href="week15-autonomic-ns-cumulative-final.html">Next: Week 15 &rarr;</a><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
