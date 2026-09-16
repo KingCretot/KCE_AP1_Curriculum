@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 13: Neural Tissue & the Spinal Cord</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 5</div></div></div><div class="lesson-tag">Week 13 &middot; Ch. 12&ndash;13 &middot; Neural Tissue &amp; Spinal Cord</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 14</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 13 · Chapters 12 &amp; 13</p><h1 class="slide-title">Neural Tissue &amp; the Spinal Cord</h1>
+  <div class="card warm"><p style="margin-bottom:0;">Exam Block 5 opens the nervous system: first, the microscopic building block — the neuron and its support cells (Ch. 12) — then how billions of those neurons organize into the spinal cord and its 31 pairs of spinal nerves (Ch. 13). Next week continues with the brain; this week lays the foundation everything else builds on.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Identify the structural parts of a neuron and their function</span></li>
+<li><span class="num">2</span><span>Distinguish sensory, motor, and interneurons by direction of signal flow</span></li>
+<li><span class="num">3</span><span>Match each neuroglial cell type to its job</span></li>
+<li><span class="num">4</span><span>Describe the spinal cord's gray matter/white matter organization</span></li>
+<li><span class="num">5</span><span>Trace a spinal nerve from dorsal/ventral roots to the periphery</span></li>
+<li><span class="num">6</span><span>Walk through the five components of a reflex arc</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Part 1 — Big Picture</p><h1 class="slide-title">The neuron: built to receive, conduct, and transmit</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <path d="M60,110 L55,70 M60,110 L50,90 M60,110 L52,130 M60,110 L58,150 M60,110 L45,115" stroke="#0047BA" stroke-width="2.5" fill="none"/>
+  <text x="30" y="45" font-size="10.5" fill="#0047BA" font-weight="700">Dendrites</text>
+  <circle cx="90" cy="110" r="28" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="90" y="115" text-anchor="middle" font-size="9" fill="#0A1F3D" font-weight="700">Cell Body</text>
+  <line x1="118" y1="110" x2="380" y2="110" stroke="#C9A84C" stroke-width="6"/>
+  <text x="230" y="90" text-anchor="middle" font-size="10.5" fill="#7A5A00" font-weight="700">Axon</text>
+  <ellipse cx="165" cy="110" rx="16" ry="9" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/><ellipse cx="205" cy="110" rx="16" ry="9" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/><ellipse cx="245" cy="110" rx="16" ry="9" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/><ellipse cx="285" cy="110" rx="16" ry="9" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/><ellipse cx="325" cy="110" rx="16" ry="9" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/><ellipse cx="365" cy="110" rx="16" ry="9" fill="#fff" stroke="#C9A84C" stroke-width="1.5"/>
+  <text x="230" y="140" text-anchor="middle" font-size="9" fill="#1c1c1c">Myelin sheath (segments)</text>
+  <text x="188" y="160" text-anchor="middle" font-size="8.5" fill="#DB2F30" font-weight="700">Node of Ranvier</text>
+  <path d="M380,110 L410,90 M380,110 L415,105 M380,110 L410,130 M380,110 L400,140" stroke="#DB2F30" stroke-width="2.5" fill="none"/>
+  <text x="460" y="75" font-size="10.5" fill="#DB2F30" font-weight="700">Axon Terminals</text>
+</svg></div>
+    <div class="diagram-caption">A neuron's shape mirrors its job. Dendrites receive incoming signals; the cell body integrates them; the axon &mdash; often wrapped in a segmented myelin sheath with gaps called Nodes of Ranvier &mdash; conducts the signal at high speed over distance; and axon terminals pass it on to the next cell. Every neuron in the body follows this same basic plan.</div>
+    
+  </div></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Part 1 — Vocabulary &amp; Word Parts</p><h1 class="slide-title">Neural tissue roots</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">neur/o-</span><span class="meaning">nerve, neuron</span></div><div class="wp-body"><b>Neur</b>on = the basic conducting cell of the nervous system.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">dendr/o-</span><span class="meaning">tree, branching</span></div><div class="wp-body"><b>Dendr</b>ites branch out from the cell body like a tree's limbs.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">ax/o-</span><span class="meaning">axis, main stem</span></div><div class="wp-body">The <b>ax</b>on is the single main conducting fiber of the neuron.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-glia / gli/o-</span><span class="meaning">glue</span></div><div class="wp-body">Neuro<b>glia</b> = the "glue" cells that support neurons without conducting signals themselves.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">syn-</span><span class="meaning">together, joined</span></div><div class="wp-body">A <b>syn</b>apse is the junction where two neurons communicate.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-algia</span><span class="meaning">pain</span></div><div class="wp-body">Neur<b>algia</b> = nerve pain, covered again in this week's clinical correlation.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Part 1 — Structure &amp; Function</p><h1 class="slide-title">Three neuron types, sorted by signal direction</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="20" width="140" height="150" rx="12" fill="#fff" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="90" y="55" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Sensory (Afferent)</text>
+  <text x="90" y="85" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Receptor → CNS</text>
+  <text x="90" y="105" text-anchor="middle" font-size="9" fill="#1c1c1c">carries signals IN</text><rect x="210" y="20" width="140" height="150" rx="12" fill="#fff" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="280" y="55" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Motor (Efferent)</text>
+  <text x="280" y="85" text-anchor="middle" font-size="9" fill="#DB2F30" font-weight="700">CNS → Effector</text>
+  <text x="280" y="105" text-anchor="middle" font-size="9" fill="#1c1c1c">carries signals OUT</text><rect x="400" y="20" width="140" height="150" rx="12" fill="#fff" stroke="#2E7D55" stroke-width="2.5"/>
+  <text x="470" y="55" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Interneuron</text>
+  <text x="470" y="85" text-anchor="middle" font-size="9" fill="#2E7D55" font-weight="700">Entirely within CNS</text>
+  <text x="470" y="105" text-anchor="middle" font-size="9" fill="#1c1c1c">connects the two</text>
+</svg></div>
+    <div class="diagram-caption">Neurons are classified by which way they carry information. Sensory (afferent) neurons carry signals from receptors toward the central nervous system (CNS). Motor (efferent) neurons carry signals from the CNS out to muscles and glands. Interneurons never leave the CNS &mdash; they connect sensory input to motor output, often adding layers of processing in between.</div>
+    
+  </div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Part 1 — Structure &amp; Function</p><h1 class="slide-title">Neuroglia: five support cells, five jobs</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="15" width="150" height="38" rx="7" fill="#fff" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="95" y="39" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Astrocytes</text>
+  <text x="185" y="39" font-size="9.5" fill="#1c1c1c">Support/nourish neurons, form blood-brain barrier</text><rect x="20" y="65" width="150" height="38" rx="7" fill="#fff" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="95" y="89" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Oligodendrocytes</text>
+  <text x="185" y="89" font-size="9.5" fill="#1c1c1c">Myelinate axons in the CNS</text><rect x="20" y="115" width="150" height="38" rx="7" fill="#fff" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="95" y="139" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Schwann cells</text>
+  <text x="185" y="139" font-size="9.5" fill="#1c1c1c">Myelinate axons in the PNS</text><rect x="20" y="165" width="150" height="38" rx="7" fill="#fff" stroke="#2E7D55" stroke-width="2.2"/>
+  <text x="95" y="189" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Microglia</text>
+  <text x="185" y="189" font-size="9.5" fill="#1c1c1c">Immune defense — phagocytize debris/pathogens</text><rect x="20" y="215" width="150" height="38" rx="7" fill="#fff" stroke="#5B3E96" stroke-width="2.2"/>
+  <text x="95" y="239" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Ependymal cells</text>
+  <text x="185" y="239" font-size="9.5" fill="#1c1c1c">Line cavities, produce/circulate CSF</text>
+</svg></div>
+    <div class="diagram-caption">Glial cells outnumber neurons but don't conduct signals &mdash; each type has a specific support role instead. The two myelin-producing types are easy to mix up: oligodendrocytes myelinate axons in the CNS, while Schwann cells do the same job in the peripheral nervous system (PNS). That CNS-vs-PNS distinction is a common exam trap.</div>
+    
+  </div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Part 1 — Clinical Correlation</p><h1 class="slide-title">Multiple sclerosis: when myelin is the target</h1>
+  <p>This condition shows exactly why the myelin sheath from the Big Picture diagram matters functionally, not just structurally.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;"><strong>Multiple sclerosis (MS)</strong> is an autoimmune condition in which the immune system attacks and damages myelin in the CNS &mdash; the territory of oligodendrocytes specifically. Without an intact myelin sheath, signal conduction along the axon slows or fails entirely, producing the varied neurological symptoms (vision changes, muscle weakness, coordination problems) associated with MS, depending on which CNS pathways are affected.</p></div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Part 2 — Big Picture</p><h1 class="slide-title">Spinal cord cross-section: an H inside a column</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="150" cy="130" r="100" fill="#F5EFE0" stroke="#C9A84C" stroke-width="2.5"/>
+  <text x="270" y="55" font-size="10.5" fill="#7A5A00" font-weight="700">White matter</text>
+  <text x="270" y="70" font-size="9" fill="#1c1c1c">(myelinated tracts)</text>
+  <path d="M150,70 C120,90 120,115 150,130 C180,115 180,90 150,70 Z M150,190 C120,170 120,145 150,130 C180,145 180,170 150,190 Z M100,130 C110,110 130,110 150,130 C130,150 110,150 100,130 Z M200,130 C190,110 170,110 150,130 C170,150 190,150 200,130 Z" fill="#D9D0E8" stroke="#5B3E96" stroke-width="2"/>
+  <text x="150" y="132" text-anchor="middle" font-size="9" fill="#5B3E96" font-weight="700">Gray matter (H)</text>
+  <circle cx="150" cy="130" r="4" fill="#0A1F3D"/>
+  <text x="130" y="30" font-size="9" fill="#0047BA" font-weight="700">Dorsal (posterior) horn</text>
+  <text x="120" y="245" font-size="9" fill="#DB2F30" font-weight="700">Ventral (anterior) horn</text>
+</svg></div>
+    <div class="diagram-caption">Cut across the spinal cord, and you'll always see the same two-region pattern: an inner, butterfly/H-shaped core of gray matter (neuron cell bodies, organized into dorsal and ventral horns), surrounded by an outer ring of white matter (myelinated axon tracts carrying signals up and down the cord). This is the reverse of the brain's organization, where gray matter is on the outside.</div>
+    
+  </div></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Part 2 — Vocabulary &amp; Word Parts</p><h1 class="slide-title">Spinal cord &amp; spinal nerve roots</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">myel/o-</span><span class="meaning">spinal cord (also: bone marrow)</span></div><div class="wp-body"><b>Myel</b>in and the spinal cord share this root &mdash; context tells you which meaning applies.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">radic/o- / rhiz/o-</span><span class="meaning">root</span></div><div class="wp-body"><b>Radic</b>ulopathy = a pinched or damaged nerve root.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">plex/o-</span><span class="meaning">network, braid</span></div><div class="wp-body">A nerve <b>plex</b>us is a braided network where spinal nerve roots intermix and reorganize.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">quadri-</span><span class="meaning">four</span></div><div class="wp-body"><b>Quadri</b>plegia = paralysis affecting all four limbs.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">para-</span><span class="meaning">beside, two similar parts</span></div><div class="wp-body"><b>Para</b>plegia = paralysis of the two lower limbs.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-plegia</span><span class="meaning">paralysis</span></div><div class="wp-body">Combined with a prefix, this suffix tells you exactly which body regions are affected.</div></div></div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Part 2 — Structure &amp; Function</p><h1 class="slide-title">How a spinal nerve is built from two roots</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="70" width="60" height="80" rx="10" fill="#F5EFE0" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="50" y="200" text-anchor="middle" font-size="9.5" fill="#7A5A00" font-weight="700">Spinal cord</text>
+  <path d="M80,90 L180,70" stroke="#0047BA" stroke-width="3" fill="none"/>
+  <circle cx="140" cy="76" r="8" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="180" y="50" font-size="10" fill="#0047BA" font-weight="700">Dorsal root (sensory in)</text>
+  <text x="140" y="100" text-anchor="middle" font-size="8.5" fill="#0047BA">ganglion</text>
+  <path d="M80,130 L180,150" stroke="#DB2F30" stroke-width="3" fill="none"/>
+  <text x="180" y="170" font-size="10" fill="#DB2F30" font-weight="700">Ventral root (motor out)</text>
+  <path d="M180,70 L180,150 L280,110 Z" fill="#FBEEF0" stroke="#C9A84C" stroke-width="2"/>
+  <text x="300" y="115" font-size="11" fill="#0A1F3D" font-weight="700">Spinal nerve</text>
+  <text x="300" y="130" font-size="9" fill="#1c1c1c">(mixed — both sensory &amp; motor)</text>
+</svg></div>
+    <div class="diagram-caption">Each of the 31 spinal nerve pairs forms the same way: a dorsal root carrying only sensory (incoming) fibers, and a ventral root carrying only motor (outgoing) fibers, join together just outside the cord. Once joined, every spinal nerve is mixed &mdash; carrying both sensory and motor information &mdash; which is why damage to a spinal nerve itself (versus just one root) affects both sensation and movement.</div>
+    
+  </div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Part 2 — Structure &amp; Function</p><h1 class="slide-title">The reflex arc: five stops, no brain required</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="10" y="60" width="100" height="60" rx="8" fill="#fff" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="60" y="95" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">1. Receptor</text>
+  <path d="M110,90 L128,90" stroke="#1c1c1c" stroke-width="2" marker-end="url(#arrow13)"/><rect x="120" y="60" width="100" height="60" rx="8" fill="#fff" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="170" y="95" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">2. Sensory neuron</text>
+  <path d="M220,90 L238,90" stroke="#1c1c1c" stroke-width="2" marker-end="url(#arrow13)"/><rect x="230" y="60" width="100" height="60" rx="8" fill="#fff" stroke="#5B3E96" stroke-width="2.2"/>
+  <text x="280" y="95" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">3. Integration (spinal cord)</text>
+  <path d="M330,90 L348,90" stroke="#1c1c1c" stroke-width="2" marker-end="url(#arrow13)"/><rect x="340" y="60" width="100" height="60" rx="8" fill="#fff" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="390" y="95" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">4. Motor neuron</text>
+  <path d="M440,90 L458,90" stroke="#1c1c1c" stroke-width="2" marker-end="url(#arrow13)"/><rect x="460" y="60" width="100" height="60" rx="8" fill="#fff" stroke="#2E7D55" stroke-width="2.2"/>
+  <text x="510" y="95" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">5. Effector (muscle)</text>
+  
+  <defs><marker id="arrow13" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1c1c1c"/></marker></defs>
+  <text x="280" y="160" text-anchor="middle" font-size="9.5" fill="#1c1c1c" font-style="italic">Fastest reflexes skip the brain entirely &mdash; the spinal cord alone completes the loop.</text>
+</svg></div>
+    <div class="diagram-caption">A reflex is the body's fastest, most automatic response, and it follows this same five-step path every time: a receptor detects a stimulus, a sensory neuron carries that signal to the spinal cord, an integration center (often a single synapse) processes it, a motor neuron carries the response back out, and an effector (usually a muscle) acts. Because the signal never has to travel to the brain and back, reflexes are dramatically faster than a conscious decision.</div>
+    
+  </div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Part 2 — Clinical Correlation</p><h1 class="slide-title">Spinal cord injury: why the level matters most</h1>
+  <p>This connects directly to the quadriplegia/paraplegia vocabulary above and the white-matter tracts from the Big Picture diagram.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">Because ascending and descending tracts run the full length of the cord, the <strong>level</strong> of a spinal cord injury &mdash; not just its severity &mdash; determines its effect. A cervical injury can affect all four limbs (quadriplegia) because it interrupts signals before they ever reach the arms. A lumbar injury, much lower on the cord, generally spares the arms and affects only the legs (paraplegia), since arm-controlling tracts branch off well above that level.</p></div></section>
+<section class="slide" data-slide="12"><p class="eyebrow">Your Turn — Connecting Ch. 12 &amp; 13</p><h1 class="slide-title">Apply both chapters before the quiz</h1>
+  <div class="gp-box"><p class="gp-prompt">A patient has a severe injury at the C4 level of the spinal cord (mid-neck).</p><p style="font-weight:600;font-size:14.5px;">Question 1 — Based on the level of injury, what is the most likely outcome?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">Quadriplegia — all four limbs affected</button>
+<button class="choice-btn" data-correct="false">Paraplegia — only the legs affected</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">A <b>cervical</b> injury sits above the point where arm-controlling tracts branch off the cord, so signals to and from all four limbs are disrupted — producing quadriplegia rather than the leg-only paraplegia seen with lower, lumbar-level injuries.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — At the cellular level, which structure being disrupted explains the loss of signal conduction?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">White matter tracts (myelinated axons) running through the injury site</button>
+<button class="choice-btn" data-correct="false">Neuroglia in the peripheral nervous system</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">The <b>white matter tracts</b> are the myelinated axon highways carrying signals up and down the cord. Damage at any single level severs those tracts for everything below it — the actual mechanism behind why level of injury predicts which body regions lose function.</div></div></section>
+<section class="slide" data-slide="13"><p class="eyebrow">Practice Quiz</p><h1 class="slide-title">8 questions across Ch. 12&ndash;13</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">Which part of a neuron receives incoming signals?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Dendrites</button>
+<button class="quiz-opt" data-correct="false">Axon</button>
+<button class="quiz-opt" data-correct="false">Axon terminals</button></div><div class="rationale-box" id="rat-quiz-q1"><b>Dendrites</b> receive incoming signals. The axon conducts the signal away from the cell body, and axon terminals pass it on to the next cell.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">A neuron carrying a signal from a receptor toward the CNS is classified as:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Sensory (afferent)</button>
+<button class="quiz-opt" data-correct="false">Motor (efferent)</button>
+<button class="quiz-opt" data-correct="false">Interneuron</button></div><div class="rationale-box" id="rat-quiz-q2"><b>Sensory (afferent)</b> neurons carry signals toward the CNS. Motor neurons carry signals away from the CNS, and interneurons stay entirely within it.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">Which glial cell myelinates axons in the peripheral nervous system?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Schwann cells</button>
+<button class="quiz-opt" data-correct="false">Oligodendrocytes</button>
+<button class="quiz-opt" data-correct="false">Astrocytes</button></div><div class="rationale-box" id="rat-quiz-q3"><b>Schwann cells</b> myelinate PNS axons. Oligodendrocytes do the same job in the CNS, and astrocytes support neurons without producing myelin.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">In a spinal cord cross-section, gray matter is located:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">In an inner, H-shaped core</button>
+<button class="quiz-opt" data-correct="false">In an outer ring</button>
+<button class="quiz-opt" data-correct="false">Only in the dorsal horn</button></div><div class="rationale-box" id="rat-quiz-q4">Spinal cord gray matter forms an <b>inner, H-shaped core</b>, surrounded by white matter tracts. This is the reverse of the brain, where gray matter is on the outside.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">The dorsal root of a spinal nerve carries:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Sensory fibers only</button>
+<button class="quiz-opt" data-correct="false">Motor fibers only</button>
+<button class="quiz-opt" data-correct="false">Both sensory and motor fibers</button></div><div class="rationale-box" id="rat-quiz-q5">The <b>dorsal root carries only sensory fibers</b>. The ventral root carries only motor fibers; the two combine into one mixed spinal nerve only after they join outside the cord.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">In the reflex arc, the integration center is typically located in the:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Spinal cord</button>
+<button class="quiz-opt" data-correct="false">Brain</button>
+<button class="quiz-opt" data-correct="false">Muscle (effector)</button></div><div class="rationale-box" id="rat-quiz-q6">The integration center is typically in the <b>spinal cord</b> itself — that's precisely why reflexes are so fast: the signal doesn't have to travel all the way to the brain and back.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">"Quadriplegia" refers to paralysis of:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">All four limbs</button>
+<button class="quiz-opt" data-correct="false">Only the legs</button>
+<button class="quiz-opt" data-correct="false">Only one side of the body</button></div><div class="rationale-box" id="rat-quiz-q7"><b>Quadri-</b> means four, so quadriplegia affects all four limbs. Paralysis of only the legs is paraplegia instead.</div></div>
+<div class="quiz-q" data-quiz="q8"><div class="qnum">Question 8</div><div class="qtext">A cervical-level spinal cord injury typically affects more of the body than a lumbar-level injury because:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">It interrupts tracts before they branch off to the arms</button>
+<button class="quiz-opt" data-correct="false">The cervical region has no white matter</button>
+<button class="quiz-opt" data-correct="false">Cervical vertebrae are larger</button></div><div class="rationale-box" id="rat-quiz-q8">A cervical injury sits <b>above where arm-controlling tracts branch off</b>, so it disrupts signals to both arms and legs. Vertebral size and white matter presence (which exists at every level) aren't the deciding factors.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 8</span></div></section>
+<section class="slide" data-slide="14"><p class="eyebrow">Quick-Reference Recap</p><h1 class="slide-title">Chapters 12&ndash;13 One-Page Summary</h1>
+  <p>Everything from this week, condensed onto one page.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Ch. 12 — Neuron Parts</h4><ul><li>Dendrites — receive</li><li>Cell body — integrate</li><li>Axon (+ myelin) — conduct</li><li>Terminals — transmit</li></ul></div>
+<div class="recap-cell"><h4>Ch. 12 — Neuron Types</h4><ul><li>Sensory (afferent) — in</li><li>Motor (efferent) — out</li><li>Interneuron — CNS only</li></ul></div>
+<div class="recap-cell"><h4>Ch. 12 — Neuroglia</h4><p>Oligodendrocytes = CNS myelin. Schwann cells = PNS myelin. Astrocytes, microglia, ependymal cells each have distinct support roles.</p></div>
+<div class="recap-cell"><h4>Ch. 13 — Cord Cross-Section</h4><p>Gray matter (H-shaped) inside, white matter tracts outside — opposite of the brain.</p></div>
+<div class="recap-cell"><h4>Ch. 13 — Spinal Nerve</h4><p>Dorsal root = sensory. Ventral root = motor. Combined nerve = mixed.</p></div>
+<div class="recap-cell"><h4>Ch. 13 — Reflex Arc</h4><p>Receptor &rarr; Sensory neuron &rarr; Integration (cord) &rarr; Motor neuron &rarr; Effector.</p></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Neuron</span><span class="term-pill">Dendrite</span><span class="term-pill">Axon</span><span class="term-pill">Myelin</span><span class="term-pill">Neuroglia</span><span class="term-pill">Oligodendrocyte</span><span class="term-pill">Schwann Cell</span><span class="term-pill">Gray Matter</span><span class="term-pill">White Matter</span><span class="term-pill">Dorsal Root</span><span class="term-pill">Ventral Root</span><span class="term-pill">Reflex Arc</span><span class="term-pill">Quadriplegia</span><span class="term-pill">Paraplegia</span></div>
+  <div class="next-box"><strong>Chapters 12&ndash;13 complete.</strong> You now know the neuron, its support cells, and how the spinal cord organizes and routes signals — including the reflex arc that skips the brain entirely. Next week moves upward: the brain and cranial nerves.</div>
+  <div class="end-actions"><a class="end-btn primary next-lesson-link" href="week14-brain-cranial-nerves.html">Next: Week 14 &rarr;</a><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
