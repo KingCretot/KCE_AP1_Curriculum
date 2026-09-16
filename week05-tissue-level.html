@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 5: The Tissue Level of Organization</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 2</div></div></div><div class="lesson-tag">Week 5 &middot; Ch. 4 &middot; Tissue Level</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 16</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 5 · Chapter 4</p><h1 class="slide-title">The Tissue Level of Organization</h1>
+  <div class="card warm"><p style="margin-bottom:0;">Groups of similar cells working together form a tissue &mdash; the next rung up from the cellular level you studied in Exam Block 1. This week covers the four primary tissue types and how their structure directly matches the job each one does.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Identify the four primary tissue types and their general roles</span></li>
+<li><span class="num">2</span><span>Classify epithelial tissue by shape and layering</span></li>
+<li><span class="num">3</span><span>Describe the five main categories of connective tissue</span></li>
+<li><span class="num">4</span><span>Distinguish the three types of muscle tissue</span></li>
+<li><span class="num">5</span><span>Describe the basic structure of nervous tissue</span></li>
+<li><span class="num">6</span><span>Identify the four body membranes and what each one covers</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Big Picture</p><h1 class="slide-title">From cells to tissues: teamwork begins</h1><div class="card warm"><p style="margin-bottom:0;">A single cell can't do much on its own. A <strong>tissue</strong> is a group of similar cells (plus the material surrounding them) working together toward a shared job. This is the direct next step up from Exam Block 1's cellular level — the same cells you studied are now organizing into functional teams.</p></div>
+  <p>There are only <strong>four</strong> primary tissue types in the entire human body. Every organ you'll study for the rest of the semester is built from some combination of these four. Learn them well now, and every later chapter gets easier.</p></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Vocabulary &amp; Word Parts</p><h1 class="slide-title">Histology roots you'll use all semester</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">epi-</span><span class="meaning">upon, above</span></div><div class="wp-body"><b>Epi</b>thelial tissue covers/lines surfaces — sits "upon" other tissue.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">squam-</span><span class="meaning">scale-like</span></div><div class="wp-body"><b>Squam</b>ous cells are flat, like scales.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">cub/o-</span><span class="meaning">cube-shaped</span></div><div class="wp-body"><b>Cub</b>oidal cells are roughly cube-shaped.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">column-</span><span class="meaning">column/pillar-shaped</span></div><div class="wp-body"><b>Column</b>ar cells are tall, like pillars.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">stratum / strat-</span><span class="meaning">layer</span></div><div class="wp-body"><b>Strat</b>ified = arranged in layers. A single layer = simple.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-itis</span><span class="meaning">inflammation</span></div><div class="wp-body">Dermat<b>itis</b> = inflammation of the skin — you'll see this suffix constantly in clinical contexts.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The four primary tissue types</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="40" width="115" height="140" rx="12" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="77" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Epithelial</text>
+  <text x="77" y="120" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Covers & lines</text><rect x="155" y="40" width="115" height="140" rx="12" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.5"/>
+  <text x="212" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Connective</text>
+  <text x="212" y="120" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Supports & connects</text><rect x="290" y="40" width="115" height="140" rx="12" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="347" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Muscle</text>
+  <text x="347" y="120" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Contracts & moves</text><rect x="425" y="40" width="115" height="140" rx="12" fill="#F0E7F7" stroke="#5B3E96" stroke-width="2.5"/>
+  <text x="482" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Nervous</text>
+  <text x="482" y="120" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Signals & controls</text>
+  <text x="280" y="205" text-anchor="middle" font-size="11.5" fill="#1c1c1c" font-style="italic">Every organ in the body is built from some combination of these four types</text>
+</svg></div>
+    <div class="diagram-caption">Every tissue in the body falls into one of these four families — memorize this short list and the rest of the semester's anatomy becomes a matter of recognizing which combination of these is at work in a given organ.</div>
+    
+  </div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Epithelial tissue: the covering and lining specialist</h1><p>Epithelial tissue covers external surfaces (like skin), lines internal cavities and tubes (like the digestive tract), and makes up glands. It shares a few defining features regardless of where it's found:</p>
+  <ul>
+    <li><strong>Avascular</strong> — no blood vessels directly within it; it's nourished by diffusion from underlying connective tissue.</li>
+    <li><strong>Sits on a basement membrane</strong> — a thin supportive layer anchoring it to the connective tissue below.</li>
+    <li><strong>High regeneration rate</strong> — constantly exposed to friction and damage, so it replaces itself quickly (this is why skin heals as fast as it does).</li>
+  </ul></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Classifying epithelial tissue: shape &times; layers</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <text x="150" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">SQUAMOUS</text>
+  <text x="290" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">CUBOIDAL</text>
+  <text x="430" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">COLUMNAR</text>
+  <text x="45" y="80" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D" transform="rotate(-90 45 80)">SIMPLE</text>
+  <text x="45" y="190" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D" transform="rotate(-90 45 190)">STRATIFIED</text>
+  <rect x="85" y="20" width="130" height="80" rx="8" fill="#FAF7EF" stroke="#C9A84C" stroke-width="1.8"/>
+  <text x="150" y="47" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Flat, thin</text>
+  <text x="150" y="63" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Diffusion/filtration</text><rect x="225" y="20" width="130" height="80" rx="8" fill="#FAF7EF" stroke="#C9A84C" stroke-width="1.8"/>
+  <text x="290" y="47" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Cube-shaped</text>
+  <text x="290" y="63" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Secretion</text><rect x="365" y="20" width="130" height="80" rx="8" fill="#FAF7EF" stroke="#C9A84C" stroke-width="1.8"/>
+  <text x="430" y="47" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Tall, column-like</text>
+  <text x="430" y="63" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Absorption</text><rect x="85" y="130" width="130" height="80" rx="8" fill="#FAF7EF" stroke="#C9A84C" stroke-width="1.8"/>
+  <text x="150" y="157" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Multiple flat layers</text>
+  <text x="150" y="173" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Protection (skin)</text><rect x="225" y="130" width="130" height="80" rx="8" fill="#FAF7EF" stroke="#C9A84C" stroke-width="1.8"/>
+  <text x="290" y="157" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Multiple cube layers</text>
+  <text x="290" y="173" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Rare — glands</text><rect x="365" y="130" width="130" height="80" rx="8" fill="#FAF7EF" stroke="#C9A84C" stroke-width="1.8"/>
+  <text x="430" y="157" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Multiple column layers</text>
+  <text x="430" y="173" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Rare — protection</text>
+</svg></div>
+    <div class="diagram-caption">Epithelial tissue is named using two variables: cell SHAPE (squamous, cuboidal, or columnar) and LAYERING (simple = one layer, stratified = multiple layers). Combine them and you get names like "simple squamous" or "stratified squamous" — six total combinations, though not all are equally common.</div>
+    
+  </div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Connective tissue: the body's most diverse family</h1><p><strong>Connective tissue</strong> is the most abundant and varied tissue type in the body. Unlike epithelial tissue, it's defined less by its cells and more by its <strong>extracellular matrix</strong> — the material surrounding those cells, which can be liquid (blood), gel-like (loose connective tissue), or solid (bone).</p>
+  <div class="card blue"><p style="margin-bottom:0;"><strong>The unifying theme:</strong> whatever its form, connective tissue connects, supports, cushions, or transports something else in the body.</p></div></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The five categories of connective tissue</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="65" cy="90" r="42" fill="#fff" stroke="#C9A84C" stroke-width="2.5"/>
+  <text x="65" y="94" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Loose</text>
+  <text x="65" y="150" text-anchor="middle" font-size="9" fill="#1c1c1c">cushions organs</text><circle cx="175" cy="90" r="42" fill="#fff" stroke="#C97A2C" stroke-width="2.5"/>
+  <text x="175" y="94" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Dense</text>
+  <text x="175" y="150" text-anchor="middle" font-size="9" fill="#1c1c1c">tendons/ligaments</text><circle cx="285" cy="90" r="42" fill="#fff" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="285" y="94" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Cartilage</text>
+  <text x="285" y="150" text-anchor="middle" font-size="9" fill="#1c1c1c">flexible support</text><circle cx="395" cy="90" r="42" fill="#fff" stroke="#0A1F3D" stroke-width="2.5"/>
+  <text x="395" y="94" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Bone</text>
+  <text x="395" y="150" text-anchor="middle" font-size="9" fill="#1c1c1c">rigid support</text><circle cx="505" cy="90" r="42" fill="#fff" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="505" y="94" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Blood</text>
+  <text x="505" y="150" text-anchor="middle" font-size="9" fill="#1c1c1c">fluid connective tissue</text>
+  <text x="280" y="200" text-anchor="middle" font-size="11" fill="#1c1c1c" font-style="italic">All five share the same blueprint: cells scattered within an extracellular matrix</text>
+</svg></div>
+    <div class="diagram-caption">Notice the range: from soft, cushioning loose connective tissue all the way to rigid bone, and even a fluid form (blood) — all five share the same underlying blueprint of cells within a matrix.</div>
+    
+  </div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Muscle tissue: three types, one job — contraction</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="150" height="130" rx="12" fill="#fff" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="95" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Skeletal</text>
+  <text x="95" y="95" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Voluntary, striated</text>
+  <text x="95" y="112" text-anchor="middle" font-size="9.5" fill="#1c1c1c">moves the skeleton</text><rect x="210" y="30" width="150" height="130" rx="12" fill="#fff" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="285" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Cardiac</text>
+  <text x="285" y="95" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Involuntary, striated</text>
+  <text x="285" y="112" text-anchor="middle" font-size="9.5" fill="#1c1c1c">the heart wall only</text><rect x="400" y="30" width="150" height="130" rx="12" fill="#fff" stroke="#C9A84C" stroke-width="2.5"/>
+  <text x="475" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="#0A1F3D">Smooth</text>
+  <text x="475" y="95" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Involuntary, no striations</text>
+  <text x="475" y="112" text-anchor="middle" font-size="9.5" fill="#1c1c1c">walls of organs & vessels</text>
+</svg></div>
+    <div class="diagram-caption">All muscle tissue shares the ability to contract and generate force, but the three types differ in location, control (voluntary vs. involuntary), and microscopic appearance (striated vs. smooth).</div>
+    
+  </div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Nervous tissue: built for signaling</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="150" cy="100" r="35" fill="#F0E7F7" stroke="#5B3E96" stroke-width="2.5"/>
+  <text x="150" y="96" text-anchor="middle" font-size="11" font-weight="700" fill="#5B3E96">Neuron</text>
+  <text x="150" y="112" text-anchor="middle" font-size="9" fill="#1c1c1c">cell body</text>
+  <line x1="185" y1="100" x2="330" y2="100" stroke="#5B3E96" stroke-width="3"/>
+  <text x="255" y="88" text-anchor="middle" font-size="9" fill="#5B3E96">axon (sends signal)</text>
+  <line x1="115" y1="80" x2="75" y2="55" stroke="#5B3E96" stroke-width="2"/>
+  <line x1="115" y1="90" x2="70" y2="80" stroke="#5B3E96" stroke-width="2"/>
+  <line x1="115" y1="110" x2="70" y2="120" stroke="#5B3E96" stroke-width="2"/>
+  <text x="70" y="45" text-anchor="middle" font-size="9" fill="#5B3E96">dendrites (receive)</text>
+  <circle cx="380" cy="60" r="14" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.8"/>
+  <text x="380" y="90" text-anchor="middle" font-size="8.5" fill="#0047BA">Glial cells</text>
+  <text x="380" y="102" text-anchor="middle" font-size="8.5" fill="#0047BA">(support neurons)</text>
+</svg></div>
+    <div class="diagram-caption">Nervous tissue is built around the neuron, whose branching dendrites receive signals and whose long axon sends them onward. Glial cells support, protect, and insulate neurons rather than transmitting signals themselves.</div>
+    
+  </div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Membranes: tissue types working together</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="115" height="130" rx="10" fill="#fff" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="77" y="90" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0A1F3D">Cutaneous</text>
+  <text x="77" y="108" text-anchor="middle" font-size="8.5" fill="#1c1c1c">the skin itself</text><rect x="160" y="30" width="115" height="130" rx="10" fill="#fff" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="217" y="90" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0A1F3D">Mucous</text>
+  <text x="217" y="108" text-anchor="middle" font-size="8.5" fill="#1c1c1c">lines open tubes</text><rect x="300" y="30" width="115" height="130" rx="10" fill="#fff" stroke="#2E7D55" stroke-width="2.2"/>
+  <text x="357" y="90" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0A1F3D">Serous</text>
+  <text x="357" y="108" text-anchor="middle" font-size="8.5" fill="#1c1c1c">lines closed cavities</text><rect x="440" y="30" width="115" height="130" rx="10" fill="#fff" stroke="#5B3E96" stroke-width="2.2"/>
+  <text x="497" y="90" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0A1F3D">Synovial</text>
+  <text x="497" y="108" text-anchor="middle" font-size="8.5" fill="#1c1c1c">lines joint cavities</text>
+</svg></div>
+    <div class="diagram-caption">A membrane is a thin sheet combining epithelial tissue with an underlying layer of connective tissue — a direct, practical example of tissue types teaming up to line or cover a structure.</div>
+    
+  </div></section>
+<section class="slide" data-slide="12"><p class="eyebrow">Your Turn &mdash; Guided Practice</p><h1 class="slide-title">Apply it before the quiz</h1>
+  <div class="gp-box"><p class="gp-prompt">A tissue sample viewed under the microscope shows a single layer of tall, column-shaped cells lining the inside of the small intestine.</p><p style="font-weight:600;font-size:14.5px;">Question 1 — What is the correct name for this tissue type?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">Simple columnar epithelium</button>
+<button class="choice-btn" data-correct="false">Stratified squamous epithelium</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">A <b>single layer</b> (simple) of <b>tall, column-shaped</b> cells (columnar) is, by definition, simple columnar epithelium — a common lining for absorptive surfaces like the intestine. Stratified squamous describes multiple layers of flat cells instead, the pattern seen in skin.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — Given its location lining the intestine, what is this tissue's most likely primary function?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">Absorption of nutrients</button>
+<button class="choice-btn" data-correct="false">Contraction to generate movement</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">Simple columnar epithelium lining the intestine is specialized for <b>absorption</b> — its single-cell-thick structure keeps the diffusion distance short. Contraction is a muscle tissue job, not an epithelial one.</div></div></section>
+<section class="slide" data-slide="13"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Why Pap smears look at epithelial cells</h1>
+  <p>A routine screening test is a direct, practical application of tissue classification.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">A <strong>Pap smear</strong> examines epithelial cells collected from the cervix under a microscope, looking for abnormal changes in cell shape and organization that can indicate precancerous or cancerous changes. Because epithelial tissue regenerates so rapidly, it's also one of the most common sites for cancer to develop — which is exactly why this kind of tissue-level screening matters.</p></div></section>
+<section class="slide" data-slide="14"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">When connective tissue overreacts: scar tissue and adhesions</h1>
+  <p>Connective tissue's job — connecting and supporting — can become a problem when it does that job in the wrong place.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">After surgery or injury, the body sometimes produces excess dense connective tissue (scar tissue), which can form <strong>adhesions</strong> — bands of tissue that abnormally connect organs or tissues that should move independently, like loops of intestine sticking together. This is a direct downstream consequence of connective tissue doing its normal job (repairing and connecting) in a context where it causes dysfunction instead of help.</p></div></section>
+<section class="slide" data-slide="15"><p class="eyebrow">Mini Knowledge Test</p><h1 class="slide-title">Show what you know &mdash; 7 questions</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">Which is NOT one of the four primary tissue types?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Vascular tissue</button>
+<button class="quiz-opt" data-correct="false">Muscle tissue</button>
+<button class="quiz-opt" data-correct="false">Nervous tissue</button></div><div class="rationale-box" id="rat-quiz-q1">The four primary tissue types are epithelial, connective, muscle, and nervous. "Vascular tissue" isn't one of the four categories — blood vessels are built from combinations of these four types, not a fifth category of their own.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">Epithelial tissue is best described as:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Avascular tissue that covers and lines surfaces</button>
+<button class="quiz-opt" data-correct="false">Tissue defined mainly by its extracellular matrix</button>
+<button class="quiz-opt" data-correct="false">Tissue specialized for contraction</button></div><div class="rationale-box" id="rat-quiz-q2">Epithelial tissue is <b>avascular</b> (no internal blood supply) and specializes in covering/lining. Being defined by its matrix describes connective tissue instead; contraction is muscle tissue's job.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">A tissue with multiple layers of flat cells is classified as:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Stratified squamous</button>
+<button class="quiz-opt" data-correct="false">Simple columnar</button>
+<button class="quiz-opt" data-correct="false">Simple cuboidal</button></div><div class="rationale-box" id="rat-quiz-q3">Multiple layers = <b>stratified</b>; flat cells = <b>squamous</b>. Combined: stratified squamous. "Simple" would mean a single layer, and "columnar"/"cuboidal" describe different cell shapes entirely.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">Which connective tissue is fluid rather than solid or gel-like?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Blood</button>
+<button class="quiz-opt" data-correct="false">Bone</button>
+<button class="quiz-opt" data-correct="false">Cartilage</button></div><div class="rationale-box" id="rat-quiz-q4"><b>Blood</b> is connective tissue with a liquid matrix (plasma). Bone has a rigid, mineralized matrix, and cartilage has a firm but flexible gel-like matrix — both are far from fluid.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">Which muscle type is voluntary and striated?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Skeletal muscle</button>
+<button class="quiz-opt" data-correct="false">Cardiac muscle</button>
+<button class="quiz-opt" data-correct="false">Smooth muscle</button></div><div class="rationale-box" id="rat-quiz-q5"><b>Skeletal muscle</b> is the only voluntary muscle type, and it's striated. Cardiac muscle is also striated but involuntary; smooth muscle is involuntary and lacks striations entirely.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">In nervous tissue, which part of the neuron sends signals outward?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">The axon</button>
+<button class="quiz-opt" data-correct="false">Dendrites</button>
+<button class="quiz-opt" data-correct="false">Glial cells</button></div><div class="rationale-box" id="rat-quiz-q6">The <b>axon</b> carries signals AWAY from the cell body toward the next cell. Dendrites RECEIVE incoming signals instead, and glial cells support/protect neurons rather than transmitting signals themselves.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">A serous membrane is best described as one that:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Lines closed body cavities</button>
+<button class="quiz-opt" data-correct="false">Lines tubes that open to the outside of the body</button>
+<button class="quiz-opt" data-correct="false">Forms the outer covering of the entire body</button></div><div class="rationale-box" id="rat-quiz-q7"><b>Serous</b> membranes line closed cavities like the thoracic and abdominal cavities. Lining tubes open to the outside (digestive/respiratory tracts) describes mucous membranes; covering the whole body describes the cutaneous membrane (skin).</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 7</span></div></section>
+<section class="slide" data-slide="16"><p class="eyebrow">Debrief</p><h1 class="slide-title">Week 5 Quick-Reference Recap</h1>
+  <p>One page to glance at before Exam 2 — everything from this week, condensed.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Four Tissue Types</h4><ul><li>Epithelial — covers/lines</li><li>Connective — supports/connects</li><li>Muscle — contracts</li><li>Nervous — signals</li></ul></div>
+<div class="recap-cell"><h4>Epithelial Classification</h4><p>Shape (squamous/cuboidal/columnar) &times; Layers (simple/stratified)</p></div>
+<div class="recap-cell"><h4>Connective Tissue Types</h4><p>Loose, Dense, Cartilage, Bone, Blood — all cells + extracellular matrix.</p></div>
+<div class="recap-cell"><h4>Muscle Types</h4><ul><li>Skeletal — voluntary, striated</li><li>Cardiac — involuntary, striated</li><li>Smooth — involuntary, no striations</li></ul></div>
+<div class="recap-cell"><h4>Nervous Tissue</h4><p>Neurons (dendrites receive, axon sends) + glial cells (support).</p></div>
+<div class="recap-cell"><h4>Membranes</h4><ul><li>Cutaneous — skin</li><li>Mucous — open tubes</li><li>Serous — closed cavities</li><li>Synovial — joints</li></ul></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Epithelial Tissue</span><span class="term-pill">Connective Tissue</span><span class="term-pill">Muscle Tissue</span><span class="term-pill">Nervous Tissue</span><span class="term-pill">Basement Membrane</span><span class="term-pill">Extracellular Matrix</span><span class="term-pill">Neuron</span><span class="term-pill">Membrane</span></div>
+  <div class="next-box"><strong>Next — Week 6: The Integumentary System.</strong> You'll apply this week's tissue types directly — skin is built almost entirely from the epithelial and connective tissue you just studied.</div>
+  <div class="end-actions"><a class="end-btn primary next-lesson-link" href="week06-integumentary-system.html">Next: Week 6 &rarr;</a><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
