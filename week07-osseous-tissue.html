@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 7: Osseous Tissue &amp; Bone Structure</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 2</div></div></div><div class="lesson-tag">Week 7 &middot; Ch. 6 &middot; Osseous Tissue</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 16</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 7 · Chapter 6</p><h1 class="slide-title">Osseous Tissue &amp; Bone Structure</h1>
+  <div class="card warm"><p style="margin-bottom:0;">Bone is the most rigid connective tissue type from Chapter 4, and one of the most dynamic — despite feeling permanent, it's constantly being broken down and rebuilt. This week covers bone classification, structure at both gross and microscopic levels, and how bone regulates calcium throughout the body.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>List the five main functions of bone</span></li>
+<li><span class="num">2</span><span>Classify bones by shape</span></li>
+<li><span class="num">3</span><span>Label the gross anatomy of a long bone</span></li>
+<li><span class="num">4</span><span>Compare compact and spongy bone structure</span></li>
+<li><span class="num">5</span><span>Describe the osteon (Haversian system) and the three bone cell types</span></li>
+<li><span class="num">6</span><span>Explain bone remodeling and its role in calcium homeostasis</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Big Picture</p><h1 class="slide-title">Bone: connective tissue that never stops working</h1><div class="card warm"><p style="margin-bottom:0;">Bone is a form of <strong>connective tissue</strong> — the same category from Chapter 4 that also includes blood and cartilage — but with a mineralized, rigid extracellular matrix. It's easy to picture bone as static scaffolding, but it's actually one of the most metabolically active tissues in the body, constantly remodeling itself and serving as the body's mineral reservoir.</p></div>
+  <p>This week ties directly back to Chapter 1's homeostasis concept: bone tissue is a central player in keeping blood calcium levels stable, using the same negative feedback logic you've now seen apply to temperature, pH, and osmotic balance.</p></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Vocabulary &amp; Word Parts</p><h1 class="slide-title">Osseous tissue roots</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">oste/o-</span><span class="meaning">bone</span></div><div class="wp-body"><b>Oste</b>oporosis = porous bone. <b>Osteo</b>blast = bone-building cell.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-blast</span><span class="meaning">immature, building cell</span></div><div class="wp-body">Osteo<b>blast</b> = a cell actively building new bone matrix.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-clast</span><span class="meaning">breaking down</span></div><div class="wp-body">Osteo<b>clast</b> = a cell that breaks down bone tissue.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-cyte</span><span class="meaning">mature cell</span></div><div class="wp-body">Osteo<b>cyte</b> = a mature bone cell maintaining existing matrix.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">peri-</span><span class="meaning">around</span></div><div class="wp-body"><b>Peri</b>osteum = the membrane around the outside of a bone.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">medull-</span><span class="meaning">middle, marrow</span></div><div class="wp-body"><b>Medull</b>ary cavity = the central marrow-containing space in a long bone's shaft.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">What bone actually does</h1><ul>
+    <li><strong>Support</strong> — the rigid framework that holds the body's shape and supports soft tissues.</li>
+    <li><strong>Protection</strong> — bones like the skull and rib cage shield delicate organs (brain, heart, lungs).</li>
+    <li><strong>Movement</strong> — bones act as rigid levers that muscles pull against to create motion.</li>
+    <li><strong>Mineral storage</strong> — bone is the body's primary reservoir for calcium and phosphorus.</li>
+    <li><strong>Blood cell production</strong> — red bone marrow (found in spongy bone) produces red blood cells, white blood cells, and platelets.</li>
+  </ul></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Classifying bones by shape</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="100" height="120" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="70" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Long</text>
+  <text x="70" y="108" text-anchor="middle" font-size="8.5" fill="#1c1c1c">femur, humerus</text><rect x="160" y="30" width="100" height="120" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="210" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Short</text>
+  <text x="210" y="108" text-anchor="middle" font-size="8.5" fill="#1c1c1c">carpals, tarsals</text><rect x="300" y="30" width="100" height="120" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="350" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Flat</text>
+  <text x="350" y="108" text-anchor="middle" font-size="8.5" fill="#1c1c1c">skull, sternum, ribs</text><rect x="440" y="30" width="100" height="120" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="490" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Irregular</text>
+  <text x="490" y="108" text-anchor="middle" font-size="8.5" fill="#1c1c1c">vertebrae, pelvis</text>
+</svg></div>
+    <div class="diagram-caption">Bone shape reflects bone function — long bones act as levers for movement, short bones provide stability with some mobility (wrists, ankles), flat bones offer broad surfaces for protection and muscle attachment, and irregular bones have complex shapes that don't fit the other three categories.</div>
+    
+  </div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Anatomy of a long bone</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 340 380" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <ellipse cx="150" cy="40" rx="55" ry="30" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="220" y="35" font-size="9.5" fill="#0047BA">Epiphysis (end)</text>
+  <rect x="125" y="70" width="50" height="240" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.5"/>
+  <text x="220" y="190" font-size="9.5" fill="#7A5A00">Diaphysis</text>
+  <text x="220" y="203" font-size="9.5" fill="#7A5A00">(shaft)</text>
+  <text x="10" y="150" font-size="9" fill="#1c1c1c">Periosteum</text>
+  <line x1="55" y1="150" x2="122" y2="150" stroke="#1c1c1c" stroke-width="1"/>
+  <rect x="138" y="90" width="24" height="200" fill="#fff" stroke="#DDD" stroke-width="1"/>
+  <text x="10" y="210" font-size="9" fill="#1c1c1c">Medullary cavity</text>
+  <line x1="70" y1="205" x2="136" y2="200" stroke="#1c1c1c" stroke-width="1"/>
+  <ellipse cx="150" cy="340" rx="55" ry="30" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="220" y="345" font-size="9.5" fill="#0047BA">Epiphysis (end)</text>
+</svg></div>
+    <div class="diagram-caption">The diaphysis (shaft) is mostly compact bone surrounding a hollow medullary cavity. The epiphyses (rounded ends) contain more spongy bone and are where the bone meets a joint. The periosteum is a tough membrane covering the outer surface — it's where tendons and ligaments anchor, and it contains cells that repair bone after a fracture.</div>
+    
+  </div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Compact vs. spongy bone</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="30" y="30" width="180" height="160" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.5"/>
+  <text x="120" y="55" text-anchor="middle" font-size="12" font-weight="700" fill="#7A5A00">Compact Bone</text>
+  <circle cx="70" cy="60" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/><circle cx="120" cy="75" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/><circle cx="170" cy="60" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/><circle cx="70" cy="90" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/><circle cx="120" cy="105" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/><circle cx="170" cy="90" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/><circle cx="70" cy="120" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/><circle cx="120" cy="135" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/><circle cx="170" cy="120" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/><circle cx="70" cy="150" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/><circle cx="120" cy="165" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/><circle cx="170" cy="150" r="8" fill="none" stroke="#96521A" stroke-width="1.5"/>
+  <text x="120" y="185" text-anchor="middle" font-size="9" fill="#1c1c1c">Dense, few gaps — outer shell</text>
+
+  <rect x="270" y="30" width="180" height="160" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="360" y="55" text-anchor="middle" font-size="12" font-weight="700" fill="#0047BA">Spongy Bone</text>
+  <path d="M290,80 L320,100 L300,130 L340,140 L310,160 L350,170" stroke="#0047BA" stroke-width="2" fill="none"/>
+  <path d="M420,80 L390,105 L430,120 L400,150 L420,170" stroke="#0047BA" stroke-width="2" fill="none"/>
+  <path d="M350,90 L370,115 L340,135" stroke="#0047BA" stroke-width="2" fill="none"/>
+  <text x="360" y="185" text-anchor="middle" font-size="9" fill="#1c1c1c">Open lattice — lightweight, holds marrow</text>
+</svg></div>
+    <div class="diagram-caption">Compact bone is dense and forms the strong outer shell of every bone. Spongy bone has an open, lattice-like structure (trabeculae) that makes it lighter while still resisting stress — and its open spaces are where red bone marrow lives.</div>
+    
+  </div></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The osteon: compact bone's microscopic unit</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 360 340" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="180" cy="150" r="120" fill="none" stroke="#FBF1D6" stroke-width="26"/>
+  <circle cx="180" cy="150" r="97" fill="none" stroke="#FDEEE0" stroke-width="20"/>
+  <circle cx="180" cy="150" r="76" fill="none" stroke="#FBF1D6" stroke-width="18"/>
+  <circle cx="180" cy="150" r="18" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="180" y="154" text-anchor="middle" font-size="8" font-weight="700" fill="#0047BA">Central canal</text>
+  <text x="180" y="20" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Concentric lamellae (rings)</text>
+  <text x="180" y="320" text-anchor="middle" font-size="9" fill="#1c1c1c">Blood vessels &amp; nerves travel through the central canal</text>
+</svg></div>
+    <div class="diagram-caption">The osteon (or Haversian system) is the basic structural unit of compact bone — concentric rings (lamellae) of mineralized matrix surrounding a central canal that carries blood vessels and nerves. Bone cells sit in small spaces between the rings, connected by tiny channels that let nutrients pass through even in this dense tissue.</div>
+    
+  </div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Three bone cell types, three jobs</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="140" height="130" rx="12" fill="#fff" stroke="#2E7D55" stroke-width="2.5"/>
+  <text x="90" y="65" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Osteoblast</text>
+  <text x="90" y="90" text-anchor="middle" font-size="9.5" fill="#2E7D55" font-weight="700">BUILDS bone</text>
+  <text x="90" y="110" text-anchor="middle" font-size="8.5" fill="#1c1c1c">lays down new matrix</text><rect x="210" y="30" width="140" height="130" rx="12" fill="#fff" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="280" y="65" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Osteocyte</text>
+  <text x="280" y="90" text-anchor="middle" font-size="9.5" fill="#0047BA" font-weight="700">MAINTAINS bone</text>
+  <text x="280" y="110" text-anchor="middle" font-size="8.5" fill="#1c1c1c">mature cell, trapped in matrix</text><rect x="400" y="30" width="140" height="130" rx="12" fill="#fff" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="470" y="65" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Osteoclast</text>
+  <text x="470" y="90" text-anchor="middle" font-size="9.5" fill="#DB2F30" font-weight="700">BREAKS DOWN bone</text>
+  <text x="470" y="110" text-anchor="middle" font-size="8.5" fill="#1c1c1c">releases stored calcium</text>
+</svg></div>
+    <div class="diagram-caption">This is a build/maintain/break-down cycle: osteoblasts build new bone matrix, osteocytes are the mature, settled cells that maintain it day to day, and osteoclasts break matrix down when calcium needs to be released or bone needs to be remodeled. All three types work together continuously, even in healthy adult bone.</div>
+    
+  </div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Bone remodeling: a continuous balanced cycle</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="240" cy="100" r="70" fill="none" stroke="#C9A84C" stroke-width="2" stroke-dasharray="4,3"/>
+  <rect x="180" y="10" width="120" height="45" rx="8" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2"/>
+  <text x="240" y="30" text-anchor="middle" font-size="10.5" font-weight="700" fill="#DB2F30">Osteoclasts</text>
+  <text x="240" y="44" text-anchor="middle" font-size="8.5" fill="#1c1c1c">break down old bone</text>
+  <rect x="180" y="145" width="120" height="45" rx="8" fill="#E7F1E7" stroke="#2E7D55" stroke-width="2"/>
+  <text x="240" y="165" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2E7D55">Osteoblasts</text>
+  <text x="240" y="179" text-anchor="middle" font-size="8.5" fill="#1c1c1c">build new bone</text>
+  <text x="240" y="104" text-anchor="middle" font-size="9.5" fill="#0A1F3D" font-style="italic">Balanced cycle</text>
+</svg></div>
+    <div class="diagram-caption">Bone is never truly "finished" — osteoclasts continuously remove old or damaged bone matrix while osteoblasts lay down new matrix to replace it. In healthy adults these two processes stay balanced; an imbalance in either direction is the root cause of several major bone diseases.</div>
+    
+  </div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Calcium homeostasis: bone as the body's mineral bank</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="240" cy="130" r="30" fill="#FAF7EF" stroke="#0A1F3D" stroke-width="2"/>
+  <text x="240" y="128" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0A1F3D">Normal Ca&#8322;&#8314;</text>
+  <text x="240" y="140" text-anchor="middle" font-size="8" fill="#0A1F3D">in blood</text>
+  <rect x="180" y="20" width="120" height="50" rx="8" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2"/>
+  <text x="240" y="42" text-anchor="middle" font-size="10" font-weight="700" fill="#DB2F30">Blood Ca&#8322;&#8314; drops</text>
+  <text x="240" y="56" text-anchor="middle" font-size="8.5" fill="#1c1c1c">low dietary intake</text>
+  <rect x="20" y="105" width="120" height="50" rx="8" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="80" y="127" text-anchor="middle" font-size="10" font-weight="700" fill="#7A5A00">Parathyroid gland</text>
+  <text x="80" y="141" text-anchor="middle" font-size="8.5" fill="#1c1c1c">releases PTH</text>
+  <rect x="340" y="105" width="120" height="50" rx="8" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="400" y="127" text-anchor="middle" font-size="10" font-weight="700" fill="#0047BA">Osteoclasts activate</text>
+  <text x="400" y="141" text-anchor="middle" font-size="8.5" fill="#1c1c1c">release bone calcium</text>
+  <rect x="180" y="190" width="120" height="50" rx="8" fill="#E7F1E7" stroke="#2E7D55" stroke-width="2"/>
+  <text x="240" y="212" text-anchor="middle" font-size="10" font-weight="700" fill="#2E7D55">Blood Ca&#8322;&#8314; restored</text>
+  <text x="240" y="226" text-anchor="middle" font-size="8.5" fill="#1c1c1c">back to normal range</text>
+</svg></div>
+    <div class="diagram-caption">This is another negative feedback loop, just like Chapter 1's temperature example. When blood calcium drops, the parathyroid gland releases PTH, which activates osteoclasts to break down bone matrix and release stored calcium into the blood — restoring the normal range and shutting the loop back off.</div>
+    
+  </div></section>
+<section class="slide" data-slide="12"><p class="eyebrow">Your Turn &mdash; Guided Practice</p><h1 class="slide-title">Apply it before the quiz</h1>
+  <div class="gp-box"><p class="gp-prompt">A patient's bloodwork shows unusually low blood calcium levels.</p><p style="font-weight:600;font-size:14.5px;">Question 1 — Which bone cell type would the body activate to help correct this?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">Osteoclasts — to release stored calcium from bone</button>
+<button class="choice-btn" data-correct="false">Osteoblasts — to build more bone matrix</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">Low blood calcium triggers PTH release, which activates <b>osteoclasts</b> to break down bone matrix and release its stored calcium into the blood. Activating osteoblasts would do the opposite — pull MORE calcium out of the blood to build new matrix, worsening the problem.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — Is this response an example of negative or positive feedback?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">Negative feedback — the response reverses the drop in calcium</button>
+<button class="choice-btn" data-correct="false">Positive feedback — the response amplifies the drop in calcium</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">The response works to <b>reverse</b> the original change (low calcium), pushing the level back toward normal — the defining signature of negative feedback, the same pattern from Chapter 1's temperature regulation example.</div></div></section>
+<section class="slide" data-slide="13"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Osteoporosis: when remodeling falls out of balance</h1>
+  <p>This is a direct, high-stakes consequence of the osteoblast/osteoclast balance covered this week.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;"><strong>Osteoporosis</strong> occurs when osteoclast activity outpaces osteoblast activity over time, causing bone to become progressively less dense and more fragile. It's especially common after menopause, when declining estrogen (which normally helps restrain osteoclast activity) shifts the balance toward bone breakdown — which is exactly why bone density scans and calcium/vitamin D management are standard preventive care for this population.</p></div></section>
+<section class="slide" data-slide="14"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Why the periosteum matters for fracture healing</h1>
+  <p>The periosteum's living cells are a direct application of this week's structural anatomy.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">When a bone fractures, the <strong>periosteum</strong> is one of the first tissues to respond — its inner layer contains cells capable of becoming osteoblasts, which begin laying down new bone matrix (initially as a soft callus) to bridge the break. This is part of why an open fracture that strips away periosteum is a more serious injury than a clean break where the periosteum stays intact — the healing machinery itself has been damaged.</p></div></section>
+<section class="slide" data-slide="15"><p class="eyebrow">Mini Knowledge Test</p><h1 class="slide-title">Show what you know &mdash; 7 questions</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">Which is NOT one of bone's five main functions?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Digestion</button>
+<button class="quiz-opt" data-correct="false">Mineral storage</button>
+<button class="quiz-opt" data-correct="false">Blood cell production</button></div><div class="rationale-box" id="rat-quiz-q1">Bone's five functions are support, protection, movement, mineral storage, and blood cell production. <b>Digestion</b> is not one of them — that's the job of the digestive system's organs, not the skeleton.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">The femur (thigh bone) is classified as which bone shape?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Long bone</button>
+<button class="quiz-opt" data-correct="false">Flat bone</button>
+<button class="quiz-opt" data-correct="false">Irregular bone</button></div><div class="rationale-box" id="rat-quiz-q2">The femur is a classic <b>long bone</b> — longer than it is wide, acting as a lever for movement. Flat bones (like the skull) and irregular bones (like vertebrae) have very different shapes suited to different jobs.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">The medullary cavity is located:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">In the hollow center of the diaphysis</button>
+<button class="quiz-opt" data-correct="false">On the outer surface of the bone</button>
+<button class="quiz-opt" data-correct="false">Only within spongy bone</button></div><div class="rationale-box" id="rat-quiz-q3">The <b>medullary cavity</b> is the hollow space running through the center of the diaphysis (shaft), containing marrow. The periosteum covers the outer surface instead, and the medullary cavity is a diaphysis feature, not a spongy-bone-only structure.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">Which type of bone tissue has an open, lattice-like structure?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Spongy bone</button>
+<button class="quiz-opt" data-correct="false">Compact bone</button>
+<button class="quiz-opt" data-correct="false">Cortical bone</button></div><div class="rationale-box" id="rat-quiz-q4"><b>Spongy bone</b> has an open trabecular lattice, making it lighter while housing marrow. Compact bone (also called cortical bone — the same thing, not a third type) is dense with few open spaces.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">In an osteon, blood vessels and nerves travel through the:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Central canal</button>
+<button class="quiz-opt" data-correct="false">Concentric lamellae</button>
+<button class="quiz-opt" data-correct="false">Periosteum only</button></div><div class="rationale-box" id="rat-quiz-q5">The <b>central canal</b> at the core of each osteon carries blood vessels and nerves into compact bone. The lamellae are the surrounding mineralized rings, not passageways; the periosteum is a separate outer membrane, not part of the osteon's internal structure.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">Which bone cell type is responsible for breaking down bone matrix?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Osteoclasts</button>
+<button class="quiz-opt" data-correct="false">Osteoblasts</button>
+<button class="quiz-opt" data-correct="false">Osteocytes</button></div><div class="rationale-box" id="rat-quiz-q6"><b>Osteoclasts</b> break down bone matrix, releasing stored minerals. Osteoblasts build NEW matrix instead, and osteocytes are mature cells that maintain existing matrix — neither breaks bone down.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">When blood calcium drops, the parathyroid gland's hormone (PTH) ultimately causes:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Increased osteoclast activity to release calcium from bone</button>
+<button class="quiz-opt" data-correct="false">Increased osteoblast activity to store more calcium in bone</button>
+<button class="quiz-opt" data-correct="false">No effect on bone tissue</button></div><div class="rationale-box" id="rat-quiz-q7">PTH activates <b>osteoclasts</b>, which break down bone matrix and release its stored calcium into the blood — restoring the normal range. Increasing osteoblast activity would pull calcium OUT of the blood instead, the opposite of what's needed.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 7</span></div></section>
+<section class="slide" data-slide="16"><p class="eyebrow">Debrief</p><h1 class="slide-title">Week 7 Quick-Reference Recap</h1>
+  <p>One page to glance at before Exam 2 — everything from this week, condensed.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Bone Functions</h4><p>Support, protection, movement, mineral storage, blood cell production.</p></div>
+<div class="recap-cell"><h4>Bone Shapes</h4><ul><li>Long — femur, humerus</li><li>Short — carpals, tarsals</li><li>Flat — skull, ribs</li><li>Irregular — vertebrae</li></ul></div>
+<div class="recap-cell"><h4>Long Bone Anatomy</h4><p>Epiphysis (ends) + Diaphysis (shaft) + Medullary cavity + Periosteum (outer membrane).</p></div>
+<div class="recap-cell"><h4>Bone Tissue Types</h4><ul><li>Compact — dense outer shell</li><li>Spongy — open lattice, holds marrow</li></ul></div>
+<div class="recap-cell"><h4>Bone Cells</h4><ul><li>Osteoblast — builds</li><li>Osteocyte — maintains</li><li>Osteoclast — breaks down</li></ul></div>
+<div class="recap-cell"><h4>Calcium Homeostasis</h4><p>Low blood Ca&sup2;&#8314; &rarr; PTH released &rarr; osteoclasts release bone calcium &rarr; blood Ca&sup2;&#8314; restored.</p></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Osteoblast</span><span class="term-pill">Osteocyte</span><span class="term-pill">Osteoclast</span><span class="term-pill">Diaphysis</span><span class="term-pill">Epiphysis</span><span class="term-pill">Periosteum</span><span class="term-pill">Medullary Cavity</span><span class="term-pill">Osteon</span><span class="term-pill">Compact Bone</span><span class="term-pill">Spongy Bone</span><span class="term-pill">Calcium Homeostasis</span></div>
+  <div class="next-box"><strong>Next — Week 8: Exam 2 Synthesis.</strong> You'll pull Chapters 4–6 together, connect them to Lab 3 and Lab Exam 1, and build your final study sheet before the real exam.</div>
+  <div class="end-actions"><a class="end-btn primary next-lesson-link" href="week08-exam2-synthesis.html">Next: Week 8 &rarr;</a><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
