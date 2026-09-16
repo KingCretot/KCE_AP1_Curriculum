@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 1: Introduction to Anatomy & Physiology</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 1</div></div></div><div class="lesson-tag">Week 1 &middot; Ch. 1 &middot; Intro to A&amp;P</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 19</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 1 · Chapter 1</p><h1 class="slide-title">Introduction to Anatomy &amp; Physiology</h1>
+  <div class="card warm"><p style="margin-bottom:0;">This week sets the vocabulary and mental map you'll use for the entire course &mdash; anatomical position, directional terms, body planes, body cavities, and the concept of homeostasis. Every later chapter assumes you're fluent in this language.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Distinguish anatomy from physiology and explain how structure informs function</span></li>
+<li><span class="num">2</span><span>Use anatomical position and directional terms correctly</span></li>
+<li><span class="num">3</span><span>Identify the three body planes and what each one divides</span></li>
+<li><span class="num">4</span><span>Locate and describe the major body cavities and their subdivisions</span></li>
+<li><span class="num">5</span><span>Explain the levels of structural organization from chemical to organism</span></li>
+<li><span class="num">6</span><span>Explain homeostasis and contrast negative vs. positive feedback loops</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Big Picture</p><h1 class="slide-title">Structure and function are the same story, told two ways</h1><div class="card warm"><p style="margin-bottom:0;"><strong>Anatomy</strong> is the study of structure &mdash; what the body's parts look like and how they're arranged. <strong>Physiology</strong> is the study of function &mdash; how those parts actually work. You cannot separate them: the shape of a structure exists because of the job it does. A bone is dense and rigid because it needs to bear weight. A capillary wall is one cell thick because it needs to let gases pass through quickly.</p></div>
+  <p>Every chapter this semester will ask you to hold both questions at once: <em>what does this look like, and why does it look that way?</em> That's the habit this course is training.</p>
+  <h2 class="sub-title">Why this chapter comes first</h2>
+  <p>Before you can describe any structure in the body, you need a shared vocabulary for location and direction &mdash; the same way you'd need to agree on "north" and "east" before giving someone driving directions. That's exactly what this week builds.</p></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Vocabulary &amp; Word Parts</p><h1 class="slide-title">Directional roots &mdash; decode, don't memorize</h1>
+  <p>Most anatomical direction terms are built from a small set of Latin roots. Once you know the root, you can often guess the meaning of a word you've never seen before.</p>
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">anter/o-</span><span class="meaning">front</span></div><div class="wp-body"><b>Anterior</b> = toward the front of the body.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">poster/o-</span><span class="meaning">back</span></div><div class="wp-body"><b>Posterior</b> = toward the back of the body.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">super/o-</span><span class="meaning">above</span></div><div class="wp-body"><b>Superior</b> = toward the head/upper part.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">infer/o-</span><span class="meaning">below</span></div><div class="wp-body"><b>Inferior</b> = toward the feet/lower part.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">medi/o-</span><span class="meaning">middle</span></div><div class="wp-body"><b>Medial</b> = toward the midline of the body.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">later/o-</span><span class="meaning">side</span></div><div class="wp-body"><b>Lateral</b> = away from the midline, toward the side.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Vocabulary &amp; Word Parts</p><h1 class="slide-title">More roots you'll see all semester</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">proxim/o-</span><span class="meaning">nearest</span></div><div class="wp-body"><b>Proximal</b> = closer to the point of attachment (e.g., the elbow is proximal to the wrist).</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">dist/o-</span><span class="meaning">far</span></div><div class="wp-body"><b>Distal</b> = farther from the point of attachment.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-logy</span><span class="meaning">study of</span></div><div class="wp-body"><b>Physio</b>logy = study of function. <b>Histo</b>logy = study of tissue.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">homeo-</span><span class="meaning">same, similar</span></div><div class="wp-body"><b>Homeo</b>stasis = keeping internal conditions the same/stable.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-stasis</span><span class="meaning">standing still, staying constant</span></div><div class="wp-body">Homeo<b>stasis</b> = a stable, steady internal state.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">viscer/o-</span><span class="meaning">internal organs</span></div><div class="wp-body"><b>Visceral</b> = relating to the internal organs (e.g., visceral pleura covers the lungs directly).</div></div></div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Anatomical position and directional terms</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 340" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  
+  <g transform="translate(280,190) scale(1.15)" stroke="#0A1F3D" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="-70" r="16" fill="#0A1F3D" stroke="none"/>
+    <rect x="-22" y="-50" width="44" height="80" rx="18" fill="none"/>
+    <line x1="-22" y1="-38" x2="-48" y2="10"/>
+    <line x1="22" y1="-38" x2="48" y2="10"/>
+    <line x1="-12" y1="30" x2="-18" y2="90"/>
+    <line x1="12" y1="30" x2="18" y2="90"/>
+  </g>
+  <!-- superior/inferior -->
+  <line x1="280" y1="30" x2="280" y2="80" stroke="#0047BA" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="280" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#0047BA">SUPERIOR (toward head)</text>
+  <line x1="280" y1="300" x2="280" y2="255" stroke="#0047BA" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="280" y="318" text-anchor="middle" font-size="13" font-weight="700" fill="#0047BA">INFERIOR (toward feet)</text>
+  <!-- medial/lateral -->
+  <text x="60" y="150" font-size="12.5" font-weight="700" fill="#C9A84C" text-anchor="start">LATERAL &#8592;</text>
+  <text x="500" y="150" font-size="12.5" font-weight="700" fill="#C9A84C" text-anchor="end">&#8594; LATERAL</text>
+  <text x="280" y="150" font-size="12.5" font-weight="700" fill="#C9A84C" text-anchor="middle">MEDIAL</text>
+  <!-- anterior label -->
+  <text x="280" y="175" font-size="11.5" fill="#1c1c1c" text-anchor="middle" font-style="italic">(anterior / ventral view shown)</text>
+  <!-- proximal/distal on arm -->
+  <text x="205" y="115" font-size="11" fill="#DB2F30" font-weight="700">proximal</text>
+  <text x="180" y="200" font-size="11" fill="#DB2F30" font-weight="700">distal</text>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0047BA"/></marker></defs>
+</svg></div>
+    <div class="diagram-caption">Anatomical position: standing upright, facing forward, arms at sides, palms facing forward. Every directional term is defined relative to this position &mdash; not relative to how the body happens to be oriented in front of you.</div>
+    <div class="label-cols"><ul class="label-list"><li><span class="dot" style="background:#0047BA"></span><span>Superior / Inferior — toward head vs. feet</span></li>
+<li><span class="dot" style="background:#0047BA"></span><span>Anterior / Posterior — toward front vs. back</span></li></ul>
+<ul class="label-list"><li><span class="dot" style="background:#C9A84C"></span><span>Medial / Lateral — toward midline vs. side</span></li>
+<li><span class="dot" style="background:#DB2F30"></span><span>Proximal / Distal — nearer vs. farther from attachment point</span></li></ul></div>
+  </div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The three body planes</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  
+  <g transform="translate(150,170) scale(1.05)" stroke="#0A1F3D" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="-70" r="16" fill="#0A1F3D" stroke="none"/>
+    <rect x="-22" y="-50" width="44" height="80" rx="18" fill="none"/>
+    <line x1="-22" y1="-38" x2="-48" y2="10"/>
+    <line x1="22" y1="-38" x2="48" y2="10"/>
+    <line x1="-12" y1="30" x2="-18" y2="90"/>
+    <line x1="12" y1="30" x2="18" y2="90"/>
+  </g>
+  <line x1="150" y1="20" x2="150" y2="290" stroke="#DB2F30" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="150" y="14" text-anchor="middle" font-size="12" font-weight="700" fill="#DB2F30">SAGITTAL PLANE</text>
+  <text x="150" y="305" text-anchor="middle" font-size="10.5" fill="#1c1c1c">(divides left / right)</text>
+
+  
+  <g transform="translate(400,170) scale(1.05)" stroke="#0A1F3D" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="-70" r="16" fill="#0A1F3D" stroke="none"/>
+    <rect x="-22" y="-50" width="44" height="80" rx="18" fill="none"/>
+    <line x1="-22" y1="-38" x2="-48" y2="10"/>
+    <line x1="22" y1="-38" x2="48" y2="10"/>
+    <line x1="-12" y1="30" x2="-18" y2="90"/>
+    <line x1="12" y1="30" x2="18" y2="90"/>
+  </g>
+  <line x1="330" y1="60" x2="470" y2="60" stroke="#0047BA" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="400" y="48" text-anchor="middle" font-size="12" font-weight="700" fill="#0047BA">FRONTAL (CORONAL) PLANE</text>
+  <text x="400" y="80" text-anchor="middle" font-size="10.5" fill="#1c1c1c">(divides front / back)</text>
+
+  <line x1="30" y1="230" x2="530" y2="230" stroke="#C9A84C" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="280" y="250" text-anchor="middle" font-size="12" font-weight="700" fill="#9A7B1F">TRANSVERSE PLANE (divides top / bottom)</text>
+</svg></div>
+    <div class="diagram-caption">A plane is an imaginary flat surface used to section the body for description or imaging (like a CT scan slice).</div>
+    <div class="label-cols"><ul class="label-list"><li><span class="dot" style="background:#DB2F30"></span><span>Sagittal — divides body into left and right</span></li>
+<li><span class="dot" style="background:#0047BA"></span><span>Frontal (Coronal) — divides body into front and back</span></li>
+<li><span class="dot" style="background:#9A7B1F"></span><span>Transverse — divides body into top and bottom (a "cross-section")</span></li></ul></div>
+  </div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The dorsal body cavity</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 380 340" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <path d="M180,40 Q230,40 235,90 Q240,140 210,160 L210,300 Q210,315 195,315 L185,315 Q170,315 170,300 L170,160 Q140,140 145,90 Q150,40 180,40 Z" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <circle cx="190" cy="95" r="45" fill="#DCE6F9" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="190" y="100" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Cranial</text>
+  <text x="190" y="114" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Cavity</text>
+  <text x="190" y="235" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Vertebral</text>
+  <text x="190" y="249" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">(Spinal)</text>
+  <text x="190" y="263" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0A1F3D">Cavity</text>
+</svg></div>
+    <div class="diagram-caption">Both parts are continuous with each other and both contain parts of the central nervous system — this is why a spinal injury and a head injury are discussed in the same anatomical "compartment."</div>
+    
+  </div></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The ventral body cavity</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="90" y="30" width="200" height="320" rx="30" fill="#FAF7EF" stroke="#0A1F3D" stroke-width="2.5"/>
+  <rect x="100" y="42" width="85" height="110" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="142" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Left</text>
+  <text x="142" y="153" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Pleural</text>
+  <rect x="195" y="42" width="85" height="110" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="237" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Right</text>
+  <text x="237" y="153" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Pleural</text>
+  <rect x="150" y="55" width="80" height="55" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="190" y="79" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7A5A00">Pericardial</text>
+  <text x="190" y="92" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7A5A00">(heart)</text>
+  <line x1="90" y1="165" x2="290" y2="165" stroke="#DB2F30" stroke-width="2.5" stroke-dasharray="5,4"/>
+  <text x="295" y="169" font-size="11" font-weight="700" fill="#DB2F30">Diaphragm</text>
+  <rect x="100" y="178" width="180" height="80" rx="10" fill="#E7F1E7" stroke="#2E7D55" stroke-width="2"/>
+  <text x="190" y="222" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Abdominal Cavity</text>
+  <rect x="100" y="264" width="180" height="75" rx="10" fill="#E7F1E7" stroke="#2E7D55" stroke-width="2"/>
+  <text x="190" y="305" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Pelvic Cavity</text>
+</svg></div>
+    <div class="diagram-caption">The diaphragm is the muscular floor of the thoracic cavity and the physical boundary that separates it from the abdominopelvic cavity below.</div>
+    
+  </div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Mapping the abdomen: quadrants vs. regions</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="30" y="30" width="180" height="220" fill="#FAF7EF" stroke="#0A1F3D" stroke-width="2.5"/>
+  <line x1="120" y1="30" x2="120" y2="250" stroke="#DB2F30" stroke-width="2"/>
+  <line x1="30" y1="140" x2="210" y2="140" stroke="#DB2F30" stroke-width="2"/>
+  <text x="75" y="90" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">RUQ</text>
+  <text x="165" y="90" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">LUQ</text>
+  <text x="75" y="200" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">RLQ</text>
+  <text x="165" y="200" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">LLQ</text>
+  <text x="120" y="270" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">4 Quadrants</text>
+  <text x="120" y="285" text-anchor="middle" font-size="10" fill="#1c1c1c">(clinical shorthand, patient's right/left)</text>
+
+  <rect x="330" y="30" width="210" height="220" fill="#FAF7EF" stroke="#0A1F3D" stroke-width="2.5"/>
+  <line x1="400" y1="30" x2="400" y2="250" stroke="#0047BA" stroke-width="1.5"/>
+  <line x1="470" y1="30" x2="470" y2="250" stroke="#0047BA" stroke-width="1.5"/>
+  <line x1="330" y1="103" x2="540" y2="103" stroke="#0047BA" stroke-width="1.5"/>
+  <line x1="330" y1="177" x2="540" y2="177" stroke="#0047BA" stroke-width="1.5"/>
+  <text x="365" y="70" text-anchor="middle" font-size="8" fill="#0A1F3D">R hypo-</text>
+  <text x="365" y="80" text-anchor="middle" font-size="8" fill="#0A1F3D">chondriac</text>
+  <text x="435" y="70" text-anchor="middle" font-size="8" fill="#0A1F3D">Epigastric</text>
+  <text x="505" y="70" text-anchor="middle" font-size="8" fill="#0A1F3D">L hypo-</text>
+  <text x="505" y="80" text-anchor="middle" font-size="8" fill="#0A1F3D">chondriac</text>
+  <text x="365" y="143" text-anchor="middle" font-size="8" fill="#0A1F3D">Right</text>
+  <text x="365" y="153" text-anchor="middle" font-size="8" fill="#0A1F3D">Lumbar</text>
+  <text x="435" y="143" text-anchor="middle" font-size="8" fill="#0A1F3D">Umbilical</text>
+  <text x="505" y="143" text-anchor="middle" font-size="8" fill="#0A1F3D">Left</text>
+  <text x="505" y="153" text-anchor="middle" font-size="8" fill="#0A1F3D">Lumbar</text>
+  <text x="365" y="216" text-anchor="middle" font-size="8" fill="#0A1F3D">Right</text>
+  <text x="365" y="226" text-anchor="middle" font-size="8" fill="#0A1F3D">Iliac</text>
+  <text x="435" y="216" text-anchor="middle" font-size="8" fill="#0A1F3D">Hypogastric</text>
+  <text x="505" y="216" text-anchor="middle" font-size="8" fill="#0A1F3D">Left</text>
+  <text x="505" y="226" text-anchor="middle" font-size="8" fill="#0A1F3D">Iliac</text>
+  <text x="435" y="270" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">9 Regions</text>
+  <text x="435" y="285" text-anchor="middle" font-size="10" fill="#1c1c1c">(precise anatomical mapping)</text>
+</svg></div>
+    <div class="diagram-caption">Two different systems for the same space. Quadrants are used for quick clinical description ("pain in the RLQ"); the 9-region system is used for precise anatomical location.</div>
+    
+  </div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Levels of structural organization</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="90" width="78" height="60" rx="8" fill="#EAF0FB" stroke="#0A1F3D" stroke-width="2"/>
+    <text x="59" y="115" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Chemical</text>
+    
+    <text x="103" y="124" text-anchor="middle" font-size="16" fill="#C9A84C" font-weight="700">&#8594;</text><rect x="110" y="90" width="78" height="60" rx="8" fill="#FBF1D6" stroke="#0A1F3D" stroke-width="2"/>
+    <text x="149" y="115" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Cellular</text>
+    
+    <text x="193" y="124" text-anchor="middle" font-size="16" fill="#C9A84C" font-weight="700">&#8594;</text><rect x="200" y="90" width="78" height="60" rx="8" fill="#EAF0FB" stroke="#0A1F3D" stroke-width="2"/>
+    <text x="239" y="115" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Tissue</text>
+    
+    <text x="283" y="124" text-anchor="middle" font-size="16" fill="#C9A84C" font-weight="700">&#8594;</text><rect x="290" y="90" width="78" height="60" rx="8" fill="#FBF1D6" stroke="#0A1F3D" stroke-width="2"/>
+    <text x="329" y="115" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Organ</text>
+    
+    <text x="373" y="124" text-anchor="middle" font-size="16" fill="#C9A84C" font-weight="700">&#8594;</text><rect x="380" y="90" width="78" height="60" rx="8" fill="#EAF0FB" stroke="#0A1F3D" stroke-width="2"/>
+    <text x="419" y="115" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Organ</text>
+    <text x="419" y="129" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">System</text>
+    <text x="463" y="124" text-anchor="middle" font-size="16" fill="#C9A84C" font-weight="700">&#8594;</text><rect x="470" y="90" width="78" height="60" rx="8" fill="#FBF1D6" stroke="#0A1F3D" stroke-width="2"/>
+    <text x="509" y="115" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Organism</text>
+    
+    
+  <text x="280" y="40" text-anchor="middle" font-size="13" fill="#1c1c1c" font-style="italic">Each level is built from the level before it</text>
+</svg></div>
+    <div class="diagram-caption">This is the roadmap for the entire course. Chapters 2–3 cover the chemical and cellular levels; Chapter 4 covers tissues; the rest of the semester moves through organs and organ systems.</div>
+    
+  </div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Homeostasis: the body's balancing act</h1><p><strong>Homeostasis</strong> is the body's ability to maintain a relatively stable internal environment — a steady body temperature, blood pH within a narrow range, stable blood glucose — even while the outside world is constantly changing.</p>
+  <div class="card blue"><p style="margin-bottom:0;">Homeostasis is not a single fixed number — it's a <strong>narrow, dynamic range</strong>. Body temperature isn't locked at exactly 98.6&deg;F; it fluctuates slightly and is constantly being nudged back toward that target.</p></div>
+  <p>Every feedback loop in the body exists to defend some variable's normal range. There are two kinds, and they behave in opposite ways.</p></section>
+<section class="slide" data-slide="12"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Negative feedback: the body's most common strategy</h1>
+  <div class="card blue">In a negative feedback loop, the response works to reverse the original change — moving the variable back toward normal. This is how most of the body's systems work, most of the time.</div>
+  <div class="step"><div class="badge">1</div><div class="content"><div class="label">1 · Stimulus</div>Something pushes a variable away from its normal range — for example, body temperature rises above normal.</div></div>
+<div class="step"><div class="badge">2</div><div class="content"><div class="label">2 · Receptor</div>A sensor detects the change (e.g., temperature receptors in the skin and hypothalamus).</div></div>
+<div class="step"><div class="badge">3</div><div class="content"><div class="label">3 · Control Center</div>The brain (often the hypothalamus) compares the reading to the normal range and sends a command.</div></div>
+<div class="step"><div class="badge">4</div><div class="content"><div class="label">4 · Effector</div>An organ or tissue carries out the command — e.g., sweat glands activate, blood vessels near the skin dilate.</div></div>
+<div class="step"><div class="badge">5</div><div class="content"><div class="label">5 · Response</div>The variable moves back toward normal, which then reduces the original stimulus — the loop shuts itself off.</div></div>
+  <div class="card think"><strong>The defining feature:</strong> the response works AGAINST the direction of the original change. That's what "negative" means here — not bad, just opposing.</div></section>
+<section class="slide" data-slide="13"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Negative feedback loop — visualized</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="240" cy="170" r="30" fill="#FAF7EF" stroke="#0A1F3D" stroke-width="2"/>
+  <text x="240" y="174" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A1F3D">Normal Range</text>
+  <rect x="180" y="20" width="120" height="50" rx="8" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="240" y="42" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Stimulus</text>
+  <text x="240" y="56" text-anchor="middle" font-size="9.5" fill="#1c1c1c">(body temp rises)</text>
+  <rect x="380" y="140" width="80" height="60" rx="8" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="420" y="165" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7A5A00">Receptor</text>
+  <text x="420" y="180" text-anchor="middle" font-size="9" fill="#1c1c1c">(skin, brain)</text>
+  <rect x="180" y="270" width="120" height="50" rx="8" fill="#E7F1E7" stroke="#2E7D55" stroke-width="2"/>
+  <text x="240" y="292" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Response</text>
+  <text x="240" y="306" text-anchor="middle" font-size="9.5" fill="#1c1c1c">(sweat, vessels dilate)</text>
+  <rect x="20" y="140" width="80" height="60" rx="8" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2"/>
+  <text x="60" y="165" text-anchor="middle" font-size="10.5" font-weight="700" fill="#DB2F30">Effector</text>
+  <text x="60" y="180" text-anchor="middle" font-size="9" fill="#1c1c1c">(sweat glands)</text>
+  <path d="M270,65 Q380,90 415,140" fill="none" stroke="#0A1F3D" stroke-width="2" marker-end="url(#arrow2)"/>
+  <path d="M405,195 Q330,255 275,278" fill="none" stroke="#0A1F3D" stroke-width="2" marker-end="url(#arrow2)"/>
+  <path d="M195,285 Q95,255 65,200" fill="none" stroke="#0A1F3D" stroke-width="2" marker-end="url(#arrow2)"/>
+  <path d="M75,145 Q140,90 195,68" fill="none" stroke="#0A1F3D" stroke-width="2" marker-end="url(#arrow2)"/>
+  <text x="240" y="245" text-anchor="middle" font-size="11" font-weight="700" fill="#DB2F30">Reverses the change, restores normal</text>
+  <defs><marker id="arrow2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0A1F3D"/></marker></defs>
+</svg></div>
+    <div class="diagram-caption">Body temperature regulation is the textbook example. Trace the loop clockwise: stimulus &rarr; receptor &rarr; (control center, not shown separately here) &rarr; effector &rarr; response reverses the stimulus.</div>
+    
+  </div></section>
+<section class="slide" data-slide="14"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Positive feedback: the exception, not the rule</h1><p>In a <strong>positive feedback</strong> loop, the response <em>amplifies</em> the original change instead of reversing it. These loops are rare in the body precisely because an unchecked amplifying loop is dangerous — they only appear where a process needs to be pushed to a fast, decisive completion.</p>
+  <div class="card think"><p style="margin-bottom:0;"><strong>Classic examples:</strong> childbirth (uterine contractions stretch the cervix &rarr; stretching signals the brain to release more oxytocin &rarr; oxytocin causes stronger contractions &rarr; repeat until birth occurs and the stretching stimulus ends) and blood clotting (platelets release chemicals that attract more platelets, rapidly building a clot).</p></div>
+  <h2 class="sub-title">Negative vs. Positive — side by side</h2>
+  <table class="datatable"><thead><tr><th>Feature</th><th>Negative Feedback</th><th>Positive Feedback</th></tr></thead><tbody><tr><td>Direction of response</td><td>Opposes/reverses the stimulus</td><td>Amplifies the stimulus</td></tr>
+<tr><td>Frequency in the body</td><td>Very common — most systems</td><td>Rare — only specific processes</td></tr>
+<tr><td>Ends when...</td><td>Variable returns to normal range</td><td>The triggering event is complete</td></tr>
+<tr><td>Examples</td><td>Body temp, blood glucose, blood pressure</td><td>Childbirth, blood clotting, action potentials</td></tr></tbody></table></section>
+<section class="slide" data-slide="15"><p class="eyebrow">Your Turn &mdash; Guided Practice</p><h1 class="slide-title">Apply it before the quiz</h1>
+  <div class="gp-box"><p class="gp-prompt">A patient reports pain that started near the navel and has now moved to the lower right side of the abdomen — a classic pattern for appendicitis.</p><p style="font-weight:600;font-size:14.5px;">Question 1 — Which quadrant would a clinician use to describe this final pain location?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">RLQ (Right Lower Quadrant)</button>
+<button class="choice-btn" data-correct="false">LUQ (Left Upper Quadrant)</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">The pain has moved to the <b>lower right</b> side of the abdomen — that's the Right Lower Quadrant (RLQ), which is also where the appendix sits. LUQ describes the upper-left abdomen, nowhere near this pain's location.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — A fever spikes, and the body responds with sweating and vessel dilation to cool back down. Is this negative or positive feedback?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">Negative feedback — the response opposes the original change</button>
+<button class="choice-btn" data-correct="false">Positive feedback — the response amplifies the original change</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">The response (sweating, vessel dilation) works to <b>cool the body back down</b> — it opposes the original rise in temperature. That reversal is the defining signature of negative feedback. Positive feedback would mean the response pushed the fever even higher, which isn't happening here.</div></div></section>
+<section class="slide" data-slide="16"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Why directional terms are a patient-safety issue</h1>
+  <p>This isn't academic vocabulary for its own sake — imprecise language in a medical chart can cause real harm.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">A surgical note that says "incision on the left side" is dangerously vague — left according to whom, looking from where? Clinical documentation always uses anatomical position as the fixed reference: <strong>the patient's own left and right</strong>, as if they were standing in anatomical position, regardless of how they're actually lying on the table or how the provider is standing. This is exactly why "RLQ pain" and "proximal fracture" are the standard, not casual shortcuts.</p></div></section>
+<section class="slide" data-slide="17"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">When positive feedback goes wrong</h1>
+  <p>Positive feedback loops are powerful precisely because they don't self-correct — which makes them dangerous when they activate inappropriately.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;"><strong>Septic shock</strong> is a clinical example of a normally protective process (the inflammatory response, and the clotting cascade) spiraling into a harmful positive feedback loop — inflammation triggers more inflammation, clotting triggers more clotting, faster than the body's negative feedback systems can rein it back in. This is part of why septic shock can deteriorate so quickly and why it's treated as a medical emergency.</p></div></section>
+<section class="slide" data-slide="18"><p class="eyebrow">Mini Knowledge Test</p><h1 class="slide-title">Show what you know &mdash; 7 questions</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">Which term means "toward the head"?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Superior</button>
+<button class="quiz-opt" data-correct="false">Inferior</button>
+<button class="quiz-opt" data-correct="false">Distal</button></div><div class="rationale-box" id="rat-quiz-q1"><b>Superior</b> means toward the head/upper part of the body. <b>Inferior</b> is its opposite (toward the feet). <b>Distal</b> isn't a head-vs-feet term at all — it describes distance from a point of attachment on a limb, a completely different axis.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">A sagittal plane divides the body into:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Left and right</button>
+<button class="quiz-opt" data-correct="false">Front and back</button>
+<button class="quiz-opt" data-correct="false">Top and bottom</button></div><div class="rationale-box" id="rat-quiz-q2"><b>Sagittal</b> = left and right. Front/back is the <b>frontal (coronal)</b> plane. Top/bottom is the <b>transverse</b> plane. Picture a sagittal cut as a vertical slice running front-to-back through the body — it's that front-to-back blade that splits left from right.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">The heart sits within which cavity?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Pericardial cavity (within the thoracic cavity)</button>
+<button class="quiz-opt" data-correct="false">Cranial cavity</button>
+<button class="quiz-opt" data-correct="false">Pelvic cavity</button></div><div class="rationale-box" id="rat-quiz-q3">The heart's own compartment is the <b>pericardial cavity</b>, nested inside the larger thoracic cavity. The <b>cranial cavity</b> holds the brain; the <b>pelvic cavity</b> holds reproductive organs, bladder, and rectum — neither one holds the heart.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">Which is the correct order of organization, smallest to largest?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Chemical → Cellular → Tissue → Organ → Organ System → Organism</button>
+<button class="quiz-opt" data-correct="false">Cellular → Chemical → Organ → Tissue → Organism → Organ System</button>
+<button class="quiz-opt" data-correct="false">Tissue → Chemical → Cellular → Organism → Organ → Organ System</button></div><div class="rationale-box" id="rat-quiz-q4">Each level is built entirely FROM the level directly below it: atoms/molecules (chemical) form cells (cellular), similar cells group into tissues, tissues combine into organs, organs sharing a job form an organ system, and all systems together make the organism. Any order that skips a step or runs backward breaks that build-up chain.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">Homeostasis is best described as:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">A stable, narrow internal range the body actively defends</button>
+<button class="quiz-opt" data-correct="false">A single fixed value that never changes</button>
+<button class="quiz-opt" data-correct="false">The study of body structure only</button></div><div class="rationale-box" id="rat-quiz-q5">Homeostasis is <b>dynamic</b> — the body defends a narrow RANGE, not one frozen number (body temperature drifts in a small band around 98.6&deg;F rather than sitting locked on it). And homeostasis is about function/regulation (physiology), not structure — that's anatomy's territory.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">In a negative feedback loop, the response:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Opposes/reverses the original stimulus</button>
+<button class="quiz-opt" data-correct="false">Amplifies the original stimulus</button>
+<button class="quiz-opt" data-correct="false">Has no relationship to the stimulus</button></div><div class="rationale-box" id="rat-quiz-q6">By definition, a negative feedback response counteracts the stimulus, nudging the variable back toward its normal range. A response that instead amplifies the stimulus is <b>positive</b> feedback. And every true feedback loop responds directly to its stimulus — "no relationship" would mean it isn't a feedback loop at all.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">Which of these is a positive feedback example?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Contractions intensifying during childbirth</button>
+<button class="quiz-opt" data-correct="false">Sweating to cool the body after a temperature spike</button>
+<button class="quiz-opt" data-correct="false">Shivering to raise body temperature</button></div><div class="rationale-box" id="rat-quiz-q7">Labor contractions are positive feedback: each contraction triggers MORE oxytocin release, which makes contractions even stronger, until birth ends the loop. Sweating and shivering are both <b>negative</b> feedback — they work to push body temperature back toward normal, opposing the original change instead of amplifying it.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 7</span></div></section>
+<section class="slide" data-slide="19"><p class="eyebrow">Debrief</p><h1 class="slide-title">Week 1 Quick-Reference Recap</h1>
+  <p>One page to glance at before Exam 1 — everything from this week, condensed.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Directional Terms</h4><ul><li>Superior/Inferior — head/feet</li><li>Anterior/Posterior — front/back</li><li>Medial/Lateral — midline/side</li><li>Proximal/Distal — near/far from attachment</li></ul></div>
+<div class="recap-cell"><h4>Body Planes</h4><ul><li>Sagittal — left/right</li><li>Frontal (Coronal) — front/back</li><li>Transverse — top/bottom</li></ul></div>
+<div class="recap-cell"><h4>Body Cavities</h4><ul><li>Dorsal — Cranial + Vertebral</li><li>Ventral — Thoracic (2 Pleural + Pericardial) + Abdominopelvic (Abdominal + Pelvic)</li></ul></div>
+<div class="recap-cell"><h4>Levels of Organization</h4><p>Chemical &rarr; Cellular &rarr; Tissue &rarr; Organ &rarr; Organ System &rarr; Organism</p></div>
+<div class="recap-cell"><h4>Homeostasis</h4><p>Stable internal range, actively defended by feedback loops.</p></div>
+<div class="recap-cell"><h4>Feedback Loops</h4><ul><li><strong>Negative</strong> = opposes change (common)</li><li><strong>Positive</strong> = amplifies change (rare, self-limiting event)</li></ul></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Anatomy</span><span class="term-pill">Physiology</span><span class="term-pill">Anatomical Position</span><span class="term-pill">Directional Terms</span><span class="term-pill">Body Planes</span><span class="term-pill">Body Cavities</span><span class="term-pill">Homeostasis</span><span class="term-pill">Negative Feedback</span><span class="term-pill">Positive Feedback</span></div>
+  <div class="next-box"><strong>Next — Week 2: The Chemical Level of Organization.</strong> You'll move one level down the organization ladder — atoms, bonding, and the biochemistry that everything cellular is built from.</div>
+  <div class="end-actions"><a class="end-btn primary next-lesson-link" href="week02-chemical-level.html">Next: Week 2 &rarr;</a><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
