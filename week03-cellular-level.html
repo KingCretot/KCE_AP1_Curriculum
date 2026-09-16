@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 3: The Cellular Level of Organization</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 1</div></div></div><div class="lesson-tag">Week 3 &middot; Ch. 3 &middot; Cellular Level</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 17</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 3 · Chapter 3</p><h1 class="slide-title">The Cellular Level of Organization</h1>
+  <div class="card warm"><p style="margin-bottom:0;">The cell is the smallest living unit of the body — everything from the phospholipids and proteins you studied last week now assembles into a working, self-sustaining structure. This week covers the membrane, the major organelles, how material moves in and out of the cell, and the basic cell life cycle.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Describe the plasma membrane's structure and explain selective permeability</span></li>
+<li><span class="num">2</span><span>Identify the major organelles and their functions</span></li>
+<li><span class="num">3</span><span>Compare passive and active transport mechanisms</span></li>
+<li><span class="num">4</span><span>Explain osmosis and predict what happens to a cell in different tonicity solutions</span></li>
+<li><span class="num">5</span><span>Outline the basic stages of the cell life cycle and mitosis</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Big Picture</p><h1 class="slide-title">The cell is a fully staffed factory, not a simple bag</h1><div class="card warm"><p style="margin-bottom:0;">It's tempting to picture a cell as a blob with a nucleus in the middle. In reality, it's closer to a factory with dedicated departments: a control center (nucleus), a manufacturing floor (ER and ribosomes), a shipping department (Golgi apparatus), a power plant (mitochondria), and a security perimeter (the plasma membrane) that decides exactly what gets in and out.</p></div>
+  <p>Every organelle you learn this week has ONE job, and that job connects directly back to something you already know: the membrane is built from the phospholipids of Week 2; the proteins made on ribosomes are built from the amino acids of Week 2; the ATP produced by mitochondria is the same ATP you previewed last week.</p></section>
+<section class="slide" data-slide="3"><p class="eyebrow">Vocabulary &amp; Word Parts</p><h1 class="slide-title">Cell biology roots</h1>
+  
+  <div class="wordpart-grid"><div class="wordpart-card"><div class="wp-head"><span class="part">cyto-</span><span class="meaning">cell</span></div><div class="wp-body"><b>Cyto</b>plasm = the fluid filling the cell. <b>Cyto</b>skeleton = the cell's internal scaffolding.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-some</span><span class="meaning">body</span></div><div class="wp-body">Ribo<b>some</b> = a small "body" that builds proteins. Lyso<b>some</b> = a "body" full of digestive enzymes.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">endo- / exo-</span><span class="meaning">into / out of</span></div><div class="wp-body"><b>Endo</b>cytosis = bringing material INTO the cell. <b>Exo</b>cytosis = pushing material OUT.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">phago- / pino-</span><span class="meaning">eating / drinking</span></div><div class="wp-body"><b>Phago</b>cytosis = "cell eating" solids. <b>Pino</b>cytosis = "cell drinking" fluid.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">mito-</span><span class="meaning">thread</span></div><div class="wp-body"><b>Mito</b>chondrion (named for its thread-like appearance under early microscopes) — the organelle that produces ATP.</div></div>
+<div class="wordpart-card"><div class="wp-head"><span class="part">-osis</span><span class="meaning">a process or condition</span></div><div class="wp-body">Mit<b>osis</b> = the process of cell division. Necr<b>osis</b> = the condition of cell death.</div></div></div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The plasma membrane: a selectively permeable gate</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="30" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="26" y1="60" x2="26" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="34" y1="60" x2="34" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="30" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="26" y1="140" x2="26" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="34" y1="140" x2="34" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="66" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="62" y1="60" x2="62" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="70" y1="60" x2="70" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="66" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="62" y1="140" x2="62" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="70" y1="140" x2="70" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="102" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="98" y1="60" x2="98" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="106" y1="60" x2="106" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="102" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="98" y1="140" x2="98" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="106" y1="140" x2="106" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="138" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="134" y1="60" x2="134" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="142" y1="60" x2="142" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="138" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="134" y1="140" x2="134" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="142" y1="140" x2="142" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="174" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="170" y1="60" x2="170" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="178" y1="60" x2="178" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="174" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="170" y1="140" x2="170" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="178" y1="140" x2="178" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="210" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="206" y1="60" x2="206" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="214" y1="60" x2="214" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="210" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="206" y1="140" x2="206" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="214" y1="140" x2="214" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="246" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="242" y1="60" x2="242" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="250" y1="60" x2="250" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="246" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="242" y1="140" x2="242" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="250" y1="140" x2="250" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="282" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="278" y1="60" x2="278" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="286" y1="60" x2="286" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="282" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="278" y1="140" x2="278" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="286" y1="140" x2="286" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="318" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="314" y1="60" x2="314" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="322" y1="60" x2="322" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="318" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="314" y1="140" x2="314" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="322" y1="140" x2="322" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="354" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="350" y1="60" x2="350" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="358" y1="60" x2="358" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="354" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="350" y1="140" x2="350" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="358" y1="140" x2="358" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="390" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="386" y1="60" x2="386" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="394" y1="60" x2="394" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="390" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="386" y1="140" x2="386" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="394" y1="140" x2="394" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="426" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="422" y1="60" x2="422" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="430" y1="60" x2="430" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="426" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="422" y1="140" x2="422" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="430" y1="140" x2="430" y2="105" stroke="#C9A84C" stroke-width="2.2"/><circle cx="462" cy="50" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="458" y1="60" x2="458" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="466" y1="60" x2="466" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <circle cx="462" cy="150" r="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="1.6"/>
+    <line x1="458" y1="140" x2="458" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+    <line x1="466" y1="140" x2="466" y2="105" stroke="#C9A84C" stroke-width="2.2"/>
+  <rect x="180" y="35" width="60" height="130" rx="14" fill="#FBF1D6" stroke="#7A5A00" stroke-width="2" opacity="0.85"/>
+  <text x="210" y="105" text-anchor="middle" font-size="10" font-weight="700" fill="#7A5A00">Membrane</text>
+  <text x="210" y="118" text-anchor="middle" font-size="10" font-weight="700" fill="#7A5A00">Protein</text>
+  <text x="260" y="20" text-anchor="middle" font-size="11" fill="#1c1c1c">Outside the cell</text>
+  <text x="260" y="200" text-anchor="middle" font-size="11" fill="#1c1c1c">Inside the cell (cytoplasm)</text>
+</svg></div>
+    <div class="diagram-caption">The phospholipid bilayer (from Week 2) forms the membrane's basic structure — heads facing the watery environment on both sides, tails hiding in the middle. Embedded proteins act as channels, carriers, receptors, and identification markers, controlling exactly what crosses.</div>
+    <div class="label-cols"><ul class="label-list"><li><span class="dot" style="background:#0047BA"></span><span>Phospholipid heads face water on both sides</span></li>
+<li><span class="dot" style="background:#C9A84C"></span><span>Phospholipid tails hide from water in the middle</span></li>
+<li><span class="dot" style="background:#7A5A00"></span><span>Membrane proteins control what passes through</span></li></ul></div>
+  </div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Meet the organelles</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <ellipse cx="240" cy="165" rx="220" ry="140" fill="#FAF7EF" stroke="#0A1F3D" stroke-width="3"/>
+  <circle cx="240" cy="165" r="55" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="240" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Nucleus</text>
+  <text x="240" y="175" text-anchor="middle" font-size="9" fill="#0A1F3D">(DNA / control center)</text>
+  <ellipse cx="130" cy="110" rx="38" ry="18" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="130" y="114" text-anchor="middle" font-size="9" font-weight="700" fill="#7A5A00">Rough ER</text>
+  <ellipse cx="340" cy="100" rx="34" ry="16" fill="#FDEEE0" stroke="#C97A2C" stroke-width="2"/>
+  <text x="340" y="104" text-anchor="middle" font-size="9" font-weight="700" fill="#96521A">Smooth ER</text>
+  <ellipse cx="120" cy="230" rx="26" ry="15" fill="#E7F1E7" stroke="#2E7D55" stroke-width="2"/>
+  <text x="120" y="234" text-anchor="middle" font-size="9" font-weight="700" fill="#0A1F3D">Mitochondrion</text>
+  <ellipse cx="350" cy="235" rx="30" ry="14" fill="#F0E7F7" stroke="#5B3E96" stroke-width="2"/>
+  <text x="350" y="239" text-anchor="middle" font-size="9" font-weight="700" fill="#5B3E96">Golgi</text>
+  <circle cx="380" cy="150" r="13" fill="#FBEEF0" stroke="#DB2F30" stroke-width="1.8"/>
+  <text x="380" y="153" text-anchor="middle" font-size="7" font-weight="700" fill="#DB2F30">Lyso</text>
+  <circle cx="90" cy="180" r="6" fill="#C9A84C"/><circle cx="102" cy="170" r="6" fill="#C9A84C"/>
+  <text x="70" y="205" font-size="8" fill="#1c1c1c">Ribosomes</text>
+</svg></div>
+    <div class="diagram-caption">Every organelle has a specialized job. This is the map you'll keep referring back to as each one is introduced individually on the next few slides.</div>
+    
+  </div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The nucleus, ER, and ribosomes: the manufacturing chain</h1>
+  <div class="card blue">Protein production is a coordinated, multi-step process — not something any single organelle does alone.</div>
+  <div class="step"><div class="badge">1</div><div class="content"><div class="label">1 · Nucleus</div>Houses the DNA — the instructions for every protein the cell can build. The nuclear envelope controls what enters and exits.</div></div>
+<div class="step"><div class="badge">2</div><div class="content"><div class="label">2 · Ribosomes</div>Read the genetic instructions and assemble amino acids into proteins. Some float free in the cytoplasm; others attach to the ER.</div></div>
+<div class="step"><div class="badge">3</div><div class="content"><div class="label">3 · Rough ER</div>Studded with ribosomes (hence "rough") — this is where proteins destined for export or the membrane get built and folded.</div></div>
+<div class="step"><div class="badge">4</div><div class="content"><div class="label">4 · Smooth ER</div>No ribosomes (hence "smooth") — builds lipids and helps detoxify certain chemicals, rather than making proteins.</div></div>
+  <div class="card think"><strong>Notice the pattern:</strong> nucleus gives instructions, ribosomes build, rough ER packages what's being built for export — this is the same logical chain you'll see repeated in the next slide's shipping step.</div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The Golgi apparatus: the shipping department</h1><p>The <strong>Golgi apparatus</strong> receives proteins from the rough ER, modifies them further (adding tags, folding them into final shape), and packages them into vesicles addressed for their final destination — whether that's the plasma membrane, a lysosome, or straight out of the cell entirely via exocytosis.</p>
+  <div class="card blue"><p style="margin-bottom:0;"><strong>Assembly-line analogy:</strong> nucleus = blueprint office &rarr; ribosome = assembly floor &rarr; rough ER = quality control &rarr; Golgi = shipping and labeling &rarr; vesicle = delivery truck.</p></div></section>
+<section class="slide" data-slide="8"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Mitochondria, lysosomes, and the cytoskeleton</h1><ul>
+    <li><strong>Mitochondria</strong> — the cell's power plant. This is where most of the cell's ATP is produced through cellular respiration, using oxygen and glucose. Cells that need a lot of energy (like muscle and liver cells) are packed with far more mitochondria than cells that don't.</li>
+    <li><strong>Lysosomes</strong> — contain digestive enzymes that break down worn-out organelles, debris, and (in white blood cells) engulfed pathogens. Think of them as the cell's recycling and waste-disposal unit.</li>
+    <li><strong>Cytoskeleton</strong> — a network of protein filaments that gives the cell its shape, allows organelles to be transported internally, and (in some cells) allows movement.</li>
+    <li><strong>Centrioles</strong> — organize the spindle fibers that pull chromosomes apart during cell division, which you'll see later this week.</li>
+  </ul></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Three ways material crosses the membrane</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 540 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="20" width="150" height="210" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+  <text x="95" y="45" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Simple Diffusion</text>
+  <circle cx="55" cy="80" r="6" fill="#C9A84C"/><circle cx="70" cy="100" r="6" fill="#C9A84C"/><circle cx="45" cy="115" r="6" fill="#C9A84C"/>
+  <circle cx="130" cy="150" r="6" fill="#C9A84C"/><circle cx="145" cy="170" r="6" fill="#C9A84C"/><circle cx="120" cy="185" r="6" fill="#C9A84C"/>
+  <text x="95" y="215" text-anchor="middle" font-size="8.5" fill="#1c1c1c">High &rarr; low, no protein, no energy</text>
+
+  <rect x="195" y="20" width="150" height="210" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+  <text x="270" y="45" text-anchor="middle" font-size="11" font-weight="700" fill="#7A5A00">Facilitated Diffusion</text>
+  <rect x="255" y="90" width="30" height="70" rx="8" fill="#fff" stroke="#7A5A00" stroke-width="2"/>
+  <circle cx="230" cy="90" r="6" fill="#0047BA"/><circle cx="270" cy="175" r="6" fill="#0047BA"/>
+  <text x="270" y="215" text-anchor="middle" font-size="8.5" fill="#1c1c1c">High &rarr; low, needs a channel/carrier</text>
+
+  <rect x="370" y="20" width="150" height="210" rx="10" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2"/>
+  <text x="445" y="45" text-anchor="middle" font-size="11" font-weight="700" fill="#DB2F30">Active Transport</text>
+  <rect x="430" y="90" width="30" height="70" rx="8" fill="#fff" stroke="#DB2F30" stroke-width="2"/>
+  <text x="445" y="130" text-anchor="middle" font-size="8" fill="#DB2F30">ATP</text>
+  <circle cx="445" cy="175" r="6" fill="#5B3E96"/><circle cx="445" cy="70" r="6" fill="#5B3E96"/>
+  <text x="445" y="215" text-anchor="middle" font-size="8.5" fill="#1c1c1c">Low &rarr; high, REQUIRES ATP energy</text>
+</svg></div>
+    <div class="diagram-caption">Notice the key distinguishing question for each: does it need a protein channel, and does it need ATP energy? Those two questions sort almost every transport mechanism you'll encounter this semester.</div>
+    
+  </div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Osmosis and tonicity</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 520 210" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="110" cy="105" r="70" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="110" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="#DB2F30">Hypertonic</text>
+  <text x="110" y="185" text-anchor="middle" font-size="9" fill="#1c1c1c">Cell shrinks (crenation)</text>
+  <ellipse cx="110" cy="112" rx="28" ry="22" fill="#fff" stroke="#DB2F30" stroke-width="1.8"/>
+
+  <circle cx="270" cy="105" r="70" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="270" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="#0047BA">Isotonic</text>
+  <text x="270" y="185" text-anchor="middle" font-size="9" fill="#1c1c1c">Normal cell shape</text>
+  <circle cx="270" cy="112" r="40" fill="#fff" stroke="#0047BA" stroke-width="1.8"/>
+
+  <circle cx="430" cy="105" r="70" fill="#E7F1E7" stroke="#2E7D55" stroke-width="2.5"/>
+  <text x="430" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="#2E7D55">Hypotonic</text>
+  <text x="430" y="185" text-anchor="middle" font-size="9" fill="#1c1c1c">Cell swells (may lyse)</text>
+  <circle cx="430" cy="118" r="52" fill="#fff" stroke="#2E7D55" stroke-width="1.8"/>
+</svg></div>
+    <div class="diagram-caption">Osmosis is a special case of diffusion — specifically the movement of WATER across a selectively permeable membrane, from an area of lower solute concentration to an area of higher solute concentration. Tonicity describes how a solution's solute concentration compares to the inside of the cell.</div>
+    
+  </div></section>
+<section class="slide" data-slide="11"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Vesicular transport: moving bulk material</h1><p>Some material is too large to pass through channels or carriers one molecule at a time — it has to be moved in bulk, wrapped in a membrane-bound sac called a vesicle.</p>
+  <div class="card think"><p style="margin-bottom:0;"><strong>Endocytosis</strong> brings material INTO the cell by pinching off a piece of the plasma membrane around it — <em>phagocytosis</em> for solid particles, <em>pinocytosis</em> for fluid. <strong>Exocytosis</strong> works in reverse, fusing a vesicle with the plasma membrane to release its contents outside the cell — this is exactly how the Golgi's packaged proteins actually get out.</p></div>
+  <p style="font-size:14px;color:#555;">Both directions require ATP — moving large material by wrapping and unwrapping membrane is active work, not passive diffusion.</p></section>
+<section class="slide" data-slide="12"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The cell life cycle: interphase and mitosis</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="65" cy="70" r="42" fill="#EAF0FB" stroke="#0047BA" stroke-width="2"/>
+    <text x="65" y="135" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">Interphase</text>
+    <text x="117" y="76" text-anchor="middle" font-size="15" fill="#C9A84C" font-weight="700">&#8594;</text><circle cx="173" cy="70" r="42" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+    <text x="173" y="135" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">Prophase</text>
+    <text x="225" y="76" text-anchor="middle" font-size="15" fill="#C9A84C" font-weight="700">&#8594;</text><circle cx="281" cy="70" r="42" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+    <text x="281" y="135" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">Metaphase</text>
+    <text x="333" y="76" text-anchor="middle" font-size="15" fill="#C9A84C" font-weight="700">&#8594;</text><circle cx="389" cy="70" r="42" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+    <text x="389" y="135" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">Anaphase</text>
+    <text x="441" y="76" text-anchor="middle" font-size="15" fill="#C9A84C" font-weight="700">&#8594;</text><circle cx="497" cy="70" r="42" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2"/>
+    <text x="497" y="135" text-anchor="middle" font-size="10" font-weight="700" fill="#0A1F3D">Telophase</text>
+    
+</svg></div>
+    <div class="diagram-caption">A cell spends most of its life in interphase — growing, functioning, and copying its DNA in preparation for division. Mitosis is the shorter, active division phase: chromosomes condense (prophase), line up (metaphase), separate (anaphase), and two new nuclei form (telophase), producing two genetically identical daughter cells.</div>
+    
+  </div></section>
+<section class="slide" data-slide="13"><p class="eyebrow">Your Turn &mdash; Guided Practice</p><h1 class="slide-title">Apply it before the quiz</h1>
+  <div class="gp-box"><p class="gp-prompt">A red blood cell is placed into a solution and, under the microscope, begins to visibly swell.</p><p style="font-weight:600;font-size:14.5px;">Question 1 — What kind of solution was the cell most likely placed into?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">A hypotonic solution</button>
+<button class="choice-btn" data-correct="false">A hypertonic solution</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">A cell swells when water moves INTO it — that happens when the surrounding solution has a LOWER solute concentration than the cell's interior, which is the definition of a <b>hypotonic</b> solution. A hypertonic solution would pull water OUT of the cell, causing it to shrink instead.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 — Is water movement into the cell here an example of active transport or passive transport?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">Passive transport (osmosis) — no ATP required</button>
+<button class="choice-btn" data-correct="false">Active transport — requires ATP</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">Osmosis is water moving down its own concentration gradient (from more water/less solute to less water/more solute) — that's a <b>passive</b> process, requiring no ATP. Active transport is reserved for moving substances AGAINST their concentration gradient, which isn't what's happening here.</div></div></section>
+<section class="slide" data-slide="14"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Cystic fibrosis: a membrane channel defect</h1>
+  <p>A single malfunctioning membrane protein can cause a serious systemic disease — a direct, high-stakes example of why membrane transport matters clinically.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;"><strong>Cystic fibrosis</strong> is caused by a defective chloride channel protein (CFTR) in the plasma membrane. Without properly functioning chloride channels, water doesn't follow chloride ions the way it should across cell membranes, resulting in abnormally thick, sticky mucus in the lungs and digestive tract — all traced back to a single faulty membrane transport protein.</p></div></section>
+<section class="slide" data-slide="15"><p class="eyebrow">Clinical Correlation</p><h1 class="slide-title">Why IV fluid tonicity is a life-or-death detail</h1>
+  <p>This directly follows up on Week 2's IV fluid preview — now you have the full cellular picture of why it matters.</p>
+  <div class="card clinical"><div class="clinical-label">&#129658; In practice</div><p style="margin-bottom:0;">Infusing a hypotonic IV solution too quickly can cause red blood cells to swell and potentially burst (hemolysis) as water rushes in by osmosis. Infusing a hypertonic solution can cause cells to shrink (crenation) and malfunction. This is exactly why nurses and pharmacists are trained to double-check IV fluid tonicity before administration — it's cellular transport with direct patient-safety consequences.</p></div></section>
+<section class="slide" data-slide="16"><p class="eyebrow">Mini Knowledge Test</p><h1 class="slide-title">Show what you know &mdash; 7 questions</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">What forms the basic structure of the plasma membrane?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">A phospholipid bilayer</button>
+<button class="quiz-opt" data-correct="false">A single layer of protein</button>
+<button class="quiz-opt" data-correct="false">Pure carbohydrate strands</button></div><div class="rationale-box" id="rat-quiz-q1">The membrane's basic structure is a <b>phospholipid bilayer</b> — two layers of phospholipids with heads facing the watery environment and tails hiding in the middle. Proteins are embedded WITHIN this bilayer, not the base structure itself.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">Which organelle is studded with ribosomes and involved in protein export?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Rough endoplasmic reticulum</button>
+<button class="quiz-opt" data-correct="false">Smooth endoplasmic reticulum</button>
+<button class="quiz-opt" data-correct="false">Golgi apparatus</button></div><div class="rationale-box" id="rat-quiz-q2">The <b>rough ER</b> gets its name specifically from the ribosomes studding its surface, and it's where proteins destined for export or the membrane are built. The smooth ER has no ribosomes and focuses on lipid synthesis instead; the Golgi apparatus modifies and packages proteins AFTER the rough ER, not during initial synthesis.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">Which organelle produces most of the cell's ATP?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Mitochondria</button>
+<button class="quiz-opt" data-correct="false">Lysosomes</button>
+<button class="quiz-opt" data-correct="false">Golgi apparatus</button></div><div class="rationale-box" id="rat-quiz-q3"><b>Mitochondria</b> are the cell's power plants, producing ATP through cellular respiration. Lysosomes handle digestion/waste breakdown, and the Golgi apparatus handles protein packaging — neither produces significant ATP.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">Moving a substance against its concentration gradient requires:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Active transport and ATP</button>
+<button class="quiz-opt" data-correct="false">Simple diffusion only</button>
+<button class="quiz-opt" data-correct="false">No energy input at all</button></div><div class="rationale-box" id="rat-quiz-q4">Moving something AGAINST its gradient (low to high concentration) always requires <b>active transport</b>, which costs ATP energy. Simple diffusion only ever moves substances WITH their gradient (high to low), which requires no added energy.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">A cell placed in a hypertonic solution will:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Shrink, as water leaves the cell</button>
+<button class="quiz-opt" data-correct="false">Swell, as water enters the cell</button>
+<button class="quiz-opt" data-correct="false">Stay exactly the same size</button></div><div class="rationale-box" id="rat-quiz-q5">"Hyper"tonic means the surrounding solution has a HIGHER solute concentration than the cell — water follows its own concentration gradient and moves OUT of the cell toward the more concentrated solution, causing the cell to shrink (crenation).</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">Phagocytosis is best described as:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">A cell engulfing a solid particle</button>
+<button class="quiz-opt" data-correct="false">A cell engulfing fluid</button>
+<button class="quiz-opt" data-correct="false">A protein channel opening briefly</button></div><div class="rationale-box" id="rat-quiz-q6"><b>Phago-</b> means "eating" — phagocytosis is a cell engulfing a SOLID particle (like a white blood cell engulfing a bacterium). Engulfing fluid instead is <b>pino</b>cytosis ("drinking"). Neither involves a simple channel opening — both are bulk vesicular transport processes.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">During which phase of mitosis do chromosomes line up at the center of the cell?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Metaphase</button>
+<button class="quiz-opt" data-correct="false">Prophase</button>
+<button class="quiz-opt" data-correct="false">Anaphase</button></div><div class="rationale-box" id="rat-quiz-q7"><b>Meta</b>phase is specifically the lining-up-in-the-middle phase — a useful memory anchor is that the chromosomes are in the "middle" during meta-phase. Prophase is the earlier condensing stage; anaphase is when chromosomes are actively pulled apart to opposite ends.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 7</span></div></section>
+<section class="slide" data-slide="17"><p class="eyebrow">Debrief</p><h1 class="slide-title">Week 3 Quick-Reference Recap</h1>
+  <p>One page to glance at before Exam 1 — everything from this week, condensed.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Plasma Membrane</h4><p>Phospholipid bilayer + embedded proteins = selective permeability.</p></div>
+<div class="recap-cell"><h4>Key Organelles</h4><ul><li>Nucleus — DNA, control center</li><li>Ribosomes — build proteins</li><li>Rough/Smooth ER — protein/lipid synthesis</li><li>Golgi — modify, package, ship</li><li>Mitochondria — ATP production</li><li>Lysosomes — digestion/waste</li></ul></div>
+<div class="recap-cell"><h4>Passive Transport</h4><ul><li>Diffusion — high &rarr; low, no protein needed</li><li>Facilitated diffusion — high &rarr; low, needs a channel</li><li>Osmosis — water only, follows solute gradient</li></ul></div>
+<div class="recap-cell"><h4>Active Transport</h4><p>Low &rarr; high concentration, always requires ATP.</p></div>
+<div class="recap-cell"><h4>Tonicity</h4><ul><li>Hypertonic — cell shrinks</li><li>Isotonic — no change</li><li>Hypotonic — cell swells</li></ul></div>
+<div class="recap-cell"><h4>Cell Cycle</h4><p>Interphase (grow + copy DNA) &rarr; Prophase &rarr; Metaphase &rarr; Anaphase &rarr; Telophase (mitosis)</p></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Plasma Membrane</span><span class="term-pill">Selective Permeability</span><span class="term-pill">Organelle</span><span class="term-pill">Diffusion</span><span class="term-pill">Osmosis</span><span class="term-pill">Tonicity</span><span class="term-pill">Active Transport</span><span class="term-pill">Endocytosis</span><span class="term-pill">Exocytosis</span><span class="term-pill">Mitosis</span></div>
+  <div class="next-box"><strong>Next — Week 4: Exam 1 Synthesis + Lab Crosswalk.</strong> This is a review week — pulling Chapters 1–3 together, connecting the material directly to Labs 1–2, and building your final study sheet before the real exam.</div>
+  <div class="end-actions"><a class="end-btn primary next-lesson-link" href="week04-exam1-synthesis.html">Next: Week 4 &rarr;</a><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
