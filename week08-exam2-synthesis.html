@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCE A&P I Supplemental — Week 8: Exam 2 Synthesis</title>
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--blue:#0047BA;--red:#DB2F30;--green:#2E7D55;--cream:#FAF7EF;--ink:#1c1c1c;--line:#E3DDC9;--purple:#5B3E96;}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;}
+.app{max-width:960px;margin:0 auto;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.35);}
+.masthead{background:var(--navy);padding:18px 28px 14px;}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.kc{border:2px solid var(--gold);padding:4px 9px;line-height:1;flex:none;}
+.kc .inner{border:1px solid var(--gold);padding:3px 7px;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1.5px;}
+.wordmark{color:var(--gold);font-size:16px;letter-spacing:.5px;font-weight:600;}
+.course-tag{color:#cfd6e4;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;}
+.lesson-tag{color:#fff;font-size:12.5px;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);padding:5px 12px;border-radius:20px;white-space:nowrap;max-width:340px;}
+.tricolor{height:5px;display:flex;}.tricolor div{flex:1;}
+.tri-b{background:var(--blue);}.tri-g{background:var(--gold);}.tri-r{background:var(--red);}
+.progress-wrap{background:#fff;padding:10px 28px;border-bottom:1px solid var(--line);}
+.progress-track{background:#eee6d2;height:8px;border-radius:6px;overflow:hidden;}
+.progress-fill{background:var(--gold);height:100%;width:5%;border-radius:6px;transition:width .35s ease;}
+.progress-label{font-size:12px;color:#777;margin-top:6px;letter-spacing:.5px;}
+.stage{flex:1;padding:32px 34px 20px;overflow-wrap:anywhere;}
+.slide{display:none;animation:fadeIn .3s ease;}.slide.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px;}
+h1.slide-title{color:var(--navy);font-size:25px;margin:0 0 16px;line-height:1.25;}
+h2.sub-title{color:var(--navy);font-size:18px;margin:22px 0 10px;}
+h3.mini-title{color:var(--navy);font-size:15.5px;margin:16px 0 8px;font-weight:700;}
+p{margin:0 0 13px;font-size:15.5px;}
+ul{margin:0 0 13px;padding-left:21px;}li{margin-bottom:7px;font-size:15.5px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.card.warm{background:#fdf8ec;border-left:5px solid var(--gold);}
+.card.blue{background:#eef2fb;border-left:5px solid var(--blue);}
+.card.think{background:#fff;border:2px dashed var(--gold);}
+.card.clinical{background:#fbeef0;border-left:5px solid var(--red);}
+.clinical-label{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--red);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.obj-list{list-style:none;margin:0;padding:0;}
+.obj-list li{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:14.5px;}
+.obj-list .num{flex:none;width:23px;height:23px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.wordpart-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.wordpart-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1 1 100%;min-width:0;}
+@media(min-width:640px){.wordpart-card{flex:1 1 calc(50% - 6px);}}
+.wp-head{background:var(--navy);color:#fff;padding:8px 14px;display:flex;align-items:baseline;gap:8px;}
+.wp-head .part{font-weight:700;font-size:15px;color:var(--gold);}
+.wp-head .meaning{font-size:12.5px;color:#dfe4ee;}
+.wp-body{padding:10px 14px;font-size:13.5px;color:#333;}
+.wp-body b{color:var(--blue);}
+.step{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start;}
+.step .badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.step .content{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;}
+.step .content .label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+.diagram-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;}
+.diagram-svg-box{width:100%;text-align:center;}
+.diagram-svg-box svg{max-width:100%;height:auto;display:inline-block;}
+.diagram-caption{font-size:12.5px;color:#666;text-align:center;margin-top:8px;font-style:italic;}
+.label-cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+.label-list{flex:1 1 220px;min-width:0;list-style:none;margin:0;padding:0;}
+.label-list li{font-size:13px;margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;}
+.label-list .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px;}
+.gp-box{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:16px 18px;}
+.gp-prompt{font-size:14.5px;margin-bottom:12px;}
+.choice-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:12px;}
+.choice-btn{background:#fff;border:2px solid var(--line);border-radius:10px;padding:9px 15px;font-size:14px;cursor:pointer;font-family:inherit;transition:.15s;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.choice-btn:hover{border-color:var(--blue);}
+.choice-btn:disabled{opacity:1;}
+.choice-btn.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.choice-btn.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.feedback{font-size:13.5px;font-weight:600;min-height:18px;}
+.feedback.ok{color:var(--green);}.feedback.bad{color:var(--red);}
+.rationale-box{display:none;margin-top:9px;padding:10px 13px;background:#fdf8ec;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;font-size:12.5px;color:#333;}
+.rationale-box.show{display:block;}
+.rationale-box b{color:var(--navy);}
+.quiz-q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:14px;}
+.quiz-q .qnum{font-size:11.5px;color:var(--blue);font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px;}
+.quiz-q .qtext{font-size:14.5px;font-weight:600;margin-bottom:11px;}
+.quiz-q .rationale-box{margin-top:11px;}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;}
+.quiz-opt{text-align:left;background:#faf8f2;border:2px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;}
+.quiz-opt:disabled{opacity:1;}
+.quiz-opt.correct{background:#e8f6ec;border-color:var(--green);color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700;}
+.quiz-opt.incorrect{background:#fdeeee;border-color:var(--red);color:var(--red);-webkit-text-fill-color:var(--red);}
+.quiz-score{text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:16px;font-weight:700;margin-top:8px;display:none;}
+.quiz-score.show{display:block;}.quiz-score .gold{color:var(--gold);}
+.recap-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:640px){.recap-grid{grid-template-columns:1fr 1fr;}}
+.recap-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;}
+.recap-cell h4{margin:0 0 6px;font-size:12.5px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;}
+.recap-cell p, .recap-cell li{font-size:13px;margin-bottom:4px;}
+.recap-cell ul{padding-left:16px;margin:0;}
+.term-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;margin:4px 6px 4px 0;font-size:13px;font-weight:600;color:var(--navy);}
+.next-box{background:#eef2fb;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:15px 18px;margin-top:16px;}
+.end-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.end-btn{font-family:inherit;font-size:14px;font-weight:700;padding:11px 20px;border-radius:10px;cursor:pointer;letter-spacing:.2px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--navy);}
+.end-btn.primary{background:var(--navy);color:#fff;}.end-btn.secondary{background:#fff;color:var(--navy);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 28px 20px;border-top:1px solid var(--line);background:#fff;gap:10px;}
+.nav button{font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;letter-spacing:.3px;flex:none;}
+.nav button.ghost{background:#fff;color:var(--navy);}.nav button:disabled{opacity:.35;cursor:default;}
+.nav .dots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.nav .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
+.nav .dot.active{background:var(--gold);width:18px;border-radius:5px;}
+.footer-brand{background:var(--navy);color:#cfd6e4;text-align:center;font-size:10.5px;letter-spacing:1.4px;padding:9px;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--navy);color:#fff;border:1px solid var(--gold);padding:12px 22px;border-radius:30px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:50;max-width:90%;text-align:center;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+table.datatable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px;}
+table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px 10px;font-size:12px;}
+table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.datatable tr:nth-child(even) td{background:#faf8f2;}
+@media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 2</div></div></div><div class="lesson-tag">Week 8 &middot; Review &middot; Exam 2 Synthesis</div></div></div>
+<div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
+<div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 10</div></div>
+<div class="stage">
+<section class="slide active" data-slide="1"><p class="eyebrow">Week 8 · Review Week</p><h1 class="slide-title">Exam 2 Synthesis</h1>
+  <div class="card warm"><p style="margin-bottom:0;">This is a review week — no new content. You'll pull Chapters 4, 5, and 6 together into one connected picture, connect lecture material to Lab 3 and Lab Exam 1, walk through common exam traps, and finish with a comprehensive practice quiz and a one-page study sheet.</p></div>
+  <h2 class="sub-title">By the end of this week, you will be able to:</h2>
+  <ul class="obj-list"><li><span class="num">1</span><span>Explain how Chapters 4, 5, and 6 build on each other</span></li>
+<li><span class="num">2</span><span>Identify the exam's rough topic distribution</span></li>
+<li><span class="num">3</span><span>Connect lecture content to Lab 3 (histology) and Lab Exam 1 (bone identification)</span></li>
+<li><span class="num">4</span><span>Recognize and avoid the most common mistakes on this material</span></li>
+<li><span class="num">5</span><span>Complete a comprehensive practice quiz spanning all three chapters</span></li>
+<li><span class="num">6</span><span>Walk away with a single-page study sheet for Exam 2</span></li></ul></section>
+<section class="slide" data-slide="2"><p class="eyebrow">Exam Blueprint</p><h1 class="slide-title">What Exam 2 covers</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="130" height="130" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="85" y="90" text-anchor="middle" font-size="26" font-weight="700" fill="#0047BA">~33%</text>
+  <text x="85" y="112" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Ch. 4</text>
+  <text x="85" y="126" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Tissue Level</text>
+
+  <rect x="175" y="30" width="130" height="130" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="240" y="90" text-anchor="middle" font-size="26" font-weight="700" fill="#7A5A00">~33%</text>
+  <text x="240" y="112" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Ch. 5</text>
+  <text x="240" y="126" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Integumentary</text>
+
+  <rect x="330" y="30" width="130" height="130" rx="10" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.2"/>
+  <text x="395" y="90" text-anchor="middle" font-size="26" font-weight="700" fill="#DB2F30">~33%</text>
+  <text x="395" y="112" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Ch. 6</text>
+  <text x="395" y="126" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Osseous Tissue</text>
+</svg></div>
+    <div class="diagram-caption">Exam 2 covers Chapters 4–6 roughly evenly. Remember from the syllabus: this is one of four lecture exams, each worth a share of 30% of your final grade, and your lowest lecture exam score gets dropped — so a strong showing here matters, but one rough exam won't sink you.</div>
+    
+  </div></section>
+<section class="slide" data-slide="3"><p class="eyebrow">The Big Picture</p><h1 class="slide-title">Chapters 4–6: one connected thread</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="150" height="90" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.5"/>
+  <text x="95" y="65" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Ch. 4</text>
+  <text x="95" y="83" text-anchor="middle" font-size="10" fill="#1c1c1c">Tissue Level</text>
+  <text x="95" y="100" text-anchor="middle" font-size="8.5" fill="#0047BA">4 tissue types</text>
+
+  <text x="195" y="82" text-anchor="middle" font-size="18" fill="#C9A84C" font-weight="700">&#8594;</text>
+
+  <rect x="205" y="30" width="150" height="90" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.5"/>
+  <text x="280" y="65" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Ch. 5</text>
+  <text x="280" y="83" text-anchor="middle" font-size="10" fill="#1c1c1c">Integumentary</text>
+  <text x="280" y="100" text-anchor="middle" font-size="8.5" fill="#7A5A00">skin = tissues applied</text>
+
+  <text x="380" y="82" text-anchor="middle" font-size="18" fill="#C9A84C" font-weight="700">&#8594;</text>
+
+  <rect x="390" y="30" width="150" height="90" rx="10" fill="#FBEEF0" stroke="#DB2F30" stroke-width="2.5"/>
+  <text x="465" y="65" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Ch. 6</text>
+  <text x="465" y="83" text-anchor="middle" font-size="10" fill="#1c1c1c">Osseous Tissue</text>
+  <text x="465" y="100" text-anchor="middle" font-size="8.5" fill="#DB2F30">rigid connective tissue</text>
+
+  <text x="280" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">The single thread: connective &amp; epithelial tissue, applied and specialized</text>
+  <text x="280" y="182" text-anchor="middle" font-size="10.5" fill="#1c1c1c">Ch. 4 gives you the four tissue types. Ch. 5 shows epithelial + connective</text>
+  <text x="280" y="198" text-anchor="middle" font-size="10.5" fill="#1c1c1c">tissue built into skin. Ch. 6 shows connective tissue specialized into bone.</text>
+</svg></div>
+    <div class="diagram-caption">These three chapters aren't three separate topics — they're one story told at increasing levels of specificity. Chapter 4 gives you the vocabulary (four tissue types). Chapter 5 shows two of those types (epithelial + connective) built into a real organ (skin). Chapter 6 takes connective tissue specifically and shows how it specializes into something completely different: rigid, mineralized bone.</div>
+    
+  </div></section>
+<section class="slide" data-slide="4"><p class="eyebrow">Cross-Chapter Connections</p><h1 class="slide-title">How epithelial and connective tissue show up everywhere</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <circle cx="140" cy="120" r="60" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="140" y="115" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Epithelial</text>
+  <text x="140" y="132" text-anchor="middle" font-size="9" fill="#1c1c1c">tissue (Ch.4)</text>
+
+  <circle cx="420" cy="120" r="60" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="420" y="115" text-anchor="middle" font-size="11" font-weight="700" fill="#0A1F3D">Connective</text>
+  <text x="420" y="132" text-anchor="middle" font-size="9" fill="#1c1c1c">tissue (Ch.4)</text>
+
+  <line x1="195" y1="105" x2="365" y2="105" stroke="#1c1c1c" stroke-width="1.3" stroke-dasharray="3,3"/>
+  <text x="280" y="98" text-anchor="middle" font-size="9" fill="#1c1c1c">both build skin</text>
+
+  <text x="140" y="200" text-anchor="middle" font-size="9.5" fill="#0047BA">Epidermis (Ch.5)</text>
+  <text x="420" y="200" text-anchor="middle" font-size="9.5" fill="#C9A84C">Dermis, then Bone (Ch.5/6)</text>
+</svg></div>
+    <div class="diagram-caption">Watch for this pattern on the exam: questions often test whether you can trace a single tissue type across chapters. Epithelial tissue = Ch. 4 concept → epidermis in Ch. 5. Connective tissue = Ch. 4 concept → dermis in Ch. 5 AND bone in Ch. 6. If a question mentions "avascular" or "basement membrane," it's testing epithelial tissue no matter which chapter it's dressed up in.</div>
+    
+  </div></section>
+<section class="slide" data-slide="5"><p class="eyebrow">Cross-Chapter Connections</p><h1 class="slide-title">Three threads worth tracing before the exam</h1><div class="card blue"><p style="margin-bottom:0;"><strong>Thread 1 — Classification systems.</strong> Ch. 4 classifies epithelial tissue by shape × layers. Ch. 6 classifies bone by shape (long/short/flat/irregular). Both are "name it by its structural pattern" systems — if you can do one, you can do the other.</p></div>
+  <div class="card blue"><p style="margin-bottom:0;"><strong>Thread 2 — Build vs. maintain vs. break down.</strong> This three-role pattern shows up explicitly with bone cells (osteoblast/osteocyte/osteoclast) in Ch. 6, but the same logic of active construction vs. steady maintenance appears in epidermal cell turnover in Ch. 5.</p></div>
+  <div class="card blue"><p style="margin-bottom:0;"><strong>Thread 3 — Negative feedback, again.</strong> Thermoregulation (Ch. 5) and calcium homeostasis (Ch. 6) are both negative feedback loops, both tracing straight back to Ch. 1. If you understand one, you understand the shape of the other.</p></div></section>
+<section class="slide" data-slide="6"><p class="eyebrow">Lab Crosswalk</p><h1 class="slide-title">Connecting lecture to Lab 3 and Lab Exam 1</h1>
+  <div class="diagram-wrap">
+    <div class="diagram-svg-box">
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
+  <rect x="20" y="30" width="250" height="160" rx="10" fill="#EAF0FB" stroke="#0047BA" stroke-width="2.2"/>
+  <text x="145" y="58" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Lab 3 &mdash; Histology</text>
+  <text x="145" y="80" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Identify tissue slides under</text>
+  <text x="145" y="94" text-anchor="middle" font-size="9.5" fill="#1c1c1c">the microscope by shape</text>
+  <text x="145" y="108" text-anchor="middle" font-size="9.5" fill="#1c1c1c">and layering (Ch. 4 content)</text>
+  <text x="145" y="130" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">Ties to: epithelial/connective</text>
+  <text x="145" y="144" text-anchor="middle" font-size="9" fill="#0047BA" font-weight="700">classification vocabulary</text>
+
+  <rect x="290" y="30" width="250" height="160" rx="10" fill="#FBF1D6" stroke="#C9A84C" stroke-width="2.2"/>
+  <text x="415" y="58" text-anchor="middle" font-size="12" font-weight="700" fill="#0A1F3D">Lab Exam 1</text>
+  <text x="415" y="80" text-anchor="middle" font-size="9.5" fill="#1c1c1c">Bone identification &mdash; long</text>
+  <text x="415" y="94" text-anchor="middle" font-size="9.5" fill="#1c1c1c">bone landmarks, compact vs.</text>
+  <text x="415" y="108" text-anchor="middle" font-size="9.5" fill="#1c1c1c">spongy bone on models</text>
+  <text x="415" y="130" text-anchor="middle" font-size="9" fill="#7A5A00" font-weight="700">Ties to: Ch. 6 long bone</text>
+  <text x="415" y="144" text-anchor="middle" font-size="9" fill="#7A5A00" font-weight="700">anatomy &amp; osteon structure</text>
+</svg></div>
+    <div class="diagram-caption">Lab practical questions test the SAME classification skills as lecture, just applied to physical slides and models instead of diagrams. If you can confidently name a tissue type from a textbook image, you're most of the way to identifying it under a microscope — the vocabulary and logic transfer directly.</div>
+    
+  </div></section>
+<section class="slide" data-slide="7"><p class="eyebrow">Common Exam Traps</p><h1 class="slide-title">Six mistakes to avoid on Exam 2</h1>
+  <div class="card blue">These are the most common ways students lose points on this material — reviewed here so none of them catch you by surprise.</div>
+  <div class="step"><div class="badge">1</div><div class="content"><div class="label">Trap 1 · Hypodermis confusion</div>The hypodermis is NOT technically part of the skin — only epidermis + dermis are. A question describing "a layer of skin" that's actually the hypodermis is testing this distinction directly.</div></div>
+<div class="step"><div class="badge">2</div><div class="content"><div class="label">Trap 2 · Compact bone = cortical bone</div>These are two names for the exact same thing, not two different bone types. Don't let an exam question trick you into thinking "cortical" is a third category alongside compact and spongy.</div></div>
+<div class="step"><div class="badge">3</div><div class="content"><div class="label">Trap 3 · Osteoblast vs. osteoclast direction</div>Easy to mix up: -BLAST builds, -CLAST breaks down. If unsure, remember "blast off" = building something new; "clast" sounds like "crash" = tearing down.</div></div>
+<div class="step"><div class="badge">4</div><div class="content"><div class="label">Trap 4 · Simple vs. stratified direction</div>Simple = ONE layer. Stratified = MULTIPLE layers. It's not about thickness or size — it's purely a layer-count distinction.</div></div>
+<div class="step"><div class="badge">5</div><div class="content"><div class="label">Trap 5 · Burn degree ≠ severity by pain alone</div>Counterintuitively, third-degree burns can be less painful than second-degree because nerve endings are destroyed. Depth of tissue damage — not pain level — is what defines burn classification.</div></div>
+<div class="step"><div class="badge">6</div><div class="content"><div class="label">Trap 6 · Negative feedback direction</div>Negative feedback REVERSES a change; it doesn't mean "a negative or bad outcome." Students sometimes misread feedback loop questions because of this word choice.</div></div>
+  </section>
+<section class="slide" data-slide="8"><p class="eyebrow">Mixed Guided Practice</p><h1 class="slide-title">One question from each chapter, back to back</h1>
+  <div class="gp-box"><p class="gp-prompt">Work through these three related questions before the comprehensive quiz.</p><p style="font-weight:600;font-size:14.5px;">Question 1 (Ch. 4) — A tissue sample shows multiple layers of flat cells lining the outer surface of the skin. What is it?</p>
+    <div class="choice-row" data-q="gp1"><button class="choice-btn" data-correct="true">Stratified squamous epithelium</button>
+<button class="choice-btn" data-correct="false">Simple columnar epithelium</button></div>
+    <p class="feedback" id="fb-gp1"></p>
+    <div class="rationale-box" id="rat-gp1">Multiple layers = <b>stratified</b>; flat cells = <b>squamous</b>. This is the exact tissue type covering the epidermis's outer surface — a direct link forward into Chapter 5's content.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 2 (Ch. 5) — Which skin layer is built from that same stratified squamous epithelium?</p>
+    <div class="choice-row" data-q="gp2"><button class="choice-btn" data-correct="true">Epidermis</button>
+<button class="choice-btn" data-correct="false">Hypodermis</button></div>
+    <p class="feedback" id="fb-gp2"></p>
+    <div class="rationale-box" id="rat-gp2">The <b>epidermis</b> is made of stratified squamous epithelium — this is Chapter 4's tissue classification applied directly to Chapter 5's organ structure. The hypodermis is a separate, non-skin layer made of different tissue entirely.</div>
+<p style="font-weight:600;font-size:14.5px;margin-top:16px;">Question 3 (Ch. 6) — If the dermis is dense connective tissue, what happens when that same connective tissue category becomes mineralized and rigid?</p>
+    <div class="choice-row" data-q="gp3"><button class="choice-btn" data-correct="true">It becomes bone (osseous tissue)</button>
+<button class="choice-btn" data-correct="false">It becomes epithelial tissue</button></div>
+    <p class="feedback" id="fb-gp3"></p>
+    <div class="rationale-box" id="rat-gp3">Connective tissue with a mineralized matrix is exactly what defines <b>bone</b> — the same broad tissue category as the dermis, just specialized in a very different direction. It never becomes epithelial tissue; that's a completely separate primary tissue type from Chapter 4.</div></div></section>
+<section class="slide" data-slide="9"><p class="eyebrow">Comprehensive Practice Quiz</p><h1 class="slide-title">Exam 2 dress rehearsal &mdash; 10 questions across Ch. 4&ndash;6</h1>
+  <div class="quiz-q" data-quiz="q1"><div class="qnum">Question 1</div><div class="qtext">The four primary tissue types are epithelial, connective, muscle, and:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Nervous</button>
+<button class="quiz-opt" data-correct="false">Osseous</button>
+<button class="quiz-opt" data-correct="false">Vascular</button></div><div class="rationale-box" id="rat-quiz-q1">The four primary types are epithelial, connective, muscle, and <b>nervous</b>. Osseous tissue is a specific TYPE of connective tissue, not a fifth primary category, and "vascular tissue" isn't a real tissue category at all.</div></div>
+<div class="quiz-q" data-quiz="q2"><div class="qnum">Question 2</div><div class="qtext">Which best describes connective tissue's defining feature?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Cells within an extracellular matrix, which can be liquid, gel, or solid</button>
+<button class="quiz-opt" data-correct="false">Always avascular and always covers surfaces</button>
+<button class="quiz-opt" data-correct="false">Always excitable and capable of generating electrical signals</button></div><div class="rationale-box" id="rat-quiz-q2">Connective tissue is defined by <b>cells within a matrix</b> that varies in consistency (blood is liquid, bone is solid). Being avascular and surface-covering describes epithelial tissue instead; generating electrical signals describes nervous tissue.</div></div>
+<div class="quiz-q" data-quiz="q3"><div class="qnum">Question 3</div><div class="qtext">The epidermis is built from which tissue type?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Stratified squamous epithelium</button>
+<button class="quiz-opt" data-correct="false">Dense connective tissue</button>
+<button class="quiz-opt" data-correct="false">Smooth muscle</button></div><div class="rationale-box" id="rat-quiz-q3">The <b>epidermis</b> is stratified squamous epithelium — flat cells in multiple layers, ideal for a protective surface barrier. The dermis (not epidermis) is dense connective tissue instead.</div></div>
+<div class="quiz-q" data-quiz="q4"><div class="qnum">Question 4</div><div class="qtext">Which structure is technically NOT part of the skin?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Hypodermis</button>
+<button class="quiz-opt" data-correct="false">Epidermis</button>
+<button class="quiz-opt" data-correct="false">Dermis</button></div><div class="rationale-box" id="rat-quiz-q4">The <b>hypodermis</b> lies beneath the skin and anchors it to muscle, but by strict definition only the epidermis and dermis count as skin itself.</div></div>
+<div class="quiz-q" data-quiz="q5"><div class="qnum">Question 5</div><div class="qtext">Which wound healing stage comes immediately after hemostasis?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Inflammation</button>
+<button class="quiz-opt" data-correct="false">Remodeling</button>
+<button class="quiz-opt" data-correct="false">Proliferation</button></div><div class="rationale-box" id="rat-quiz-q5">The order is Hemostasis &rarr; <b>Inflammation</b> &rarr; Proliferation &rarr; Remodeling. Inflammation clears debris and pathogens right after bleeding is controlled, before rebuilding begins.</div></div>
+<div class="quiz-q" data-quiz="q6"><div class="qnum">Question 6</div><div class="qtext">A burn destroying the full thickness of skin is classified as:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Third-degree</button>
+<button class="quiz-opt" data-correct="false">First-degree</button>
+<button class="quiz-opt" data-correct="false">Second-degree</button></div><div class="rationale-box" id="rat-quiz-q6"><b>Third-degree</b> burns destroy the full thickness of skin (epidermis and dermis both). First-degree affects only the epidermis; second-degree extends partway into the dermis without destroying it completely.</div></div>
+<div class="quiz-q" data-quiz="q7"><div class="qnum">Question 7</div><div class="qtext">Long bones like the femur are filled internally with a hollow space called the:</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Medullary cavity</button>
+<button class="quiz-opt" data-correct="false">Osteon</button>
+<button class="quiz-opt" data-correct="false">Periosteum</button></div><div class="rationale-box" id="rat-quiz-q7">The <b>medullary cavity</b> is the hollow, marrow-containing space inside the diaphysis. An osteon is a microscopic structural unit, not a large cavity; the periosteum is an outer membrane, not an internal space.</div></div>
+<div class="quiz-q" data-quiz="q8"><div class="qnum">Question 8</div><div class="qtext">Which bone cell type actively lays down new bone matrix?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Osteoblast</button>
+<button class="quiz-opt" data-correct="false">Osteoclast</button>
+<button class="quiz-opt" data-correct="false">Osteocyte</button></div><div class="rationale-box" id="rat-quiz-q8"><b>Osteoblasts</b> build new matrix ("blast" = building). Osteoclasts break matrix down instead, and osteocytes are mature cells that maintain — rather than actively build — existing matrix.</div></div>
+<div class="quiz-q" data-quiz="q9"><div class="qnum">Question 9</div><div class="qtext">Low blood calcium triggers which hormonal response?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Parathyroid hormone (PTH) release, activating osteoclasts</button>
+<button class="quiz-opt" data-correct="false">Increased osteoblast activity to store calcium</button>
+<button class="quiz-opt" data-correct="false">No hormonal response — calcium is not regulated</button></div><div class="rationale-box" id="rat-quiz-q9">Low blood calcium triggers <b>PTH release</b>, which activates osteoclasts to release calcium stored in bone back into the blood. Increasing osteoblast activity would make the problem worse by pulling calcium OUT of the blood.</div></div>
+<div class="quiz-q" data-quiz="q10"><div class="qnum">Question 10</div><div class="qtext">Which pattern connects Chapter 1's homeostasis concept to both Chapter 5 and Chapter 6?</div><div class="quiz-opts"><button class="quiz-opt" data-correct="true">Negative feedback loops (thermoregulation, calcium regulation)</button>
+<button class="quiz-opt" data-correct="false">Positive feedback loops</button>
+<button class="quiz-opt" data-correct="false">Tissue classification by shape</button></div><div class="rationale-box" id="rat-quiz-q10">Both thermoregulation (Ch. 5) and calcium homeostasis (Ch. 6) are <b>negative feedback loops</b> — the same core pattern from Chapter 1, where a stimulus triggers a response that reverses the original change. Neither is a positive feedback example or purely a classification topic.</div></div>
+  <div class="quiz-score" id="quizScore">Score: <span class="gold" id="scoreText">0 / 10</span></div></section>
+<section class="slide" data-slide="10"><p class="eyebrow">Final Study Sheet</p><h1 class="slide-title">Exam 2 One-Page Recap: Chapters 4–6</h1>
+  <p>Your last stop before the real exam — everything from this block, condensed onto one page.</p>
+  <div class="recap-grid"><div class="recap-cell"><h4>Ch. 4 — Four Tissue Types</h4><ul><li>Epithelial — covers/lines, avascular</li><li>Connective — cells + matrix</li><li>Muscle — contracts</li><li>Nervous — signals</li></ul></div>
+<div class="recap-cell"><h4>Ch. 4 — Epithelial Classification</h4><p>Shape (squamous/cuboidal/columnar) &times; Layers (simple/stratified)</p></div>
+<div class="recap-cell"><h4>Ch. 5 — Skin Layers</h4><ul><li>Epidermis — stratified squamous</li><li>Dermis — dense connective</li><li>Hypodermis — NOT part of skin</li></ul></div>
+<div class="recap-cell"><h4>Ch. 5 — Skin Functions</h4><p>Protection, thermoregulation, vitamin D, sensation, excretion.</p></div>
+<div class="recap-cell"><h4>Ch. 5 — Burns &amp; Healing</h4><p>1st = epidermis, 2nd = into dermis, 3rd = full thickness. Healing: Hemostasis &rarr; Inflammation &rarr; Proliferation &rarr; Remodeling.</p></div>
+<div class="recap-cell"><h4>Ch. 6 — Bone Shapes &amp; Anatomy</h4><p>Long/short/flat/irregular. Diaphysis + Epiphysis + Medullary cavity + Periosteum.</p></div>
+<div class="recap-cell"><h4>Ch. 6 — Bone Cells</h4><ul><li>Osteoblast — builds</li><li>Osteocyte — maintains</li><li>Osteoclast — breaks down</li></ul></div>
+<div class="recap-cell"><h4>Ch. 6 — Calcium Homeostasis</h4><p>Low Ca&sup2;&#8314; &rarr; PTH &rarr; osteoclasts release calcium &rarr; restored.</p></div></div>
+  <h2 class="sub-title">Key Terms This Week</h2><div><span class="term-pill">Epithelial Tissue</span><span class="term-pill">Connective Tissue</span><span class="term-pill">Epidermis</span><span class="term-pill">Dermis</span><span class="term-pill">Hypodermis</span><span class="term-pill">Osteoblast</span><span class="term-pill">Osteoclast</span><span class="term-pill">Osteocyte</span><span class="term-pill">Negative Feedback</span><span class="term-pill">Wound Healing</span><span class="term-pill">Burn Classification</span></div>
+  <div class="next-box"><strong>You've completed Exam Block 2.</strong> Chapters 4–6 are covered, cross-referenced, and drilled. Good luck on Exam 2 — and when you're ready, Exam Block 3 picks up with Chapters 7–12 and the Lab Exam 2 crosswalk.</div>
+  <div class="end-actions"><button class="end-btn secondary" data-action="restart">&#8635; Restart This Week</button></div></section>
+</div>
+<div class="nav"><button class="ghost" id="prevBtn">&larr; Back</button><div class="dots" id="dots"></div><button id="nextBtn">Next &rarr;</button></div>
+<div class="footer-brand">KINGCRETOT EXPERIENCE &middot; A&amp;P I SUPPLEMENTAL PROGRAM &middot; STUDY AID &mdash; NOT COURSE-SUBMITTED WORK</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+function kceShuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var shuffleContainers = document.querySelectorAll('.choice-row, .quiz-opts');
+for (var sc = 0; sc < shuffleContainers.length; sc++) {
+  var container = shuffleContainers[sc];
+  var kids = [];
+  for (var kc = 0; kc < container.children.length; kc++) kids.push(container.children[kc]);
+  kceShuffle(kids);
+  for (var kc2 = 0; kc2 < kids.length; kc2++) container.appendChild(kids[kc2]);
+}
+var total = document.querySelectorAll('.slide').length;
+var current = 1;
+var dotsEl = document.getElementById('dots');
+for (var i = 1; i <= total; i++) { var d = document.createElement('div'); d.className = 'dot' + (i === 1 ? ' active' : ''); dotsEl.appendChild(d); }
+function goTo(n) {
+  if (n < 1 || n > total) return;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.remove('active');
+  document.querySelectorAll('.dot')[current - 1].classList.remove('active');
+  current = n;
+  document.querySelector('.slide[data-slide="' + current + '"]').classList.add('active');
+  document.querySelectorAll('.dot')[current - 1].classList.add('active');
+  document.getElementById('progressFill').style.width = Math.round(current / total * 100) + '%';
+  document.getElementById('progressLabel').textContent = 'Slide ' + current + ' of ' + total;
+  document.getElementById('prevBtn').disabled = current === 1;
+  var nb = document.getElementById('nextBtn');
+  if (current === total) { nb.style.display = 'none'; } else { nb.style.display = 'inline-block'; nb.textContent = 'Next \u2192'; }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.getElementById('prevBtn').disabled = true;
+document.getElementById('prevBtn').addEventListener('click', function(){ goTo(current - 1); });
+document.getElementById('nextBtn').addEventListener('click', function(){ goTo(current + 1); });
+function showToast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(window._toastTimer); window._toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3200); }
+var restartBtns = document.querySelectorAll('[data-action="restart"]');
+for (var rb = 0; rb < restartBtns.length; rb++) {
+  restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
+}
+var choiceRows = document.querySelectorAll('.choice-row');
+for (var cr = 0; cr < choiceRows.length; cr++) {
+  (function(row){
+    var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
+    var btns = row.querySelectorAll('.choice-btn');
+    for (var bi = 0; bi < btns.length; bi++) {
+      btns[bi].addEventListener('click', function(){
+        var clickedBtn = this;
+        var allBtns = row.querySelectorAll('.choice-btn');
+        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
+        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
+        else {
+          clickedBtn.classList.add('incorrect');
+          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
+          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
+        }
+        if (rat) rat.classList.add('show');
+      });
+    }
+  })(choiceRows[cr]);
+}
+var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
+var quizQs = document.querySelectorAll('.quiz-q');
+for (var qq = 0; qq < quizQs.length; qq++) {
+  (function(qEl){
+    var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
+    var opts = qEl.querySelectorAll('.quiz-opt');
+    for (var oi = 0; oi < opts.length; oi++) {
+      opts[oi].addEventListener('click', function(){
+        if (quizAnswered[qid] !== undefined) return;
+        var clickedBtn = this;
+        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
+        var allOpts = qEl.querySelectorAll('.quiz-opt');
+        for (var z = 0; z < allOpts.length; z++) {
+          allOpts[z].disabled = true;
+          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
+          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
+        }
+        if (rat) rat.classList.add('show');
+        updateScore();
+      });
+    }
+  })(quizQs[qq]);
+}
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+</script>
+</body>
+</html>
