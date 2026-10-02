@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KingCretot Experience — A&amp;P I Supplemental</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A1F3D;--gold:#C9A84C;--cream:#FAF7EF;--red:#C9342F;--blue:#0047BA;--green:#2E7D55;
+--ink:#1d2733;--line:#E7E0CF;--soft:#FAF7EF;--display:'Fraunces',serif;--body:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace;}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;line-height:1.55}
+.mast{background:var(--navy);color:#fff;padding:46px 24px 40px}
+.wrap{max-width:1080px;margin:0 auto}
+.brand{font-family:var(--display);font-weight:700;font-size:30px;letter-spacing:.2px}
+.tag{font-family:var(--mono);font-size:12px;letter-spacing:1px;margin-top:6px}
+.tag .e1{color:var(--blue)}.tag .e2{color:var(--gold)}.tag .e3{color:#DB2F30}
+.rule{border:none;border-top:2px solid var(--gold);margin:20px 0;max-width:120px}
+.mast h1{font-family:var(--display);font-weight:600;font-size:34px;margin:6px 0 8px}
+.mast p{max-width:640px;color:#c7d2e0;font-size:16px;margin:0}
+.intro{background:var(--cream);border-bottom:1px solid var(--line);padding:22px 24px}
+.intro .wrap{display:flex;gap:26px;flex-wrap:wrap;font-size:14px;color:#4a5666}
+.intro b{color:var(--navy)}
+main{padding:34px 24px 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;background:#fff;transition:.15s;box-shadow:0 1px 0 rgba(10,31,61,.03)}
+.card:hover{border-color:var(--gold);box-shadow:0 6px 22px rgba(10,31,61,.08);transform:translateY(-2px)}
+.card.milestone{background:var(--navy);border-color:var(--navy)}
+.card.milestone:hover{border-color:var(--gold);transform:translateY(-2px)}
+.card.milestone .wk{color:var(--gold)}
+.card.milestone h3{color:#fff}
+.card.milestone .sub{color:#c7d2e0;font-size:13px;margin:0 0 14px;line-height:1.5}
+.card.milestone .tag.t-exam{background:var(--gold);color:var(--navy)}
+.card.milestone .btn.primary{background:var(--gold);color:var(--navy)}
+.card.milestone .btn.primary:hover{background:#dcbf6c}
+.wk{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#9A7D20}
+.card h3{font-family:var(--display);font-weight:600;font-size:21px;color:var(--navy);margin:5px 0 10px;line-height:1.25}
+.tags{margin-bottom:14px}
+.tag.t-math,.tag.t-foundations,.tag.t-reading,.tag.t-writing,.tag.t-diagnostic,.tag.t-review{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.t-math{background:#eef3fe;color:#2b56b8}.t-reading{background:#eaf5ee;color:#1f6b43}
+.t-writing{background:#fdeeed;color:#b02b27}.t-foundations{background:#fbf3dd;color:#92731a}
+.t-diagnostic{background:#f0ecf8;color:#5b3fa0}.t-review{background:#e9f6f6;color:#1d6f70}
+.links{display:flex;flex-direction:column;gap:8px}
+.btn{display:block;text-align:center;text-decoration:none;font-weight:600;font-size:14px;padding:11px 14px;border-radius:10px;transition:.15s}
+.btn.primary{background:var(--navy);color:#fff}
+.btn.primary:hover{background:#13294b}
+.btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--gold);color:#1a3252}
+.note{max-width:1080px;margin:8px auto 0;padding:0 24px;color:#7a8794}
+footer{margin-top:34px;border-top:1px solid var(--line);padding:22px 24px;color:#7d8794;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer b{color:var(--navy)}
+.fl{height:3px;width:60px;background:var(--gold);border-radius:2px;margin-bottom:12px}
+@media(max-width:560px){.mast h1{font-size:27px}.brand{font-size:25px}}
+
+.t-english{background:#fdeeed;color:#b02b27}.t-science{background:#f0ecf8;color:#5b3fa0}
+.tag.t-english,.tag.t-science{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.card.milestone .tag.t-exam{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.btn.soon{background:#f5f2e9;color:#8a8f99;border:1.5px dashed var(--line);cursor:default}
+.card.milestone .btn.soon{background:rgba(255,255,255,.06);color:#9fb0c8;border:1.5px dashed rgba(255,255,255,.25)}
+.card.start{background:var(--cream);border-color:var(--gold)}
+
+.block{margin:30px 0 14px}.block:first-child{margin-top:0}
+.block h2{font-family:var(--display);font-weight:600;font-size:22px;color:var(--navy);margin:0 0 4px}
+.block p{margin:0;color:#6b7684;font-size:14px}
+.block .fl{margin-bottom:10px}
+.card .sub{color:#5f6b79;font-size:13px;margin:0 0 14px;line-height:1.5}
+.t-ela{background:#fdeeed;color:#b02b27}
+.tag.t-ela{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.tags .tag+.tag{margin-left:6px}
+.tag.t-exam{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:#fbf3dd;color:#92731a}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="brand">KingCretot Experience</div>
+  <div class="tag"><span class="e1">EDUCATE.</span>&nbsp;&nbsp;<span class="e2">EMPOWER.</span>&nbsp;&nbsp;<span class="e3">EXCEL.</span></div>
+  <hr class="rule">
+  <h1>KCE A&amp;P I Supplemental</h1>
+  <p>A fifteen-week study companion for college Human Anatomy &amp; Physiology I. Each week is a slide-by-slide study guide for that week’s chapters, and every exam block ends with a synthesis review.</p>
+</div></header>
+
+<div class="intro"><div class="wrap">
+  <div><b>15 weekly study guides</b> · work through them at your own pace</div>  <div><b>5 exam blocks</b> · each one closes with a synthesis review</div>  <div><b>Chapters 1–16</b> · chemistry through the autonomic nervous system</div>
+</div></div>
+
+<main class="wrap">
+  <section class="block"><div class="fl"></div><h2>Exam Block 1</h2><p>Chemistry, cells and the language of the body</p></section>
+  <div class="grid"><article class="card"><div class="wk">Week 01</div><h3>Introduction to Anatomy &amp; Physiology</h3><p class="sub">Ch. 1</p><div class="tags"><span class="tag t-reading">Study guide</span></div><div class="links"><a class="btn primary" href="week01-intro-to-ap.html">Open study guide</a></div></article><article class="card"><div class="wk">Week 02</div><h3>The Chemical Level of Organization</h3><p class="sub">Ch. 2</p><div class="tags"><span class="tag t-reading">Study guide</span></div><div class="links"><a class="btn primary" href="week02-chemical-level.html">Open study guide</a></div></article><article class="card"><div class="wk">Week 03</div><h3>The Cellular Level of Organization</h3><p class="sub">Ch. 3</p><div class="tags"><span class="tag t-reading">Study guide</span></div><div class="links"><a class="btn primary" href="week03-cellular-level.html">Open study guide</a></div></article><article class="card milestone"><div class="wk">Week 04</div><h3>Exam 1 Synthesis + Lab Crosswalk</h3><p class="sub">Review</p><div class="tags"><span class="tag t-exam">Exam review</span></div><div class="links"><a class="btn primary" href="week04-exam1-synthesis.html">Open study guide</a></div></article></div>
+  <section class="block"><div class="fl"></div><h2>Exam Block 2</h2><p>Tissues, skin and bone</p></section>
+  <div class="grid"><article class="card"><div class="wk">Week 05</div><h3>The Tissue Level of Organization</h3><p class="sub">Ch. 4</p><div class="tags"><span class="tag t-reading">Study guide</span></div><div class="links"><a class="btn primary" href="week05-tissue-level.html">Open study guide</a></div></article><article class="card"><div class="wk">Week 06</div><h3>The Integumentary System</h3><p class="sub">Ch. 5</p><div class="tags"><span class="tag t-reading">Study guide</span></div><div class="links"><a class="btn primary" href="week06-integumentary-system.html">Open study guide</a></div></article><article class="card"><div class="wk">Week 07</div><h3>Osseous Tissue &amp; Bone Structure</h3><p class="sub">Ch. 6</p><div class="tags"><span class="tag t-reading">Study guide</span></div><div class="links"><a class="btn primary" href="week07-osseous-tissue.html">Open study guide</a></div></article><article class="card milestone"><div class="wk">Week 08</div><h3>Exam 2 Synthesis</h3><p class="sub">Review</p><div class="tags"><span class="tag t-exam">Exam review</span></div><div class="links"><a class="btn primary" href="week08-exam2-synthesis.html">Open study guide</a></div></article></div>
+  <section class="block"><div class="fl"></div><h2>Exam Block 3</h2><p>The skeleton and its joints</p></section>
+  <div class="grid"><article class="card"><div class="wk">Week 09</div><h3>Axial &amp; Appendicular Skeleton</h3><p class="sub">Ch. 7–8</p><div class="tags"><span class="tag t-reading">Study guide</span></div><div class="links"><a class="btn primary" href="week09-axial-appendicular-skeleton.html">Open study guide</a></div></article><article class="card"><div class="wk">Week 10</div><h3>Articulations + Exam 3 Synthesis</h3><p class="sub">Ch. 9 + Review</p><div class="tags"><span class="tag t-reading">Study guide</span><span class="tag t-exam">Exam review</span></div><div class="links"><a class="btn primary" href="week10-articulations-exam3-synthesis.html">Open study guide</a></div></article></div>
+  <section class="block"><div class="fl"></div><h2>Exam Block 4</h2><p>Muscle</p></section>
+  <div class="grid"><article class="card"><div class="wk">Week 11</div><h3>Skeletal Muscle Tissue</h3><p class="sub">Ch. 10</p><div class="tags"><span class="tag t-reading">Study guide</span></div><div class="links"><a class="btn primary" href="week11-skeletal-muscle-tissue.html">Open study guide</a></div></article><article class="card"><div class="wk">Week 12</div><h3>The Muscular System + Exam 4 Synthesis</h3><p class="sub">Ch. 11 + Review</p><div class="tags"><span class="tag t-reading">Study guide</span><span class="tag t-exam">Exam review</span></div><div class="links"><a class="btn primary" href="week12-muscular-system-exam4-synthesis.html">Open study guide</a></div></article></div>
+  <section class="block"><div class="fl"></div><h2>Exam Block 5</h2><p>The nervous system and the final</p></section>
+  <div class="grid"><article class="card"><div class="wk">Week 13</div><h3>Neural Tissue &amp; the Spinal Cord</h3><p class="sub">Ch. 12–13</p><div class="tags"><span class="tag t-reading">Study guide</span></div><div class="links"><a class="btn primary" href="week13-neural-tissue-spinal-cord.html">Open study guide</a></div></article><article class="card"><div class="wk">Week 14</div><h3>The Brain, Cranial Nerves &amp; Sensory-Motor Pathways</h3><p class="sub">Ch. 14–15</p><div class="tags"><span class="tag t-reading">Study guide</span></div><div class="links"><a class="btn primary" href="week14-brain-cranial-nerves.html">Open study guide</a></div></article><article class="card"><div class="wk">Week 15</div><h3>Autonomic Nervous System &amp; Cumulative Final Review</h3><p class="sub">Ch. 16 + Cumulative Review</p><div class="tags"><span class="tag t-reading">Study guide</span><span class="tag t-exam">Exam review</span></div><div class="links"><a class="btn primary" href="week15-autonomic-ns-cumulative-final.html">Open study guide</a></div></article></div>
+
+</main>
+
+<footer><div class="wrap">
+  <div><div class="fl"></div><b>KingCretot Experience</b> · A&amp;P I Supplemental</div>
+  <div>kce@kingcretot.com &nbsp;·&nbsp; 914-809-0112 &nbsp;·&nbsp; PO Box 2322, Arcadia, FL 34265</div>
+</div></footer>
+</body>
+</html>
