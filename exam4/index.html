@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A&amp;P I Exam 4 Study Guide | KingCretot Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16233F; --navy-2:#223257; --gold:#C9A227; --gold-soft:#EFE1B0;
+  --cream:#FBF7EC; --paper:#FFFFFF; --ink:#1C2230; --muted:#5A6275;
+  --pen:#B3362F; --ok:#2E7550; --line:#E4DCC6;
+  --serif:"Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:"Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(120px + env(safe-area-inset-top,0px))}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6}
+button{font-family:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* Top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--navy);color:#fff;box-shadow:0 2px 0 var(--gold)}
+.bar-in{max-width:880px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto}
+.mark{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px}
+.brand b{font-family:var(--serif);font-size:17px;letter-spacing:.2px}
+.brand small{display:block;font-size:11px;color:var(--gold-soft);font-weight:500}
+.stats{display:flex;align-items:center;gap:14px;font-size:13px;font-weight:600}
+.xp{display:flex;align-items:center;gap:8px}
+.xp-track{width:120px;height:9px;background:rgba(255,255,255,.18);border-radius:9px;overflow:hidden}
+.xp-fill{height:100%;width:0;background:var(--gold);transition:width .4s ease}
+.coin{display:inline-flex;align-items:center;gap:5px}
+.coin i{width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#F6DE84,var(--gold) 60%,#9C7B14);display:inline-block}
+.tabs{max-width:880px;margin:0 auto;padding:0 18px;display:flex;gap:4px}
+.tab{background:none;border:0;color:#C9D0E0;padding:10px 14px 12px;font-weight:600;font-size:14px;border-bottom:3px solid transparent}
+.tab[aria-selected="true"]{color:#fff;border-bottom-color:var(--gold)}
+
+main{max-width:880px;margin:0 auto;padding:0 18px 80px}
+
+/* Hero */
+.hero{padding:44px 0 28px;border-bottom:1px solid var(--line)}
+.hero h1{font-family:var(--serif);font-size:clamp(34px,6vw,54px);line-height:1.05;margin:0 0 14px;color:var(--navy)}
+.hero .for{font-size:15px;color:var(--muted);margin:0 0 18px}
+.hero .for strong{color:var(--ink)}
+.hero p.lead{max-width:62ch;margin:0 0 10px}
+.redpen-demo{font-family:var(--serif);font-size:19px;margin:18px 0 0;padding:14px 18px;background:var(--paper);border-left:4px solid var(--pen);max-width:62ch}
+del{color:var(--pen);text-decoration-thickness:2px}
+ins{text-decoration:none;color:var(--ok);font-weight:700;background:linear-gradient(transparent 62%,rgba(46,117,80,.14) 62%)}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{border:2px solid var(--navy);background:var(--navy);color:#fff;padding:9px 16px;border-radius:6px;font-weight:600;font-size:14px}
+.btn.ghost{background:transparent;color:var(--navy)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+
+/* Chapter nav */
+.chnav{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 0}
+.chnav a{color:var(--navy);font-weight:600;font-size:13px;text-decoration:none;border:1px solid var(--line);background:var(--paper);padding:6px 12px;border-radius:20px}
+
+/* Chapters */
+.chapter{padding-top:40px}
+.chapter > h2{font-family:var(--serif);font-size:32px;color:var(--navy);margin:0 0 4px}
+.chapter > .chsub{color:var(--muted);margin:0 0 8px;font-size:15px}
+.topic{margin-top:30px}
+.topic h3{font-size:19px;font-weight:700;color:var(--navy);margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid var(--gold);display:inline-block}
+.core{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:16px 20px;margin:6px 0 16px}
+.core p{margin:0 0 10px;max-width:70ch}
+.core p:last-child{margin-bottom:0}
+.core .mn{font-family:var(--serif);font-style:italic;color:var(--navy)}
+table.mini{border-collapse:collapse;width:100%;font-size:14px;margin:6px 0 4px}
+.tblwrap{overflow-x:auto}
+table.mini th,table.mini td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+table.mini th{background:var(--navy);color:#fff;font-weight:600}
+
+/* Question items */
+.q{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:16px 0;border-top:1px dashed var(--line)}
+.qn{font-family:var(--serif);font-size:24px;color:var(--gold);font-weight:700;line-height:1.2}
+.stem{margin:0 0 6px;font-weight:600}
+.opts{margin:0 0 10px;padding:0;list-style:none;font-size:15px;color:var(--muted)}
+.opts li{display:inline-block;margin:0 16px 2px 0}
+.reveal{background:transparent;border:1.5px solid var(--navy);color:var(--navy);border-radius:5px;padding:5px 12px;font-weight:600;font-size:13px}
+.reveal[aria-expanded="true"]{background:var(--navy);color:#fff}
+.ans{margin-top:12px;animation:drop .25s ease}
+@keyframes drop{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.verdict{font-weight:700;margin:0 0 8px}
+.verdict .tag{display:inline-block;padding:2px 10px;border-radius:4px;color:#fff;background:var(--ok);margin-left:6px}
+.verdict .tag.f{background:var(--pen)}
+.fix{font-family:var(--serif);font-size:18px;line-height:1.5;margin:0 0 10px;padding:10px 14px;background:var(--paper);border-left:4px solid var(--pen)}
+.why{margin:0 0 10px;max-width:70ch}
+.trap{margin:0;font-size:14px;background:var(--gold-soft);padding:9px 12px;border-radius:4px;max-width:70ch}
+
+/* Flashcards */
+.fc-head{padding:40px 0 10px}
+.fc-head h2,.qz-head h2{font-family:var(--serif);font-size:34px;color:var(--navy);margin:0 0 6px}
+.fc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:18px}
+.card{perspective:1000px;height:190px;border:0;background:none;padding:0;text-align:left}
+.card-in{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.card.flip .card-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:6px;padding:16px;display:flex;flex-direction:column;justify-content:center}
+.front{background:var(--navy);color:#fff;border-bottom:4px solid var(--gold)}
+.front b{font-family:var(--serif);font-size:22px;line-height:1.2}
+.front span{font-size:12px;color:var(--gold-soft);margin-top:8px}
+.back{background:var(--paper);border:1px solid var(--line);transform:rotateY(180deg);font-size:14px;line-height:1.5;overflow:auto}
+
+/* Quiz */
+.qz-head{padding:40px 0 10px}
+.qz-box{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:22px;margin-top:16px}
+.qz-prog{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);font-weight:600;margin-bottom:8px}
+.qz-bar{height:6px;background:var(--line);border-radius:6px;overflow:hidden;margin-bottom:18px}
+.qz-bar div{height:100%;background:var(--gold);width:0;transition:width .3s}
+.qz-stem{font-size:18px;font-weight:600;margin:0 0 14px}
+.qz-opts{display:grid;gap:8px}
+.qz-opt{text-align:left;background:var(--cream);border:2px solid var(--line);border-radius:6px;padding:11px 14px;font-size:15px;color:var(--ink)}
+.qz-opt:hover:not(:disabled){border-color:var(--navy)}
+.qz-opt.right{border-color:var(--ok);background:#E7F2EB}
+.qz-opt.wrong{border-color:var(--pen);background:#F8E6E4}
+.qz-opt:disabled{cursor:default}
+.qz-fb{margin-top:14px}
+.qz-fb .fix{font-size:16px}
+.qz-actions{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+.score{font-family:var(--serif);font-size:56px;color:var(--navy);margin:0;line-height:1}
+.missed{margin:12px 0 0;padding-left:18px}
+.missed a{color:var(--navy);font-weight:600}
+
+footer{border-top:2px solid var(--gold);background:var(--navy);color:#C9D0E0;font-size:13px;text-align:center;padding:22px 18px calc(22px + env(safe-area-inset-bottom,0px))}
+footer b{color:#fff;font-family:var(--serif);font-size:16px}
+footer em{color:var(--gold-soft);font-style:normal}
+
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:10px 18px;border-radius:30px;font-weight:600;font-size:14px;opacity:0;pointer-events:none;transition:.25s;border:2px solid var(--gold);z-index:50}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
+[hidden]{display:none!important}
+@media (max-width:560px){
+  .xp-track{width:80px}
+  .brand small{display:none}
+  .q{grid-template-columns:32px 1fr}
+  .qn{font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media print{
+  .bar,.tools,.reveal,#view-cards,#view-quiz,footer{display:none!important}
+  .ans{display:block!important}
+  body{background:#fff}
+}
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+
+<header class="bar">
+  <div class="bar-in">
+    <div class="brand"><div class="mark">KC</div><div><b>KingCretot Experience</b><small>Educate. Empower. Excel.</small></div></div>
+    <div class="stats">
+      <div class="xp"><span id="lvl">Lv 1</span><div class="xp-track"><div class="xp-fill" id="xpfill"></div></div><span id="xptext">0 XP</span></div>
+      <span class="coin"><i></i><span id="coins">0</span></span>
+    </div>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-view="guide">Study guide</button>
+    <button class="tab" role="tab" aria-selected="false" data-view="cards">Flashcards</button>
+    <button class="tab" role="tab" aria-selected="false" data-view="quiz">Practice test</button>
+  </nav>
+</header>
+
+<main>
+  <section id="view-guide">
+    <div class="hero">
+      <h1>Muscles &amp; Neural Tissue</h1>
+      <p class="for"><strong>BSC 1085C Anatomy &amp; Physiology I, Exam 4 (Chapters 10 to 12)</strong><br>Prepared for Adrianna Gomez</p>
+      <p class="lead">Every question from your practice exam is here, grouped by topic, with the concept behind it. True/false questions on this exam usually hinge on one swapped word. When a statement is false, you'll see exactly which word is wrong and what belongs there, the way a professor would mark it.</p>
+      <p class="redpen-demo">Gray matter is made up of regions with many <del>axons</del> <ins>neuron cell bodies</ins>.</p>
+      <p class="lead" style="margin-top:14px">Read the concept block first, try each question, then show the answer. Finish with the flashcards and the practice test.</p>
+      <div class="tools">
+        <button class="btn" id="showAll">Show all answers</button>
+        <button class="btn ghost" onclick="window.print()">Print study guide</button>
+      </div>
+      <nav class="chnav" id="chnav"></nav>
+    </div>
+    <div id="guide"></div>
+  </section>
+
+  <section id="view-cards" hidden>
+    <div class="fc-head">
+      <h2>Flashcards</h2>
+      <p>Say the definition out loud before you tap. Tap again to flip back.</p>
+      <div class="tools"><button class="btn ghost" id="shuffleCards">Shuffle cards</button></div>
+    </div>
+    <div class="fc-grid" id="cards"></div>
+  </section>
+
+  <section id="view-quiz" hidden>
+    <div class="qz-head">
+      <h2>Practice test</h2>
+      <p>All 50 questions in a new order. Matching items are asked one at a time. Each correct answer earns 20 XP and a coin.</p>
+    </div>
+    <div class="qz-box" id="quiz"></div>
+  </section>
+</main>
+
+<footer>
+  <b>KingCretot Experience</b><br>
+  <em>Educate. Empower. Excel.</em><br>
+  www.kingcretot.com &nbsp;|&nbsp; kce@kingcretot.com
+</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ---------- CONTENT ---------- */
+const TF = ["True","False"];
+
+const MO_CT = ["layer which surrounds muscle","thin sheath around each muscle fiber","surrounds each fascicle"];
+const MO_MP = ["resting membrane to a more negative potential","resting membrane potential","returning to resting membrane potential after depolarization"];
+const MO_GLIA = ["make CSF fluid","form myelin","eat bacteria","blood brain barrier"];
+const MO_NEUR = ["monitor the position and movement of skeletal muscles and joints","innervate all other peripheral effectors (ex. smooth muscle, glands)","innervate skeletal muscles"];
+
+const Q = {
+1:{t:"mc",q:"Which of these are included within the central nervous system?",o:["Schwann cells","astrocytes","oligodendrocytes","both a and c","both b and c"],a:4,
+why:"The CNS (brain and spinal cord) has four kinds of neuroglia: astrocytes, oligodendrocytes, microglia and ependymal cells. The PNS has two: Schwann cells (which myelinate peripheral axons) and satellite cells (which surround cell bodies in ganglia). So astrocytes and oligodendrocytes are CNS cells; Schwann cells are not.",
+trap:"Myelin is made by two different cells: oligodendrocytes in the CNS, Schwann cells in the PNS. The location decides which one.",
+k:"CNS glia: astrocytes, oligodendrocytes, microglia, ependymal cells."},
+
+2:{t:"mc",q:"What is the function of astrocytes?",o:["eat bacteria","act as a blood barrier","make cerebrospinal fluid","form myelin"],a:1,
+why:"Astrocytes are the largest and most numerous CNS glia. Their feet wrap the brain's capillaries and help maintain the blood–brain barrier, which controls what passes from the blood into neural tissue. They also form the structural framework of the CNS, repair damaged tissue and help regulate the fluid around neurons. Microglia eat bacteria and debris, ependymal cells line the ventricles and help make CSF, and oligodendrocytes form myelin.",
+trap:"\"Blood barrier\" on this exam means the blood–brain barrier.",
+k:"Astrocytes maintain the blood–brain barrier."},
+
+3:{t:"tf",q:"Mechanically gated channels open and close in response when bound to specific chemicals.",a:1,
+fix:"<del>Mechanically</del> <ins>Chemically</ins> gated channels open and close in response when bound to specific chemicals.",
+why:"Gated ion channels open only when something triggers them. Chemically gated (ligand-gated) channels open when a specific chemical, such as acetylcholine, binds to them. Voltage-gated channels open when the membrane potential changes. Mechanically gated channels open when the membrane is physically distorted by pressure, stretch or vibration.",
+trap:"Match the trigger to the name: chemical → chemically gated, voltage → voltage-gated, physical force → mechanically gated.",
+k:"Chemically gated channels respond to chemicals."},
+
+4:{t:"tf",q:"Voltage-gated channels open and close in response to vibrations, sound waves and pressure.",a:1,
+fix:"<del>Voltage-gated</del> <ins>Mechanically gated</ins> channels open and close in response to vibrations, sound waves and pressure.",
+why:"Vibration, sound waves and pressure physically deform the membrane, which opens mechanically gated channels (found in touch, pressure and hearing receptors). Voltage-gated channels respond to changes in membrane potential; they are what carries an action potential along an axon.",
+trap:"Questions 3 and 4 swap the channel names. Read the trigger in the sentence and check that the name fits it.",
+k:"Mechanically gated channels respond to pressure and vibration."},
+
+5:{t:"mc",q:"During hyperpolarization, which of these values is accurate?",o:["-70 millivolts","-90 millivolts","-50 millivolts","only a and c are correct"],a:1,
+why:"Resting membrane potential is about −70 mV. Depolarization moves it toward zero; threshold is roughly −60 to −55 mV, and the action potential peaks near +30 mV. During repolarization, voltage-gated K+ channels open and K+ leaves the cell. They close slowly, so the membrane overshoots below rest to about −90 mV: that dip is hyperpolarization.",
+trap:"−70 is rest, −55 is threshold, +30 is the peak, −90 is hyperpolarization.",
+k:"Hyperpolarization ≈ −90 mV."},
+
+6:{t:"mc",q:"Typically, a bipolar neuron has how many axons?",o:["1","2","3","7"],a:0,
+why:"A bipolar neuron has two processes: one dendrite and one axon, with the cell body between them. The \"bi\" counts processes, not axons. Bipolar neurons are rare and found in the special senses: the retina, the olfactory epithelium and the inner ear. Multipolar neurons (most common, including motor neurons) have many dendrites and one axon; unipolar neurons (most sensory neurons) have one process that splits into a dendrite-like branch and an axon.",
+trap:"No neuron type has more than one axon. Bipolar = 1 dendrite + 1 axon; multipolar = many dendrites + 1 axon.",
+k:"Bipolar neuron: one dendrite, one axon."},
+
+7:{t:"mc",q:"The skeletal muscle fiber's cytoplasm is called the…",o:["sarcoplasm","sarcolemma","cytoplasm","both a and c"],a:0,
+why:"Muscle cells get their own names for familiar cell parts, all starting with sarco- (flesh). The cytoplasm is the sarcoplasm; the plasma membrane is the sarcolemma; the smooth endoplasmic reticulum, which stores calcium, is the sarcoplasmic reticulum (SR).",
+trap:"Sarco-PLASM = cyto-PLASM. Sarco-LEMMA = plasma membrane (lemma means husk or sheath).",
+k:"Sarcoplasm = cytoplasm of a muscle fiber."},
+
+8:{t:"tf",q:"Extensibility is the ability to return to its original shape after contracting or extending.",a:1,
+fix:"<del>Extensibility</del> <ins>Elasticity</ins> is the ability to return to its original shape after contracting or extending.",
+why:"Muscle tissue has four properties. Excitability: it responds to stimulation. Contractility: it shortens and pulls. Extensibility: it can be stretched beyond its resting length without damage. Elasticity: it recoils to its original length after being stretched or contracted.",
+trap:"EXtensibility = EXtend (stretch). Elasticity = snap back, like a rubber band.",
+k:"Elasticity = return to original shape. Extensibility = can be stretched."},
+
+9:{t:"tf",q:"Calcium ions are released from the terminal cisternae.",a:0,
+why:"The sarcoplasmic reticulum stores calcium. Its enlarged ends, the terminal cisternae, sit on either side of each transverse (T) tubule; one T tubule plus two terminal cisternae form a triad. When an action potential travels down the T tubule, the terminal cisternae release Ca2+ into the sarcoplasm, which starts contraction.",
+k:"Terminal cisternae of the SR release Ca2+."},
+
+10:{t:"tf",q:"Myosin is found on thin filaments.",a:1,
+fix:"Myosin is found on <del>thin</del> <ins>thick</ins> filaments.",
+why:"Thick filaments are made of myosin molecules, whose heads form cross-bridges. Thin filaments are made of actin (strands of G-actin) plus the regulatory proteins troponin and tropomyosin, held in line by nebulin.",
+trap:"Thick = myosin (both are \"big\" words). Thin = actin, troponin, tropomyosin.",
+k:"Myosin = thick filament. Actin = thin filament."},
+
+11:{t:"mc",q:"During muscle contraction, calcium binds to troponin on which filaments?",o:["thick","thin","Both a and b"],a:1,
+why:"Troponin is a regulatory protein on the thin filament. When Ca2+ binds troponin, troponin changes shape and pulls tropomyosin off the active sites on G-actin, so myosin heads can attach and form cross-bridges.",
+k:"Ca2+ binds troponin on the thin filament."},
+
+12:{t:"match",q:"Match: epimysium",o:MO_CT,a:0,
+why:"The epimysium is the dense layer of collagen fibers that surrounds the entire muscle (epi- = upon). It separates the muscle from nearby tissues and is continuous with the deep fascia.",
+k:"Epimysium surrounds the whole muscle."},
+
+13:{t:"match",q:"Match: perimysium",o:MO_CT,a:2,
+why:"The perimysium divides the muscle into bundles of fibers called fascicles and surrounds each one (peri- = around). It carries the blood vessels and nerves that supply each fascicle.",
+k:"Perimysium surrounds each fascicle."},
+
+14:{t:"match",q:"Match: endomysium",o:MO_CT,a:1,
+why:"The endomysium is the thin sheath of loose connective tissue around each individual muscle fiber (endo- = within). It holds capillaries, nerve fibers and myosatellite (stem) cells.",
+k:"Endomysium surrounds each muscle fiber."},
+
+15:{t:"tf",q:"Skeletal muscle contracts when stimulated by a motor neuron at the neuromuscular junction.",a:0,
+why:"Skeletal muscle is voluntary and contracts only when a somatic motor neuron stimulates it. At the neuromuscular junction (NMJ), the axon terminal releases acetylcholine, which binds receptors on the motor end plate and starts an action potential in the sarcolemma.",
+k:"Skeletal muscle contracts when a motor neuron stimulates it at the NMJ."},
+
+16:{t:"mc",q:"During aerobic respiration, how many net ATP per glucose are there?",o:["1","2","12","40-42","30-32"],a:4,
+why:"Complete aerobic breakdown of one glucose (glycolysis plus the mitochondrial reactions) yields about 30–32 ATP (some older textbooks say 36–38). Glycolysis alone, the anaerobic step in the cytoplasm, yields only 2 ATP per glucose. That difference is why aerobic metabolism supports long, steady activity and anaerobic metabolism supports short bursts.",
+trap:"2 ATP = glycolysis (anaerobic). About 30–32 ATP = aerobic. Use the number your professor's key uses.",
+k:"Aerobic respiration ≈ 30–32 ATP per glucose."},
+
+17:{t:"mc",q:"Anaerobic metabolism occurs in the",o:["cytoplasm","mitochondria","nucleus","none of the above"],a:0,
+why:"Glycolysis, the anaerobic pathway, happens in the cytoplasm (the sarcoplasm in a muscle fiber). It breaks glucose into pyruvate for a quick 2 ATP without oxygen. When oxygen is short, pyruvate becomes lactate.",
+k:"Anaerobic metabolism (glycolysis) happens in the cytoplasm."},
+
+18:{t:"match",q:"Match: polarized",o:MO_MP,a:1,
+why:"A polarized membrane has a charge difference across it: at rest the inside is negative compared with the outside. That state is the resting membrane potential, about −70 mV in a neuron.",
+k:"Polarized = resting membrane potential."},
+
+19:{t:"match",q:"Match: repolarization",o:MO_MP,a:2,
+why:"After depolarization, voltage-gated K+ channels open and K+ flows out, bringing the membrane back toward the resting membrane potential. That return is repolarization.",
+k:"Repolarization = returning to rest after depolarization."},
+
+20:{t:"match",q:"Match: hyperpolarization",o:MO_MP,a:0,
+why:"Hyperpolarization takes the membrane more negative than rest (to about −90 mV) because the K+ channels close slowly and extra K+ leaves. Hyper- = beyond.",
+k:"Hyperpolarization = more negative than rest."},
+
+21:{t:"tf",q:"All fibers in a motor unit contract at the same time.",a:0,
+why:"A motor unit is one motor neuron and all the muscle fibers it controls. When that neuron fires, every fiber in its unit contracts together. The body grades force by recruiting more motor units, not by contracting part of one. Small motor units (eye muscles) give fine control; large ones (leg muscles) give power.",
+k:"A motor unit's fibers all contract together."},
+
+22:{t:"mc",q:"Smooth muscle tissue is found in",o:["blood vessels","airways","both a and b","none of the above"],a:2,
+why:"Smooth muscle is involuntary and lines hollow organs: blood vessel walls, the airways, the digestive tract, the bladder and the uterus. Its cells are spindle-shaped with one nucleus and no striations. Skeletal muscle is voluntary and striated; cardiac muscle is striated, involuntary and found only in the heart.",
+trap:"When two answers are both true, look for \"both a and b.\"",
+k:"Smooth muscle: blood vessels, airways and other hollow organs."},
+
+23:{t:"mc",q:"The point of muscle tendon attachment to the more movable bone is called....",o:["origin","insertion","joint","all of the above"],a:1,
+why:"Each skeletal muscle has an origin, the attachment that stays fixed (usually proximal), and an insertion, the attachment on the bone that moves (usually distal). When the muscle contracts, the insertion moves toward the origin.",
+trap:"Insertion = the bone that moves. Origin = the anchor.",
+k:"Insertion = attachment to the more movable bone."},
+
+24:{t:"tf",q:"Gray matter is made up of regions with many axons.",a:1,
+fix:"Gray matter is made up of regions with many <del>axons</del> <ins>neuron cell bodies</ins>.",
+why:"Gray matter is where neuron cell bodies, dendrites and unmyelinated axons gather; it looks gray because it has little myelin. White matter is made of bundles of myelinated axons, and the fatty myelin makes it look white. In the brain the gray matter is on the outside (cortex); in the spinal cord it is the H-shaped center.",
+trap:"White = myelin = axons. Gray = cell bodies.",
+k:"Gray matter = cell bodies. White matter = myelinated axons."},
+
+25:{t:"mc",q:"The action potential moves step by step through the entire unmyelinated axon",o:["Saltatory propagation","Continuous propagation","both a and b","none of the above"],a:1,
+why:"In an unmyelinated axon, each patch of membrane depolarizes the next one, so the action potential moves step by step along the whole length: continuous propagation (about 1 m/s). In a myelinated axon, the signal jumps from one node of Ranvier to the next: saltatory propagation, which is much faster (up to about 140 m/s).",
+trap:"Saltatory comes from the Latin for leap: it needs myelin and nodes.",
+k:"Unmyelinated axon = continuous propagation."},
+
+26:{t:"mc",q:"What neuroglia form myelin?",o:["astrocytes","oligodendrocytes","schwann cells","both a and b","both b and c"],a:4,
+why:"Oligodendrocytes form myelin in the CNS, and one oligodendrocyte can wrap segments of several axons. Schwann cells form myelin in the PNS, and each Schwann cell wraps one segment of one axon.",
+k:"Myelin: oligodendrocytes (CNS) and Schwann cells (PNS)."},
+
+27:{t:"tf",q:"Each bone is a fulcrum and each joint is a lever.",a:1,
+fix:"Each bone is a <del>fulcrum</del> <ins>lever</ins> and each joint is a <del>lever</del> <ins>fulcrum</ins>.",
+why:"In the body's lever systems, the bone is the lever (the rigid bar that moves), the joint is the fulcrum (the pivot point), and the muscle applies the force. Most limb movements are third-class levers, with the muscle's force applied between the fulcrum and the load (the elbow during biceps flexion).",
+trap:"The joint is where things pivot, so the joint is the fulcrum.",
+k:"Bone = lever. Joint = fulcrum. Muscle = applied force."},
+
+28:{t:"mc",q:"Opposes the movement of the agonist.",o:["antagonist","synergist","agonist","all of the above"],a:0,
+why:"The agonist (prime mover) does most of the work in a movement. The antagonist opposes it (the triceps brachii when the biceps flexes the elbow). A synergist helps the agonist, for example by stabilizing the origin.",
+k:"Antagonist opposes the agonist."},
+
+29:{t:"mc",q:"This covers the active sites on G-actin and prevents actin-myosin interaction",o:["troponin","sodium ions","titin","tropomyosin"],a:3,
+why:"At rest, strands of tropomyosin lie along the thin filament and cover the active sites on G-actin, so myosin cannot bind. Troponin holds tropomyosin in place. When Ca2+ binds troponin, troponin shifts and pulls tropomyosin off the active sites, and cross-bridges can form.",
+trap:"Tropomyosin covers. Troponin is the switch that Ca2+ flips.",
+k:"Tropomyosin covers the active sites."},
+
+30:{t:"tf",q:"The dendrites are responsible for carrying the output of information.",a:1,
+fix:"The dendrites are responsible for carrying the <del>output</del> <ins>input</ins> of information.",
+why:"Dendrites receive incoming signals and carry them toward the cell body: input. The axon carries the outgoing signal, the action potential, away from the cell body to its terminals: output.",
+trap:"Dendrites = in. Axon = out (axon and away both start with a).",
+k:"Dendrites = input. Axon = output."},
+
+31:{t:"match",q:"Match: astrocytes",o:MO_GLIA,a:3,
+why:"Astrocytes maintain the blood–brain barrier, form the CNS framework and repair damage.",
+k:"Astrocytes = blood–brain barrier."},
+
+32:{t:"match",q:"Match: oligodendrocytes",o:MO_GLIA,a:1,
+why:"Oligodendrocytes form the myelin sheaths around CNS axons.",
+k:"Oligodendrocytes = form myelin (CNS)."},
+
+33:{t:"match",q:"Match: microglia",o:MO_GLIA,a:2,
+why:"Microglia are the CNS's immune cells: small phagocytes that eat bacteria, debris and dead cells.",
+k:"Microglia = eat bacteria and debris."},
+
+34:{t:"match",q:"Match: ependymal cells",o:MO_GLIA,a:0,
+why:"Ependymal cells line the ventricles of the brain and the central canal of the spinal cord. They help produce and circulate cerebrospinal fluid (CSF).",
+k:"Ependymal cells = make CSF."},
+
+35:{t:"mc",q:"The skeletal muscle fiber's plasma membrane is called the…",o:["sarcoplasm","sarcolemma","cytoplasm","sarcoplasm"],a:1,
+why:"The sarcolemma is the plasma membrane of a muscle fiber. It carries the action potential, which then dives into the fiber through the T tubules. (The practice exam lists sarcoplasm twice; the answer is still b.)",
+k:"Sarcolemma = plasma membrane of a muscle fiber."},
+
+36:{t:"tf",q:"A synapse is the connection between nerves or between nerves and muscles.",a:0,
+why:"A synapse is any site where a neuron communicates with another cell: another neuron, a muscle fiber or a gland cell. The neuromuscular junction is a synapse between a motor neuron and a skeletal muscle fiber.",
+k:"Synapse = where a neuron meets another neuron, muscle or gland."},
+
+37:{t:"mc",q:"The ...... is the most dislocated joint in the adult body.",o:["hip","knee","shoulder","all of the above"],a:2,
+why:"The shoulder (glenohumeral joint) has the greatest range of motion in the body because its socket, the glenoid cavity, is shallow. That same shallowness makes it the least stable joint and the one most often dislocated. The hip trades range for stability with a deep socket (acetabulum).",
+k:"Shoulder = most dislocated joint."},
+
+38:{t:"tf",q:"Acetylcholine is an excitatory neurotransmitter?",a:0,
+why:"At the neuromuscular junction and at most synapses that use it, acetylcholine (ACh) is excitatory: it opens chemically gated Na+ channels and depolarizes the next cell. In the heart, ACh slows the rate, so whether a neurotransmitter excites or inhibits depends on the receptor. For this exam, answer true.",
+trap:"If a question mentions the heart, remember ACh slows it.",
+k:"ACh is excitatory at the neuromuscular junction."},
+
+39:{t:"mc",q:"Which of the following matches rectus femoris?",o:["convergent","multipennate","parallel","bipennate"],a:3,
+why:"Fascicle arrangement shapes a muscle. Parallel fascicles run along the long axis (biceps brachii). Convergent fascicles fan in to one tendon (pectoralis major). Pennate fascicles attach at an angle to a central tendon like a feather: unipennate on one side (extensor digitorum), bipennate on both sides (rectus femoris), multipennate with several tendons (deltoid). Circular muscles ring an opening (orbicularis oris).",
+trap:"Rectus femoris = bipennate. Deltoid = multipennate. Know one example of each.",
+k:"Rectus femoris is bipennate."},
+
+40:{t:"match",q:"Match: somatic motor neuron",o:MO_NEUR,a:2,
+why:"Somatic motor neurons innervate skeletal muscles; this is the voluntary (somatic) nervous system.",
+k:"Somatic motor neurons innervate skeletal muscles."},
+
+41:{t:"match",q:"Match: visceral motor neurons",o:MO_NEUR,a:1,
+why:"Visceral (autonomic) motor neurons innervate all other peripheral effectors: smooth muscle, cardiac muscle, glands and adipose tissue.",
+k:"Visceral motor neurons innervate smooth muscle, cardiac muscle and glands."},
+
+42:{t:"match",q:"Match: proprioceptors",o:MO_NEUR,a:0,
+why:"Proprioceptors are sensory receptors that monitor the position and movement of skeletal muscles and joints, which is how you know where your arm is with your eyes closed.",
+k:"Proprioceptors monitor position and movement."},
+
+43:{t:"mc",q:"Myofilaments have repeating units called…",o:["sarcomere","sarcolemma","sarcoplasm","none of the above"],a:0,
+why:"The sarcomere is the smallest functional unit of a muscle fiber: the stretch of a myofibril from one Z line to the next. Each myofibril is a chain of sarcomeres, built from overlapping thick and thin myofilaments; their pattern makes the striations.",
+k:"Sarcomere = repeating unit of a myofibril."},
+
+44:{t:"tf",q:"The collagen fibers of the epimysium, perimysium, and endomysium come together at ends of muscles to form tendons or aponeuroses.",a:0,
+why:"At the end of a muscle, the collagen fibers of all three layers come together. They form a cord-like tendon or a broad, flat sheet called an aponeurosis, which attaches the muscle to bone or to another muscle.",
+k:"All three wrappings join to form tendons or aponeuroses."},
+
+45:{t:"mc",q:"Extreme stretching of the muscle fiber is prevented by which of these?",o:["Troponin","Tropomyosin","Titin","All of the above"],a:2,
+why:"Titin is a huge elastic protein that runs from the Z line through the thick filament to the M line. It keeps the thick filaments centered, limits how far a sarcomere can be stretched and helps it recoil. Troponin and tropomyosin regulate contraction; they do not limit stretch.",
+k:"Titin prevents overstretching."},
+
+46:{t:"mc",q:"Sarcomeres are separated by…",o:["Z lines","Actin","Myosin","All of the above"],a:0,
+why:"Each sarcomere runs from one Z line (Z disc) to the next. Thin filaments anchor to the Z lines. The M line marks the middle of the sarcomere, the A band is the full length of the thick filaments, and the I band holds only thin filaments.",
+k:"Z lines separate sarcomeres."},
+
+47:{t:"mc",q:"Acetylcholine is released from synaptic vesicles by",o:["Exocytosis","Endocytosis","Phagocytosis","All of the above"],a:0,
+why:"When the action potential reaches the axon terminal, Ca2+ enters and the synaptic vesicles fuse with the membrane, releasing ACh into the synaptic cleft by exocytosis (exo- = out). Acetylcholinesterase in the cleft then breaks ACh down so the signal stops.",
+k:"ACh is released by exocytosis."},
+
+48:{t:"tf",q:"Endomysium contain myosatellite cells (stem cells) that repair damage",a:0,
+why:"Myosatellite cells are stem cells tucked in the endomysium between the fiber and its sheath. After injury they divide and help repair or replace damaged muscle fibers, though skeletal muscle's repair ability is limited.",
+k:"Myosatellite cells in the endomysium repair muscle."},
+
+49:{t:"mc",q:"As thick and thin filaments interact, the sarcomeres…",o:["Shorten","Lengthen","Stays constant","None of the above"],a:0,
+why:"In the sliding filament theory, myosin heads pull the thin filaments toward the M line. The filaments themselves keep their length, but they overlap more, so the Z lines move closer and the sarcomere shortens. The H zone and I band narrow; the A band stays the same.",
+trap:"The sarcomere shortens; the filaments do not.",
+k:"Sarcomeres shorten during contraction."},
+
+50:{t:"tf",q:"Aerobic metabolism requires oxygen and occurs in the cytoplasm.",a:1,
+fix:"Aerobic metabolism requires oxygen and occurs in the <del>cytoplasm</del> <ins>mitochondria</ins>.",
+why:"Aerobic metabolism (the citric acid cycle and the electron transport chain) needs oxygen and takes place in the mitochondria, producing most of a cell's ATP. Anaerobic glycolysis takes place in the cytoplasm. Questions 17 and 50 test the same pair.",
+k:"Aerobic = mitochondria. Anaerobic = cytoplasm."}
+};
+
+const NOTES = `<div class="core" style="background:#fff8e6;border-left:4px solid #C9A84C;padding:12px 16px;border-radius:8px;margin:0 0 14px"><p style="margin:0 0 6px"><strong>Adrianna's notes from the practice exam</strong></p><ul style="margin:0;padding-left:20px"><li><strong>49 of 50 right.</strong> The one miss was question 6: a bipolar neuron has <strong>one</strong> axon (and one dendrite), not seven. No neuron type has more than one axon.</li><li><strong>The true/false traps on this exam swap a pair:</strong> chemically vs mechanically gated (3, 4), elasticity vs extensibility (8), thick vs thin (10), axons vs cell bodies (24), lever vs fulcrum (27), input vs output (30), cytoplasm vs mitochondria (50). Learn each pair, not just one side.</li><li><strong>On question 22 you circled two answers.</strong> On the real exam, circle one; when two choices are both true, the answer is \"both a and b.\"</li></ul></div>`;
+
+const CHAPTERS = [
+{id:"ch10",title:"Chapter 10: Muscle Tissue",sub:"Properties, connective tissue wrappings, fiber anatomy, the sarcomere, the neuromuscular junction, motor units and energy.",topics:[
+ {h:"Properties and types of muscle tissue",core:`<div class="tblwrap"><table class="mini"><tr><th>Property</th><th>Meaning</th></tr><tr><td>Excitability</td><td>Responds to stimulation</td></tr><tr><td>Contractility</td><td>Shortens and pulls</td></tr><tr><td>Extensibility</td><td>Can be stretched</td></tr><tr><td>Elasticity</td><td>Recoils to its original length</td></tr></table></div><div class="tblwrap" style="margin-top:8px"><table class="mini"><tr><th>Type</th><th>Control</th><th>Look</th><th>Where</th></tr><tr><td>Skeletal</td><td>Voluntary</td><td>Striated, many nuclei</td><td>Attached to bones</td></tr><tr><td>Cardiac</td><td>Involuntary</td><td>Striated, intercalated discs</td><td>Heart only</td></tr><tr><td>Smooth</td><td>Involuntary</td><td>No striations, one nucleus</td><td>Blood vessels, airways, digestive tract, bladder</td></tr></table></div>`,qs:[8,22]},
+ {h:"Connective tissue wrappings and tendons",core:`<div class="tblwrap"><table class="mini"><tr><th>Layer</th><th>Surrounds</th><th>Remember</th></tr><tr><td>Epimysium</td><td>The whole muscle</td><td>epi- = upon</td></tr><tr><td>Perimysium</td><td>Each fascicle (bundle of fibers)</td><td>peri- = around</td></tr><tr><td>Endomysium</td><td>Each muscle fiber; holds myosatellite cells</td><td>endo- = within</td></tr></table></div><p class="mn" style="margin-top:8px">All three layers come together at the end of the muscle to form a tendon (cord) or an aponeurosis (sheet).</p>`,qs:[12,13,14,44,48]},
+ {h:"Inside a muscle fiber",core:`<div class="tblwrap"><table class="mini"><tr><th>Muscle term</th><th>Means</th></tr><tr><td>Sarcolemma</td><td>Plasma membrane</td></tr><tr><td>Sarcoplasm</td><td>Cytoplasm</td></tr><tr><td>Sarcoplasmic reticulum (SR)</td><td>Smooth ER that stores Ca2+</td></tr><tr><td>T tubules</td><td>Tunnels that carry the action potential inside</td></tr><tr><td>Terminal cisternae</td><td>Ends of the SR beside each T tubule; release Ca2+ (triad = 1 T tubule + 2 cisternae)</td></tr></table></div>`,qs:[7,35,9]},
+ {h:"The sarcomere and its filaments",core:`<p>A myofibril is a chain of <strong>sarcomeres</strong>, each running from one <strong>Z line</strong> to the next. <strong>Thick filaments</strong> are myosin; <strong>thin filaments</strong> are actin with troponin and tropomyosin. <strong>Titin</strong> anchors the thick filaments to the Z lines and keeps the sarcomere from overstretching.</p><p class="mn">Sliding filament theory: the filaments slide past each other and overlap more. The sarcomere shortens, the I band and H zone narrow, and the A band stays the same.</p>`,qs:[43,46,10,45,49]},
+ {h:"From nerve signal to contraction",core:`<p>1. A motor neuron's action potential reaches the axon terminal at the <strong>neuromuscular junction</strong>. 2. Synaptic vesicles release <strong>acetylcholine</strong> by <strong>exocytosis</strong>. 3. ACh binds the motor end plate and an action potential spreads along the sarcolemma and down the T tubules. 4. The <strong>terminal cisternae</strong> release Ca2+. 5. Ca2+ binds <strong>troponin</strong> on the thin filament, which moves <strong>tropomyosin</strong> off the active sites on G-actin. 6. Myosin heads form cross-bridges and pull. 7. Acetylcholinesterase breaks down ACh and the SR takes Ca2+ back, so the muscle relaxes.</p>`,qs:[15,47,11,29]},
+ {h:"Motor units",core:`<p>A <strong>motor unit</strong> is one motor neuron and all the fibers it controls. All fibers in a unit contract together. Force rises by <strong>recruiting</strong> more units. Small units = fine control (eye); large units = power (thigh).</p>`,qs:[21]},
+ {h:"Energy for contraction",core:`<div class="tblwrap"><table class="mini"><tr><th>Pathway</th><th>Oxygen?</th><th>Where</th><th>ATP per glucose</th></tr><tr><td>Anaerobic (glycolysis)</td><td>No</td><td>Cytoplasm (sarcoplasm)</td><td>2</td></tr><tr><td>Aerobic</td><td>Yes</td><td>Mitochondria</td><td>About 30–32</td></tr></table></div>`,qs:[16,17,50]}
+]},
+{id:"ch11",title:"Chapter 11: The Muscular System",sub:"Attachments and actions, levers, fascicle arrangement, plus one joint review question.",topics:[
+ {h:"Origins, insertions and actions",core:`<p>The <strong>origin</strong> is the fixed attachment; the <strong>insertion</strong> is on the bone that moves. The <strong>agonist</strong> (prime mover) does the main work, the <strong>antagonist</strong> opposes it, and a <strong>synergist</strong> helps.</p>`,qs:[23,28]},
+ {h:"Levers",core:`<p>Bone = <strong>lever</strong>. Joint = <strong>fulcrum</strong>. Muscle = <strong>applied force</strong>. Most body movements are third-class levers, with the force applied between the fulcrum and the load.</p>`,qs:[27]},
+ {h:"Fascicle arrangement",core:`<div class="tblwrap"><table class="mini"><tr><th>Arrangement</th><th>Fascicles</th><th>Example</th></tr><tr><td>Parallel</td><td>Run along the long axis</td><td>Biceps brachii</td></tr><tr><td>Convergent</td><td>Fan in to one tendon</td><td>Pectoralis major</td></tr><tr><td>Unipennate</td><td>One side of a tendon</td><td>Extensor digitorum</td></tr><tr><td>Bipennate</td><td>Both sides of a tendon</td><td>Rectus femoris</td></tr><tr><td>Multipennate</td><td>Several tendons</td><td>Deltoid</td></tr><tr><td>Circular</td><td>Ring around an opening</td><td>Orbicularis oris</td></tr></table></div>`,qs:[39]},
+ {h:"Review from Chapter 9",core:`<p>The <strong>shoulder</strong> has the greatest range of motion and a shallow glenoid cavity, so it is the most dislocated joint.</p>`,qs:[37]}
+]},
+{id:"ch12",title:"Chapter 12: Neural Tissue",sub:"Neuron structure and types, neuroglia, gray and white matter, membrane potentials, propagation and synapses.",topics:[
+ {h:"Neurons: structure and types",core:`<p><strong>Dendrites</strong> bring signals in; the <strong>axon</strong> carries the signal out. Every neuron has at most one axon.</p><div class="tblwrap"><table class="mini"><tr><th>Type</th><th>Processes</th><th>Where</th></tr><tr><td>Multipolar</td><td>Many dendrites, 1 axon</td><td>Motor neurons; most CNS neurons</td></tr><tr><td>Bipolar</td><td>1 dendrite, 1 axon</td><td>Retina, olfactory epithelium, inner ear</td></tr><tr><td>Unipolar</td><td>1 process that splits</td><td>Most sensory neurons</td></tr></table></div><p class="mn" style="margin-top:8px">Sensory side: proprioceptors monitor position and movement. Motor side: somatic motor neurons → skeletal muscle; visceral motor neurons → smooth muscle, cardiac muscle, glands.</p>`+NOTES,qs:[6,30,40,41,42]},
+ {h:"Neuroglia",core:`<div class="tblwrap"><table class="mini"><tr><th>Cell</th><th>Where</th><th>Job</th></tr><tr><td>Astrocytes</td><td>CNS</td><td>Blood–brain barrier, framework, repair</td></tr><tr><td>Oligodendrocytes</td><td>CNS</td><td>Myelin</td></tr><tr><td>Microglia</td><td>CNS</td><td>Eat bacteria and debris</td></tr><tr><td>Ependymal cells</td><td>CNS</td><td>Line ventricles; make CSF</td></tr><tr><td>Schwann cells</td><td>PNS</td><td>Myelin</td></tr><tr><td>Satellite cells</td><td>PNS</td><td>Surround cell bodies in ganglia</td></tr></table></div>`,qs:[1,2,26,31,32,33,34]},
+ {h:"Gray and white matter",core:`<p><strong>Gray matter</strong> = neuron cell bodies, dendrites and unmyelinated axons. <strong>White matter</strong> = myelinated axons (myelin is fatty and white).</p>`,qs:[24]},
+ {h:"Ion channels and membrane potentials",core:`<div class="tblwrap"><table class="mini"><tr><th>Channel</th><th>Opens when</th></tr><tr><td>Chemically (ligand) gated</td><td>A specific chemical binds</td></tr><tr><td>Voltage-gated</td><td>The membrane potential changes</td></tr><tr><td>Mechanically gated</td><td>Pressure, stretch or vibration</td></tr></table></div><div class="tblwrap" style="margin-top:8px"><table class="mini"><tr><th>State</th><th>About</th><th>What is happening</th></tr><tr><td>Polarized (rest)</td><td>−70 mV</td><td>Resting membrane potential</td></tr><tr><td>Threshold</td><td>−60 to −55 mV</td><td>Voltage-gated Na+ channels open</td></tr><tr><td>Depolarization</td><td>up to +30 mV</td><td>Na+ rushes in</td></tr><tr><td>Repolarization</td><td>back toward −70</td><td>K+ leaves</td></tr><tr><td>Hyperpolarization</td><td>−90 mV</td><td>Slow K+ channels overshoot below rest</td></tr></table></div>`,qs:[3,4,5,18,19,20]},
+ {h:"Propagation",core:`<p><strong>Continuous propagation</strong>: unmyelinated axons, step by step, slow. <strong>Saltatory propagation</strong>: myelinated axons, jumps node to node, fast.</p>`,qs:[25]},
+ {h:"Synapses",core:`<p>A <strong>synapse</strong> is where a neuron communicates with another neuron, a muscle fiber or a gland. Acetylcholine is excitatory at the neuromuscular junction; whether a neurotransmitter excites or inhibits depends on the receptor.</p>`,qs:[36,38]}
+]}
+];
+
+const CARDS = [
+["Excitability","Responds to stimulation."],
+["Contractility","Shortens and pulls."],
+["Extensibility","Can be stretched without damage."],
+["Elasticity","Recoils to its original length after stretching or contracting."],
+["Epimysium","Collagen layer around the whole muscle."],
+["Perimysium","Surrounds each fascicle; carries vessels and nerves."],
+["Endomysium","Surrounds each muscle fiber; holds myosatellite cells."],
+["Myosatellite cells","Stem cells in the endomysium that repair muscle."],
+["Tendon / aponeurosis","Cord / sheet formed where all three wrappings come together."],
+["Sarcolemma","Plasma membrane of a muscle fiber."],
+["Sarcoplasm","Cytoplasm of a muscle fiber."],
+["Sarcoplasmic reticulum","Smooth ER that stores Ca2+."],
+["Terminal cisternae","Ends of the SR beside each T tubule; release Ca2+."],
+["Sarcomere","Repeating unit of a myofibril, Z line to Z line."],
+["Thick filament","Myosin."],
+["Thin filament","Actin, troponin and tropomyosin."],
+["Troponin","Binds Ca2+ and moves tropomyosin."],
+["Tropomyosin","Covers the active sites on G-actin at rest."],
+["Titin","Elastic protein that prevents overstretching."],
+["Neuromuscular junction","Synapse between a motor neuron and a muscle fiber; ACh released by exocytosis."],
+["Motor unit","One motor neuron and all the fibers it controls; they contract together."],
+["Aerobic metabolism","Needs oxygen; mitochondria; about 30–32 ATP per glucose."],
+["Anaerobic metabolism","No oxygen; cytoplasm; 2 ATP per glucose."],
+["Origin / insertion","Fixed attachment / attachment on the bone that moves."],
+["Agonist, antagonist, synergist","Prime mover; opposes it; helps it."],
+["Levers","Bone = lever; joint = fulcrum; muscle = force."],
+["Bipennate","Fascicles on both sides of a tendon (rectus femoris)."],
+["Dendrites / axon","Input / output."],
+["Bipolar neuron","1 dendrite + 1 axon; retina, smell, inner ear."],
+["Astrocytes","Blood–brain barrier (CNS)."],
+["Oligodendrocytes","Myelin in the CNS."],
+["Schwann cells","Myelin in the PNS."],
+["Microglia","Eat bacteria and debris (CNS)."],
+["Ependymal cells","Line ventricles; make CSF."],
+["Gray matter / white matter","Cell bodies / myelinated axons."],
+["Chemically / voltage / mechanically gated","Chemical binds / voltage changes / pressure or vibration."],
+["Resting membrane potential","About −70 mV (polarized)."],
+["Hyperpolarization","About −90 mV, more negative than rest."],
+["Continuous / saltatory propagation","Unmyelinated, step by step / myelinated, node to node."],
+["Somatic vs visceral motor neurons","Skeletal muscle vs smooth muscle, cardiac muscle and glands."],
+["Proprioceptors","Monitor position and movement of muscles and joints."]
+];
+
+/* ---------- STATE, SOUND, FX ---------- */
+const store = {get(k,d){try{const v=localStorage.getItem("kce-ap1-ex4-"+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem("kce-ap1-ex4-"+k,JSON.stringify(v))}catch(e){}}};
+let xp = store.get("xp",0), coins = store.get("coins",0);
+const revealed = new Set(store.get("rev",[])), flipped = new Set(store.get("flip",[]));
+const PER_LVL = 250;
+
+function renderStats(){
+  const lvl = Math.floor(xp/PER_LVL)+1;
+  document.getElementById("lvl").textContent = "Lv "+lvl;
+  document.getElementById("xptext").textContent = xp+" XP";
+  document.getElementById("xpfill").style.width = ((xp%PER_LVL)/PER_LVL*100)+"%";
+  document.getElementById("coins").textContent = coins;
+}
+function gain(n,c){
+  const before = Math.floor(xp/PER_LVL);
+  xp += n; coins += (c||0);
+  store.set("xp",xp); store.set("coins",coins); renderStats();
+  if(Math.floor(xp/PER_LVL) > before){ toast("Level up! You reached level "+(Math.floor(xp/PER_LVL)+1)); tone("level"); confetti(); }
+}
+let actx;
+function tone(kind){
+  try{
+    actx = actx || new (window.AudioContext||window.webkitAudioContext)();
+    const seq = {right:[660,880],wrong:[220,180],flip:[520],level:[523,659,784,1047],reveal:[740]}[kind]||[600];
+    seq.forEach((f,i)=>{
+      const o=actx.createOscillator(), g=actx.createGain();
+      o.type = kind==="wrong"?"sawtooth":"sine"; o.frequency.value=f;
+      const t=actx.currentTime+i*0.09;
+      g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.12,t+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+0.18);
+      o.connect(g).connect(actx.destination); o.start(t); o.stop(t+0.2);
+    });
+  }catch(e){}
+}
+let toastT;
+function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove("show"),2200);}
+function confetti(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const c=document.getElementById("confetti"),x=c.getContext("2d");
+  c.width=innerWidth;c.height=innerHeight;
+  const cols=["#C9A227","#16233F","#EFE1B0","#2E7550","#FFFFFF"];
+  const P=Array.from({length:140},()=>({x:Math.random()*c.width,y:-20-Math.random()*c.height*0.4,vx:(Math.random()-.5)*4,vy:2+Math.random()*4,r:4+Math.random()*5,a:Math.random()*6,col:cols[Math.floor(Math.random()*cols.length)]}));
+  let f=0;(function draw(){x.clearRect(0,0,c.width,c.height);P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.a+=.1;x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.col;x.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.6);x.restore()});if(++f<170)requestAnimationFrame(draw);else x.clearRect(0,0,c.width,c.height)})();
+}
+
+/* ---------- STUDY GUIDE ---------- */
+const L = "abcde";
+function answerText(n){const q=Q[n];return q.t==="tf"?TF[q.a]:L[q.a]+". "+q.o[q.a];}
+function optsHTML(q){
+  if(q.t==="tf") return `<ul class="opts"><li>a. True</li><li>b. False</li></ul>`;
+  return `<ul class="opts">${q.o.map((o,i)=>`<li>${L[i]}. ${o}</li>`).join("")}</ul>`;
+}
+function ansHTML(n){
+  const q=Q[n]; const isF = q.t==="tf" && q.a===1;
+  return `<p class="verdict">Answer:<span class="tag ${isF?"f":""}">${answerText(n)}</span></p>`+
+    (q.fix?`<p class="fix">${q.fix}</p>`:"")+
+    `<p class="why">${q.why}</p>`+
+    (q.trap?`<p class="trap"><strong>Exam trap:</strong> ${q.trap}</p>`:"");
+}
+function buildGuide(){
+  const g=document.getElementById("guide"), nav=document.getElementById("chnav");
+  CHAPTERS.forEach(ch=>{
+    nav.insertAdjacentHTML("beforeend",`<a href="#${ch.id}">${ch.title.split(":")[0]}</a>`);
+    let h=`<section class="chapter" id="${ch.id}"><h2>${ch.title}</h2><p class="chsub">${ch.sub}</p>`;
+    ch.topics.forEach(tp=>{
+      h+=`<div class="topic"><h3>${tp.h}</h3><div class="core">${tp.core}</div>`;
+      tp.qs.forEach(n=>{
+        const q=Q[n];
+        h+=`<article class="q" id="q${n}"><div class="qn">${n}</div><div><p class="stem">${q.q}</p>${optsHTML(q)}
+        <button class="reveal" aria-expanded="false" aria-controls="a${n}" data-n="${n}">Show answer</button>
+        <div class="ans" id="a${n}" hidden>${ansHTML(n)}</div></div></article>`;
+      });
+      h+=`</div>`;
+    });
+    g.insertAdjacentHTML("beforeend",h+"</section>");
+  });
+  g.addEventListener("click",e=>{
+    const b=e.target.closest(".reveal"); if(!b) return;
+    const n=b.dataset.n, box=document.getElementById("a"+n), open=b.getAttribute("aria-expanded")==="true";
+    setOpen(b,box,!open);
+    if(!open && !revealed.has(n)){revealed.add(n);store.set("rev",[...revealed]);gain(10);tone("reveal");}
+  });
+  let all=false;
+  document.getElementById("showAll").addEventListener("click",e=>{
+    all=!all; e.target.textContent=all?"Hide all answers":"Show all answers";
+    document.querySelectorAll(".reveal").forEach(b=>setOpen(b,document.getElementById("a"+b.dataset.n),all));
+  });
+}
+function setOpen(b,box,open){box.hidden=!open;b.setAttribute("aria-expanded",open);b.textContent=open?"Hide answer":"Show answer";}
+
+/* ---------- FLASHCARDS ---------- */
+function buildCards(order){
+  const el=document.getElementById("cards"); el.innerHTML="";
+  order.forEach(i=>{
+    const [t,d]=CARDS[i];
+    el.insertAdjacentHTML("beforeend",`<button class="card" data-i="${i}" aria-label="Flashcard: ${t}. Tap to flip."><div class="card-in"><div class="face front"><b>${t}</b><span>Tap to flip</span></div><div class="face back">${d}</div></div></button>`);
+  });
+}
+document.getElementById("cards").addEventListener("click",e=>{
+  const c=e.target.closest(".card"); if(!c) return;
+  c.classList.toggle("flip"); tone("flip");
+  const i=c.dataset.i; if(!flipped.has(i)){flipped.add(i);store.set("flip",[...flipped]);gain(5);}
+});
+document.getElementById("shuffleCards").addEventListener("click",()=>buildCards(shuffle(CARDS.map((_,i)=>i))));
+
+/* ---------- QUIZ ---------- */
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+let qz={order:[],i:0,right:0,missed:[]};
+function startQuiz(){qz={order:shuffle(Object.keys(Q).map(Number)),i:0,right:0,missed:[]};renderQ();}
+function renderQ(){
+  const box=document.getElementById("quiz");
+  if(qz.i>=qz.order.length) return endQuiz();
+  const n=qz.order[qz.i], q=Q[n], opts=q.t==="tf"?TF:q.o, total=qz.order.length;
+  box.innerHTML=`<div class="qz-prog"><span>Question ${qz.i+1} of ${total}</span><span>${qz.right} correct</span></div>
+  <div class="qz-bar"><div style="width:${qz.i/total*100}%"></div></div>
+  <p class="qz-stem">${q.q}</p><div class="qz-opts">${opts.map((o,i)=>`<button class="qz-opt" data-i="${i}">${L[i]}. ${o}</button>`).join("")}</div>
+  <div class="qz-fb" id="fb"></div>`;
+  box.querySelectorAll(".qz-opt").forEach(b=>b.addEventListener("click",()=>pick(n,+b.dataset.i)));
+  box.querySelector(".qz-opt").focus({preventScroll:true});
+}
+function pick(n,i){
+  const q=Q[n], ok=i===q.a, btns=document.querySelectorAll(".qz-opt");
+  btns.forEach((b,j)=>{b.disabled=true;if(j===q.a)b.classList.add("right");else if(j===i)b.classList.add("wrong");});
+  if(ok){qz.right++;gain(20,1);tone("right");} else {qz.missed.push(n);tone("wrong");}
+  const last=qz.i===qz.order.length-1;
+  document.getElementById("fb").innerHTML=`<p class="verdict">${ok?"Correct.":"Not quite."} ${q.k}</p>${q.fix?`<p class="fix">${q.fix}</p>`:""}
+  <div class="qz-actions"><button class="btn" id="next">${last?"See results":"Next question"}</button></div>`;
+  const nx=document.getElementById("next"); nx.focus(); nx.addEventListener("click",()=>{qz.i++;renderQ();});
+}
+function endQuiz(){
+  const total=qz.order.length, pct=Math.round(qz.right/total*100);
+  if(pct>=80){confetti();tone("level");gain(50,5);}
+  const msg=pct>=90?"Exam ready. Review anything you missed once more and get some sleep.":pct>=80?"Strong. Go back over the missed questions below, then take it again.":"Keep going. Reread the concept blocks for the questions below, then retake the test.";
+  document.getElementById("quiz").innerHTML=`<p class="score">${pct}%</p><p><strong>${qz.right} of ${total} correct.</strong> ${msg}</p>
+  ${qz.missed.length?`<p style="margin-bottom:0">Review these in the study guide:</p><ul class="missed">${qz.missed.sort((a,b)=>a-b).map(n=>`<li><a href="#q${n}" data-go="${n}">Question ${n}: ${Q[n].q}</a></li>`).join("")}</ul>`:""}
+  <div class="qz-actions"><button class="btn gold" id="again">Take the test again</button></div>`;
+  document.getElementById("again").addEventListener("click",startQuiz);
+  document.querySelectorAll("[data-go]").forEach(a=>a.addEventListener("click",e=>{
+    e.preventDefault(); show("guide"); const n=a.dataset.go;
+    setOpen(document.querySelector(`.reveal[data-n="${n}"]`),document.getElementById("a"+n),true);
+    document.getElementById("q"+n).scrollIntoView({behavior:"smooth"});
+  }));
+}
+
+/* ---------- TABS ---------- */
+function show(v){
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.view===v));
+  ["guide","cards","quiz"].forEach(id=>document.getElementById("view-"+id).hidden=id!==v);
+  window.scrollTo({top:0});
+}
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>show(t.dataset.view)));
+
+buildGuide(); buildCards(CARDS.map((_,i)=>i)); startQuiz(); renderStats();
+</script>
+<div id="kce-legal" style="display:block;clear:both;box-sizing:border-box;width:100%;margin:0;padding:10px 16px;background:#0A1F3D;color:#C9A84C;font:12px/1.4 Arial,sans-serif;text-align:center">&copy; 2026 KingCretot Experience. All rights reserved. Licensed for KCE students only. Do not copy, share or distribute.</div><script>(function(){var e=document.getElementById("kce-legal");if(!e)return;function place(){var r=document.documentElement,b=document.body,t=null,best=0,a=b?b.getElementsByTagName("*"):[];for(var i=0;i<a.length;i++){var x=a[i];if(x===e||e.contains(x))continue;if(x.scrollHeight>x.clientHeight+20&&x.clientHeight>innerHeight*0.5&&x.clientWidth>innerWidth*0.5){var o=getComputedStyle(x).overflowY;if((o==="auto"||o==="scroll")&&x.clientHeight*x.clientWidth>best){best=x.clientHeight*x.clientWidth;t=x}}}if(!t&&b){var bs=getComputedStyle(b),hs=getComputedStyle(r);if(/(hidden|clip)/.test(hs.overflowY)||(/(auto|scroll)/.test(bs.overflowY)&&b.scrollHeight>b.clientHeight+1))t=b;else t=r}if(t&&e.parentNode!==t)t.appendChild(e);var h=0;for(var j=0;j<a.length;j++){var s=getComputedStyle(a[j]);if(s.position==="fixed"&&s.display!=="none"&&s.visibility!=="hidden"&&!e.contains(a[j])){var q=a[j].getBoundingClientRect();if(q.height>0&&q.height<200&&q.bottom>=innerHeight-2&&q.width>innerWidth*0.5)h=Math.max(h,q.height)}}e.style.marginBottom=h?h+"px":"0"}if(document.readyState==="complete")setTimeout(place,50);else addEventListener("load",function(){setTimeout(place,50)})})();</script>
+</body>
+</html>
