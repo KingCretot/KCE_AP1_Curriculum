@@ -111,11 +111,16 @@ table.datatable th{background:var(--navy);color:#fff;text-align:left;padding:7px
 table.datatable td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
 table.datatable tr:nth-child(even) td{background:#faf8f2;}
 @media(max-width:520px){.stage{padding:20px 16px 12px;}h1.slide-title{font-size:20px;}.nav{padding:13px 14px 16px;}.nav .dots{display:none;}}
+.kshake{animation:kshake .3s}@keyframes kshake{0%,100%{transform:none}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.kq-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:6px 0 12px;font-size:13px;font-weight:700;color:var(--navy)}
+.kq-btn{font:inherit;font-weight:700;font-size:13px;padding:8px 14px;border-radius:8px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer}
+.kq-btn.ghost{background:#fff;color:var(--navy)}.kq-btn:disabled{opacity:.35;cursor:default}
+.kce-home{color:#fff;text-decoration:none;font-weight:600;font-size:12px;border:1.5px solid rgba(201,168,76,.7);padding:5px 10px;border-radius:6px;white-space:nowrap}.kce-home:hover{border-color:#C9A84C}
 </style>
 </head>
 <body>
 <div class="app">
-<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 1</div></div></div><div class="lesson-tag">Week 1 &middot; Ch. 1 &middot; Intro to A&amp;P</div></div></div>
+<div class="masthead"><div class="mast-row"><div class="brand"><div class="kc"><span class="inner">KC</span></div><div><div class="wordmark">KingCretot Experience</div><div class="course-tag">Human Anatomy &amp; Physiology I Supplemental &middot; Exam Block 1</div></div></div><div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><div class="lesson-tag">Week 1 &middot; Ch. 1 &middot; Intro to A&amp;P</div><a class="kce-home" href="./">&larr; Course home</a></div></div></div>
 <div class="tricolor"><div class="tri-b"></div><div class="tri-g"></div><div class="tri-r"></div></div>
 <div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-label" id="progressLabel">Slide 1 of 19</div></div>
 <div class="stage">
@@ -151,31 +156,26 @@ table.datatable tr:nth-child(even) td{background:#faf8f2;}
 <section class="slide" data-slide="5"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">Anatomical position and directional terms</h1>
   <div class="diagram-wrap">
     <div class="diagram-svg-box">
-<svg viewBox="0 0 560 340" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
-  
-  <g transform="translate(280,190) scale(1.15)" stroke="#0A1F3D" stroke-width="3" fill="none" stroke-linecap="round">
-    <circle cx="0" cy="-70" r="16" fill="#0A1F3D" stroke="none"/>
-    <rect x="-22" y="-50" width="44" height="80" rx="18" fill="none"/>
-    <line x1="-22" y1="-38" x2="-48" y2="10"/>
-    <line x1="22" y1="-38" x2="48" y2="10"/>
-    <line x1="-12" y1="30" x2="-18" y2="90"/>
-    <line x1="12" y1="30" x2="18" y2="90"/>
-  </g>
-  <!-- superior/inferior -->
-  <line x1="280" y1="30" x2="280" y2="80" stroke="#0047BA" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="280" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#0047BA">SUPERIOR (toward head)</text>
-  <line x1="280" y1="300" x2="280" y2="255" stroke="#0047BA" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="280" y="318" text-anchor="middle" font-size="13" font-weight="700" fill="#0047BA">INFERIOR (toward feet)</text>
-  <!-- medial/lateral -->
-  <text x="60" y="150" font-size="12.5" font-weight="700" fill="#C9A84C" text-anchor="start">LATERAL &#8592;</text>
-  <text x="500" y="150" font-size="12.5" font-weight="700" fill="#C9A84C" text-anchor="end">&#8594; LATERAL</text>
-  <text x="280" y="150" font-size="12.5" font-weight="700" fill="#C9A84C" text-anchor="middle">MEDIAL</text>
-  <!-- anterior label -->
-  <text x="280" y="175" font-size="11.5" fill="#1c1c1c" text-anchor="middle" font-style="italic">(anterior / ventral view shown)</text>
-  <!-- proximal/distal on arm -->
-  <text x="205" y="115" font-size="11" fill="#DB2F30" font-weight="700">proximal</text>
-  <text x="180" y="200" font-size="11" fill="#DB2F30" font-weight="700">distal</text>
-  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0047BA"/></marker></defs>
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;" role="img" aria-label="Anatomical position and directional terms">
+<defs><marker id="aB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0047BA"/></marker><marker id="aG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8A6D1F"/></marker><marker id="aR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#DB2F30"/></marker></defs>
+<text x="20" y="22" font-size="11" font-style="italic" fill="#555">Anterior (front) view</text>
+<text x="280" y="22" text-anchor="middle" font-size="15" font-weight="700" fill="#0047BA">SUPERIOR (toward head)</text>
+<line x1="280" y1="30" x2="280" y2="56" stroke="#0047BA" stroke-width="2.5" marker-end="url(#aB)"/>
+<line x1="280" y1="64" x2="280" y2="300" stroke="#C9A84C" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="272" y="314" text-anchor="end" font-size="10" fill="#8A6D1F" font-weight="700">midline</text>
+<g stroke="#0A1F3D" stroke-width="3" fill="none" stroke-linecap="round"><circle cx="280" cy="80" r="18" fill="#0A1F3D" stroke="none"/><rect x="256" y="104" width="48" height="92" rx="18"/><line x1="256" y1="116" x2="228" y2="202"/><line x1="304" y1="116" x2="332" y2="202"/><line x1="268" y1="196" x2="264" y2="288"/><line x1="292" y1="196" x2="296" y2="288"/></g>
+<text x="150" y="262" text-anchor="middle" font-size="13" font-weight="700" fill="#8A6D1F">MEDIAL</text>
+<text x="150" y="277" text-anchor="middle" font-size="10" fill="#333">toward the midline</text>
+<line x1="95" y1="288" x2="244" y2="288" stroke="#8A6D1F" stroke-width="2.5" marker-end="url(#aG)"/>
+<text x="420" y="262" text-anchor="middle" font-size="13" font-weight="700" fill="#8A6D1F">LATERAL</text>
+<text x="420" y="277" text-anchor="middle" font-size="10" fill="#333">away from the midline</text>
+<line x1="310" y1="288" x2="475" y2="288" stroke="#8A6D1F" stroke-width="2.5" marker-end="url(#aG)"/>
+<circle cx="307" cy="120" r="5" fill="#DB2F30"/><line x1="312" y1="118" x2="390" y2="96" stroke="#DB2F30" stroke-width="1.3"/>
+<text x="394" y="94" font-size="13" font-weight="700" fill="#DB2F30">PROXIMAL</text><text x="394" y="108" font-size="10" fill="#333">closer to where the limb attaches</text>
+<circle cx="332" cy="202" r="5" fill="#DB2F30"/><line x1="337" y1="200" x2="390" y2="176" stroke="#DB2F30" stroke-width="1.3"/>
+<text x="394" y="174" font-size="13" font-weight="700" fill="#DB2F30">DISTAL</text><text x="394" y="188" font-size="10" fill="#333">farther from where it attaches</text>
+<line x1="280" y1="322" x2="280" y2="300" stroke="#0047BA" stroke-width="2.5" marker-end="url(#aB)"/>
+<text x="280" y="346" text-anchor="middle" font-size="15" font-weight="700" fill="#0047BA">INFERIOR (toward feet)</text>
 </svg></div>
     <div class="diagram-caption">Anatomical position: standing upright, facing forward, arms at sides, palms facing forward. Every directional term is defined relative to this position &mdash; not relative to how the body happens to be oriented in front of you.</div>
     <div class="label-cols"><ul class="label-list"><li><span class="dot" style="background:#0047BA"></span><span>Superior / Inferior — toward head vs. feet</span></li>
@@ -186,35 +186,24 @@ table.datatable tr:nth-child(even) td{background:#faf8f2;}
 <section class="slide" data-slide="6"><p class="eyebrow">Structure &amp; Function</p><h1 class="slide-title">The three body planes</h1>
   <div class="diagram-wrap">
     <div class="diagram-svg-box">
-<svg viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;">
-  
-  <g transform="translate(150,170) scale(1.05)" stroke="#0A1F3D" stroke-width="3" fill="none" stroke-linecap="round">
-    <circle cx="0" cy="-70" r="16" fill="#0A1F3D" stroke="none"/>
-    <rect x="-22" y="-50" width="44" height="80" rx="18" fill="none"/>
-    <line x1="-22" y1="-38" x2="-48" y2="10"/>
-    <line x1="22" y1="-38" x2="48" y2="10"/>
-    <line x1="-12" y1="30" x2="-18" y2="90"/>
-    <line x1="12" y1="30" x2="18" y2="90"/>
-  </g>
-  <line x1="150" y1="20" x2="150" y2="290" stroke="#DB2F30" stroke-width="2.5" stroke-dasharray="6,4"/>
-  <text x="150" y="14" text-anchor="middle" font-size="12" font-weight="700" fill="#DB2F30">SAGITTAL PLANE</text>
-  <text x="150" y="305" text-anchor="middle" font-size="10.5" fill="#1c1c1c">(divides left / right)</text>
-
-  
-  <g transform="translate(400,170) scale(1.05)" stroke="#0A1F3D" stroke-width="3" fill="none" stroke-linecap="round">
-    <circle cx="0" cy="-70" r="16" fill="#0A1F3D" stroke="none"/>
-    <rect x="-22" y="-50" width="44" height="80" rx="18" fill="none"/>
-    <line x1="-22" y1="-38" x2="-48" y2="10"/>
-    <line x1="22" y1="-38" x2="48" y2="10"/>
-    <line x1="-12" y1="30" x2="-18" y2="90"/>
-    <line x1="12" y1="30" x2="18" y2="90"/>
-  </g>
-  <line x1="330" y1="60" x2="470" y2="60" stroke="#0047BA" stroke-width="2.5" stroke-dasharray="6,4"/>
-  <text x="400" y="48" text-anchor="middle" font-size="12" font-weight="700" fill="#0047BA">FRONTAL (CORONAL) PLANE</text>
-  <text x="400" y="80" text-anchor="middle" font-size="10.5" fill="#1c1c1c">(divides front / back)</text>
-
-  <line x1="30" y1="230" x2="530" y2="230" stroke="#C9A84C" stroke-width="2.5" stroke-dasharray="6,4"/>
-  <text x="280" y="250" text-anchor="middle" font-size="12" font-weight="700" fill="#9A7B1F">TRANSVERSE PLANE (divides top / bottom)</text>
+<svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,Helvetica,sans-serif;" role="img" aria-label="The three body planes">
+<text x="100" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#DB2F30">SAGITTAL PLANE</text>
+<text x="100" y="38" text-anchor="middle" font-size="10" font-style="italic" fill="#555">front view</text>
+<g stroke="#0A1F3D" stroke-width="3" fill="none" stroke-linecap="round"><circle cx="100" cy="76" r="18" fill="#0A1F3D" stroke="none"/><rect x="76" y="100" width="48" height="92" rx="18"/><line x1="76" y1="112" x2="48" y2="198"/><line x1="124" y1="112" x2="152" y2="198"/><line x1="88" y1="192" x2="84" y2="284"/><line x1="112" y1="192" x2="116" y2="284"/></g>
+<line x1="100" y1="48" x2="100" y2="300" stroke="#DB2F30" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="100" y="322" text-anchor="middle" font-size="12" fill="#222">divides <tspan font-weight="700">left</tspan> and <tspan font-weight="700">right</tspan></text>
+<text x="300" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0047BA">FRONTAL (CORONAL) PLANE</text>
+<text x="300" y="38" text-anchor="middle" font-size="10" font-style="italic" fill="#555">side view, facing right</text>
+<g stroke="#0A1F3D" stroke-width="3" fill="none" stroke-linecap="round"><circle cx="302" cy="76" r="18" fill="#0A1F3D" stroke="none"/><path d="M318 74 l8 4 l-8 3" fill="#0A1F3D" stroke="none"/><rect x="286" y="100" width="30" height="92" rx="13"/><line x1="300" y1="114" x2="304" y2="198"/><line x1="296" y1="192" x2="294" y2="284"/><line x1="306" y1="192" x2="308" y2="284"/><line x1="308" y1="284" x2="320" y2="284"/></g>
+<line x1="301" y1="48" x2="301" y2="300" stroke="#0047BA" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="268" y="180" text-anchor="end" font-size="10" font-weight="700" fill="#0047BA">back</text><text x="334" y="180" font-size="10" font-weight="700" fill="#0047BA">front</text>
+<text x="300" y="322" text-anchor="middle" font-size="12" fill="#222">divides <tspan font-weight="700">front</tspan> and <tspan font-weight="700">back</tspan></text>
+<text x="500" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#8A6D1F">TRANSVERSE PLANE</text>
+<text x="500" y="38" text-anchor="middle" font-size="10" font-style="italic" fill="#555">front view</text>
+<g stroke="#0A1F3D" stroke-width="3" fill="none" stroke-linecap="round"><circle cx="500" cy="76" r="18" fill="#0A1F3D" stroke="none"/><rect x="476" y="100" width="48" height="92" rx="18"/><line x1="476" y1="112" x2="448" y2="198"/><line x1="524" y1="112" x2="552" y2="198"/><line x1="488" y1="192" x2="484" y2="284"/><line x1="512" y1="192" x2="516" y2="284"/></g>
+<line x1="430" y1="172" x2="570" y2="172" stroke="#C9A84C" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="500" y="322" text-anchor="middle" font-size="12" fill="#222">divides <tspan font-weight="700">top</tspan> and <tspan font-weight="700">bottom</tspan></text>
+<text x="500" y="338" text-anchor="middle" font-size="10" fill="#555">(a cross-section)</text>
 </svg></div>
     <div class="diagram-caption">A plane is an imaginary flat surface used to section the body for description or imaging (like a CT scan slice).</div>
     <div class="label-cols"><ul class="label-list"><li><span class="dot" style="background:#DB2F30"></span><span>Sagittal — divides body into left and right</span></li>
@@ -473,24 +462,34 @@ for (var rb = 0; rb < restartBtns.length; rb++) {
   restartBtns[rb].addEventListener('click', function(){ showToast('\ud83c\udf89 Week complete \u2014 nice work!'); goTo(1); });
 }
 var choiceRows = document.querySelectorAll('.choice-row');
+/* 3 tries per question: a wrong try resets the choices; the answer and rationale show after the 3rd miss or a correct pick. */
+function kceTry(btns, clicked, fb, rat, state, onDone){
+  if (state.done) return;
+  state.tries++;
+  for (var x = 0; x < btns.length; x++) btns[x].classList.remove('correct','incorrect','kshake');
+  if (clicked.dataset.correct === 'true') {
+    state.done = true; state.firstTry = (state.tries === 1);
+    for (var a = 0; a < btns.length; a++) btns[a].disabled = true;
+    clicked.classList.add('correct');
+    fb.textContent = state.firstTry ? '✓ Correct on the first try!' : '✓ Correct.'; fb.className = 'feedback ok';
+    if (rat) rat.classList.add('show'); onDone(state.firstTry); return;
+  }
+  if (state.tries < 3) {
+    void clicked.offsetWidth; clicked.classList.add('kshake');
+    var left = 3 - state.tries;
+    fb.textContent = 'Not quite. Try again (' + left + (left === 1 ? ' try' : ' tries') + ' left).'; fb.className = 'feedback bad';
+    return;
+  }
+  state.done = true; state.firstTry = false;
+  for (var b = 0; b < btns.length; b++) { btns[b].disabled = true; if (btns[b].dataset.correct === 'true') btns[b].classList.add('correct'); }
+  fb.textContent = 'Out of tries. Here’s why:'; fb.className = 'feedback bad';
+  if (rat) rat.classList.add('show'); onDone(false);
+}
 for (var cr = 0; cr < choiceRows.length; cr++) {
   (function(row){
     var q = row.dataset.q; var fb = document.getElementById('fb-' + q); var rat = document.getElementById('rat-' + q);
-    var btns = row.querySelectorAll('.choice-btn');
-    for (var bi = 0; bi < btns.length; bi++) {
-      btns[bi].addEventListener('click', function(){
-        var clickedBtn = this;
-        var allBtns = row.querySelectorAll('.choice-btn');
-        for (var x = 0; x < allBtns.length; x++) { allBtns[x].classList.remove('correct','incorrect'); allBtns[x].disabled = true; }
-        if (clickedBtn.dataset.correct === 'true') { clickedBtn.classList.add('correct'); fb.textContent = '\u2713 Correct!'; fb.className = 'feedback ok'; }
-        else {
-          clickedBtn.classList.add('incorrect');
-          for (var y = 0; y < allBtns.length; y++) { if (allBtns[y].dataset.correct === 'true') allBtns[y].classList.add('correct'); }
-          fb.textContent = 'Not quite \u2014 here\'s why:'; fb.className = 'feedback bad';
-        }
-        if (rat) rat.classList.add('show');
-      });
-    }
+    var btns = row.querySelectorAll('.choice-btn'); var state = {tries:0, done:false};
+    for (var bi = 0; bi < btns.length; bi++) btns[bi].addEventListener('click', function(){ kceTry(btns, this, fb, rat, state, function(){}); });
   })(choiceRows[cr]);
 }
 var quizAnswered = {}; var quizTotal = document.querySelectorAll('.quiz-q').length;
@@ -498,25 +497,29 @@ var quizQs = document.querySelectorAll('.quiz-q');
 for (var qq = 0; qq < quizQs.length; qq++) {
   (function(qEl){
     var qid = qEl.dataset.quiz; var rat = document.getElementById('rat-quiz-' + qid);
-    var opts = qEl.querySelectorAll('.quiz-opt');
-    for (var oi = 0; oi < opts.length; oi++) {
-      opts[oi].addEventListener('click', function(){
-        if (quizAnswered[qid] !== undefined) return;
-        var clickedBtn = this;
-        quizAnswered[qid] = (clickedBtn.dataset.correct === 'true');
-        var allOpts = qEl.querySelectorAll('.quiz-opt');
-        for (var z = 0; z < allOpts.length; z++) {
-          allOpts[z].disabled = true;
-          if (allOpts[z].dataset.correct === 'true') allOpts[z].classList.add('correct');
-          else if (allOpts[z] === clickedBtn) allOpts[z].classList.add('incorrect');
-        }
-        if (rat) rat.classList.add('show');
-        updateScore();
-      });
-    }
+    var fb = document.createElement('p'); fb.className = 'feedback'; fb.style.marginTop = '8px';
+    qEl.querySelector('.quiz-opts').insertAdjacentElement('afterend', fb);
+    var opts = qEl.querySelectorAll('.quiz-opt'); var state = {tries:0, done:false};
+    for (var oi = 0; oi < opts.length; oi++) opts[oi].addEventListener('click', function(){
+      kceTry(opts, this, fb, rat, state, function(first){ quizAnswered[qid] = first; updateScore(); });
+    });
   })(quizQs[qq]);
 }
-function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; if (answeredCount < quizTotal) return; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal; scoreBox.classList.add('show');} }
+/* Show the knowledge test one question at a time */
+(function(){
+  if (!quizQs.length) return;
+  var cur = 0, first = quizQs[0];
+  var bar = document.createElement('div'); bar.className = 'kq-nav';
+  bar.innerHTML = '<button type="button" class="kq-btn ghost" id="kqPrev">Back</button><span id="kqPos"></span><button type="button" class="kq-btn" id="kqNext">Next question</button>';
+  quizQs[quizQs.length - 1].insertAdjacentElement('afterend', bar);
+  function show(i){ cur = i; for (var k = 0; k < quizQs.length; k++) quizQs[k].style.display = (k === i) ? '' : 'none';
+    document.getElementById('kqPos').textContent = 'Question ' + (i + 1) + ' of ' + quizQs.length;
+    document.getElementById('kqPrev').disabled = (i === 0); document.getElementById('kqNext').disabled = (i === quizQs.length - 1); }
+  document.getElementById('kqPrev').addEventListener('click', function(){ if (cur > 0) show(cur - 1); });
+  document.getElementById('kqNext').addEventListener('click', function(){ if (cur < quizQs.length - 1) show(cur + 1); });
+  show(0);
+})();
+function updateScore(){ var answeredCount = Object.keys(quizAnswered).length; var score = 0; for (var k in quizAnswered) if (quizAnswered[k]) score++; var scoreBox = document.getElementById('quizScore'); if(scoreBox){document.getElementById('scoreText').textContent = score + ' / ' + quizTotal + ' on the first try' + (answeredCount < quizTotal ? ' (' + answeredCount + ' of ' + quizTotal + ' answered)' : ''); scoreBox.classList.add('show');} }
 </script>
 <div id="kce-legal" style="display:block;clear:both;box-sizing:border-box;width:100%;margin:0;padding:10px 16px;background:#0A1F3D;color:#C9A84C;font:12px/1.4 Arial,sans-serif;text-align:center">&copy; 2026 KingCretot Experience. All rights reserved. Licensed for KCE students only. Do not copy, share or distribute.</div><script>(function(){var e=document.getElementById("kce-legal");if(!e)return;function place(){var r=document.documentElement,b=document.body,t=null,best=0,a=b?b.getElementsByTagName("*"):[];for(var i=0;i<a.length;i++){var x=a[i];if(x===e||e.contains(x))continue;if(x.scrollHeight>x.clientHeight+20&&x.clientHeight>innerHeight*0.5&&x.clientWidth>innerWidth*0.5){var o=getComputedStyle(x).overflowY;if((o==="auto"||o==="scroll")&&x.clientHeight*x.clientWidth>best){best=x.clientHeight*x.clientWidth;t=x}}}if(!t&&b){var bs=getComputedStyle(b),hs=getComputedStyle(r);if(/(hidden|clip)/.test(hs.overflowY)||(/(auto|scroll)/.test(bs.overflowY)&&b.scrollHeight>b.clientHeight+1))t=b;else t=r}if(t&&e.parentNode!==t)t.appendChild(e);var h=0;for(var j=0;j<a.length;j++){var s=getComputedStyle(a[j]);if(s.position==="fixed"&&s.display!=="none"&&s.visibility!=="hidden"&&!e.contains(a[j])){var q=a[j].getBoundingClientRect();if(q.height>0&&q.height<200&&q.bottom>=innerHeight-2&&q.width>innerWidth*0.5)h=Math.max(h,q.height)}}e.style.marginBottom=h?h+"px":"0"}if(document.readyState==="complete")setTimeout(place,50);else addEventListener("load",function(){setTimeout(place,50)})})();</script>
 </body>
