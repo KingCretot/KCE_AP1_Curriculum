@@ -172,13 +172,55 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
   .qn{font-size:20px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+#printdoc{display:none}
+@page{size:letter;margin:0.55in 0.6in 0.6in}
 @media print{
-  .bar,.tools,.reveal,#view-cards,#view-quiz,#view-diagrams,#view-extra,#view-key,footer,#kce-legal{display:none!important}
-  body.print-key #view-guide{display:none!important}
-  body.print-key #view-key{display:block!important}
-  table.key{font-size:11px}table.key tr{break-inside:avoid}
-  .ans{display:block!important}
-  body{background:#fff}
+  html,body{background:#fff!important}
+  body > *:not(#printdoc){display:none!important}
+  #printdoc{display:block!important;font-family:Arial,Helvetica,sans-serif;color:#1C2230;font-size:10.5pt;line-height:1.42}
+  #printdoc *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .pd-mast{background:#0A1F3D;color:#fff;padding:14px 18px 12px;border-bottom:4px solid #C9A84C;display:flex;align-items:center;gap:14px}
+  .pd-mono{width:38px;height:38px;border:2px solid #C9A84C;outline:1px solid #C9A84C;outline-offset:2px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:700;color:#C9A84C;font-size:15px;flex:none}
+  .pd-word{font-family:Georgia,"Times New Roman",serif;font-size:20pt;font-weight:700;color:#C9A84C;line-height:1.1}
+  .pd-tag{font-family:Arial,sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;margin-top:3px}
+  .pd-title{margin:14px 0 2px;font-family:Georgia,serif;font-size:19pt;color:#0A1F3D;line-height:1.15}
+  .pd-sub{margin:0 0 10px;font-size:10pt;color:#5A6275}
+  .pd-name{display:flex;gap:24px;margin:0 0 6px;font-size:10.5pt;font-weight:700;color:#0A1F3D}
+  .pd-name span{flex:1;border-bottom:1px solid #0A1F3D;padding-bottom:2px}
+  .pd-name span.d{flex:0 0 2.4in}
+  .pd-ch{font-family:Georgia,serif;font-size:15pt;color:#0A1F3D;margin:18px 0 2px;padding-bottom:3px;border-bottom:2px solid #C9A84C;break-after:avoid}
+  .pd-ch.newpage{break-before:page;margin-top:0}
+  .pd-tp{font-size:11pt;font-weight:700;color:#0A1F3D;margin:12px 0 5px;break-after:avoid}
+  .pd-core{border:1px solid #E4DCC6;border-left:3px solid #C9A84C;padding:7px 10px;margin:0 0 6px;background:#FBF7EC}
+  .pd-core tr{break-inside:avoid}.pd-core table{break-inside:auto}
+  .pd-core p{margin:0 0 4px}.pd-core p:last-child{margin:0}
+  .pd-core ul{margin:2px 0 0;padding-left:16px}
+  .pd-core table{border-collapse:collapse;width:100%;font-size:9.5pt;margin:2px 0;background:#fff}
+  .pd-core th,.pd-core td{border:1px solid #C9C9C9;padding:3px 6px;text-align:left;vertical-align:top;font-family:Arial,sans-serif}
+  .pd-core th{background:#0A1F3D;color:#fff}
+  .pd-core .core{background:transparent!important;border:0!important;border-left:0!important;padding:4px 0 0!important;margin:4px 0 0!important}
+  .pd-q{display:grid;grid-template-columns:28px 1fr;gap:6px;padding:6px 0;border-top:1px dashed #E4DCC6;break-inside:avoid}
+  .pd-qn{font-family:Georgia,serif;font-weight:700;color:#C9A84C;font-size:13pt;line-height:1.1}
+  .pd-stem{font-weight:700;margin:0 0 2px}
+  .pd-opts{margin:0 0 3px;color:#5A6275;font-size:9.5pt}
+  .pd-opts span{margin-right:12px;display:inline-block}
+  .pd-ans{margin:0 0 2px}
+  .pd-ans b{color:#fff;background:#2E7550;padding:0 6px;border-radius:3px}
+  .pd-ans b.f{background:#B3362F}
+  .pd-fix{font-family:Georgia,serif;margin:2px 0;padding:2px 8px;border-left:3px solid #B3362F}
+  .pd-fix del{color:#B3362F}.pd-fix ins{color:#2E7550;font-weight:700;text-decoration:none}
+  .pd-why{margin:2px 0 0;font-size:9.5pt}
+  .pd-trap{margin:3px 0 0;font-size:9pt;background:#F7EED3;padding:2px 7px}
+  .pd-key{border-collapse:collapse;width:100%;font-size:9.5pt;margin-top:6px}
+  .pd-key th,.pd-key td{border:1px solid #C9C9C9;padding:4px 7px;text-align:left;vertical-align:top}
+  .pd-key th{background:#0A1F3D;color:#fff}
+  .pd-key tr{break-inside:avoid}
+  .pd-key td.n{font-family:Georgia,serif;font-weight:700;color:#C9A84C;text-align:center;width:28px}
+  .pd-key td.a{font-weight:700;color:#0A1F3D;width:1.7in}.pd-key td.a.f{color:#B3362F}
+  .pd-key .fx{display:block;font-family:Georgia,serif;margin-top:2px}
+  .pd-key del{color:#B3362F}.pd-key ins{color:#2E7550;font-weight:700;text-decoration:none}
+  .pd-foot{margin-top:14px;padding:8px 12px;background:#0A1F3D;color:#fff;font-size:8.5pt;text-align:center;break-inside:avoid}
+  .pd-foot .g{color:#C9A84C}
 }
 </style>
 </head>
@@ -213,7 +255,7 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
       <p class="lead" style="margin-top:14px">Work in this order: study guide, vocabulary, diagrams (hide the labels and quiz yourself), the 50-question practice test, then 50 brand-new extra practice questions. The answer key has every answer with its logic in one place.</p>
       <div class="tools">
         <button class="btn" id="showAll">Show all answers</button>
-        <button class="btn ghost" onclick="window.print()">Print study guide</button>
+        <button class="btn ghost" id="printGuide">Print study guide</button>
       </div>
       <nav class="chnav" id="chnav"></nav>
     </div>
@@ -854,7 +896,47 @@ function buildKey(){
   });
   document.getElementById("keytable").innerHTML=h;
 }
-document.getElementById("printKey").addEventListener("click",()=>{document.body.classList.add("print-key");window.print();setTimeout(()=>document.body.classList.remove("print-key"),500);});
+
+
+
+/* ---------- PRINT (clean branded document) ---------- */
+function pdHead(title,sub){
+  return `<div class="pd-mast"><div class="pd-mono">KC</div><div><div class="pd-word">KingCretot Experience</div><div class="pd-tag"><span style="color:#0047BA">EDUCATE.</span> <span style="color:#C9A84C">EMPOWER.</span> <span style="color:#DB2F30">EXCEL.</span></div></div></div>
+  <h1 class="pd-title">${title}</h1><p class="pd-sub">${sub}</p><div class="pd-name"><span>Name:</span><span class="d">Date: ____ / ____ / ________</span></div>`;
+}
+const PD_FOOT=`<div class="pd-foot">KingCretot Experience, LLC · PO Box 2322, Arcadia, FL 34265 · kingcretot.com · kce@kingcretot.com<br><span class="g">Approved Provider: Step Up For Students · Arizona ESA · West Virginia Hope Scholarship</span><br>© 2026 KingCretot Experience. Licensed for KCE students only. Do not copy, share or distribute.</div>`;
+function pdGuide(){
+  let h=pdHead("A&amp;P I Final Exam Study Guide","BSC 1085C Anatomy &amp; Physiology I · The Brain, Senses &amp; Autonomic Nervous System (Chapters 13 to 16) · All 50 practice-final questions with answers");
+  CHAPTERS.forEach((ch,ci)=>{
+    h+=`<h2 class="pd-ch">${ch.title}</h2>`;
+    ch.topics.forEach(tp=>{
+      h+=`<h3 class="pd-tp">${tp.h}</h3><div class="pd-core">${tp.core.replace(/class="mini"/g,"").replace(/<div class="tblwrap"[^>]*>/g,"<div>")}</div>`;
+      tp.qs.forEach(n=>{
+        const q=Q[n], f=q.t==="tf"&&q.a===1;
+        const opts=q.t==="tf"?`<span>a. True</span><span>b. False</span>`:q.o.map((o,i)=>`<span>${L[i]}. ${o}</span>`).join("");
+        h+=`<div class="pd-q"><div class="pd-qn">${n}</div><div><p class="pd-stem">${q.q}</p><p class="pd-opts">${opts}</p>
+        <p class="pd-ans">Answer: <b class="${f?"f":""}">${answerText(n)}</b></p>${q.fix?`<p class="pd-fix">${q.fix}</p>`:""}<p class="pd-why">${q.why}</p>${q.trap?`<p class="pd-trap"><strong>Exam trap:</strong> ${q.trap}</p>`:""}</div></div>`;
+      });
+    });
+  });
+  return h+PD_FOOT;
+}
+function pdKey(){
+  let h=pdHead("A&amp;P I Final Exam Answer Key","BSC 1085C Anatomy &amp; Physiology I · Practice final, Chapters 13 to 16 · Answer and logic for all 50 questions");
+  h+=`<table class="pd-key"><tr><th>#</th><th>Answer</th><th>Logic</th></tr>`;
+  Object.keys(Q).map(Number).sort((a,b)=>a-b).forEach(n=>{const q=Q[n],f=q.t==="tf"&&q.a===1;
+    h+=`<tr><td class="n">${n}</td><td class="a${f?" f":""}">${answerText(n)}</td><td>${q.k}${q.fix?`<span class="fx">${q.fix}</span>`:""}</td></tr>`;});
+  return h+`</table>`+PD_FOOT;
+}
+function printDoc(kind){
+  let d=document.getElementById("printdoc");
+  if(!d){d=document.createElement("div");d.id="printdoc";document.body.appendChild(d);}
+  d.innerHTML=kind==="key"?pdKey():pdGuide();
+  window.print();
+}
+document.getElementById("printGuide").addEventListener("click",()=>printDoc("guide"));
+document.getElementById("printKey").addEventListener("click",()=>printDoc("key"));
+window.addEventListener("beforeprint",()=>{const d=document.getElementById("printdoc");if(!d||!d.innerHTML){let e=d;if(!e){e=document.createElement("div");e.id="printdoc";document.body.appendChild(e);}e.innerHTML=pdGuide();}});
 
 /* ---------- TABS ---------- */
 function show(v){
