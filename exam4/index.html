@@ -791,7 +791,7 @@ function pageGuide(){
   const g=document.getElementById("guide");
   g.insertAdjacentHTML("beforeend",`<div class="gpager"><button class="btn ghost" id="gPrev">&larr; Back</button><span class="pos" id="gPos"></span><button class="btn" id="gNext">Next topic &rarr;</button></div>`);
   document.getElementById("gPrev").addEventListener("click",()=>goTopic(gp.i-1,true));
-  document.getElementById("gNext").addEventListener("click",()=>goTopic(gp.i+1,true));
+  document.getElementById("gNext").addEventListener("click",()=>{if(gp.i===gp.list.length-1)printDoc("guide");else goTopic(gp.i+1,true);});
   document.querySelectorAll("#chnav a").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();const ch=document.querySelector(a.getAttribute("href"));const t=ch.querySelector(".topic");goTopic(gp.list.indexOf(t),true);}));
   goTopic(0,false);
 }
@@ -802,7 +802,7 @@ function goTopic(i,scroll){
   const ch=cur.closest(".chapter"), idx=[...ch.querySelectorAll(".topic")].indexOf(cur)+1, n=ch.querySelectorAll(".topic").length;
   document.getElementById("gPos").textContent=`${ch.querySelector("h2").textContent.split(":")[0]} · Topic ${idx} of ${n} · ${i+1} / ${gp.list.length}`;
   document.getElementById("gPrev").disabled=i===0;
-  const nx=document.getElementById("gNext"); nx.disabled=i===gp.list.length-1; nx.innerHTML=i===gp.list.length-1?"End of study guide":"Next topic &rarr;";
+  const nx=document.getElementById("gNext"); nx.disabled=false; nx.innerHTML=i===gp.list.length-1?"&#128424; Print study guide":"Next topic &rarr;";
   if(scroll) ch.scrollIntoView({behavior:"smooth",block:"start"});
 }
 
