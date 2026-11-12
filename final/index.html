@@ -245,6 +245,7 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
   .pd-foot{margin-top:14px;padding:8px 12px;background:#0A1F3D;color:#fff;font-size:8.5pt;text-align:center;break-inside:avoid}
   .pd-foot .g{color:#C9A84C}
 }
+.core-after{margin-top:14px}.core-h{font-family:var(--serif);font-weight:700;color:var(--navy);margin:0 0 8px}
 </style>
 </head>
 <body>
@@ -274,7 +275,7 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
     <div class="hero">
       <h1>The Brain, Senses &amp; Autonomic Nervous System</h1>
       <p class="for"><strong>BSC 1085C Anatomy &amp; Physiology I, Final Exam practice (Chapters 13 to 16)</strong></p>
-      <p class="lead">All 50 questions from the practice final are here, grouped by topic, each with the concept behind it. Pick an answer for each question. You get 3 tries; the answer and its explanation show after a correct pick or a third miss, just like the weekly lessons. When a true/false statement is false, the explanation shows exactly which word is wrong and what belongs there, the way a professor would mark it.</p>
+      <p class="lead">All 50 questions from the practice final are here, grouped by topic, each with the concept behind it. Pick an answer for each question. You get 3 tries; the answer and its explanation show after a correct pick or a third miss, just like the weekly lessons. When a true/false statement is false, the explanation shows exactly which word is wrong and what belongs there, the way a professor would mark it. When you finish a topic, its concept review opens below the questions.</p>
       <p class="lead" style="margin-top:14px">Work in this order: study guide, vocabulary, diagrams (hide the labels and quiz yourself), the 50-question practice test, then 50 brand-new extra practice questions. The answer key opens once you finish the practice test.</p>
       <div class="tools">
         <button class="btn ghost" id="printGuide">Print study guide</button>
@@ -736,18 +737,19 @@ function buildGuide(){
     nav.insertAdjacentHTML("beforeend",`<a href="#${ch.id}">${ch.title.split(":")[0]}</a>`);
     let h=`<section class="chapter" id="${ch.id}"><h2>${ch.title}</h2><p class="chsub">${ch.sub}</p>`;
     ch.topics.forEach(tp=>{
-      h+=`<div class="topic"><h3>${tp.h}</h3><div class="core">${tp.core}</div>`;
+      h+=`<div class="topic"><h3>${tp.h}</h3>`;
       tp.qs.forEach(n=>{
         const q=Q[n]; q.__n=n;
         h+=`<article class="q" id="q${n}"><div class="qn">${n}</div><div><p class="stem">${q.q}</p>${optsHTML(q)}
         <div class="ans" id="a${n}" hidden>${ansHTML(n)}</div></div></article>`;
       });
-      h+=`</div>`;
+      h+=`<div class="core core-after" data-qs="${tp.qs.join(",")}" hidden><p class="core-h">Concept review</p>${tp.core}</div></div>`;
     });
     g.insertAdjacentHTML("beforeend",h+"</section>");
   });
   window.lockGuide=function(n){if(gDone.has(n))return;gDone.add(n);const btns=[...document.querySelectorAll(`.gopt[data-n="${n}"]`)];btns.forEach(b=>{b.disabled=true;b.classList.add("locked")});if(btns[Q[n].a])btns[Q[n].a].classList.add("right");const fb=document.getElementById("gfb"+n);if(fb){fb.className="gfb no";fb.textContent="Answer shown. Try it again on the practice test.";}};
   const gTries={}, gDone=new Set();
+  const topicCheck=n=>document.querySelectorAll(".core-after").forEach(c=>{const qs=c.dataset.qs.split(",");if(qs.includes(String(n))&&qs.every(x=>gDone.has(x)))c.hidden=false;});
   g.addEventListener("click",e=>{
     const op=e.target.closest(".gopt");
     if(op){
@@ -759,7 +761,7 @@ function buildGuide(){
         gDone.add(n); btns.forEach(b=>{b.disabled=true;b.classList.remove("wrong")}); op.classList.add("right");
         fb.className="gfb ok"; fb.textContent=gTries[n]===1?"Correct on the first try!":"Correct.";
         tone("right"); gain(gTries[n]===1?15:5,gTries[n]===1?1:0);
-        setOpen(rb,box,true); revealed.add(n); store.set("rev",[...revealed]);
+        setOpen(rb,box,true); revealed.add(n); store.set("rev",[...revealed]); topicCheck(n);
       } else if(gTries[n]<3){
         btns.forEach(b=>b.classList.remove("wrong","shake")); void op.offsetWidth; op.classList.add("shake");
         const left=3-gTries[n]; fb.className="gfb no"; fb.textContent=`Not quite. Try again (${left} ${left===1?"try":"tries"} left).`;
@@ -767,7 +769,7 @@ function buildGuide(){
       } else {
         gDone.add(n); btns.forEach(b=>b.disabled=true); btns[q.a].classList.add("right");
         fb.className="gfb no"; fb.textContent="Out of tries. Read the explanation below.";
-        tone("wrong"); setOpen(rb,box,true); revealed.add(n); store.set("rev",[...revealed]);
+        tone("wrong"); setOpen(rb,box,true); revealed.add(n); store.set("rev",[...revealed]); topicCheck(n);
       }
       return;
     }
